@@ -3,10 +3,10 @@
  * blog(微博)模块子路由
  */
 import details from '@/views/blog/Detail.vue'
-import list from '@/views/blog/List.vue'
+import topic from '@/views/blog/Topic.vue'
 
 export default [
     {path: 'details', component: details},
-    {path: 'list', component: list}
+    {path: 'topic', component: topic}
 
 ]
