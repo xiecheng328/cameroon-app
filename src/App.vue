@@ -2,15 +2,12 @@
     <div id="app">
         <mu-container>
         <router-view/>
-        <div id="nav">
-            <router-link to="/blog">Blog</router-link>
-            |
-            <router-link to="/message">Message</router-link>
-            |
-            <router-link to="/shop">Shop</router-link>
-            |
-            <router-link to="/profile">Profile</router-link>
-        </div>
+        <mu-bottom-nav>
+            <mu-bottom-nav-item title="Recents" to="Blog" ></mu-bottom-nav-item>
+            <mu-bottom-nav-item title="Message" to="/message" ></mu-bottom-nav-item>
+            <mu-bottom-nav-item title="Shop" to="/shop"></mu-bottom-nav-item>
+            <mu-bottom-nav-item title="Profile" to="/profile"></mu-bottom-nav-item>
+        </mu-bottom-nav>
         </mu-container>
     </div>
 </template>
