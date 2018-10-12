@@ -1,34 +1,46 @@
 <template>
     <div id="app">
         <mu-container>
-        <router-view/>
-        <mu-bottom-nav>
-            <mu-bottom-nav-item title="Recents" to="Blog" ></mu-bottom-nav-item>
-            <mu-bottom-nav-item title="Message" to="/message" ></mu-bottom-nav-item>
-            <mu-bottom-nav-item title="Shop" to="/shop"></mu-bottom-nav-item>
-            <mu-bottom-nav-item title="Profile" to="/profile"></mu-bottom-nav-item>
-        </mu-bottom-nav>
+            <div id="cameroon-content">
+                <router-view/>
+            </div>
+            <mu-bottom-nav>
+                <mu-bottom-nav-item title="圈子" to="/Blog" icon="." id="cameroon-blog"></mu-bottom-nav-item>
+                <mu-bottom-nav-item title="信息" to="/message" icon="." id="cameroon-message"></mu-bottom-nav-item>
+                <mu-bottom-nav-item title="商城" to="/shop" icon="." id="cameroon-shop"></mu-bottom-nav-item>
+                <mu-bottom-nav-item title="我的" to="/profile" icon="." id="cameroon-profile"></mu-bottom-nav-item>
+            </mu-bottom-nav>
         </mu-container>
     </div>
 </template>
 
 <style lang="scss">
-    #app {
-        font-family: 'Avenir', Helvetica, Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-align: center;
-        color: #2c3e50;
-    }
+    .mu-bottom-nav {
+        height: 48px !important;
+        #cameroon-blog .mu-bottom-item-wrapper .mu-bottom-item-icon {
+            background: url("./assets/blog-icon-unchecked.png") center no-repeat;
+            background-size: 20px;
+            color: #fff;
+        }
+        #cameroon-message .mu-bottom-item-wrapper .mu-bottom-item-icon {
+            background: url("./assets/message-icon.png") center no-repeat;
+            background-size: 20px;
+            color: #fff;
+        }
 
-    #nav {
-        padding: 30px;
-        a {
-            font-weight: bold;
-            color: #2c3e50;
-            &.router-link-exact-active {
-                color: #42b983;
-            }
+        #cameroon-shop .mu-bottom-item-wrapper .mu-bottom-item-icon {
+            background: url("./assets/shop-icon.png") center no-repeat;
+            background-size: 20px;
+            color: #fff;
+        }
+        #cameroon-profile .mu-bottom-item-wrapper .mu-bottom-item-icon {
+            background: url("./assets/my-icon.png") center no-repeat;
+            background-size: 20px;
+            color: #fff;
         }
     }
+    #cameroon-content{
+        height:600px;
+    }
+
 </style>
