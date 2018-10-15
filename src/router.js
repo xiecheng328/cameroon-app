@@ -19,7 +19,7 @@ import shops from './router/shops.js'
 // 引用 profile 子路由配置文件
 import profiles from './router/profiles.js'
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   mode: 'history',
