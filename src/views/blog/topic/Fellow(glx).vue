@@ -4,9 +4,7 @@
         <fellowList></fellowList>
         <fellowList></fellowList>
         <fellowList></fellowList>
-
     </div>
-
 </template>
 
 <script>

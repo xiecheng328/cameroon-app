@@ -1,5 +1,7 @@
 <template>
-    
+    <div id="hot-list">
+        hotlist
+    </div>
 </template>
 
 <script>

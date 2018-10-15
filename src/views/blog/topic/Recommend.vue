@@ -1,5 +1,7 @@
 <template>
-    
+    <div id="recommend">
+        recommend
+    </div>
 </template>
 
 <script>
