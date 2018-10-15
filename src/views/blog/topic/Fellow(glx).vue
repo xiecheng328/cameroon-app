@@ -1,6 +1,10 @@
 <template>
     <div>
         <fellowList></fellowList>
+        <fellowList></fellowList>
+        <fellowList></fellowList>
+        <fellowList></fellowList>
+
     </div>
 
 </template>

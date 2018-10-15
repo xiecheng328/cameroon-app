@@ -16,6 +16,9 @@
 
 <style lang="scss">
     .mu-bottom-nav {
+        width: 100% !important;
+        position: fixed !important;
+        margin-bottom:0 ;
         height: 48px !important;
         #cameroon-blog .mu-bottom-item-wrapper .mu-bottom-item-icon {
             background: url("./assets/blog-icon-unchecked.png") center no-repeat;
