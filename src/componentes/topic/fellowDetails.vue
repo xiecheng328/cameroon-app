@@ -45,7 +45,7 @@
             font-size: 13px;
         }
         #headPortrait{
-            background-image: url("../../../../assets/headPortrait.jpeg");
+            background-image: url("../../assets/headPortrait.jpeg");
             background-repeat: no-repeat;
             background-size:cover ;
             background-position: center;
@@ -75,7 +75,7 @@
                 flex: 1;
                 width: 100%;
                 height: 100%;
-                background: url("../../../../assets/publicityPictures.jpg");
+                background: url("../../assets/publicityPictures.jpg");
                 background-repeat: no-repeat;
                 background-size: cover;
                 /*border-radius: 10%;*/

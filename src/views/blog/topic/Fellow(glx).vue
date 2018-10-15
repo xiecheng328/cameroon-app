@@ -6,7 +6,7 @@
 </template>
 
 <script>
-    import fellowList from './fellow_component/fellowDetails'
+    import fellowList from '../../../componentes/topic/fellowDetails'
     export default {
         name: "fellow",
         components:{
