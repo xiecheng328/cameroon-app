@@ -9,15 +9,16 @@
         <span id="dian" class="headInformation">&nbsp;·&nbsp;</span>
         <div id="TUT" class="headInformation">六分钟前</div>
         <h4 id="articleTitle">大学生如何在堕落的寝室中出淤泥而不染？</h4>
-        <div id="article">
-            <div id="articleDetails">用户名：文章内容文章内容文章内容文章内容文
-                章内容文章内容文章内容文章内容文章内容文章内容文章内容
-                文章内容文章内容文章内容文章内容文章内容文章内容文章内容
-                文章内容文章内容文章内容文章内容文章内容
-            </div>
-            <div id="publicityPictures"></div>
-        </div>
-        <div di="fellowListBottom">
+        <!--<div id="article">-->
+            <!--<div id="articleDetails">用户名：文章内容文章内容文章内容文章内容文-->
+                <!--章内容文章内容文章内容文章内容文章内容文章内容文章内容-->
+                <!--文章内容文章内容文章内容文章内容文章内容文章内容文章内容-->
+                <!--文章内容文章内容文章内容文章内容文章内容-->
+            <!--</div>-->
+            <!--<div id="publicityPictures"></div>-->
+        <!--</div>-->
+        <video id="oVd" src="../../../../assets/testmp4.mp4" autoplay preload controls>您的浏览器不支持video标签</video>
+        <div id="fellowListBottom">
             <span>2121赞同</span><span>&nbsp;·&nbsp;</span><span>时间</span>
         </div>
     </div>
@@ -82,6 +83,10 @@
         }
         #fellowListBottom{
 
+        }
+        #oVd{
+            width: 100%;
+            height: 100px;
         }
     }
 
