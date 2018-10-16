@@ -35,3 +35,8 @@
   约定 mock 目录里所有的 .js 文件会被解析为 mock 文件。
   比如，新建 mock/users.js,设置对应路径
   然后在浏览器里访问 http://localhost:8000/api/users 就可以了。
+
+## i18n
+   约定 unit/lang 下存放语言配置目录，en.js对应英语，fra.js对应法语，zh.js对应中文
+   已经实现根据浏览器语言环境，自动切换语言
+   
