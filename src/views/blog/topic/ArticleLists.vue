@@ -113,7 +113,7 @@
         margin-bottom: 10px;
     }
     .head{
-        background-image: url("../../../assets/headPortrait.jpeg");
+        background-image: url("../../../assets/img/headPortrait.jpeg");
         background-repeat: no-repeat;
         background-size:cover ;
         background-position: center;

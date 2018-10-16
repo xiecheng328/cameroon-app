@@ -34,8 +34,23 @@
     *{
         margin: 0;
         padding: 0;
+        body{
+            background: black;
+        }
     }
     #container{
+        width: 100%;
+        color: black;
+        margin-top:10px;
+        margin-bottom:10px;
+
+        background: white;
+        #oBo{
+            width: 100%;
+            height: 10px;
+            background: grey;
+            clear: both;
+        }
         .headInformation{
             float: left;
             height: 25px;
@@ -44,7 +59,7 @@
             font-size: 13px;
         }
         #headPortrait{
-            background-image: url("../../assets/headPortrait.jpeg");
+            background-image: url("../../assets/img/headPortrait.jpeg");
             background-repeat: no-repeat;
             background-size:cover ;
             background-position: center;
@@ -83,7 +98,7 @@
                 flex: 1;
                 width: 100%;
                 height: 100%;
-                background: url("../../assets/publicityPictures.jpg");
+                background: url("../../assets/img/publicityPictures.jpg");
                 background-repeat: no-repeat;
                 background-size: cover;
                 /*border-radius: 10%;*/
