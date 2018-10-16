@@ -1,14 +1,14 @@
 <template>
-    <div>
+    <router-link to="" >
         <fellowList></fellowList>
         <fellowList></fellowList>
         <fellowList></fellowList>
         <fellowList></fellowList>
-    </div>
+    </router-link>
 </template>
 
 <script>
-    import fellowList from '../../../componentes/topic/fellowDetails'
+    import fellowList from '../../../componentes/topic/fellowList'
     export default {
         name: "fellow",
         components:{
