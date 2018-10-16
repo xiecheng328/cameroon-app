@@ -9,11 +9,24 @@ import 'muse-ui/dist/muse-ui.css';
 import 'mockjs';
 //import './mockAll';
 Vue.config.productionTip = false;
+//调用i18n
+import VueI18n from 'vue-i18n';
+import {getBrowserLanguage} from "./Unit/language";
 
 Vue.use(MuseUI);
-
+Vue.use(VueI18n);
+const messages = {
+    zh: require('./Unit/lang/zh.js'),
+    en: require('./Unit/lang/en.js'),
+    fr: require('./Unit/lang/fra.js')
+};
+const i18n = new VueI18n({
+    locale: getBrowserLanguage(), // 语言标识
+    messages
+});
 new Vue({
     router,
     store,
+    i18n,
     render: h => h(App)
 }).$mount('#app');
