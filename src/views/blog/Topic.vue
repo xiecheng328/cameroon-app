@@ -6,6 +6,7 @@
                 <mu-button flat to="/blog/topic/fellow">关注</mu-button>
                 <mu-button flat to="/blog/topic/recommend">推荐</mu-button>
                 <mu-button flat to="/blog/topic/hotlist">热榜</mu-button>
+                <mu-button flat to="/blog/topic/alists">回答</mu-button>
             </mu-container>
         </mu-appbar>
         <router-view></router-view>
@@ -25,7 +26,7 @@
             display: block;
             float: left;
             /*margin: 20px;*/
-            width: 100px;
+            width: 75px;
             height: 56px;
         }
         .router-link-active{

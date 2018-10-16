@@ -7,6 +7,7 @@ import topic from '@/views/blog/Topic.vue';
 import fellow from '@/views/blog/topic/Fellow(glx).vue';
 import recommend from '@/views/blog/topic/Recommend.vue';
 import hotlist from '@/views/blog/topic/HotList.vue';
+import alists from '@/views/blog/topic/ArticleLists.vue';
 
 export default [
     {path: 'details', component: details},
@@ -15,7 +16,8 @@ export default [
         children: [
             {path: 'fellow', component: fellow, name: 'fellow'},
             {path: 'recommend', component: recommend, name: 'recommend'},
-            {path: 'hotlist', component: hotlist, name: 'hotlist'}
+            {path: 'hotlist', component: hotlist, name: 'hotlist'},
+            {path: 'alists', component: alists, name: 'alists'}
         ]
     },
 
