@@ -1,10 +1,12 @@
 <template>
-    
+    <div id="hot-list">
+        hotlist
+    </div>
 </template>
 
 <script>
     export default {
-        name: "Topic"
+        name: "HotList"
     }
 </script>
 
