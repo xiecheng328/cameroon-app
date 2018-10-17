@@ -9,7 +9,7 @@
 </template>
 
 <script>
-    import fellowList from '../../../componentes/topic/fellowList'
+    import fellowList from '../../../components/topic/fellowList'
     export default {
         name: "fellow",
         components:{
