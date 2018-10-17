@@ -1,11 +1,6 @@
 <template>
     <router-link to="" id="contain">
-        <div>
-            <fellowList></fellowList>
-            <fellowList></fellowList>
-            <fellowList></fellowList>
-            <fellowList></fellowList>
-        </div>
+        <fellowList v-for="(val,index) in fList" :details="val"></fellowList>
         <div class="load" v-show="isShow">
             <img src="../../../assets/img/loading.gif" alt="">
         </div>
@@ -23,7 +18,50 @@
         data(){
             return {
                 isShow:false,
-                isEnd:false
+                isEnd:false,
+                fList:[
+                    {
+                        focusPeople:"json",
+                        time:"七分钟前",
+                        title:"颓废的一天又开始了",
+                        videoSrc:"",
+                        author:"steven",
+                        article:"文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内" +
+                            "文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容" +
+                            "文章内容文章内容文章内容文章内容文章内容" +
+                            "容",
+                        agreeNum:2155,
+                        commentNum:7588,
+                        src:"./../../assets/img/publicityPictures0.jpg"
+                    },
+                    {
+                        focusPeople:"ritle",
+                        time:"四分钟前",
+                        title:"大学生如何在堕落寝室",
+                        videoSrc:"",
+                        author:"rose",
+                        article:"文章容",
+                        agreeNum:7878,
+                        commentNum:96696,
+                        src:"./../../assest/img/publicityPictures1.jpg"
+
+                    },
+                    {
+                        focusPeople:"json",
+                        time:"八分钟前",
+                        title:"出淤泥而不染",
+                        videoSrc:"",
+                        author:"Micheal",
+                        article:"文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内" +
+                            "文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容" +
+                            "文章内容文章内容文章内容文章内容文章内容" +
+                            "容",
+                        agreeNum:366,
+                        commentNum:12,
+                        src:"./../../assest/img/publicityPictures2.jpg"
+
+                    }
+                ]
             }
         },
         created(){
