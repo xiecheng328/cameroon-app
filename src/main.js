@@ -10,7 +10,7 @@ import '@/assets/css/reset.css';
 import 'mockjs';
 // import './mockAll';
 //引入rem
-import './assets/css/rem.js';
+import './assets/js/rem.js';
 //引入css重置样式
 // import './assets/css/reset.css';
 Vue.config.productionTip = false;
