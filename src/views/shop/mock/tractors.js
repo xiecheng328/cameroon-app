@@ -1,8 +1,8 @@
 import Mock from 'mockjs';
-import tractorImg from './../../../assets/farm-machinery2.png';
-import tractorImg1 from './../../../assets/小麦收割机1.jpg';
-import tractorImg2 from './../../../assets/小麦收割机2.jpg';
-import tractorImg3 from './../../../assets/小麦收割机3.jpg';
+import tractorImg from './../../../assets/img/farm-machinery2.png';
+import tractorImg1 from './../../../assets/img/小麦收割机1.jpg';
+import tractorImg2 from './../../../assets/img/小麦收割机2.jpg';
+import tractorImg3 from './../../../assets/img/小麦收割机3.jpg';
 var Random = Mock.Random;
 Random.extend({
     BRANDNAME: function() {
