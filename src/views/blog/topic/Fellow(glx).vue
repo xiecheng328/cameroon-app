@@ -1,6 +1,6 @@
 <template>
     <router-link to="" id="contain">
-        <fellowList v-for="(val,index) in fList" :details="val"></fellowList>
+        <fellowList v-for="(val,index) in fList" :key="index" :details="val"></fellowList>
         <div class="load" v-show="isShow">
             <img src="../../../assets/img/loading.gif" alt="">
         </div>
@@ -32,7 +32,7 @@
                             "容",
                         agreeNum:2155,
                         commentNum:7588,
-                        src:"./../../assets/img/publicityPictures0.jpg"
+                        src:"./../../publicityPictures0.jpg"
                     },
                     {
                         focusPeople:"ritle",
@@ -43,7 +43,7 @@
                         article:"文章容",
                         agreeNum:7878,
                         commentNum:96696,
-                        src:"./../../assest/img/publicityPictures1.jpg"
+                        src:"./../../publicityPictures4.jpg"
 
                     },
                     {
@@ -58,7 +58,7 @@
                             "容",
                         agreeNum:366,
                         commentNum:12,
-                        src:"./../../assest/img/publicityPictures2.jpg"
+                        src:"./../../publicityPictures1.jpg"
 
                     }
                 ]

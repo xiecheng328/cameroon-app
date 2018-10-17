@@ -16,7 +16,7 @@
             <div id="articleDetails"><span>{{details.author}}：</span>
                 <span>{{details.article}}</span>
             </div>
-            <div id="pB" class="publicityPictures" :style="{'background':'url('+details.src+')'}"></div>
+            <div id="pB" class="publicityPictures" :style="{'background-image':'url('+details.src+')'}"></div>
         </div>
         <div id="fellowListBottom" class="HFborder">
             <span>{{details.agreeNum}}赞同</span><span>&nbsp;·&nbsp;</span><span>{{details.commentNum}}评论</span>
