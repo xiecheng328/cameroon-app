@@ -4,8 +4,8 @@
             <img src="../../assets/img/1230.jpg" alt="">
         </div>
         <div class="right">
-            <span class="name">{{list.name}}</span>
-            <p class="time">{{list.time}}</p>
+            <span class="name"> {{list.name}} </span>
+            <p class="time"> {{list.time}} </p>
             <p class="content">{{list.content}}</p>
         </div>
     </li>
