@@ -7,7 +7,6 @@
             <!--<div id="">1130万热度</div>-->
             <!--<div>sss</div>-->
             <div id="praise">23121万热度</div>
-
         </div>
         <div id="IMG"></div>
 
