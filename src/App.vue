@@ -21,7 +21,7 @@
         width: 100% !important;
         position: fixed !important;
         margin-bottom:0 !important;
-        height: 48px !important;
+        height: 50px !important;
         #cameroon-blog .mu-bottom-item-wrapper .mu-bottom-item-icon {
             background: url("assets/img/blog-icon-unchecked.png") center no-repeat;
             background-size: 20px;
@@ -45,7 +45,7 @@
         }
     }
     #cameroon-content{
-        height:600px;
+        height:618px;
     }
 
 </style>
