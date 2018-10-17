@@ -9,14 +9,14 @@
         <span id="dian" class="headInformation HFborder">&nbsp;·&nbsp;</span>
         <div id="TUT" class="headInformation HFborder">{{details.time}}</div>
         <div id="articleTitle">{{details.title}}</div>
-        <div id="art" class="article">
-                <video id="oVd" src="../../assets/testmp4.mp4" preload controls>您的浏览器不支持video标签</video>
+        <div id="art" class="article" v-if=details.isShowVideo>
+            <video id="oVd" :src="details.videoSrc" preload controls>您的浏览器不支持video标签</video>
         </div>
         <div id="article_img">
             <div id="articleDetails"><span>{{details.author}}：</span>
                 <span>{{details.article}}</span>
             </div>
-            <div id="pB" class="publicityPictures" :style="{'background-image':'url('+details.src+')'}"></div>
+            <div id="pB" v-if=details.isShowImg class="publicityPictures" :style="{'background-image':'url('+details.imgSrc+')'}"></div>
         </div>
         <div id="fellowListBottom" class="HFborder">
             <span>{{details.agreeNum}}赞同</span><span>&nbsp;·&nbsp;</span><span>{{details.commentNum}}评论</span>
@@ -30,9 +30,15 @@
         props:['details'],
         data(){
             return{
+                det:{}
             }
         },
         created(){
+            // this.det = this.props.details
+            // console.log(this.det);
+                // if(this.props.details.videoSrc != ""){
+                //     this.isShow = true;
+                // }
         }
 
     }
@@ -88,9 +94,9 @@
             width: 100%;
             height: 100px;
             #oVd{
-                    height: 100%;
-                    width: 100%;
-                }
+                height: 100%;
+                width: 100%;
+            }
         }
         #article_img{
             display: flex;

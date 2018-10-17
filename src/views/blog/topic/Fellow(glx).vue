@@ -24,15 +24,15 @@
                         focusPeople:"json",
                         time:"七分钟前",
                         title:"颓废的一天又开始了",
-                        videoSrc:"",
+                        videoSrc:"./../../testmp4.mp4",
                         author:"steven",
-                        article:"文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内" +
-                            "文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容" +
-                            "文章内容文章内容文章内容文章内容文章内容" +
-                            "容",
+                        article:"文章内容",
                         agreeNum:2155,
                         commentNum:7588,
-                        src:"./../../publicityPictures0.jpg"
+                        imgSrc:"./../../publicityPictures1.jpg",
+                        isShowVideo:true,
+                        isShowImg:false
+
                     },
                     {
                         focusPeople:"ritle",
@@ -40,10 +40,15 @@
                         title:"大学生如何在堕落寝室",
                         videoSrc:"",
                         author:"rose",
-                        article:"文章容",
+                        article:"文章内容文章内容文章内容文章内容文章内容文章内容" +
+                            "文章内容文章内容文章内容文",
                         agreeNum:7878,
                         commentNum:96696,
-                        src:"./../../publicityPictures4.jpg"
+                        imgSrc:"./../../publicityPictures4.jpg",
+                        isShowVideo:false,
+                        isShowImg:true
+
+
 
                     },
                     {
@@ -52,13 +57,13 @@
                         title:"出淤泥而不染",
                         videoSrc:"",
                         author:"Micheal",
-                        article:"文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内" +
-                            "文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容" +
-                            "文章内容文章内容文章内容文章内容文章内容" +
-                            "容",
+                        article:"文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容",
                         agreeNum:366,
                         commentNum:12,
-                        src:"./../../publicityPictures1.jpg"
+                        imgSrc:"",
+                        isShowVideo:false,
+                        isShowImg:false
+
 
                     }
                 ]
@@ -75,6 +80,24 @@
                     console.log("到底了");
                 }
             }
+            var val = {}
+            // for (val in this.fList)
+            // {
+            //     if(this.fList[val].videoSrc == "")
+            //     {
+            //         this.fList[val].isShowVideo == false;
+            //         if(this.fList[val].imgSrc == "")
+            //         {
+            //             this.fList[val].isShowImg == false
+            //         }else {
+            //             this.fList[val].isShowImg == true
+            //         }
+            //     }else {
+            //         this.fList[val].isShowVideo == true;
+            //         this.fList[val].isShowImg == false
+            //     }
+            //     console.log(this.fList[val])
+            // }
         }
     }
 </script>
