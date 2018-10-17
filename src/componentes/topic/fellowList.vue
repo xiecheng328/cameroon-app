@@ -5,22 +5,21 @@
     <div id="container">
         <div id="headPortrait" class="headInformation HFborder"></div>
         <span class="headInformation"> &nbsp;</span>
-        <span id="name" class="headInformation HFborder">guuuu赞了你的回答</span>
+        <span id="name" class="headInformation HFborder">{{details.focusPeople}}赞了你的回答</span>
         <span id="dian" class="headInformation HFborder">&nbsp;·&nbsp;</span>
-        <div id="TUT" class="headInformation HFborder">六分钟前</div>
-        <div id="articleTitle">大学生如何在堕落的寝室中出淤泥而不染？</div>
-        <div id="article">
-                <video  id="oVd" src="../../assets/testmp4.mp4" preload controls>您的浏览器不支持video标签</video>
+        <div id="TUT" class="headInformation HFborder">{{details.time}}</div>
+        <div id="articleTitle">{{details.title}}</div>
+        <div id="art" class="article">
+                <video  id="oVd" src="./../../assets/testmp4.mp4" preload controls>您的浏览器不支持video标签</video>
         </div>
         <div id="article_img">
-            <div id="articleDetails"><span>用户名：</span>
-                <span>文章内容文章内容文章内容文章内容文
-                章内容文章内容文章内容文章内容文章内容文章内容文章内容</span>
+            <div id="articleDetails"><span>{{details.author}}：</span>
+                <span>{{details.article}}</span>
             </div>
-            <div class="publicityPictures"></div>
+            <div id="pB" class="publicityPictures" :style="{'background':'url('+details.src+')'}"></div>
         </div>
         <div id="fellowListBottom" class="HFborder">
-            <span>2121赞同</span><span>&nbsp;·&nbsp;</span><span>时间</span>
+            <span>{{details.agreeNum}}赞同</span><span>&nbsp;·&nbsp;</span><span>{{details.commentNum}}评论</span>
         </div>
     </div>
 </template>
@@ -28,6 +27,13 @@
 <script>
     export default {
         name: "fellow_list",
+        props:['details'],
+        data(){
+            return{
+            }
+        },
+        created(){
+        }
 
     }
 </script>
@@ -45,6 +51,7 @@
             color: #8590a6;
         }
         width: 100%;
+        height: 100%;
         color: black;
         margin-top:10px;
         margin-bottom:10px;
@@ -76,7 +83,7 @@
             clear: both;
             font-size: 20px;
         }
-        #article {
+        .article {
             margin-outside: 5px;
             width: 100%;
             height: 100px;
@@ -87,14 +94,22 @@
         }
         #article_img{
             display: flex;
+            height: 100%;
+            width: 100%;
             #articleDetails{
                 flex: 2;
+
             }
             .publicityPictures {
                 flex: 1;
-                background-image: url("../../assets/img/publicityPictures.jpg");
+                height: 100px;
+                width: 100px;
+                margin-bottom: auto;
+                margin-top: auto;
+                /*background: url("../../assets/img/publicityPictures0.jpg");*/
                 background-repeat: no-repeat;
-                background-size: cover;
+                background-size: contain;
+                background-position: center;
                 /*border-radius: 10%;*/
             }
         }
