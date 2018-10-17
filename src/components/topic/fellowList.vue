@@ -10,7 +10,7 @@
         <div id="TUT" class="headInformation HFborder">{{details.time}}</div>
         <div id="articleTitle">{{details.title}}</div>
         <div id="art" class="article">
-                <video  id="oVd" src="./../../assets/testmp4.mp4" preload controls>您的浏览器不支持video标签</video>
+                <video id="oVd" src="../../assets/testmp4.mp4" preload controls>您的浏览器不支持video标签</video>
         </div>
         <div id="article_img">
             <div id="articleDetails"><span>{{details.author}}：</span>
