@@ -80,7 +80,7 @@
         </ul>
         <div class="hot-nj-img-right">
           <span>东方红</span>
-          <img src="./../../assets/farm-machinery2.png" alt=""></div>
+          <img src="./../../assets/img/farm-machinery2.png" alt=""></div>
       </div>
     </div>
 
@@ -189,21 +189,21 @@
   </div>
 </template>
 <script>
-import carouselImg1 from './../../assets/banner.png';
-import carouselImg2 from './../../assets/banner.png';
-import carouselImg3 from './../../assets/banner.png';
-import carouselImg4 from './../../assets/banner.png';
+import carouselImg1 from './../../assets/img/banner.png';
+import carouselImg2 from './../../assets/img/banner.png';
+import carouselImg3 from './../../assets/img/banner.png';
+import carouselImg4 from './../../assets/img/banner.png';
 //分类图片
-import menu01 from './../../assets/menu_01.png';
-import menu02 from './../../assets/menu_02.png';
-import menu03 from './../../assets/menu_03.png';
-import menu04 from './../../assets/menu_04.png';
-import menu05 from './../../assets/menu_05.png';
-import menu06 from './../../assets/menu_06.png';
-import menu07 from './../../assets/menu_07.png';
-import menu08 from './../../assets/menu_08.png';
-import menu09 from './../../assets/menu_09.png';
-import menu10 from './../../assets/menu_10.png';
+import menu01 from './../../assets/img/menu_01.png';
+import menu02 from './../../assets/img/menu_02.png';
+import menu03 from './../../assets/img/menu_03.png';
+import menu04 from './../../assets/img/menu_04.png';
+import menu05 from './../../assets/img/menu_05.png';
+import menu06 from './../../assets/img/menu_06.png';
+import menu07 from './../../assets/img/menu_07.png';
+import menu08 from './../../assets/img/menu_08.png';
+import menu09 from './../../assets/img/menu_09.png';
+import menu10 from './../../assets/img/menu_10.png';
 //引用axios
 import axios from 'axios';
 //数据模拟
@@ -290,24 +290,24 @@ export default {
       text-align: center;
   }
   .mu-icon-button{
-    background: url(./../../assets/search-icon1.png) center no-repeat;
+    background: url(./../../assets/img/search-icon1.png) center no-repeat;
   }
   #shop-icon{
-    background: url(./../../assets/shop-icon.png) center no-repeat;
+    background: url(./../../assets/img/shop-icon.png) center no-repeat;
   }
   .shop-search{
     margin-top: 46px;
-    background: #000;
-    // background: rgba(238,238,238,1);
+    background-color: #eee;
     width: 100%;
     height: 46px;
     input{
       border-style:none; 
       margin-top: 0.1rem;
-      width: 5.5rem;
+      width: 5rem;
       height: 46px;
       border-radius: 2rem;
-      background:url(./../../assets/search-icon.png) center no-repeat;
+      background:url(./../../assets/img/search-icon.png) 50px  no-repeat;
+      background-size: 25px;
       text-align: center;
       font-weight: 400;
       font-size: 16px;
