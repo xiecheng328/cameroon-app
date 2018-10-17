@@ -31,12 +31,15 @@
     <!-- </mu-container> -->
 
     <!-- 商城主页分类 -->
-      <mu-grid-list class="gridlist-demo"  cell-height="40" :cols="5">
-          <div v-for="(tile, index) in list" :key="index" class="shop-list" >
-            <div :style="{background:tile.color}" class="img"><img :src="tile.image" ></div>
-          <div>{{tile.shopName}}</div>
-          </div>
-      </mu-grid-list>
+      <div class="gridlist-demo">
+          <ul class="shop-list">
+            <li :style="{background:tile.color}" class="img" v-for="(tile, index) in list" :key="index" >
+              <img :src="tile.image" >
+              <p>{{tile.shopName}}</p>
+            </li>
+          </ul>
+           
+      </div>
 
     <!-- 热门商品 -->
     <div class="hot-shop">
@@ -161,10 +164,12 @@
               </div>
               <div>
                 <p>{{tile.machineryPartsName}}</p>
-                <p>{{tile.price}}</p>
+                <p>￥{{tile.price}}</p>
               </div>
             </div>
           </div>
+      </div>
+      <div class="hot-sop-list">
           <div v-for="(tile, index) in parts" :key="index">
             <div class="hot-img">
               <div class="img">
@@ -291,12 +296,18 @@ export default {
     background: url(./../../assets/shop-icon.png) center no-repeat;
   }
   .shop-search{
+    margin-top: 46px;
+    background: #000;
+    // background: rgba(238,238,238,1);
+    width: 100%;
+    height: 46px;
     input{
+      border-style:none; 
       margin-top: 0.1rem;
       width: 5.5rem;
       height: 46px;
       border-radius: 2rem;
-      background:rgba(238,238,238,1);
+      background:url(./../../assets/search-icon.png) center no-repeat;
       text-align: center;
       font-weight: 400;
       font-size: 16px;
@@ -315,17 +326,22 @@ export default {
     }
   }
   .shop-list{
-    // padding-top: 0.2rem;
-    width: 1.25rem;
-    height: 1.6rem;
-    margin: 0.1rem auto;
+    padding: 0.15rem;
+    width: 100%;
+    height: 3.5rem;
+    text-align: center;
     .img{
+      margin-left: 0.1rem;
+      margin-bottom: 0.5rem;
+      float: left;
       width: 1.1rem;
       height: 1.1rem;
       border-radius: 50%;
-      margin: 0.1rem auto;
+      p{
+        margin-top: 0.3rem;
+      }
       img{
-        margin-top: 0.25rem;
+        margin-top: 0.2rem;
         width: 0.6rem;
         height: 0.6rem;
     }
@@ -338,7 +354,7 @@ export default {
   }
   .gridlist-demo{
     width: 100%;
-    height: 4rem;
+    height: 3.5rem;
     background: #fff;
   }
   .hot-shop{
@@ -523,6 +539,7 @@ export default {
     height: 5.4rem;
     margin-top: 0.25rem;
     background: #fff;
+    text-align: center;
   }
   .title{
       float: left;
