@@ -435,7 +435,7 @@ input[disabled] {
 input[type="checkbox"],
 input[type="radio"] {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+    box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -509,9 +509,9 @@ option:disabled:checked {
 * 修正 Safari 3+, Chrome 1+ Placeholder 居中问题
 */
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
-  input {
-    line-height: normal !important;
-  }
+    input {
+        line-height: normal !important;
+    }
 }
 
 /**
