@@ -10,7 +10,7 @@
 </template>
 
 <script>
-    import NewsList from "./UnattendednewsList.vue";
+    import NewsList from "./newsList.vue";
 
     export default {
         data(){
