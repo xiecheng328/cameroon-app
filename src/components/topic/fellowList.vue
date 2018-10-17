@@ -8,7 +8,7 @@
         <span id="name" class="headInformation HFborder">{{details.focusPeople}}赞了你的回答</span>
         <span id="dian" class="headInformation HFborder">&nbsp;·&nbsp;</span>
         <div id="TUT" class="headInformation HFborder">{{details.time}}</div>
-        <div id="articleTitle">{{details.title}}{{details.isShowVideo}}</div>
+        <div id="articleTitle">{{details.title}}</div>
         <div id="art" class="article" v-if=details.isShowVideo>
             <video id="oVd" :src="details.videoSrc" preload controls>您的浏览器不支持video标签</video>
         </div>
