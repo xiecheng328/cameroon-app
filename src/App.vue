@@ -15,8 +15,16 @@
 </template>
 
 <style lang="scss">
+    .container{
+        padding-left:0 !important;
+        padding-right:0 !important;
+    }
     .mu-bottom-nav {
-        height: 48px !important;
+        height: 56px !important;
+        position: fixed !important;
+        bottom: 0;
+        right: 0;
+        left: 0;
         #cameroon-blog .mu-bottom-item-wrapper .mu-bottom-item-icon {
             background: url("./assets/blog-icon-unchecked.png") center no-repeat;
             background-size: 20px;
@@ -40,7 +48,8 @@
         }
     }
     #cameroon-content{
-        height:600px;
+        height:100%;
+        margin-bottom: 56px;
     }
 
 </style>
