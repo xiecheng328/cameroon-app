@@ -39,4 +39,9 @@
 ## i18n
    约定 unit/lang 下存放语言配置目录，en.js对应英语，fra.js对应法语，zh.js对应中文
    已经实现根据浏览器语言环境，自动切换语言
-   
+  
+## CDN
+
+material-design-icons：
+
+cdn.bootcss.com
