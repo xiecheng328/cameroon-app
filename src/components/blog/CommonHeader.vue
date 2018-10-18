@@ -28,7 +28,7 @@
     }
     .head .allAttention{
         font-size: 16px;
-        
+
         width: 35%;
     }
     .head .topic{
