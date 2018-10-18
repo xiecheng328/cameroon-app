@@ -6,6 +6,7 @@
           {{val.title}}
             <!--<div id="">1130万热度</div>-->
             <!--<div>sss</div>-->
+            <div>swswswwqw</div>
             <div id="praise" >{{val.hot}}万热度</div>
         </div>
         <div id="IMG" :style="{'background-image':'url('+val.src+')'}"></div>
