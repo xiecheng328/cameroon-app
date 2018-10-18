@@ -1,6 +1,9 @@
 <template>
     <div>
         <mu-container>
+        <div id="fan-title">
+          <span class="fan-title-text">我的粉丝</span>
+        </div>
         <mu-tabs :value.sync="active1" inverse color="secondary" text-color="rgba(0, 0, 0, .54)"  center>
             <mu-tab >粉丝年龄集中</mu-tab>
             <mu-tab >粉丝性别分布</mu-tab>
@@ -30,6 +33,11 @@ export default {
 }
 </script>
 <style lang="scss">
+.fan-title-text{
+  text-align: center;
+  font-size: 18px;
+}
+
 .demo-text {
   padding: 16px;
   background: #fff;
