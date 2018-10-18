@@ -2,7 +2,7 @@
     <div>
         <mu-container>
         <div class="fan-title">
-          <mu-button class="fan-title-back" flat>返回</mu-button>
+          <mu-button class="fan-title-back" flat @click="changeFatherB">返回</mu-button>
           <h3 class="fan-title-text">我的粉丝</h3>
         </div>
         <mu-tabs :value.sync="active1" inverse color="secondary" text-color="rgba(0, 0, 0, .54)"  center>
@@ -12,12 +12,15 @@
         </mu-tabs>
         <div class="demo-text" v-if="active1 === 0">
             <p>“粉丝年龄集中”</p>
+            <router-view></router-view>
         </div>
         <div class="demo-text" v-if="active1 === 1">
             <p>“粉丝性别分布”</p>
+            <router-view></router-view>
         </div>
         <div class="demo-text" v-if="active1 === 2">
             <p>“粉丝数排名”</p>
+            <router-view></router-view>
         </div>
         </mu-container>
     </div>
@@ -30,6 +33,11 @@ export default {
     return {
       active1: 0
     };
+  },
+  methods:{
+    changeFatherB(){
+      this.$emit('resetFatherp');
+    }
   }
 }
 </script>
