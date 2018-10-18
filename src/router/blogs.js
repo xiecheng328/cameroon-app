@@ -2,7 +2,7 @@
  * Created by apple on 18/10/11.
  * blog(微博)模块子路由
  */
-import details from '@/views/blog/Detail.vue';
+import details from '@/views/blog/Allflw.vue';
 import topic from '@/views/blog/Topic.vue';
 import fellow from '@/views/blog/topic/Fellow(glx).vue';
 import recommend from '@/views/blog/topic/Recommend.vue';
