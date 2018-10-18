@@ -33,7 +33,6 @@ export default [
             {path: 'hotlist', component: hotlist, name: 'hotlist'},
             {path: 'alists', component: alists, name: 'alists'},
             {path: 'article', component: article, name: 'article'},
-
         ]
     },
     {path: '/sendweibo', component: SendWeibo},
