@@ -17,7 +17,7 @@ import CommonFooter from '@/components/common/CommonFooter.vue';
 import SendWeibo from '@/views/blog/view/SendWeibo.vue';
 import Search from '@/views/blog/topic/Search.vue';
 import TopicHeader from '@/components/topic/TopicHeader.vue'
-
+import TopicComment from '@/views/blog/topic/Comment.vue'
 export default [
     {
         path: '/blog',
@@ -79,6 +79,10 @@ export default [
                 },
                 name: 'article'
             },
+            {
+                path:'comment',
+                component:TopicComment,
+            }
         ]
     },
     {path: '/sendweibo', component: SendWeibo},
