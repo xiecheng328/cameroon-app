@@ -1,8 +1,11 @@
 <template>
   <div class="profile">
-    <router-view></router-view>
-    <div v-show="isClick">
+    <router-view v-show="!isClick"></router-view>
 
+     <!--  此处的子页面 v-show变量要通过各子页面的“返回按钮”的点击改变父组件的isClick的值，取反，（父子，子父组件传参）自己研究-->
+
+    <div v-show="isClick">
+   
     <h3 class="profile-header">我的</h3>
     <div class="profile-user">
       <div class="profile-user-slideimg"><img src="@/assets/img/user.png" alt="" class="profile-user-slideimg-uersimg"></div>
