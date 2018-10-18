@@ -7,7 +7,7 @@
     </div>
     <div class="menuprofile">
       <div class="menuprofile-first">
-        <li v-for="(item,index) in profileMenu" :key="index"><img :src="item.iconimg" alt=""><span>{{item.text}}</span></li>
+        <li v-for="(item,index) in profileMenu" :key="index" @click="routerGo"><img :src="item.iconimg" alt="" ><span>{{item.text}}</span></li>
       </div>
       <div class="menuprofile-second"></div>
       <div class="menuprofile-third"></div>
@@ -49,10 +49,15 @@ export default {
      }
    },
    created() {
-     
-   },
-   methods:{
 
+   },
+  
+
+   
+   methods:{
+    routerGo(){
+      
+    },
    }
 }
 </script>
@@ -60,7 +65,7 @@ export default {
 .profile{
 
   &-header{
-    margin-top: 20px;
+    margin-top: 0.4rem;
     height: 40px;
     line-height: 40px;
     text-align: center;
