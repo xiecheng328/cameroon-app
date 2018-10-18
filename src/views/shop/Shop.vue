@@ -186,9 +186,11 @@
     <div class="allProduct">
      <mu-button full-width textColor="#2196F3" style="font-size:16px">查看全部产品</mu-button>
     </div>
+    <confirmReceipt/>
   </div>
 </template>
 <script>
+import ConfirmReceipt from "./ConfirmReceipt.vue";
 import carouselImg1 from './../../assets/img/banner.png';
 import carouselImg2 from './../../assets/img/banner.png';
 import carouselImg3 from './../../assets/img/banner.png';
@@ -211,6 +213,9 @@ import './mock/shopList.js';
 import './mock/brand.js';
 import './mock/tractors.js';
 export default {
+  components:{
+      ConfirmReceipt,
+  },
   data () {
     return {
       list: [{
