@@ -4,7 +4,7 @@
         <mu-appbar style="width: 100%; height: 50px;">
             <mu-button flat to="/blog/details" slot="left">全部关注</mu-button>
             <mu-button flat to="/blog/topic/recommend" @click="showSearchBtn" slot="left">话题</mu-button>
-            <mu-auto-complete label="提示输入内容"></mu-auto-complete>
+            <mu-auto-complete></mu-auto-complete>
             <mu-button icon slot="right">
                 <mu-icon value="search"></mu-icon>
             </mu-button>

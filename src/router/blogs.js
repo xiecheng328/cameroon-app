@@ -10,7 +10,7 @@ import hotlist from '@/views/blog/topic/HotList.vue';
 import alists from '@/views/blog/topic/ArticleLists.vue';
 import qutquestion from '@/views/blog/PutQuestion.vue';
 import answer from '@/views/blog/topic/Answer.vue';
-
+import article from '@/views/blog/topic/Article.vue'
 export default [
     {path: 'details', component: details},
     {path: 'qutquestion', component: qutquestion, name: 'qutquestion'},
@@ -22,6 +22,8 @@ export default [
             {path: 'recommend', component: recommend, name: 'recommend'},
             {path: 'hotlist', component: hotlist, name: 'hotlist'},
             {path: 'alists', component: alists, name: 'alists'},
+            {path: 'article', component: article, name: 'article'},
+
         ]
     },
 
