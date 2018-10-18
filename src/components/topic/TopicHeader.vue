@@ -8,6 +8,15 @@
             <mu-icon value="search"></mu-icon>
         </mu-button>
     </mu-appbar>
+    <mu-appbar style="width: 100%;height: 30px;" title="">
+        <mu-container class="button-wrapper">
+            <mu-button flat to="/blog/topic/fellow">关注</mu-button>
+            <mu-button flat to="/blog/topic/recommend">推荐</mu-button>
+            <mu-button flat to="/blog/topic/hotlist">热榜</mu-button>
+            <!--<mu-button flat to="/blog/topic/alists">回答</mu-button>-->
+        </mu-container>
+    </mu-appbar>
+
 </template>
 
 <script>
