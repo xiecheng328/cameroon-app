@@ -26,7 +26,7 @@ const messages = {
     fr: require('./Unit/lang/fra.js')
 };
 const i18n = new VueI18n({
-    locale: getBrowserLanguage(), // 语言标识
+    locale: 'zh', // 语言标识
     messages
 });
 new Vue({

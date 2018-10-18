@@ -2,18 +2,19 @@
     <div id="app">
         <mu-container>
             <div id="cameroon-content">
-                <router-view/>
+               <router-view></router-view>
             </div>
-           <common-footer></common-footer>
+           <!--<common-footer></common-footer>-->
+            <router-view name="footer"></router-view>
         </mu-container>
     </div>
 </template>
 <script>
-    import CommonFooter from '@/components/common/CommonFooter.vue';
+    //import CommonFooter from '@/components/common/CommonFooter.vue';
     export default {
-        components:{
-            CommonFooter
-        }
+        // components:{
+        //     CommonFooter
+        // }
     }
 </script>
 <style lang="scss">

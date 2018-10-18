@@ -3,7 +3,6 @@
   
     <div class="shop">
       <!-- 商城title -->
-      
       <mu-appbar style="width: 100%;left:0;right:0;top:0;position:fixed;" color="#FFFFFF" z-depth="0" textColor="#333333">
       <mu-button icon slot="left" @click="goSearch()">
       <mu-icon ></mu-icon>

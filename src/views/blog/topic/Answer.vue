@@ -1,5 +1,6 @@
 <template>
     <!--叶欣-->
+    <div class="cameroon-answer">
     <div id="title">
         <h3>中国的农业发展迅速是因为先进的生产设备吗？</h3>
         <a href="#">写回答</a>&nbsp;&nbsp;
@@ -31,6 +32,7 @@
         <i class="iconfont icon-shoucang"></i>
         <i class="iconfont icon-dianzan"></i>
         <i class="iconfont icon-pinglun"></i>
+    </div>
     </div>
 </template>
 

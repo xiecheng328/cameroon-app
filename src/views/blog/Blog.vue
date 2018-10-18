@@ -1,21 +1,38 @@
 <template>
     <div class="blog">
         <!--<h1>This is a message page</h1>-->
-        <mu-appbar style="width: 100%; height: 50px;" title="Title">
-            <mu-container class="button-wrapper">
-                <mu-button flat to="/blog/details">全部关注</mu-button>
-                <mu-button flat to="/blog/topic/recommend">话题</mu-button>
-            </mu-container>
-        </mu-appbar>
+        <router-view name="header"></router-view>
         <router-view></router-view>
+        <router-view name="footer"></router-view>
     </div>
 </template>
-<style scoped lang="scss">
-    .mu-elevation-4{
-        -webkit-box-shadow:none;
-        box-shadow:none;
+<script>
+    export default {
+        data() {
+            return {
+                showSearch: false,
+            }
+        },
+        methods: {
+            showSearchBtn() {
+                this.showSearch = true;
+            }
+        }
     }
-    .mu-appbar{
+</script>
+<style scoped lang="scss">
+    @import url("//unpkg.com/muse-ui@3.0.1/dist/muse-ui.css");
+
+    .cameroon-search {
+        display: none;
+    }
+
+    .mu-elevation-4 {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .mu-appbar {
         background-color: white;
     }
 </style>
