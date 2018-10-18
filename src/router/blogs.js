@@ -8,7 +8,7 @@ import fellow from '@/views/blog/topic/Fellow(glx).vue';
 import recommend from '@/views/blog/topic/Recommend.vue';
 import hotlist from '@/views/blog/topic/HotList.vue';
 import alists from '@/views/blog/topic/ArticleLists.vue';
-import qutquestion from '@/views/blog/PutQuestion.vue';
+import putquestion from '@/views/blog/topic/PutQuestion.vue';
 import answer from '@/views/blog/topic/Answer.vue';
 import article from '@/views/blog/topic/Article.vue';
 import ArticleFooter from '@/components/topic/ArticleFooter.vue';
@@ -23,8 +23,8 @@ export default [
         path: '/blog',
         redirect: "/blog/details"
     },
+    {path: '/sendweibo', component: SendWeibo},
     {path: 'details', components: {header: BlogHeader, default: details, footer: CommonFooter}},
-    {path: 'qutquestion', component: qutquestion, name: 'qutquestion'},
     {path: '/answer', component: answer, name: 'answer'},
     {path: 'search', component: Search, name: 'Search'},
     {
@@ -82,10 +82,13 @@ export default [
             {
                 path:'comment',
                 component:TopicComment,
-            }
+            },
+            {
+                path: 'putquestion',
+                component: putquestion,
+                name: 'qutquestion'
+            },
+
         ]
     },
-    {path: '/sendweibo', component: SendWeibo},
-
-
 ]
