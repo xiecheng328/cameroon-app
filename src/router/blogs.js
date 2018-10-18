@@ -2,38 +2,93 @@
  * Created by apple on 18/10/11.
  * blog(微博)模块子路由
  */
-import details from '@/views/blog/Detail.vue';
+import details from '@/views/blog/Allflw.vue';
 import topic from '@/views/blog/Topic.vue';
 import fellow from '@/views/blog/topic/Fellow(glx).vue';
 import recommend from '@/views/blog/topic/Recommend.vue';
 import hotlist from '@/views/blog/topic/HotList.vue';
 import alists from '@/views/blog/topic/ArticleLists.vue';
-import qutquestion from '@/views/blog/PutQuestion.vue';
+import putquestion from '@/views/blog/topic/PutQuestion.vue';
 import answer from '@/views/blog/topic/Answer.vue';
 import article from '@/views/blog/topic/Article.vue';
 import ArticleFooter from '@/components/topic/ArticleFooter.vue';
 import BlogHeader from '@/components/blog/CommonHeader.vue';
 import CommonFooter from '@/components/common/CommonFooter.vue';
-
+import SendWeibo from '@/views/blog/view/SendWeibo.vue';
+import Search from '@/views/blog/topic/Search.vue';
+import TopicHeader from '@/components/topic/TopicHeader.vue'
+import TopicComment from '@/views/blog/topic/Comment.vue'
 export default [
     {
         path: '/blog',
         redirect: "/blog/details"
     },
-    {path: 'details', components: {header: BlogHeader, default: details,footer:CommonFooter}},
-    {path: 'qutquestion', component: qutquestion, name: 'qutquestion'},
+    {path: '/sendweibo', component: SendWeibo},
+    {path: 'details', components: {header: BlogHeader, default: details, footer: CommonFooter}},
     {path: '/answer', component: answer, name: 'answer'},
+    {path: 'search', component: Search, name: 'Search'},
     {
-        path: 'topic', components: {header:BlogHeader, default: topic,footer: ArticleFooter}, name: 'topic',
+        path: 'topic',
+        component: topic,
+        name: 'topic',
         children: [
-            {path: 'fellow', components:{ default:fellow,footer:ArticleFooter}, name: 'fellow'},
-            {path: 'recommend', component: recommend, name: 'recommend'},
-            {path: 'hotlist', component: hotlist, name: 'hotlist'},
-            {path: 'alists', component: alists, name: 'alists'},
-            {path: 'article', component: article, name: 'article'},
+            {
+                path: 'fellow',
+                components:
+                    {
+                        header: TopicHeader,
+                        default: fellow,
+                        footer: ArticleFooter
+                    },
+                name: 'fellow'
+            },
+            {
+                path: 'recommend',
+                components: {
+                    header: TopicHeader,
+                    footer: CommonFooter,
+                    default: recommend,
+
+                },
+                name: 'recommend'
+            },
+            {
+                path: 'hotlist',
+                components: {
+                    header: TopicHeader,
+                    footer: CommonFooter,
+                    default: hotlist
+                },
+                name: 'hotlist'
+            },
+            {
+                path: 'alists',
+                components: {
+                    header: TopicHeader,
+                    footer: CommonFooter,
+                    default: alists
+                },
+                name: 'alists'
+            },
+            {
+                path: 'article',
+                components: {
+                    header: TopicHeader,
+                    footer: CommonFooter,
+                    default: article
+                },
+                name: 'article'
+            },
+            {
+                path:'comment',
+                component:TopicComment,
+            },
+            {
+                path: 'putquestion',
+                component: putquestion,
+                name: 'qutquestion'
+            },
 
         ]
     },
-
-
 ]

@@ -1,22 +1,22 @@
 <template>
     <div>
     <div id="topic">
-        <div id="serialNumber">1</div>
+        <div id="serialNumber">{{index+1}}</div>
         <div id="title">
-          赵丽颖冯绍峰领证
+          {{val.title}}
             <!--<div id="">1130万热度</div>-->
             <!--<div>sss</div>-->
-            <div id="praise">23121万热度</div>
+            <div id="praise" >{{val.hot}}万热度</div>
         </div>
-        <div id="IMG"></div>
-
+        <div id="IMG" :style="{'background-image':'url('+val.src+')'}"></div>
     </div>
     </div>
 </template>
 
 <script>
     export default {
-        name: "hotlistDetails"
+        name: "hotlistDetails",
+        props:['val','index'],
     }
 </script>
 
@@ -31,9 +31,10 @@
             clear: both;
             margin-bottom: 10px;
             margin-top: 10px;
+            padding: 0.1rem;
             #serialNumber{
                 width: 30px;
-                font-size: 15px;
+                font-size: 20px;
                 color: red;
             }
             #title{
@@ -42,11 +43,13 @@
                 text-align: center;
                 line-height: 100%;
                 position: relative;
-                top: 2px;
+                top: 0.05rem;
                 #praise{
                     position: absolute;
                     left: 0;
                     bottom: 0;
+                    font-size: 10px;
+                    color: #8590a6;
                 }
             }
             #IMG{
