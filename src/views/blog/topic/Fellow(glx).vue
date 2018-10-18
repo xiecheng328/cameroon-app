@@ -1,5 +1,5 @@
 <template>
-    <router-link to="" id="contain">
+    <router-link to="article" id="contain">
         <fellowList v-for="(val,index) in fList" :key="index" :details="val"></fellowList>
         <div class="load" v-show="isShow">
             <img src="../../../assets/img/loading.gif" alt="">
