@@ -16,23 +16,73 @@ import BlogHeader from '@/components/blog/CommonHeader.vue';
 import CommonFooter from '@/components/common/CommonFooter.vue';
 import SendWeibo from '@/views/blog/view/SendWeibo.vue';
 import Search from '@/views/blog/topic/Search.vue';
+import TopicHeader from '@/components/topic/TopicHeader.vue'
+import TopicComment from '@/views/blog/topic/Comment.vue'
 export default [
     {
         path: '/blog',
         redirect: "/blog/details"
     },
-    {path: 'details', components: {header: BlogHeader, default: details,footer:CommonFooter}},
+    {path: 'details', components: {header: BlogHeader, default: details, footer: CommonFooter}},
     {path: 'qutquestion', component: qutquestion, name: 'qutquestion'},
     {path: '/answer', component: answer, name: 'answer'},
     {path: 'search', component: Search, name: 'Search'},
     {
-        path: 'topic', components: {header:BlogHeader, default: topic,footer: ArticleFooter}, name: 'topic',
+        path: 'topic',
+        component: topic,
+        name: 'topic',
         children: [
-            {path: 'fellow', components:{ default:fellow,footer:ArticleFooter}, name: 'fellow'},
-            {path: 'recommend', component: recommend, name: 'recommend'},
-            {path: 'hotlist', component: hotlist, name: 'hotlist'},
-            {path: 'alists', component: alists, name: 'alists'},
-            {path: 'article', component: article, name: 'article'},
+            {
+                path: 'fellow',
+                components:
+                    {
+                        header: TopicHeader,
+                        default: fellow,
+                        footer: ArticleFooter
+                    },
+                name: 'fellow'
+            },
+            {
+                path: 'recommend',
+                components: {
+                    header: TopicHeader,
+                    footer: CommonFooter,
+                    default: recommend,
+
+                },
+                name: 'recommend'
+            },
+            {
+                path: 'hotlist',
+                components: {
+                    header: TopicHeader,
+                    footer: CommonFooter,
+                    default: hotlist
+                },
+                name: 'hotlist'
+            },
+            {
+                path: 'alists',
+                components: {
+                    header: TopicHeader,
+                    footer: CommonFooter,
+                    default: alists
+                },
+                name: 'alists'
+            },
+            {
+                path: 'article',
+                components: {
+                    header: TopicHeader,
+                    footer: CommonFooter,
+                    default: article
+                },
+                name: 'article'
+            },
+            {
+                path:'comment',
+                component:TopicComment,
+            }
         ]
     },
     {path: '/sendweibo', component: SendWeibo},
