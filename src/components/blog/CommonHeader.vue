@@ -15,7 +15,6 @@
     export default {
         name: "CommonHeader",
         methods:{
-
         }
     }
 </script>
@@ -23,18 +22,14 @@
 <style scoped>
 
     .head .camera{
-
         width: 15%;
     }
     .head .allAttention{
         font-size: 16px;
-
         width: 35%;
     }
     .head .topic{
-
         font-size: 16px;
-
         width: 35%;
     }
     .head .add{
