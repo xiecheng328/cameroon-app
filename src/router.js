@@ -6,7 +6,8 @@ import Blog from '@/views/blog/Blog.vue';
 import Message from '@/views/message/Message.vue';
 import Shop from '@/views/shop/Shop.vue';
 import Profile from '@/views/profile/Profile.vue';
-import Answer from '@/views/blog/topic/Answer.vue';
+
+import CommonFooter from '@/components/common/CommonFooter.vue'
 
 // 引用 blog 子路由配置文件
 import blogs from './router/blogs.js'
@@ -32,22 +33,31 @@ export default new Router({
         },
         {
             path: '/blog',
-            component: Blog,
+            component:Blog,
             children: blogs
         },
         {
             path: '/shop',
-            component: Shop,
+            components: {
+                default:Shop,
+                footer:CommonFooter
+            },
             children: shops
         },
         {
             path: '/message',
-            component: Message,
+            components: {
+                default:Message,
+                footer:CommonFooter
+            },
             children: messages
         },
         {
             path: '/profile',
-            component: Profile,
+            components: {
+                default:Profile,
+                footer:CommonFooter
+            },
             children: profiles
         },
     ]

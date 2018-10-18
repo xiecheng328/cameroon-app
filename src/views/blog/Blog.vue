@@ -1,15 +1,9 @@
 <template>
     <div class="blog">
         <!--<h1>This is a message page</h1>-->
-        <mu-appbar style="width: 100%; height: 50px;">
-            <mu-button flat to="/blog/details" slot="left">全部关注</mu-button>
-            <mu-button flat to="/blog/topic/recommend" @click="showSearchBtn" slot="left">话题</mu-button>
-            <mu-auto-complete></mu-auto-complete>
-            <mu-button icon slot="right">
-                <mu-icon value="search"></mu-icon>
-            </mu-button>
-        </mu-appbar>
+        <router-view name="header"></router-view>
         <router-view></router-view>
+        <router-view name="footer"></router-view>
     </div>
 </template>
 <script>

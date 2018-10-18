@@ -1,11 +1,9 @@
 <template>
     <mu-bottom-nav>
-        <slot>
             <mu-bottom-nav-item :title="bottomBar.blog" to="/Blog" icon="." id="cameroon-blog"></mu-bottom-nav-item>
             <mu-bottom-nav-item :title="bottomBar.message" to="/message" icon="." id="cameroon-message"></mu-bottom-nav-item>
             <mu-bottom-nav-item :title="bottomBar.shop" to="/shop" icon="." id="cameroon-shop"></mu-bottom-nav-item>
             <mu-bottom-nav-item :title="bottomBar.profile" to="/profile" icon="." id="cameroon-profile"></mu-bottom-nav-item>
-        </slot>
     </mu-bottom-nav>
 </template>
 <script>
