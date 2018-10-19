@@ -16,7 +16,7 @@
                             <p><span>名称：</span>{{item.name}}</p>
                             <p><span>价格：¥</span>{{item.price}}</p>
                         </div>
-                        <div class="commodity-content-list-cancel"><button>取消关注</button></div>
+                        <div class="commodity-content-list-cancel" @click="detele(index)"><button>取消关注</button></div>
                     </div>
                 </div>
             </li>
@@ -29,6 +29,11 @@ export default {
     props:[
         'commodity'
     ],
+    methods:{
+      detele(index){
+        this.$props.commodity.splice(index,1);
+      }
+    }
 };
 </script>
 
@@ -84,9 +89,13 @@ export default {
         bottom: 0.1rem;
         right: 0.1rem;
         button {
-          border: 1px solid #000;
-          background-color: #fff;
+          background-color: rgb(209, 5, 5);
           font-size: 0.1rem;
+          color: #fff;
+          outline: none;
+          width: 1rem;
+          height: .5rem;
+          line-height: .5rem;
         }
       }
     }
