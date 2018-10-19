@@ -4,11 +4,11 @@
  */
 import cHead from '@/components/common/CommonHead.vue';
 import details from '@/views/blog/Allflw.vue';
-import answer from '@/views/blog/topic/Answer.vue';
+// import answer from '@/views/blog/topic/Answer.vue';
 import BlogHeader from '@/views/blog/component/BlogHeader.vue';
 import CommonFooter from '@/components/common/CommonFooter.vue';
 import SendWeibo from '@/views/blog/view/SendWeibo.vue';
-import Search from '@/views/blog/topic/Search.vue';
+// import Search from '@/views/blog/topic/Search.vue';
 import comment from '@/views/blog/view/comment.vue';
 import LikeWeibo from '@/views/blog/view/LikeWeibo.vue';
 import CommentWb from '@/views/blog/view/CommentWb.vue';
@@ -21,8 +21,8 @@ export default [
     },
     {path: '/sendweibo', component: SendWeibo},
     {path: 'details', components: {header: BlogHeader, default: details, footer: CommonFooter}},
-    {path: '/answer', component: answer, name: 'answer'},
-    {path: 'search', component: Search, name: 'Search'},
+    // {path: '/answer', component: answer, name: 'answer'},
+    // {path: 'search', component: Search, name: 'Search'},
     {path: '/likeweibo', component: LikeWeibo,name: 'LikeWeibo'},
     {path: '/commentwb', component: CommentWb,name: 'CommentWb'},
     {path: '/repostwb', component: RepostWb,name: 'RepostWb'},
