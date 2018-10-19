@@ -49,7 +49,7 @@ export default {
   data(){
     return{
       active1:0,
-      imgs:[
+      /*imgs:[
         {
           imgurl:require('./../../../../../public/img.1/profilemydownload.jpg')
         },
@@ -86,7 +86,7 @@ export default {
         {
           imgurl:require('./../../../../../public/img.1/profilemydownload.jpg')
         },
-      ]
+      ]*/
     };  
   },
   methods:{
