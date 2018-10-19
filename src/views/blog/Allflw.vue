@@ -68,7 +68,6 @@
 <style lang="scss">
   .detail{
     margin-top: .2rem;
-
   }
   .detail-content{
     height: 78px;
@@ -109,7 +108,6 @@
   }
   .image{
     width: 100%;
-    /*display: flex;*/
   }
   .image img{
     width: 1.7rem;
