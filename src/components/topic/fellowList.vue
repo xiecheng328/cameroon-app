@@ -2,7 +2,8 @@
     <!--headPortrait:头像-->
     <!--name:点赞人-->
     <!--TUT:点赞时间(time up time)-->
-    <div id="container">
+
+    <div  id="container">
         <div id="headPortrait" class="headInformation HFborder"></div>
         <span class="headInformation"> &nbsp;</span>
         <span id="name" class="headInformation HFborder">{{details.focusPeople}}赞了你的回答</span>
@@ -21,7 +22,8 @@
         <div id="fellowListBottom" class="HFborder">
             <span>{{details.agreeNum}}赞同</span><span>&nbsp;·&nbsp;</span><span>{{details.commentNum}}评论</span>
         </div>
-    </div>
+        </div>
+
 </template>
 
 <script>

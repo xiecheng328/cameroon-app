@@ -2,6 +2,7 @@
  * Created by apple on 18/10/11.
  * blog(微博)模块子路由
  */
+import cHead from '@/components/common/CommonHead.vue';
 import details from '@/views/blog/Allflw.vue';
 import topic from '@/views/blog/Topic.vue';
 import fellow from '@/views/blog/topic/Fellow(glx).vue';
@@ -18,6 +19,7 @@ import SendWeibo from '@/views/blog/view/SendWeibo.vue';
 import Search from '@/views/blog/topic/Search.vue';
 import TopicHeader from '@/components/topic/TopicHeader.vue'
 import TopicComment from '@/views/blog/topic/Comment.vue'
+import ownPages from '@/views/blog/OwnPage.vue'
 export default [
     {
         path: '/blog',
@@ -27,6 +29,7 @@ export default [
     {path: 'details', components: {header: BlogHeader, default: details, footer: CommonFooter}},
     {path: '/answer', component: answer, name: 'answer'},
     {path: 'search', component: Search, name: 'Search'},
+    {path :'/cHead',component:cHead,name:'CommonHead'},
     {
         path: 'topic',
         component: topic,
@@ -38,7 +41,7 @@ export default [
                     {
                         header: TopicHeader,
                         default: fellow,
-                        footer: ArticleFooter
+                        footer: CommonFooter
                     },
                 name: 'fellow'
             },
@@ -88,7 +91,10 @@ export default [
                 component: putquestion,
                 name: 'qutquestion'
             },
-
+            {
+                path:'ownPage',
+                component:ownPages
+            }
         ]
     },
 ]
