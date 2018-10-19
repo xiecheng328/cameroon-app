@@ -1,11 +1,11 @@
 <template>
-<div id="withme">
- <div id='messageTitle'>
-  <span style="margin-left: .1rem"><-</span>
-  <h5>@我</h5>
- </div>
- <div class="titlehead">
-  <img class="messagehead" src="../../assets/img/messagesHead.png" alt="">
+ <div id="withme">
+  <div id='messageTitle'>
+   <span style="margin-left: .1rem"><-</span>
+   <h5>@我</h5>
+  </div>
+  <div class="titlehead">
+   <img class="messagehead" src="../../assets/img/messagesHead.png" alt="">
    <ul>
     <li>
      昵称1
@@ -14,41 +14,41 @@
      5-22 16:40
     </li>
    </ul>
- </div>
- <p>//@昵称1 ：转发消息</p>
+  </div>
+  <p>//@昵称1 ：转发消息</p>
   <div class="messagecontain">
    <img class="messageconent" src="../../assets/img/messageConent.png" alt="">
    <div class="containtext">
-   <span>@昵称2</span>
-   <div class="containtext">内容内容内容内容内容内容内容内容
-  内容内容内容内容内容内容内容内容
-  内容
+    <span>@昵称2</span>
+    <div class="containtext">内容内容内容内容内容内容内容内容
+     内容内容内容内容内容内容内容内容
+     内容
+    </div>
    </div>
-   </div>
- </div>
- <div class="titlehead">
-  <img class="messagehead" src="../../assets/img/messagesHead.png" alt="">
-  <ul>
-   <li>
-    昵称3
-   </li>
-   <li>
-    5-22 16:40
-   </li>
-  </ul>
- </div>
- <p>评论内容@昵称1</p>
- <div class="messagecontain">
-  <img class="messageconent" src="../../assets/img/messageConent.png" alt="">
-  <div class="containtext">
-   <span>@昵称3</span>
-   <div class="containtext">内容内容内容内容内容内容内容内容
-    内容内容内容内容内容内容内容内容
-    内容
+  </div>
+  <div class="titlehead">
+   <img class="messagehead" src="../../assets/img/messagesHead.png" alt="">
+   <ul>
+    <li>
+     昵称3
+    </li>
+    <li>
+     5-22 16:40
+    </li>
+   </ul>
+  </div>
+  <p>评论内容@昵称1</p>
+  <div class="messagecontain">
+   <img class="messageconent" src="../../assets/img/messageConent.png" alt="">
+   <div class="containtext">
+    <span>@昵称3</span>
+    <div class="containtext">内容内容内容内容内容内容内容内容
+     内容内容内容内容内容内容内容内容
+     内容
+    </div>
    </div>
   </div>
  </div>
-</div>
 </template>
 <script>
 
@@ -59,10 +59,10 @@
   margin-right: 3.1rem;
 
  }
-.messagehead{
- width:.7rem!important;
- height: .7rem!important;
-}
+ .messagehead{
+  width:.7rem!important;
+  height: .7rem!important;
+ }
  .messageconent{
   width: 1.2rem;
   height: 1.2rem;
