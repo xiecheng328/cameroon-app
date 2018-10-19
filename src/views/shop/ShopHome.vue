@@ -37,7 +37,7 @@
     <!-- 商城主页分类 -->
       <div class="gridlist-demo">
           <ul class="shop-list">
-            <li :style="{background:tile.color}" class="img" v-for="(tile, index) in list" :key="index" @click="goEnterList(index)">
+            <li :style="{background:tile.color}" class="img" v-for="(tile, index) in list" :key="index" @click="goEnterList(index),classify(index)">
               <img :src="tile.image" >
               <p>{{tile.shopName}}</p>
             </li>
@@ -281,6 +281,16 @@ export default {
     goEnterList(nowIndex){
       let productList = this.list;
       console.log(productList[nowIndex].shopName);
+    },
+    classify(nowIndex){
+      let productList = this.list;
+      let name = productList[nowIndex].shopName;
+      console.log(name);
+      if(name == "全部"){
+        this.$router.push({
+        path:'/shop/classify'
+      })
+      }
     },
     goLookAll(){
       console.log(123);
