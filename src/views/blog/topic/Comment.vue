@@ -34,10 +34,8 @@
 </template>
 <!--<link rel="stylesheet" type="text/css" href="./topic_font/iconfont.css ">-->
 <script>
-    import Props from "muse-ui/src/Picker/mixins/props";
-    export default {
+     export default {
         name: "Comment",
-        components: {Props},
         data(){
             return{
                 cList:[

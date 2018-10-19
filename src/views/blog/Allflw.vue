@@ -65,7 +65,7 @@
     </ul>
   </div>
 </template>
-<style lang="scss">
+<style scoped lang="scss">
     *{
         margin: 0;
         padding: 0;
