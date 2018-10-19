@@ -3,7 +3,7 @@
     <div>
         <div class="searchBar">
             <mu-button icon slot="left" id="return">
-                <mu-button flat to="/blog/topic/recommend" >返回</mu-button>
+                <mu-button flat to="/topic/recommend" >返回</mu-button>
                 <!--<mu-icon value="close" flat to="/blog/topic/recommend"></mu-icon>-->
             </mu-button>
             <mu-auto-complete v-model="val"></mu-auto-complete>
@@ -57,15 +57,15 @@
                 arr:[],
                 hotList:[
                     {
-                        content:'拖拉机大减价',
+                        content:'播种机价格',
 
                     },
                     {
-                        content:'玉米种子大甩卖',
+                        content:'玉米种子价格比较',
 
                     },
                     {
-                        content:'挖掘机技术哪家强',
+                        content:'惠农政策',
 
                     },
                     {
