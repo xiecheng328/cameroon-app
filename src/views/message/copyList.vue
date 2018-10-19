@@ -1,5 +1,5 @@
 <template>
-<div class="report">
+<div class="copyList">
 
     <div class="header">
 <img src="../../assets/img/left.png" alt="" class="comeback" @click="home()">
@@ -75,7 +75,7 @@
     }
     .goodmark{
         font-size:20px;
-        background: #ff0000;
+        background: pink;
     }
     </style>
 
