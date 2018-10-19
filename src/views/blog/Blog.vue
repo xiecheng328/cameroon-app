@@ -3,6 +3,7 @@
         <!--<h1>This is a message page</h1>-->
         <router-view name="header"></router-view>
         <router-view></router-view>
+        <router-link to="/ownPage/weibos">个人主页</router-link>
         <router-view name="footer"></router-view>
     </div>
 </template>
