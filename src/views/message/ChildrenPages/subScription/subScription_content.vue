@@ -3,7 +3,7 @@
         <div class="header">
             <span class="ReturnPre"><<</span>
             <h5 class="small-header">订阅消息</h5>
-            <img class="addMore" src="../assets/message_add.png" alt="">
+            <img class="addMore" src="../../../../assets/img/message_add.png" alt="">
         </div>
         <SubScription_message  v-for="val in list" :list="val"></SubScription_message>
     </div>

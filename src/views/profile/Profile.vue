@@ -94,7 +94,6 @@ export default {
 .profile{
 
   &-header{
-    margin-top: 0.4rem;
     height: 40px;
     line-height: 40px;
     text-align: center;

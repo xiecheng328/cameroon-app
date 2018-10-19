@@ -55,7 +55,7 @@
         }
     }
 </script>
-<style lang="scss">
+<style scoped lang="scss">
     * {
         margin: 0px;
         padding: 0px;

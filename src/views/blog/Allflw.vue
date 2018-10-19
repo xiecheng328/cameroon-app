@@ -1,21 +1,17 @@
-
 <template>
   <div class="detail">
     <!--<router-link to="/ownPage/weibos">个人主页</router-link>-->
     <ul>
       <li>
-
         <div class="detail-content">
           <router-link to="/ownPage/weibos">
             <img src="../../assets/img/mood (1).jpg" alt="" class="head-por">
           </router-link>
-
           <div class="con-name">
             <div class="name-id">杂交水稻研究人</div>
             <div class="name-time">1小时前</div>
           </div>
         </div>
-
         <div class="text">
           <span>
             【河南夏邑借棚改之名强征千亩耕地 农业局称：土地权证发错了！】村里的一位老党员称，9月2日，乡政府组织村里开过一次村民代表大会，说的重点是棚户区改造的情况，当时乡党委书记董天成在会上明确表示，土地批文下来后才会征地。没想到会后第二天，就把耕地全部铲平了。

@@ -10,7 +10,7 @@
         </div>
         <ul class="cbody">
             <li v-for="val in cList ">
-                <div class="cimg">{{val.idimg}}</div>
+                <img class="cimg" :src="val.idimg">
                 <span class="cbody-idname">
                     {{val.idname}}
                 </span>
@@ -34,15 +34,13 @@
 </template>
 <!--<link rel="stylesheet" type="text/css" href="./topic_font/iconfont.css ">-->
 <script>
-    import Props from "muse-ui/src/Picker/mixins/props";
-    export default {
+     export default {
         name: "Comment",
-        components: {Props},
         data(){
             return{
                 cList:[
                     {
-                       idimg:'../../../assets/img/1230.jpg',
+                       idimg:'./../../img/1230.jpg',
                        idname:'猫掉了',
                        idcomment:'产品非常好产品非常好产品非常好产品非常好产品非常好产品非常好产品非常好产品非常好',
                        datatime:'08-08',
@@ -51,7 +49,7 @@
                        iconimg2:'评论'
                     },
                     {
-                        idimg:'../../../assets/img/1230.jpg',
+                        idimg:'./../../img/1230.jpg',
                         idname:'一戒',
                         idcomment:'产品非常好产品非常好产品非常好产品非常好产品非常好',
                         datatime:'08-10',
@@ -60,7 +58,7 @@
                         iconimg2:'评论'
                     },
                     {
-                        idimg:'../../../assets/img/1230.jpg',
+                        idimg:'./../../img/1230.jpg',
                         idname:'柒',
                         idcomment:'产品非常好',
                         datatime:'08-19',
@@ -74,7 +72,10 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+    .cimg{
+        width: 1rem;
+    }
     #comment{
         height: 12rem;
         background: white;

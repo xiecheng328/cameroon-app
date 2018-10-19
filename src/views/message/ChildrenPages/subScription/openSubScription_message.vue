@@ -3,7 +3,7 @@
         <div class="timer">{{list.time}}</div>
         <h4 class="Otitle">{{list.title}}</h4>
         <div  class="container">
-            <img src="../assets/message_30a07a3203b47979cf5519981729f3d8.jpg" alt="">
+            <img src="../../../../assets/img/message_30a07a3203b47979cf5519981729f3d8.jpg" alt="">
             <div class="line">--------------------------</div>
             <div class="full">阅读全文</div>
         </div>
