@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "echarts": "^4.2.0-rc.2",
     "mockjs": "^1.0.1-beta3",
     "muse-ui": "^3.0.1",
     "npm": "^6.4.1",
