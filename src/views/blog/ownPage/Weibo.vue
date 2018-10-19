@@ -1,7 +1,7 @@
 <template>
     <div class="ownPage">
-        <span>全部微博（59）</span>
-        <div class="component">
+        <div class="all-weibo">全部微博（59）</div>
+        <div class="com">
             <Content></Content>
         </div>
     </div>
@@ -16,10 +16,12 @@
     }
 </script>
 <style>
-    .ownPage span{
+    .ownPage .all-weibo{
         color:rgb(149,149,147) ;
+        padding: 10px 0px;
+        border-top:1px solid #ccc;
     }
-    .component{
+    .com{
         height: 56%;
         width: 100%;
         border-top: 1px solid #ccc;

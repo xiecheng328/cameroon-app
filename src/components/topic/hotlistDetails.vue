@@ -44,6 +44,7 @@
                 line-height: 100%;
                 position: relative;
                 top: 0.05rem;
+                color: black;
                 #praise{
                     position: absolute;
                     left: 0;
@@ -59,7 +60,7 @@
                 margin: auto;
                 height: 60px;
                 /*background: black;*/
-                background: url("../../assets/img/1230.jpg");
+                background: url("../../../public/img/1230.jpg");
                 background-size: cover;
                 background-repeat: no-repeat;
                 line-height: 100%;
@@ -88,7 +89,7 @@
     /*color:gainsboro;*/
     /*}*/
     #jpg {
-        background-image: url("../../assets/img/1230.jpg");
+        background-image: url("../../../public/img/1230.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         /*width: 70px;*/

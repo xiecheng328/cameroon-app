@@ -1,12 +1,16 @@
-
 <template>
   <div class="detail">
+    <!--<router-link to="/ownPage/weibos">个人主页</router-link>-->
     <ul>
       <li>
-        <img src="../../assets/img/mood (1).jpg" alt="" class="head-por">
-        <div class="name">
-          <p class="name-id">杂交水稻研究人</p>
-          <p class="name-time">1小时前</p>
+        <div class="detail-content">
+          <router-link to="/ownPage/weibos">
+            <img src="../../assets/img/mood (1).jpg" alt="" class="head-por">
+          </router-link>
+          <div class="con-name">
+            <div class="name-id">杂交水稻研究人</div>
+            <div class="name-time">1小时前</div>
+          </div>
         </div>
         <div class="text">
           <span>
@@ -20,10 +24,12 @@
         </div>
       </li>
       <li>
-        <img src="../../assets/img/mood (2).jpg" alt="" class="head-por">
-        <div class="name">
-          <p class="name-id">耕地人-小吴</p>
-          <p class="name-time">1小时前</p>
+        <div class="detail-content">
+          <img src="../../assets/img/mood (2).jpg" alt="" class="head-por">
+          <div class="con-name">
+            <div class="name-id">耕地人-小吴</div>
+            <div class="name-time">1小时前</div>
+          </div>
         </div>
         <div class="text">
           <span>
@@ -37,10 +43,12 @@
         </div>
       </li>
       <li>
-        <img src="../../assets/img/mood (3).jpg" alt="" class="head-por">
-        <div class="name">
-          <p class="name-id">卖农机的-weCreate</p>
-          <p class="name-time">1小时前</p>
+        <div class="detail-content">
+          <img src="../../assets/img/mood (3).jpg" alt="" class="head-por">
+          <div class="con-name">
+            <div class="name-id">卖农机的-weCreate</div>
+            <div class="name-time">1小时前</div>
+          </div>
         </div>
         <div class="text">
           <span>
@@ -59,9 +67,22 @@
 <style lang="scss">
   .detail{
     margin-top: .2rem;
-
   }
-
+  .detail-content{
+    height: 78px;
+    img{
+      float:left;
+    }
+    & .con-name{
+      width: 326px;
+      font-size: 20px;
+      color: #2196f3;
+      & .name-time{
+        font-size: 16px;
+        color:rgb(149,149,147);
+      }
+    }
+  }
   .detail li{
     width: 100%;
     padding-left: .4rem;
@@ -81,12 +102,8 @@
     color: #2196f3;
     font-size: .5rem;
   }
-  .text{
-
-  }
   .image{
     width: 100%;
-    /*display: flex;*/
   }
   .image img{
     width: 1.7rem;

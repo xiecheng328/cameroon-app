@@ -4,9 +4,8 @@
         <mu-button flat to="/blog/details" slot="left">全部关注</mu-button>
         <mu-button flat to="/blog/topic/recommend"  slot="left">话题</mu-button>
         <!--search路由跳转--修改-->
-        <mu-auto-complete @click="jumptoSearch"></mu-auto-complete>
         <mu-button icon slot="right">
-            <mu-icon value="search"></mu-icon>
+            <mu-icon value="search" @click="jumptoSearch"></mu-icon>
         </mu-button>
     </mu-appbar>
     <mu-appbar style="width: 100%;height: 30px;" title="">
@@ -33,6 +32,28 @@
     }
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+    .mu-elevation-4{
+        -webkit-box-shadow:none;
+        box-shadow:none;
+    }
+    .mu-appbar{
+        background-color: #ffffff;
+    }
+    #cameroon-topic{
+        background: #eeeeee;
+    }
+    .button-wrapper {
+        text-align: center;
+        .mu-button{
+            display: block;
+            float: left;
+            /*margin: 20px;*/
+            width: 103px;
+            height: 30px;
+        }
+        .router-link-active{
+            border-bottom: solid 2px black;
+        }
+    }
 </style>

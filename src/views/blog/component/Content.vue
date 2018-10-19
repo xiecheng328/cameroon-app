@@ -1,56 +1,62 @@
 <template>
-  <div id="content">
+    <div id="content">
         <div id="head-portrait">
-          <div id="head-img"></div>
-          <span class="username">昵称</span>
-          <div class="content-time">1小时前</div>
+            <div id="head-img"></div>
+            <div class="describe">
+                <div class="username">昵称</div>
+                <div class="content-time">1小时前</div>
+            </div>
+
         </div>
         <div id="content-text">
-          <p>内容内容内容内容内容内容内容内容内容内容内容内容
-            内容内容内容内容内容内容内容内容内容内容内容内容
-            内容内容内容内容内容内容内容内容内容内容内容内容
-            内容内容内容内容内容内容内容内容内容内容内容内容
-            内容内容内容内容内容内容内容内容内容内容内容内容
-            <a href="">全文</a>
-          </p>
-      </div>
-      <div id="operation">
-          <div class="send">
-              <div class="zf"></div>
-              161
-          </div>
-          <div class="send">
-              <div class="pl"></div>
-              61
-          </div>
-          <div class="send">
-              <div class="xh"></div>
-              2350
-          </div>
-      </div>
-  </div>
+            <p>内容内容内容内容内容内容内容内容内容内容内容内容
+                内容内容内容内容内容内容内容内容内容内容内容内容
+                内容内容内容内容内容内容内容内容内容内容内容内容
+                内容内容内容内容内容内容内容内容内容内容内容内容
+                内容内容内容内容内容内容内容内容内容内容内容内容
+                内容内容内容内容内容内容内容内容内容内容内容内容
+                内容内容内容内容内容内容内容内容内容内容内容内容
+                <a href="">全文</a>
+            </p>
+        </div>
+        <div id="operation">
+            <div class="send">
+                <div class="zf"></div>
+                161
+            </div>
+            <div class="send">
+                <div class="pl"></div>
+                61
+            </div>
+            <div class="send">
+                <div class="xh"></div>
+                2350
+            </div>
+        </div>
+    </div>
 </template>
 <script>
-        export default {
+
+    export default {
 
     }
 </script>
 <style scoped lang="scss">
     #content{
-      height:400px;
+        height:300px;
     }
     #head-portrait{
-      height:18%;
-      & .username{
-        padding: 10px 10px;
-        color:rgb(0,183,225);
-        font-size: 18px;
-      }
-      & .content-time{
-          color: rgb(149,149,147);
-          width: 36%;
-          margin-left: 20%;
-      }
+        height:26%;
+        & .username{
+            margin-left: 76px;
+            color:rgb(0,183,225);
+            font-size: 18px;
+        }
+        & .content-time{
+            color: rgb(149,149,147);
+            width: 36%;
+            margin-left: 20%;
+        }
     }
     #head-img {
         background: url("img/head.png");
@@ -60,13 +66,19 @@
         border: 1px solid #000;
         border-radius: 10px;
     }
+    .describe{
+        padding: 10px 0px;
+    }
     #content-text{
-      height:52%;
-      overflow: hidden;
+        height:56%;
+        overflow: hidden;
+        span{
+            color: #000000;
+        }
     }
     #operation{
-      height:14%;
-      border-bottom: 1px solid #ccc;
+        height:14%;
+        border-bottom: 1px solid #ccc;
         & .send{
             float: left;
             width: 33%;
