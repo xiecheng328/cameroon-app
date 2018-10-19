@@ -16,6 +16,9 @@ import BlogHeader from '@/components/blog/CommonHeader.vue';
 import CommonFooter from '@/components/common/CommonFooter.vue';
 import SendWeibo from '@/views/blog/view/SendWeibo.vue';
 import Search from '@/views/blog/topic/Search.vue';
+
+import ownPages from '@/views/blog/OwnPage.vue'
+
 export default [
     {
         path: '/blog',
@@ -36,6 +39,9 @@ export default [
         ]
     },
     {path: '/sendweibo', component: SendWeibo},
-
+    {
+        path:'ownPage',
+        component:ownPages
+    }
 
 ]

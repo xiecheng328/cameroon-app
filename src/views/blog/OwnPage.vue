@@ -51,7 +51,7 @@
     #background{
         background:url("component/img/bg.png") center no-repeat;
         background-size: 400px;
-        height:30%;
+        height: 210px;
         width: 100%;
         color:#ffffff;
         position:relative;
