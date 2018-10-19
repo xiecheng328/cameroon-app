@@ -25,7 +25,7 @@ export default [
     {path: 'search', component: Search, name: 'Search'},
     {path: '/likeweibo', component: LikeWeibo,name: 'LikeWeibo'},
     {path: '/commentwb', component: CommentWb,name: 'CommentWb'},
-    {path: '/repostwb', component: CommentWb,name: 'RepostWb'},
+    {path: '/repostwb', component: RepostWb,name: 'RepostWb'},
 
     {
         path: 'passage',
