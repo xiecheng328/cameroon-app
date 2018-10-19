@@ -78,23 +78,5 @@ export default [
         name: 'HelpAndfeedback',
         component: HelpAndfeedback,
       },
-    children: [{
-            path: '/HelpAndfeedback/commonquestion',
-            name: 'Commonquestion',
-            component: Commonquestion,
-          },
-          {
-            path: '/HelpAndfeedback/userGuide',
-            name: 'UserGuide',
-            component: UserGuide,
-          },
-          {
-            path: '/HelpAndfeedback/userFeedback',
-            name: 'UserFeedback',
-            component: UserFeedback,
-          },
-         
-
-        ]
-      },
+    
 ];
