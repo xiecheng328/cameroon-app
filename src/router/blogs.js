@@ -39,7 +39,7 @@ export default [
                     {
                         header: TopicHeader,
                         default: fellow,
-                        footer: ArticleFooter
+                        footer: CommonFooter
                     },
                 name: 'fellow'
             },
