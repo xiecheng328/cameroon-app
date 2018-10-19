@@ -47,7 +47,10 @@
           <img src="../../assets/img/mood (6).jpg" alt="">
         </div>
         <div class="bottom-details">
-          <span>转发161</span>
+          <span>
+            <img src="" alt="">
+            转发161
+          </span>
           <span>评论281</span>
           <span>点赞3390</span>
         </div>
