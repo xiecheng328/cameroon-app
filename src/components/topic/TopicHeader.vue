@@ -5,8 +5,8 @@
         <mu-button flat to="/topic/recommend"  slot="left">话题</mu-button>
         <mu-button flat to="/topic/putquestion"  slot="left">提问</mu-button>
         <!--search路由跳转--修改-->
-        <mu-button icon slot="right">
-            <mu-icon value="search" @click="jumptoSearch"></mu-icon>
+        <mu-button icon slot="right" to="/topic/search">
+            <mu-icon value="search"></mu-icon>
         </mu-button>
     </mu-appbar>
     <mu-appbar style="width: 100%;height: 30px;" title="">
