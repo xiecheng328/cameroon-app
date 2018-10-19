@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 //引入VUE组件
+import Topic from '@/views/topic/Topic.vue'
 import Blog from '@/views/blog/Blog.vue';
 import Message from '@/views/message/Message.vue';
 import Shop from '@/views/shop/Shop.vue';
@@ -13,6 +14,9 @@ import CommonFooter from '@/components/common/CommonFooter.vue'
 // 引用 blog 子路由配置文件
 import blogs from './router/blogs.js'
 import ownPages from './router/ownPages.js'
+
+//引用 topic 子路由配置文件
+import topic from './router/topic';
 
 // 引用 message 子路由配置文件
 import messages from './router/messages.js'
@@ -49,6 +53,11 @@ base: process.env.BASE_URL,
             path: '/blog',
             component:Blog,
             children: blogs
+        },
+        {
+            path:'/topic',
+            component:Topic,
+            children:topic
         },
         {
             path: '/ownPage',
