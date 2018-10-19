@@ -1,6 +1,9 @@
 <template>
     <div class="blog">
         <div id="background">
+            <router-link to="/blog/details">
+                <div id="return"></div>
+            </router-link>
             <div class="bg-head-img"></div>
             <span>昵称</span>
             <div class="bg-attention">
@@ -50,6 +53,13 @@
     }
     .blog{
 
+    }
+    #return{
+        width: .2rem;
+        height: .3rem;
+        background: url("component/img/return.png") center no-repeat;
+        padding: .6rem .4rem;
+        background-size: 0.6rem;
     }
     #background{
         background:url("component/img/bg.png") center no-repeat;
