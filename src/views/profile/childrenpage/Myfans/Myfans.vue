@@ -1,5 +1,6 @@
 <template>
-    <div>
+    <div class="fans-profile">
+
         <mu-container>
         <div class="fan-title">
           <mu-button class="fan-title-back" flat @click="changeFatherB">返回</mu-button>
@@ -11,32 +12,39 @@
             <mu-tab >粉丝数排名</mu-tab>
         </mu-tabs>
         <div class="demo-text" v-if="active1 === 0">
-            <p>“粉丝年龄集中”</p>
-            <router-view></router-view>
+          <div class="demo-text-layer11"><Age class="imglayer1" /></div> 
+          <div class="demo-text-layer12"><Age1 /></div>
+
         </div>
         <div class="demo-text" v-if="active1 === 1">
-            <p>“粉丝性别分布”</p>
-            <router-view></router-view>
+            <div class="demo-text-layer21"><Sex /></div>
         </div>
         <div class="demo-text" v-if="active1 === 2">
             <p>“粉丝数排名”</p>
-            <router-view></router-view>
         </div>
         </mu-container>
     </div>
 </template>
 
 <script>
+import Age from '@/views/profile/childrenpage/Myfans/Age.vue';
+import Age1 from '@/views/profile/childrenpage/Myfans/Age1.vue';
+import Sex from '@/views/profile/childrenpage/Myfans/Sex.vue';
 export default {
-    name: "profile",
+    components:{
+      Age,
+      Age1,
+      Sex
+    },
   data () {
-    return {
+    return { 
       active1: 0
     };
   },
   methods:{
     changeFatherB(){
       this.$emit('resetFatherp');
+
     }
   }
 }
@@ -67,6 +75,17 @@ export default {
   background: #fff;
   p {
     margin: 8px 0;
+  }
+}
+.imglayer1{
+  // width: 100%;
+  // height: 50px;
+}
+.fans-profile{
+  .demo-text{
+    &-layer12{
+      margin-top: 1rem;
+    }
   }
 }
 </style>

@@ -12,7 +12,7 @@ import Myfans from '@/views/profile/childrenpage/Myfans/Myfans.vue';
 import Myinterst from '@/views/profile/childrenpage/Myinterst/Myinterst.vue';
 import Myset from '@/views/profile/childrenpage/MySet/Myset.vue';
 import Myshopping from '@/views/profile/childrenpage/Myshopping/Myshopping.vue';
-
+import Age from '@/views/profile/childrenpage/Myfans/Age.vue';
 // Vue.use(Router);
 export default [
     // mode: 'history',
