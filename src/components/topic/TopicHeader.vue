@@ -5,19 +5,9 @@
         <mu-button flat to="/topic/recommend"  slot="left">话题</mu-button>
         <mu-button flat to="/topic/putquestion"  slot="left">提问</mu-button>
         <!--search路由跳转--修改-->
-        <!--<mu-button icon slot="right">-->
-            <!--<mu-icon value="search" @click="jumptoSearch"></mu-icon>-->
-        <!--181019 23：15 删除搜索框之后只点放大镜不好使，如果不用搜索框的话，换成按钮？-->
-        <!--</mu-button>-->
-        <!---->
-        <mu-auto-complete @click="jumptoSearch"></mu-auto-complete>
-        <mu-button icon slot="right">
+        <mu-button icon slot="right" to="/topic/search">
             <mu-icon value="search"></mu-icon>
         </mu-button>
-        <!---->
-        <!---->
-        <!--<mu-button flat to="/topic/search" slot="left">搜索</mu-button>-->
-        <!---->
     </mu-appbar>
     <mu-appbar style="width: 100%;height: 30px;" title="">
         <mu-container class="button-wrapper">
@@ -36,7 +26,7 @@
         methods:{
             //search跳转页面路由
             jumptoSearch(){
-                this.$router.push('/topic/search')
+                this.$router.push('/blog/search')
             }
             //search跳转页面路由
         }
