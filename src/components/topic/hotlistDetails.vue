@@ -44,6 +44,7 @@
                 line-height: 100%;
                 position: relative;
                 top: 0.05rem;
+                color: black;
                 #praise{
                     position: absolute;
                     left: 0;
