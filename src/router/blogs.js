@@ -11,23 +11,15 @@ import comment from '@/views/blog/view/comment.vue';
 import LikeWeibo from '@/views/blog/view/LikeWeibo.vue';
 import CommentWb from '@/views/blog/view/CommentWb.vue';
 import RepostWb from '@/views/blog/view/RepostWb.vue';
-
+import Talk from '@/views/blog/view/Talk.vue';
 export default [
-    {
-        path: '/blog',
-        redirect: "/blog/details"
-    },
+    {path: '/blog', redirect: "/blog/details"},
     {path: '/sendweibo', component: SendWeibo},
     {path: 'details', components: {header: BlogHeader, default: details, footer: CommonFooter}},
-   // {path: '/answer', component: answer, name: 'answer'},
-   // {path: 'search', component: Search, name: 'Search'},
     {path: '/likeweibo', component: LikeWeibo,name: 'LikeWeibo'},
     {path: '/commentwb', component: CommentWb,name: 'CommentWb'},
     {path: '/repostwb', component: CommentWb,name: 'RepostWb'},
-
-    {
-        path: 'passage',
-        component: comment,
-    },
-    {path :'/cHead',component:cHead,name:'CommonHead'}
+    {path: 'passage', component: comment,},
+    {path:'/cHead',component:cHead,name:'CommonHead'},
+    {path:'/talk',component:Talk,name:talk},
 ]
