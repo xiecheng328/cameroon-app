@@ -103,9 +103,6 @@
     color: #2196f3;
     font-size: .5rem;
   }
-  .text{
-
-  }
   .image{
     width: 100%;
   }
