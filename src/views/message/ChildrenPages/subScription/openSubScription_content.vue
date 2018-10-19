@@ -3,7 +3,7 @@
         <div class="header">
             <span class="ReturnCon"><<</span>
             <h5 class="small-header">农机使用</h5>
-            <img class="MoreCon" src="../assets/message_more.png" alt="">
+            <img class="MoreCon" src=../../../../assets/message_more.png" alt="">
         </div>
         <OpenSubScription_message  v-for="val in list" :list="val"></OpenSubScription_message>
     </div>
