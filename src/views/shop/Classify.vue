@@ -1,5 +1,5 @@
 <template>
-<div class="shop">
+<div class="shop" id="classifies">
     <div class="classify">
     <!--标题-->
     <div class="classify-header">
@@ -235,6 +235,10 @@
 </script>
 
 <style lang="scss">
+#classifies{
+  overflow:-Scroll;overflow-x:hidden
+
+}
   .classify{
     &-header{
       width: 100%;

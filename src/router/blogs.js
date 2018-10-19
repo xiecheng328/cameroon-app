@@ -13,7 +13,7 @@ import putquestion from '@/views/blog/topic/PutQuestion.vue';
 import answer from '@/views/blog/topic/Answer.vue';
 import article from '@/views/blog/topic/Article.vue';
 import ArticleFooter from '@/components/topic/ArticleFooter.vue';
-import BlogHeader from '@/components/blog/CommonHeader.vue';
+import BlogHeader from '@/views/blog/component/BlogHeader.vue';
 import CommonFooter from '@/components/common/CommonFooter.vue';
 import SendWeibo from '@/views/blog/view/SendWeibo.vue';
 import Search from '@/views/blog/topic/Search.vue';

@@ -26,19 +26,22 @@ const attention = function(){
     }];
     let topic = [{
         title:'种田',
-        hot:1024,
+        hot:2087,
         src:require('./../../../../public/img/profileicon1@2x.png'),
-        intro:'在这里可以了解种田的知识'
+        intro:'一个关于种田好处的话题',
+        deleteSlider:''
     },{
         title:'不种田',
-        hot:1024,
+        hot:10242,
         src:require('./../../../../public/img/profileicon1@2x.png'),
-        intro:'在这里可以了解不种田的生活'
+        intro:'不种田坏处',
+        deleteSlider:''
     },{
-        title:'种田',
-        hot:1024,
+        title:'怎么种米好吃',
+        hot:61824,
         src:require('./../../../../public/img/profileicon1@2x.png'),
-        intro:'在这里可以了解种田的知识'
+        intro:'分享种米的知识',
+        deleteSlider:''
     }]
     return {
         commodity:commodity,
