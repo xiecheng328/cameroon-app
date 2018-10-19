@@ -1,5 +1,5 @@
 <template>
-<div class="shop">
+<div class="shop" id="classifies">
     <div class="classify">
     <!--标题-->
     <div class="classify-header">
@@ -235,6 +235,10 @@
 </script>
 
 <style lang="scss">
+#classifies{
+  overflow:-Scroll;overflow-x:hidden
+
+}
   .classify{
     &-header{
       width: 100%;
@@ -334,16 +338,15 @@
         width: 60px;
         border: 1px #ccc solid;
         left: 50%;
-        margin-top: 10px;
-        margin-left: 20px;
+        margin-top: 5%;
+        margin-left: 8%;
       }
       text-align: center;
       font-size: 13px;
       &-word{
-        padding-left:30px;
+        padding-left: 14.3%;
       }
     }
-    
   }
 }
 .mu-item{
