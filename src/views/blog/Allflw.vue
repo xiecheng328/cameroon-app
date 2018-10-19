@@ -22,6 +22,11 @@
           <img src="../../assets/img/mood (2).jpg" alt="">
           <img src="../../assets/img/mood (3).jpg" alt="">
         </div>
+        <div class="bottom-details">
+              <span>转发161</span>
+              <span>评论281</span>
+              <span>点赞3390</span>
+        </div>
       </li>
       <li>
         <div class="detail-content">
@@ -41,6 +46,14 @@
           <img src="../../assets/img/mood (5).jpg" alt="">
           <img src="../../assets/img/mood (6).jpg" alt="">
         </div>
+        <div class="bottom-details">
+          <span>
+            <img src="" alt="">
+            转发161
+          </span>
+          <span>评论281</span>
+          <span>点赞3390</span>
+        </div>
       </li>
       <li>
         <div class="detail-content">
@@ -59,6 +72,11 @@
           <img src="../../assets/img/mood (1).jpg" alt="">
           <img src="../../assets/img/mood (2).jpg" alt="">
           <img src="../../assets/img/mood (3).jpg" alt="">
+        </div>
+        <div class="bottom-details">
+          <span>转发161</span>
+          <span>评论281</span>
+          <span>点赞3390</span>
         </div>
       </li>
     </ul>
@@ -104,6 +122,8 @@
   }
   .image{
     width: 100%;
+    border-bottom: 1px solid rgb(149,149,147);
+    padding-bottom: .2rem;
   }
   .image img{
     width: 1.7rem;
@@ -112,5 +132,14 @@
   }
   .mu-appbar-left{
     margin: 0 auto;
+  }
+  .bottom-details{
+    height: .8rem;
+    display: flex;
+  }
+  .bottom-details span{
+    flex: 1;
+    text-align: center;
+    line-height: .8rem;
   }
 </style>

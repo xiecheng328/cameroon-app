@@ -12,6 +12,7 @@ import Myfans from '@/views/profile/childrenpage/Myfans/Myfans.vue';
 import Myinterst from '@/views/profile/childrenpage/Myinterst/Myinterst.vue';
 import Myset from '@/views/profile/childrenpage/MySet/Myset.vue';
 import Myshopping from '@/views/profile/childrenpage/Myshopping/Myshopping.vue';
+import Age from '@/views/profile/childrenpage/Myfans/Age.vue';
 import About from '@/views/profile/childrenpage/MySet/component/About.vue';
 import Check from '@/views/profile/childrenpage/MySet/component/Check.vue';
 import Clear from '@/views/profile/childrenpage/MySet/component/Clear.vue';
