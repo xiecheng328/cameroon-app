@@ -1,8 +1,8 @@
 <template>
-<div>
- <div>
-  <span><-</span>
-  <h6>@我</h6>
+<div id="withme">
+ <div id='messageTitle'>
+  <span style="margin-left: .1rem"><-</span>
+  <h5>@我</h5>
  </div>
  <div class="titlehead">
   <img class="messagehead" src="../../assets/img/messagesHead.png" alt="">
@@ -22,7 +22,7 @@
    <span>@昵称2</span>
    <div class="containtext">内容内容内容内容内容内容内容内容
   内容内容内容内容内容内容内容内容
-  内容内容内
+  内容
    </div>
    </div>
  </div>
@@ -44,7 +44,7 @@
    <span>@昵称3</span>
    <div class="containtext">内容内容内容内容内容内容内容内容
     内容内容内容内容内容内容内容内容
-    内容内容内
+    内容
    </div>
   </div>
  </div>
@@ -54,13 +54,18 @@
 
 </script>
 <style scoped>
+ h5{
+  float: right;
+  margin-right: 3.1rem;
+
+ }
 .messagehead{
- width:3.5rem;
- height: 3.5rem;
+ width:.7rem!important;
+ height: .7rem!important;
 }
  .messageconent{
-  width: 6rem;
-  height: 6rem;
+  width: 1.2rem;
+  height: 1.2rem;
  }
  h6{
   display: inline;
@@ -78,14 +83,23 @@
   display: flex;
   flex-direction: row;
   background-color: #f2f2f5;
-  padding-bottom: 1.2rem;
-  border-bottom: .1rem solid #ccc;
+  padding-bottom: .3rem;
+  border-bottom: .01rem solid #ccc;
   margin-bottom: .5rem;
+  padding-top: .2rem;
 
  }
  .containtext{
   display: flex;
   flex-direction: column;
-  margin-left: .5rem;
+  margin-left: .2rem;
+ }
+ #withme{
+  margin:0 .1rem;
+ }
+ #messageTitle{
+  width: 100%;
+  background-color: #0086b3;
+  margin-bottom: .2rem;
  }
 </style>

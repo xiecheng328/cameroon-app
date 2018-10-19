@@ -68,7 +68,6 @@
     }
     .describe{
         padding: 10px 0px;
-        margin-top: -1.5rem;
     }
     #content-text{
         height:56%;

@@ -1,6 +1,9 @@
 <template>
     <div class="blog">
         <div id="background">
+            <router-link to="/blog/details">
+                <div id="return"></div>
+            </router-link>
             <div class="bg-head-img"></div>
             <span>昵称</span>
             <div class="bg-attention">
@@ -22,10 +25,9 @@
                 <div><router-link to="/ownPage/photos">相册</router-link></div>
             </div>
         </div>
-        <div>
-            <router-view></router-view>
-        </div>
+        <router-view></router-view>
         <div id="component">
+
         </div>
         <div class="nav">
 
@@ -44,14 +46,25 @@
     }
 </script>
 <style scoped lang="scss">
+    body{
+        padding: 0;
+        margin: 0;
+        font-size: 100px;
+    }
     .blog{
-        width: 100%;
-        height:100%;
+
+    }
+    #return{
+        width: .2rem;
+        height: .3rem;
+        background: url("component/img/return.png") center no-repeat;
+        padding: .6rem .4rem;
+        background-size: 0.6rem;
     }
     #background{
         background:url("component/img/bg.png") center no-repeat;
         background-size: 400px;
-        height:210px;
+        height:3rem;
         width: 100%;
         color:#ffffff;
         position:relative;
@@ -61,22 +74,22 @@
             top: 30%;
             left: 50%;
             transform: translate(-50%,-50%);
-            height:66px;
-            width:66px;
+            height:1.2rem;
+            width:1.2rem;
             border:1px solid #000;
-            border-radius: 10px;
+            border-radius: .1rem;
         }
         span{
             position: absolute;
             top: 60%;
             left: 50%;
             transform: translate(-50%,-50%);
-            font-size: 16px;
+            font-size: .3rem;
         }
         & .bg-attention{
-            font-size: 14px;
-            height:24px;
-            width: 180px;
+            font-size: .2rem;
+            height:.6rem;
+            width: 3rem;
             position: absolute;
             top: 76%;
             left: 50%;
@@ -84,17 +97,17 @@
 
             & .bg-fans-1{
                 float: left;
-                height: 20px;
-                width: 90px;
+                height: .4rem;
+                width: 1.5rem;
                 border-right: 1px solid #fff;
-                padding: 0px 10px;
+                padding: 0 .1rem;
             }
             & .bg-fans{
                 position: absolute;
                 left:50%;
-                height:24px;
-                width: 90px;
-                padding-left: 16px;
+                height:.4rem;
+                width: 1.5rem;
+                padding-left: .4rem;
             }
         }
         & .introduction{
@@ -104,17 +117,14 @@
         }
     }
     .nav{
-        height: 50px;
-        width: 100%;
-        /*border-top: 1px solid #ccc;*/
-        /*border-bottom: 1px solid #ccc;*/
-        z-index: 1;
+
     }
     .nav-msg{
-        height: 6%;
+        height: 2rem;
         width: 100%;
         border-top: 1px solid #ccc;
         line-height: 250%;
+
     }
     .nav-detail{
         float: left;
@@ -141,7 +151,7 @@
 
     }
     #component{
-        height: 56%;
+        height: 7rem;
         width: 100%;
     }
 </style>

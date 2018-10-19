@@ -1,6 +1,6 @@
 <template>
   <div class="profile">
-    <router-view v-show="!isClick" v-on:resetFatherp="resetF"></router-view>
+    <router-view v-show="!isClick" v-on:resetFatherp="resetF" ></router-view>
 
      <!--  此处的子页面 v-show变量要通过各子页面的“返回按钮”的点击改变父组件的isClick的值，取反，（父子，子父组件传参）自己研究-->
 
@@ -85,7 +85,7 @@ export default {
       resetF(){
         console.log("chufal!");
         this.$router.push('/profile');
-       this.isClick=!this.isClick;
+        this.isClick=!this.isClick;
      }
    }
 }

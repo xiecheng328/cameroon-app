@@ -13,6 +13,10 @@ import Myinterst from '@/views/profile/childrenpage/Myinterst/Myinterst.vue';
 import Myset from '@/views/profile/childrenpage/MySet/Myset.vue';
 import Myshopping from '@/views/profile/childrenpage/Myshopping/Myshopping.vue';
 import Age from '@/views/profile/childrenpage/Myfans/Age.vue';
+import About from '@/views/profile/childrenpage/MySet/component/About.vue';
+import Check from '@/views/profile/childrenpage/MySet/component/Check.vue';
+import Clear from '@/views/profile/childrenpage/MySet/component/Clear.vue';
+import Message from '@/views/profile/childrenpage/MySet/component/Message.vue';
 // Vue.use(Router);
 export default [
     // mode: 'history',
@@ -43,7 +47,32 @@ export default [
         path: '/myset',
         name: 'Myset',
         component: Myset,
-      },
+        children:[
+            {
+                path: '/myset/about',
+                name: 'About',
+                component: About,
+            },
+            {
+                path: '/myset/check',
+                name: 'Check',
+                component: Check,
+            },
+            {
+                path: '/myset/clear',
+                name: 'Clear',
+                component: Clear,
+            },
+            {
+                path: '/myset/message',
+                name: 'Message',
+                component: Message,
+            }
+
+        ]
+
+
+    },
       {
         path: '/helpAndfeedback',
         name: 'HelpAndfeedback',

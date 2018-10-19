@@ -5,7 +5,7 @@
         <div class="topic-content">
             <div class="topic-content-list">
                 <ul>
-                    <li v-for="(item,index) in topic" :key="index">
+                    <li class="list-item" v-for="(item,index) in topic" @touchstart='touchStart(index)' @touchmove='touchMove' @touchend='touchEnd' :style="item.deleteSlider" :key="index">
                         <div class="topic-content-list-content">
                             <div class="topic-content-list-content-left"><img :src="item.src" alt=""></div>
                             <div class="topic-content-list-content-right">
@@ -22,6 +22,9 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="remove" ref='remove'>
+                            <button @click="detele(index)">取消关注</button>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -31,14 +34,87 @@
 
 <script>
 export default {
-  props: ["topic"]
+  props: ["topic"],
+  data() {
+    return {
+      startX: 0,
+      endX: 0
+    };
+  },
+  methods: {
+    touchStart(index, e) {
+      e = e || event;
+      this.nowindex = index;
+      //tounches类数组，等于1时表示此时有只有一只手指在触摸屏幕
+    //   console.log(index);
+      if (e.touches.length == 1) {
+        // 记录开始位置
+        this.startX = e.touches[0].clientX;
+      }
+    },
+    touchMove(e) {
+      e = e || event;
+      //获取删除按钮的宽度，此宽度为滑块左滑的最大距离
+      let wd = this.$refs.remove.offsetWidth;
+      if (e.touches.length == 1) {
+        // 滑动时距离浏览器左侧实时距离
+        this.moveX = e.touches[0].clientX;
+
+        //起始位置减去 实时的滑动的距离，得到手指实时偏移距离
+        this.disX = this.startX - this.moveX;
+        // 如果是向右滑动或者不滑动，不改变滑块的位置
+        if (this.disX < 0 || this.disX == 0) {
+          this.$props.topic[this.nowindex].deleteSlider = "transform:translateX(0px)";
+          // 大于0，表示左滑了，此时滑块开始滑动
+        } else if (this.disX > 0) {
+          //具体滑动距离我取的是 手指偏移距离*5。
+          this.$props.topic[this.nowindex].deleteSlider =
+            "transform:translateX(-" + this.disX * 5 + "px)";
+
+          // 最大也只能等于删除按钮宽度
+          if (this.disX * 5 >= wd) {
+            this.$props.topic[this.nowindex].deleteSlider =
+              "transform:translateX(-" + wd + "px)";
+          }
+        }
+      }
+    },
+    touchEnd(e) {
+      e = e || event;
+    //   let currentTarget = e.currentTarget;
+    //   console.log(e.currentTarget.style);
+      let wd = this.$refs.remove[0].offsetWidth;
+      if (e.changedTouches.length == 1) {
+        let endX = e.changedTouches[0].clientX;
+        this.disX = this.startX - endX;
+        //如果距离小于删除按钮一半,强行回到起点
+
+        if (this.disX * 5 < wd / 2) {
+          this.$props.topic[this.nowindex].deleteSlider = "transform:translateX(0px)";
+        } else {
+          //大于一半 滑动到最大值
+          this.$props.topic[this.nowindex].deleteSlider =
+            "transform:translateX(-" + wd + "px)";
+        }
+      }
+    },
+    detele(index){
+        this.$props.topic.forEach((elem,indexx) => {
+            if(indexx==index){
+                this.nowindex = -1;
+                this.$props.topic.splice(index,1);
+                this.index=-1;
+            }
+        });
+    }
+  }
 };
 </script>
 
 <style scoped lang="scss">
 .topic {
   &-content {
-    background-color: #ddd;
+    background: #fafafa;
     height: 100%;
     overflow: hidden;
     &-list {
@@ -46,6 +122,10 @@ export default {
         margin-top: 0.2rem;
         height: 1.8rem;
         background-color: #fff;
+        border-top: 0.5px solid rgb(208, 208, 208);
+        border-bottom: 0.5px solid rgb(208, 208, 208);
+        position: relative;
+        transition: 0.3s;
       }
       &-content {
         display: flex;
@@ -85,7 +165,24 @@ export default {
 .demo-text p {
   margin: 0;
 }
-.container{
-    height: 100%;
+.container {
+  height: 100%;
+}
+.remove {
+  width: 2rem;
+  height: 1.8rem;
+  background: #ff4949;
+  font-size: 0.3rem;
+  color: #fff;
+  border-top: 0.5px solid rgb(208, 208, 208);
+  border-bottom: 0.5px solid rgb(208, 208, 208);
+  text-align: center;
+  line-height: 1.5rem;
+  position: absolute;
+  top: 0;
+  right: -2rem;
+  button{
+      color:#fff;
+  }
 }
 </style>

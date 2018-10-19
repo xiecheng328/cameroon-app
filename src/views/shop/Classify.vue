@@ -1,5 +1,5 @@
 <template>
-<div class="shop">
+<div class="shop" id="classifies">
     <div class="classify">
     <!--标题-->
     <div class="classify-header">
@@ -57,7 +57,6 @@
     </div>
   </div>
 </div>
-  
 </template>
 
 <script>
@@ -227,13 +226,19 @@
           }, 500); 
         },
         back(){
-          this.$router.go(-1);
+          this.$router.push({
+          path:'/shop/shophome'
+        })
         }
       }
     }
 </script>
 
 <style lang="scss">
+#classifies{
+  overflow:-Scroll;overflow-x:hidden
+
+}
   .classify{
     &-header{
       width: 100%;
@@ -300,6 +305,8 @@
   background-color: #fff;
   display: flex;
   &-left{
+    height: 680px;
+    overflow:scroll;
     width: 26%;
     &-a{
       color: #000;
