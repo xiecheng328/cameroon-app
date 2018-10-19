@@ -57,7 +57,6 @@
     </div>
   </div>
 </div>
-  
 </template>
 
 <script>
@@ -227,7 +226,9 @@
           }, 500); 
         },
         back(){
-          this.$router.go(-1);
+          this.$router.push({
+          path:'/shop/shophome'
+        })
         }
       }
     }
@@ -300,6 +301,8 @@
   background-color: #fff;
   display: flex;
   &-left{
+    height: 680px;
+    overflow:scroll;
     width: 26%;
     &-a{
       color: #000;
