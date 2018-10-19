@@ -21,6 +21,10 @@ import TopicHeader from '@/components/topic/TopicHeader.vue';
 import TopicComment from '@/views/blog/topic/Comment.vue';
 import ownPages from '@/views/blog/OwnPage.vue';
 import comment from '@/views/blog/view/comment.vue';
+import LikeWeibo from '@/views/blog/view/LikeWeibo.vue';
+import CommentWb from '@/views/blog/view/CommentWb.vue';
+import RepostWb from '@/views/blog/view/RepostWb.vue';
+
 export default [
     {
         path: '/blog',
@@ -30,6 +34,10 @@ export default [
     {path: 'details', components: {header: BlogHeader, default: details, footer: CommonFooter}},
     {path: '/answer', component: answer, name: 'answer'},
     {path: 'search', component: Search, name: 'Search'},
+    {path: '/likeweibo', component: LikeWeibo,name: 'LikeWeibo'},
+    {path: '/commentwb', component: CommentWb,name: 'CommentWb'},
+    {path: '/repostwb', component: CommentWb,name: 'RepostWb'},
+
     {
         path: 'passage',
         component: comment,
