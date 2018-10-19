@@ -1,20 +1,18 @@
 <template>
-    <router-link to="" id="contain">
-        <div>
-            <fellowList></fellowList>
-            <fellowList></fellowList>
-            <fellowList></fellowList>
-            <fellowList></fellowList>
-        </div>
+    <div id="contain">
+        <router-link to="article" v-for="(val,index) in fList" :key="index" >
+            <fellowList  :details="val"></fellowList>
+        </router-link>
+
         <div class="load" v-show="isShow">
             <img src="../../../assets/img/loading.gif" alt="">
         </div>
             <div id="oShow" v-show="true">没文章了,去推荐看看</div>
-    </router-link>
+    </div>
 </template>
 
 <script>
-    import fellowList from '../../../componentes/topic/fellowList'
+    import fellowList from '../../../components/topic/fellowList'
     export default {
         name: "fellow",
         components:{
@@ -23,7 +21,190 @@
         data(){
             return {
                 isShow:false,
-                isEnd:false
+                isEnd:false,
+                fList:[
+                    {
+                        focusPeople:"json",
+                        time:"七分钟前",
+                        title:"颓废的一天又开始了",
+                        videoSrc:"./../../testmp4.mp4",
+                        author:"steven",
+                        article:"文章内容",
+                        agreeNum:2155,
+                        commentNum:7588,
+                        imgSrc:"./../../publicityPictures1.jpg",
+                        isShowVideo:true,
+                        isShowImg:false
+
+                    },
+                    {
+                        focusPeople:"ritle",
+                        time:"四分钟前",
+                        title:"大学生如何在堕落寝室",
+                        videoSrc:"",
+                        author:"rose",
+                        article:"文章内容文章内容文章内容文章内容文章内容文章内容" +
+                            "文章内容文章内容文章内容文",
+                        agreeNum:7878,
+                        commentNum:96696,
+                        imgSrc:"./../../publicityPictures4.jpg",
+                        isShowVideo:false,
+                        isShowImg:true
+
+
+
+                    },
+                    {
+                        focusPeople:"json",
+                        time:"八分钟前",
+                        title:"出淤泥而不染",
+                        videoSrc:"",
+                        author:"Micheal",
+                        article:"文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容",
+                        agreeNum:366,
+                        commentNum:12,
+                        imgSrc:"",
+                        isShowVideo:false,
+                        isShowImg:false
+
+
+                    }, {
+                        focusPeople:"json",
+                        time:"七分钟前",
+                        title:"颓废的一天又开始了",
+                        videoSrc:"./../../testmp4.mp4",
+                        author:"steven",
+                        article:"文章内容",
+                        agreeNum:2155,
+                        commentNum:7588,
+                        imgSrc:"./../../publicityPictures1.jpg",
+                        isShowVideo:true,
+                        isShowImg:false
+
+                    },
+                    {
+                        focusPeople:"ritle",
+                        time:"四分钟前",
+                        title:"大学生如何在堕落寝室",
+                        videoSrc:"",
+                        author:"rose",
+                        article:"文章内容文章内容文章内容文章内容文章内容文章内容" +
+                            "文章内容文章内容文章内容文",
+                        agreeNum:7878,
+                        commentNum:96696,
+                        imgSrc:"./../../publicityPictures4.jpg",
+                        isShowVideo:false,
+                        isShowImg:true
+
+
+
+                    },
+                    {
+                        focusPeople:"json",
+                        time:"八分钟前",
+                        title:"出淤泥而不染",
+                        videoSrc:"",
+                        author:"Micheal",
+                        article:"文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容",
+                        agreeNum:366,
+                        commentNum:12,
+                        imgSrc:"",
+                        isShowVideo:false,
+                        isShowImg:false
+
+
+                    }, {
+                        focusPeople:"json",
+                        time:"七分钟前",
+                        title:"颓废的一天又开始了",
+                        videoSrc:"./../../testmp4.mp4",
+                        author:"steven",
+                        article:"文章内容",
+                        agreeNum:2155,
+                        commentNum:7588,
+                        imgSrc:"./../../publicityPictures1.jpg",
+                        isShowVideo:true,
+                        isShowImg:false
+
+                    },
+                    {
+                        focusPeople:"ritle",
+                        time:"四分钟前",
+                        title:"大学生如何在堕落寝室",
+                        videoSrc:"",
+                        author:"rose",
+                        article:"文章内容文章内容文章内容文章内容文章内容文章内容" +
+                            "文章内容文章内容文章内容文",
+                        agreeNum:7878,
+                        commentNum:96696,
+                        imgSrc:"./../../publicityPictures4.jpg",
+                        isShowVideo:false,
+                        isShowImg:true
+
+
+
+                    },
+                    {
+                        focusPeople:"json",
+                        time:"八分钟前",
+                        title:"出淤泥而不染",
+                        videoSrc:"",
+                        author:"Micheal",
+                        article:"文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容",
+                        agreeNum:366,
+                        commentNum:12,
+                        imgSrc:"",
+                        isShowVideo:false,
+                        isShowImg:false
+
+
+                    }, {
+                        focusPeople:"json",
+                        time:"七分钟前",
+                        title:"颓废的一天又开始了",
+                        videoSrc:"./../../testmp4.mp4",
+                        author:"steven",
+                        article:"文章内容",
+                        agreeNum:2155,
+                        commentNum:7588,
+                        imgSrc:"./../../publicityPictures1.jpg",
+                        isShowVideo:true,
+                        isShowImg:false
+
+                    },
+                    {
+                        focusPeople:"ritle",
+                        time:"四分钟前",
+                        title:"大学生如何在堕落寝室",
+                        videoSrc:"",
+                        author:"rose",
+                        article:"文章内容文章内容文章内容文章内容文章内容文章内容" +
+                            "文章内容文章内容文章内容文",
+                        agreeNum:7878,
+                        commentNum:96696,
+                        imgSrc:"./../../publicityPictures4.jpg",
+                        isShowVideo:false,
+                        isShowImg:true
+
+
+
+                    },
+                    {
+                        focusPeople:"json",
+                        time:"八分钟前",
+                        title:"出淤泥而不染",
+                        videoSrc:"",
+                        author:"Micheal",
+                        article:"文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容",
+                        agreeNum:366,
+                        commentNum:12,
+                        imgSrc:"",
+                        isShowVideo:false,
+                        isShowImg:false
+
+
+                    }
+                ]
             }
         },
         created(){
@@ -37,6 +218,24 @@
                     console.log("到底了");
                 }
             }
+            var val = {}
+            // for (val in this.fList)
+            // {
+            //     if(this.fList[val].videoSrc == "")
+            //     {
+            //         this.fList[val].isShowVideo == false;
+            //         if(this.fList[val].imgSrc == "")
+            //         {
+            //             this.fList[val].isShowImg == false
+            //         }else {
+            //             this.fList[val].isShowImg == true
+            //         }
+            //     }else {
+            //         this.fList[val].isShowVideo == true;
+            //         this.fList[val].isShowImg == false
+            //     }
+            //     console.log(this.fList[val])
+            // }
         }
     }
 </script>

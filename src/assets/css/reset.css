@@ -23,16 +23,16 @@ h1, h2, h3, h4, h5, h6, pre,
 form, fieldset, legend, input, textarea, optgroup,
 p, blockquote, figure, hr, menu, dir,
 thead, tbody, tfoot, th, td {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /**
 * 非大面积文字排版网站通常不需要列表项，如果需要可单独设置
 */
 ul, ol {
-    list-style-type: none;
-    list-style-image: none;
+  list-style-type: none;
+  list-style-image: none;
 }
 
 /* ==========================================================================
@@ -43,10 +43,10 @@ ul, ol {
 * 2. 去掉 IE 10+ 点击链接时的灰色背景
 */
 a {
-    text-decoration: none;
-    /* 1 */
-    background-color: transparent;
-    /* 2 */
+  text-decoration: none;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
 }
 
 /**
@@ -54,7 +54,7 @@ a {
 */
 a:active,
 a:hover {
-    outline-width: 0;
+  outline-width: 0;
 }
 
 /**
@@ -64,7 +64,7 @@ a:hover {
 *
 */
 a:focus {
-    outline: 1px dotted;
+  outline: 1px dotted;
 }
 
 /* ==========================================================================
@@ -74,17 +74,17 @@ a:focus {
 * 1.防止 iOS 横屏字号放大，同时保证在PC上 zoom 功能正常
 */
 html {
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-    /* 1 */
-    font-size: 62.5%;
-    /* 10/16=62.5% */
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+  /* 1 */
+  font-size: 62.5%;
+  /* 10/16=62.5% */
 }
 
 body {
-    font-size: 14px;
-    line-height: 1.8;
+  font-size: 14px;
+  line-height: 1.8;
 }
 
 /**
@@ -107,11 +107,11 @@ button,
 input,
 select,
 textarea {
-    font-family: 'helvetica neue', arial, 'hiragino sans gb', stheiti, 'wenquanyi micro hei', \5FAE\8F6F\96C5\9ED1, \5B8B\4F53, sans-serif;
-    -ms-text-autospace: ideograph-alpha ideograph-numeric ideograph-parenthesis;
-    /* 5 */
-    text-spacing: ideograph-alpha ideograph-numeric ideograph-parenthesis;
-    /* 5 */
+  font-family: 'helvetica neue', arial, 'hiragino sans gb', stheiti, 'wenquanyi micro hei', \5FAE\8F6F\96C5\9ED1, \5B8B\4F53, sans-serif;
+  -ms-text-autospace: ideograph-alpha ideograph-numeric ideograph-parenthesis;
+  /* 5 */
+  text-spacing: ideograph-alpha ideograph-numeric ideograph-parenthesis;
+  /* 5 */
 }
 
 /**
@@ -120,31 +120,31 @@ textarea {
 * 2. 统一 Firefox 4+，Safari 5 和 Chrome 中「section」和「article」内的字体大小
 */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: normal;
+  font-weight: normal;
 }
 
 h1 {
-    font-size: 36px;
+  font-size: 36px;
 }
 
 h2 {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 h3 {
-    font-size: 22px;
+  font-size: 22px;
 }
 
 h4 {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 h5 {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 h6 {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 /**
@@ -153,10 +153,10 @@ h6 {
 */
 abbr,
 acronym {
-    border-bottom: 1px dotted;
-    /* 1 */
-    cursor: help;
-    /* 2 */
+  border-bottom: 1px dotted;
+  /* 1 */
+  cursor: help;
+  /* 2 */
 }
 
 /**
@@ -164,23 +164,23 @@ acronym {
 */
 b,
 strong {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 /**
 * 修正 Safari5 和 Chrome 中没有样式的问题
 */
 dfn {
-    font-style: italic;
+  font-style: italic;
 }
 
 /**
 * 修正 Firefox 和其他浏览器之间的差异
 */
 hr {
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box;
-    height: 0;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0;
 }
 
 /**
@@ -188,8 +188,8 @@ hr {
 * 修正 IE6-11 中没有样式的问题
 */
 mark {
-    background-color: #d2e5ff;
-    color: #000;
+  background-color: #d2e5ff;
+  color: #000;
 }
 
 /**
@@ -204,7 +204,7 @@ code,
 kbd,
 pre,
 samp {
-    font-family: monaco, menlo, consolas, 'courier new', courier, monospace;
+  font-family: monaco, menlo, consolas, 'courier new', courier, monospace;
 }
 
 /**
@@ -213,11 +213,11 @@ samp {
 * 2. pre 标签应当包含滚溢出
 */
 pre {
-    white-space: pre;
-    white-space: pre-wrap;
-    /* 1 */
-    word-wrap: break-word;
-    overflow: auto;
+  white-space: pre;
+  white-space: pre-wrap;
+  /* 1 */
+  word-wrap: break-word;
+  overflow: auto;
 }
 
 /**
@@ -226,7 +226,7 @@ pre {
 * 现代浏览器去除 quotes 内容
 */
 q {
-    quotes: none;
+  quotes: none;
 }
 
 /**
@@ -234,16 +234,16 @@ q {
 */
 q:before,
 q:after {
-    content: '';
-    content: none;
+  content: '';
+  content: none;
 }
 
 /**
 * 中文网页<small>元素字号小于 12px 不易阅读
 */
 small {
-    font-size: 85.7%;
-    /* 12/14=0.8571428571 */
+  font-size: 85.7%;
+  /* 12/14=0.8571428571 */
 }
 
 /**
@@ -252,18 +252,18 @@ small {
 */
 sub,
 sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
 }
 
 sup {
-    top: -.5em;
+  top: -.5em;
 }
 
 sub {
-    bottom: -.25em;
+  bottom: -.25em;
 }
 
 /* ==========================================================================
@@ -273,8 +273,8 @@ sub {
 * 合并单元格边框
 */
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /**
@@ -282,7 +282,7 @@ table {
 * http://jsbin.com/evoxif/2/edit
 */
 th {
-    text-align: left;
+  text-align: left;
 }
 
 /**
@@ -290,17 +290,17 @@ th {
 */
 table th,
 table td {
-    border: 1px solid #ddd;
-    padding: 8px 10px;
+  border: 1px solid #ddd;
+  padding: 8px 10px;
 }
 
 /**
 * 表头底部边框
 */
 table th {
-    font-weight: inherit;
-    border-bottom-width: 2px;
-    border-bottom-color: #ccc;
+  font-weight: inherit;
+  border-bottom-width: 2px;
+  border-bottom-color: #ccc;
 }
 
 /* ==========================================================================
@@ -316,25 +316,25 @@ table th {
 * 6. 修复 IE7 图片缩放失真
 */
 img {
-    border-style: none;
-    /* 1 */
-    width: auto\9;
-    /* 2 */
-    height: auto;
-    /* 3 */
-    max-width: 100%;
-    /* 4 */
-    vertical-align: top;
-    /* 5 */
-    -ms-interpolation-mode: bicubic;
-    /* 6 */
+  border-style: none;
+  /* 1 */
+  width: auto\9;
+  /* 2 */
+  height: auto;
+  /* 3 */
+  max-width: 100%;
+  /* 4 */
+  vertical-align: top;
+  /* 5 */
+  -ms-interpolation-mode: bicubic;
+  /* 6 */
 }
 
 /**
 * 修复 IE9 中的「overflow」的怪异表现
 */
 svg:not(:root) {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 /* ==========================================================================
@@ -344,9 +344,9 @@ svg:not(:root) {
 * 定义一致的边框、外边距和内边距
 */
 fieldset {
-    border: 1px solid #c0c0c0;
-    margin: 0 2px;
-    padding: .35em .625em .75em;
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: .35em .625em .75em;
 }
 
 /**
@@ -355,12 +355,12 @@ fieldset {
 * 3. 修正 IE6-7 中怪异的对齐方式
 */
 legend {
-    border-style: none;
-    /* 1 */
-    white-space: normal;
-    /* 2 */
-    *margin-left: -7px;
-    /* 3 */
+  border-style: none;
+  /* 1 */
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
 }
 
 /**
@@ -373,16 +373,16 @@ button,
 input,
 select,
 textarea {
-    font-family: inherit;
-    /* 1 */
-    font-size: 100%;
-    /* 2 */
-    margin: 0;
-    /* 3 */
-    vertical-align: baseline;
-    /* 4 */
-    *vertical-align: middle;
-    /* 4 */
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+  vertical-align: baseline;
+  /* 4 */
+  *vertical-align: middle;
+  /* 4 */
 }
 
 /**
@@ -390,7 +390,7 @@ textarea {
 */
 input,
 button {
-    *overflow: visible;
+  *overflow: visible;
 }
 
 /**
@@ -400,7 +400,7 @@ button {
 */
 button,
 select {
-    text-transform: none;
+  text-transform: none;
 }
 
 /**
@@ -413,10 +413,10 @@ button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-    -webkit-appearance: button;
-    /* 2 */
-    cursor: pointer;
-    /* 3 */
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
 }
 
 /**
@@ -424,7 +424,7 @@ input[type="submit"] {
 */
 button[disabled],
 input[disabled] {
-    cursor: default;
+  cursor: default;
 }
 
 /**
@@ -434,15 +434,15 @@ input[disabled] {
 */
 input[type="checkbox"],
 input[type="radio"] {
-    -webkit-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    /* 1 */
-    padding: 0;
-    /* 2 */
-    *height: 13px;
-    /* 3 */
-    *width: 13px;
-    /* 3 */
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */
 }
 
 /**
@@ -450,10 +450,10 @@ input[type="radio"] {
 * 2. 修正 Safari 5 和 Chrome 中「box-sizing」被设置为 「border-box」的问题
 */
 input[type="search"] {
-    -webkit-appearance: textfield;
-    /* 1 */
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box;
+  -webkit-appearance: textfield;
+  /* 1 */
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
 }
 
 /**
@@ -462,7 +462,7 @@ input[type="search"] {
  input[type="search"]::-webkit-search-cancel-button
 */
 input[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
 /**
@@ -470,8 +470,8 @@ input[type="search"]::-webkit-search-decoration {
 */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-    border-style: none;
-    padding: 0;
+  border-style: none;
+  padding: 0;
 }
 
 /**
@@ -482,7 +482,7 @@ input::-moz-focus-inner {
 */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
-    height: auto;
+  height: auto;
 }
 
 /**
@@ -490,10 +490,10 @@ input[type="number"]::-webkit-outer-spin-button {
 * 2. 禁止水平拖动，防止破坏布局
 */
 textarea {
-    overflow: auto;
-    /* 1 */
-    resize: vertical;
-    /* 2 */
+  overflow: auto;
+  /* 1 */
+  resize: vertical;
+  /* 2 */
 }
 
 /**
@@ -502,7 +502,7 @@ textarea {
 */
 select:disabled option:checked,
 option:disabled:checked {
-    color: #d2d2d2;
+  color: #d2d2d2;
 }
 
 /**
@@ -518,15 +518,15 @@ option:disabled:checked {
 * 修正 Firefox 19+ Placeholder 设置了opacity 的问题
 */
 input::-moz-placeholder, textarea::-moz-placeholder {
-    color: darkGray;
-    opacity: 1;
+  color: darkGray;
+  opacity: 1;
 }
 
 /**
 * label 元素给予手型，暗示此处可点击
 */
 label {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 /**
@@ -536,8 +536,8 @@ label {
 select[size],
 select[multiple],
 select[size][multiple] {
-    border: 1px solid #aaa;
-    padding: 0;
+  border: 1px solid #aaa;
+  padding: 0;
 }
 
 /* ==========================================================================
@@ -558,7 +558,7 @@ main,
 nav,
 section,
 summary {
-    display: block;
+  display: block;
 }
 
 /**
@@ -569,10 +569,10 @@ audio,
 canvas,
 video,
 progress {
-    display: inline-block;
-    /* 1 */
-    vertical-align: baseline;
-    /* 2 */
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
 }
 
 /**
@@ -580,10 +580,10 @@ progress {
 * 2.去掉 iOS 5 中多余的高度
 */
 audio:not([controls]) {
-    display: none;
-    /* 1 */
-    height: 0;
-    /* 2 */
+  display: none;
+  /* 1 */
+  height: 0;
+  /* 2 */
 }
 
 /**
@@ -591,7 +591,7 @@ audio:not([controls]) {
 * 在IE、Safari、Firefox 22- 中隐藏「template」元素
 */
 [hidden], template {
-    display: none;
+  display: none;
 }
 
 /**
@@ -599,7 +599,7 @@ audio:not([controls]) {
 * http://jsbin.com/apavod/1/edit
 */
 [draggable] {
-    cursor: move;
+  cursor: move;
 }
 
 /*# sourceMappingURL=neat.css.map */

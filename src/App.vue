@@ -2,24 +2,32 @@
     <div id="app">
         <mu-container>
             <div id="cameroon-content">
-                <router-view/>
+               <router-view></router-view>
             </div>
-            <mu-bottom-nav>
-                <mu-bottom-nav-item title="圈子" to="/Blog" icon="." id="cameroon-blog"></mu-bottom-nav-item>
-                <mu-bottom-nav-item title="信息" to="/message" icon="." id="cameroon-message"></mu-bottom-nav-item>
-                <mu-bottom-nav-item title="商城" to="/shop" icon="." id="cameroon-shop"></mu-bottom-nav-item>
-                <mu-bottom-nav-item title="我的" to="/profile" icon="." id="cameroon-profile"></mu-bottom-nav-item>
-            </mu-bottom-nav>
+           <!--<common-footer></common-footer>-->
+            <router-view name="footer"></router-view>
         </mu-container>
     </div>
 </template>
-
+<script>
+    //import CommonFooter from '@/components/common/CommonFooter.vue';
+    export default {
+        // components:{
+        //     CommonFooter
+        // }
+    }
+</script>
 <style lang="scss">
+    .container{
+        padding-left:0 !important;
+        padding-right:0 !important;
+    }
     .mu-bottom-nav {
-        width: 100% !important;
+        height: 56px !important;
         position: fixed !important;
-        margin-bottom:0 !important;
-        height: 48px !important;
+        bottom: 0;
+        right: 0;
+        left: 0;
         #cameroon-blog .mu-bottom-item-wrapper .mu-bottom-item-icon {
             background: url("assets/img/blog-icon-unchecked.png") center no-repeat;
             background-size: 20px;
@@ -43,7 +51,8 @@
         }
     }
     #cameroon-content{
-        height:600px;
+        height:100%;
+        margin-bottom: 56px;
     }
 
 </style>

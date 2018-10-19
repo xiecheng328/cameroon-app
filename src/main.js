@@ -8,7 +8,11 @@ import 'muse-ui/dist/muse-ui.css';
 import '@/assets/css/reset.css';
 //将mock文件下所有文件引入
 import 'mockjs';
-//import './mockAll';
+// import './mockAll';
+//引入rem
+import './assets/js/rem.js';
+//引入css重置样式
+// import './assets/css/reset.css';
 Vue.config.productionTip = false;
 //调用i18n
 import VueI18n from 'vue-i18n';
@@ -22,7 +26,7 @@ const messages = {
     fr: require('./Unit/lang/fra.js')
 };
 const i18n = new VueI18n({
-    locale: getBrowserLanguage(), // 语言标识
+    locale: 'zh', // 语言标识
     messages
 });
 new Vue({

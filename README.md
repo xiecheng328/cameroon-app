@@ -39,4 +39,13 @@
 ## i18n
    约定 unit/lang 下存放语言配置目录，en.js对应英语，fra.js对应法语，zh.js对应中文
    已经实现根据浏览器语言环境，自动切换语言
-   
+  
+## CDN
+
+material-design-icons：
+
+cdn.bootcss.com
+
+## 可替换式header 和  可替换式 footer 的实现(已知问题，底部导航栏激活变色有bug)
+
+[请参考vue 官网：](https://router.vuejs.org/zh/guide/essentials/named-views.html#%E5%B5%8C%E5%A5%97%E5%91%BD%E5%90%8D%E8%A7%86%E5%9B%BE)

@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "mockjs": "^1.0.1-beta3",
     "muse-ui": "^3.0.1",
     "npm": "^6.4.1",
     "vue": "^2.5.17",
