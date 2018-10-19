@@ -1,4 +1,3 @@
-
 <template>
   <div class="detail">
     <!--<router-link to="/ownPage/weibos">个人主页</router-link>-->
