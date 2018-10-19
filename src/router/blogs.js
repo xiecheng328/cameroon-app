@@ -2,6 +2,7 @@
  * Created by apple on 18/10/11.
  * blog(微博)模块子路由
  */
+import cHead from '@/components/common/CommonHead.vue';
 import details from '@/views/blog/Allflw.vue';
 import topic from '@/views/blog/Topic.vue';
 import fellow from '@/views/blog/topic/Fellow(glx).vue';
@@ -28,6 +29,7 @@ export default [
     {path: 'details', components: {header: BlogHeader, default: details, footer: CommonFooter}},
     {path: '/answer', component: answer, name: 'answer'},
     {path: 'search', component: Search, name: 'Search'},
+    {path :'/cHead',component:cHead,name:'CommonHead'},
     {
         path: 'topic',
         component: topic,
