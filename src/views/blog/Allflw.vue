@@ -4,9 +4,12 @@
     <!--<router-link to="/ownPage/weibos">个人主页</router-link>-->
     <ul>
       <li>
-        <!--<router-link to="/ownPage/weibos"></router-link>-->
+
         <div class="detail-content">
-          <img src="../../assets/img/mood (1).jpg" alt="" class="head-por">
+          <router-link to="/ownPage/weibos">
+            <img src="../../assets/img/mood (1).jpg" alt="" class="head-por">
+          </router-link>
+
           <div class="con-name">
             <div class="name-id">杂交水稻研究人</div>
             <div class="name-time">1小时前</div>
