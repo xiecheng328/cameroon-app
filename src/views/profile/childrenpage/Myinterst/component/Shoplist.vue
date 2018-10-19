@@ -93,7 +93,7 @@ export default {
           font-size: 0.1rem;
           color: #fff;
           outline: none;
-          width: 1rem;
+          width: 1.2rem;
           height: .5rem;
           line-height: .5rem;
         }
