@@ -5,7 +5,7 @@
       <!-- 商城title -->
       
       <mu-appbar style="width: 100%;left:0;right:0;top:0;position:fixed;" color="#FFFFFF" z-depth="0" textColor="#333333">
-      <mu-button icon slot="left" @click="goSearch()">
+      <mu-button icon slot="left" @click="goSearch('农机搜索')">
       <mu-icon ></mu-icon>
       </mu-button >
       <div class="shop-title">商城</div>
@@ -273,7 +273,9 @@ export default {
   },
   methods:{
     goSearch(){
-      console.log(123);
+      this.$router.push({
+        path:'/shop/search',
+      })
     },
     goShoppingCart(){
       console.log(123);
@@ -315,7 +317,6 @@ export default {
     }
   },
   mounted:function() {
-    // console.log(this.$router.children);
     axios.get('msg').then(res=>{
         this.parts = res.data.machineryProuct;
     });

@@ -3,21 +3,21 @@
         <div id="head-portrait">
             <div id="head-img"></div>
             <div class="describe">
-                <span class="username">昵称</span>
+                <div class="username">昵称</div>
                 <div class="content-time">1小时前</div>
             </div>
 
         </div>
         <div id="content-text">
-          <span>内容内容内容内容内容内容内容内容内容内容内容内容
-            内容内容内容内容内容内容内容内容内容内容内容内容
-            内容内容内容内容内容内容内容内容内容内容内容内容
-            内容内容内容内容内容内容内容内容内容内容内容内容
-            内容内容内容内容内容内容内容内容内容内容内容内容
-              内容内容内容内容内容内容内容内容内容内容内容内容
-              内容内容内容内容内容内容内容内容内容内容内容内容
-            <a href="">全文</a>
-          </span>
+            <p>内容内容内容内容内容内容内容内容内容内容内容内容
+                内容内容内容内容内容内容内容内容内容内容内容内容
+                内容内容内容内容内容内容内容内容内容内容内容内容
+                内容内容内容内容内容内容内容内容内容内容内容内容
+                内容内容内容内容内容内容内容内容内容内容内容内容
+                内容内容内容内容内容内容内容内容内容内容内容内容
+                内容内容内容内容内容内容内容内容内容内容内容内容
+                <a href="">全文</a>
+            </p>
         </div>
         <div id="operation">
             <div class="send">
@@ -48,7 +48,7 @@
     #head-portrait{
         height:26%;
         & .username{
-            padding: 10px 10px;
+            margin-left: 76px;
             color:rgb(0,183,225);
             font-size: 18px;
         }

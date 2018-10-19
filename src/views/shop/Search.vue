@@ -1,7 +1,7 @@
 <template>
     <div class="searchDetail">
         <div class="head">
-          <img src="./../../assets/img/return.png" alt="" class="lt">
+          <img src="./../../assets/img/return.png" alt="" class="lt" @click="goHome()">
           <div class="search">
             <input type="text" placeholder="大家都在搜“商品名”" class="ipt" v-model="btnName"  >
             <button class="btn" @click="add">搜索</button>
@@ -64,7 +64,9 @@
               btnName: this.btnName
             });
             }
-            console.log(this.isNull)
+          },
+          goHome(){
+            this.$router.go(-1);
           }
         }
     }
@@ -73,6 +75,7 @@
 <style scoped>
   .searchDetail{
     position: relative;
+    margin-top: 56px;
   }
   
   .head .lt{
@@ -100,7 +103,7 @@
     height: 30px;
     width: 290px;
     text-align: center;
-    background:url("./../../assets/img/search.png") no-repeat 50px;
+    background:url("./../../assets/img/search-icon.png") no-repeat 50px;
 
     background-size: 20px 20px;
   }
