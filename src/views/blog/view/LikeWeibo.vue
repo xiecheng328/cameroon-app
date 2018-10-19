@@ -2,25 +2,25 @@
     <div>
         <div class="like">
             <div class="header">
-                <img src="./component/img/head.png" alt="">
+                <img src="../component/img/head.png" alt="">
             </div>
             <div class="content">昵称</div>
         </div>
         <div class="like">
             <div class="header">
-                <img src="./component/img/head.png" alt="">
+                <img src="../component/img/head.png" alt="">
             </div>
             <div class="content">昵称</div>
         </div>
         <div class="like">
             <div class="header">
-                <img src="./component/img/head.png" alt="">
+                <img src="../component/img/head.png" alt="">
             </div>
             <div class="content">昵称</div>
         </div>
         <div class="like">
             <div class="header">
-                <img src="./component/img/head.png" alt="">
+                <img src="../component/img/head.png" alt="">
             </div>
             <div class="content">昵称</div>
         </div>

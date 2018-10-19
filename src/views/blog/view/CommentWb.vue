@@ -1,8 +1,8 @@
 <template>
     <div>
-        <div class="repost">
+        <div class="comment">
             <div class="header">
-                <img src="./component/img/head.png" alt="">
+                <img src="../component/img/head.png" alt="">
             </div>
             <div class="content">
                 <span class="color">昵称</span>
@@ -13,11 +13,11 @@
             </div>
 
         </div>
-        <div class="repost">
+        <div class="comment">
             <div class="header">
-                <img src="./component/img/head.png" alt="">
+                <img src="../component/img/head.png" alt="">
             </div>
-            <div class="repost">
+            <div class="content">
                 <span class="color">昵称</span>
                 <div>
                     评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容
@@ -31,7 +31,7 @@
 </template>
 <script>
     export default {
-        name: "RepostWb"
+        name: "CommentWb"
     }
 </script>
 <style scoped lang="scss">
@@ -49,13 +49,13 @@
         flex:2;
         border-bottom: #999999 1px solid;
     }
-    .repost{
+    .comment{
         display:flex;
         margin-top:10px;
     }
 
-    .color{
-        color:blue;
-    }
+.color{
+    color:blue;
+}
 
 </style>
