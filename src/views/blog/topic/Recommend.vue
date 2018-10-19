@@ -1,6 +1,6 @@
 <template>
     <div id="recommend">
-        <div class="container">
+        <div class="container" v-for="i in 4">
             <div class="header">
                 <img src="../../../assets/img/headPortrait.jpeg" alt="">
                 <span class="name">目在远方</span>
