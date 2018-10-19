@@ -1,53 +1,50 @@
 <template>
-    <div class="commodity">
-        <ul>
-            <li v-for="(item,index) in commodity" :key="index">
-                <div class="commodity-content">
-                    <div class="commodity-content-shop">
-                        <div class="commodity-content-shop-name">
-                            <img src="./../../../../../assets/img/shop-icon@1,5x.png" alt="">
-                            <span>{{item.shop}}</span>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="commodity-content-list">
-                        <div class="commodity-content-list-left"> <img :src="item.img" alt=""></div>
-                        <div class="commodity-content-list-right">
-                            <p><span>名称：</span>{{item.name}}</p>
-                            <p><span>价格：¥</span>{{item.price}}</p>
-                        </div>
-                        <div class="commodity-content-list-cancel" @click="detele(index)"><button>取消关注</button></div>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </div>
+  <div class="commodity">
+    <ul>
+      <li v-for="(item,index) in commodity" :key="index">
+        <div class="commodity-content">
+          <div class="commodity-content-shop">
+            <div class="commodity-content-shop-name">
+              <img src="./../../../../../assets/img/shop-icon@1,5x.png" alt="">
+              <span>{{item.shop}}</span>
+            </div>
+            <div></div>
+          </div>
+          <div class="commodity-content-list">
+            <div class="commodity-content-list-left"> <img :src="item.img" alt=""></div>
+            <div class="commodity-content-list-right">
+              <p><span>名称：</span>{{item.name}}</p>
+              <p><span>价格：¥</span>{{item.price}}</p>
+            </div>
+            <div class="commodity-content-list-cancel" @click="detele(index)"><button>取消关注</button></div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
 export default {
-    props:[
-        'commodity'
-    ],
-    methods:{
-      detele(index){
-        this.$props.commodity.splice(index,1);
-      }
+  props: ["commodity"],
+  methods: {
+    detele(index) {
+      this.$props.commodity.splice(index, 1);
     }
+  }
 };
 </script>
 
 <style scoped lang="scss">
 .commodity {
-  background: rgb(235, 235, 235);
   overflow: hidden;
+  background-color: #fafafa;
   &-content {
     border-radius: 0.2rem;
-    border: 1px solid #fff;
-    background: #fff;
+    border: 1px solid #ddd;
+    background-color: #fff;
 
     &-shop {
-      background: #fff;
       border-bottom: 1px solid #ddd;
       border-top-left-radius: 0.2rem;
       border-top-right-radius: 0.2rem;
@@ -94,8 +91,8 @@ export default {
           color: #fff;
           outline: none;
           width: 1.2rem;
-          height: .5rem;
-          line-height: .5rem;
+          height: 0.5rem;
+          line-height: 0.5rem;
         }
       }
     }
