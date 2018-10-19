@@ -18,6 +18,7 @@ import SendWeibo from '@/views/blog/view/SendWeibo.vue';
 import Search from '@/views/blog/topic/Search.vue';
 import TopicHeader from '@/components/topic/TopicHeader.vue'
 import TopicComment from '@/views/blog/topic/Comment.vue'
+import ownPages from '@/views/blog/OwnPage.vue'
 export default [
     {
         path: '/blog',
@@ -88,7 +89,10 @@ export default [
                 component: putquestion,
                 name: 'qutquestion'
             },
-
+            {
+                path:'ownPage',
+                component:ownPages
+            }
         ]
     },
 ]
