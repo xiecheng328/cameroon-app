@@ -21,5 +21,5 @@ export default [
     {path: '/repostwb', component: CommentWb,name: 'RepostWb'},
     {path: 'passage', component: comment,},
     {path:'/cHead',component:cHead,name:'CommonHead'},
-    {path:'/talk',component:Talk,name:talk},
+    {path:'/talk',component:Talk,name:'talk'},
 ]
