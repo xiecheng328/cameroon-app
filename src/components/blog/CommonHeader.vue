@@ -8,12 +8,6 @@
         <mu-button class="add" flat to="">
             <img src="../../assets/img/加号.png" alt="">
         </mu-button>
-        <!--search路由跳转--修改-->
-        <mu-auto-complete @click="jumptoSearch"></mu-auto-complete>
-        <mu-button icon slot="right">
-            <mu-icon value="search"></mu-icon>
-        </mu-button>
-        <!---->
     </mu-appbar>
 </template>
 
