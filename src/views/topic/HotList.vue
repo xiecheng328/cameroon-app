@@ -8,7 +8,7 @@
 </template>
 
 <script>
-    import hotlistDetails from '../../../components/topic/hotlistDetails';
+    import hotlistDetails from '../../components/topic/hotlistDetails';
     export default {
         name: "HotList",
         components:{
