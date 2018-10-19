@@ -7,7 +7,7 @@ import OpenSubScription_message from '../views/message/ChildrenPages/subScriptio
 import SubScription_content from '../views/message/ChildrenPages/subScription/subScription_content';
 import SubScription_message from '../views/message/ChildrenPages/subScription/subScription_message';
 import Report from '../views/message/report';
-import Goodluck from '../views/message/goodlick';
+import Goodluck from '../views/message/goodluck';
 
 export default [
     {path:'openSubScription_content',component:OpenSubScription_content},
