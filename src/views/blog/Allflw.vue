@@ -1,10 +1,10 @@
 
 <template>
   <div class="detail">
-      <router-link to="/ownPage/weibos">个人主页</router-link>
+      <!--<router-link to="/ownPage/weibos">个人主页</router-link>-->
     <ul>
       <li>
-        <img src="../../assets/img/mood (1).jpg" alt="" class="head-por">
+        <router-link to="/ownPage/weibos"><img src="../../assets/img/mood (1).jpg" alt="" class="head-por"></router-link>
         <div class="name">
           <p class="name-id">杂交水稻研究人</p>
           <p class="name-time">1小时前</p>
