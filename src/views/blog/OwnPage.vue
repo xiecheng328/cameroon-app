@@ -22,24 +22,24 @@
                 <div><router-link to="/ownPage/photos">相册</router-link></div>
             </div>
         </div>
-        <div class="nav-msg">
+        <div>
             <router-view></router-view>
         </div>
         <div id="component">
-
         </div>
         <div class="nav">
-            <slot>组件</slot>
+
         </div>
+        <Wrapper></Wrapper>
     </div>
 </template>
 <script>
     import Wrapper from '@/views/blog/component/Wrapper.vue';
-
+    import Content from '@/views/blog/component/Content.vue';
 
     export default {
         components: {
-            Wrapper
+            Wrapper,Content
         },
     }
 </script>
@@ -51,7 +51,7 @@
     #background{
         background:url("component/img/bg.png") center no-repeat;
         background-size: 400px;
-        height:30%;
+        height:210px;
         width: 100%;
         color:#ffffff;
         position:relative;
@@ -84,9 +84,9 @@
 
             & .bg-fans-1{
                 float: left;
-                height:24px;
+                height: 20px;
                 width: 90px;
-                border-right: 1px solid #000;
+                border-right: 1px solid #fff;
                 padding: 0px 10px;
             }
             & .bg-fans{
@@ -104,9 +104,10 @@
         }
     }
     .nav{
-        height: 8%;
+        height: 50px;
         width: 100%;
-        border-top: 1px solid #ccc;
+        /*border-top: 1px solid #ccc;*/
+        /*border-bottom: 1px solid #ccc;*/
         z-index: 1;
     }
     .nav-msg{
