@@ -12,6 +12,7 @@ import LikeWeibo from '@/views/blog/view/LikeWeibo.vue';
 import CommentWb from '@/views/blog/view/CommentWb.vue';
 import RepostWb from '@/views/blog/view/RepostWb.vue';
 import Talk from '@/views/blog/view/Talk.vue';
+import Forwaid from '@/views/blog/view/Forwaid.vue';
 export default [
     {path: '/blog', redirect: "/blog/details"},
     {path: '/sendweibo', component: SendWeibo},
@@ -21,5 +22,7 @@ export default [
     {path: '/repostwb', component: CommentWb,name: 'RepostWb'},
     {path: 'passage', component: comment,},
     {path:'/cHead',component:cHead,name:'CommonHead'},
-    {path:'/talk',component:Talk,name:'talk'},
+    {path:'/talk',component:Talk,name:'Talk'},
+    {path:'/forwaid',component:Forwaid,name:'Forwaid'},
+
 ]
