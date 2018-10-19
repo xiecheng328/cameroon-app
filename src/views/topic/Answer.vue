@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../../../../public/font/iconfont.css">
+<!--<link rel="stylesheet" href="../../../../public/font/iconfont.css">-->
 <template>
     <!--叶欣-->
     <div class="cameroon-answer">
@@ -59,8 +59,8 @@
         }
     }
 </script>
-<link rel="stylesheet" href="">
-<style scoped>
+<!--<link rel="stylesheet" href="">-->
+<style scoped lang="scss">
     .cameroon-answer{
         margin:20px;
     }
