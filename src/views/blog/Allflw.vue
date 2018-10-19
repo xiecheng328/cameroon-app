@@ -1,6 +1,7 @@
 
 <template>
   <div class="detail">
+      <router-link to="/ownPage/weibos">个人主页</router-link>
     <ul>
       <li>
         <img src="../../assets/img/mood (1).jpg" alt="" class="head-por">
