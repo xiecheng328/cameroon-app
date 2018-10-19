@@ -7,7 +7,7 @@ import OpenSubScription_message from '../views/message/ChildrenPages/subScriptio
 import SubScription_content from '../views/message/ChildrenPages/subScription/subScription_content';
 import SubScription_message from '../views/message/ChildrenPages/subScription/subScription_message';
 import Report from '../views/message/report';
-import Goodluck from '../views/message/goodluck';
+//import Goodluck from '../views/message/goodluck';
 import Chatroom from '../views/message/ChildrenPages/UnAttention/Chatroom';
 
 export default [
@@ -21,9 +21,9 @@ export default [
         name:'Report',
         component:Report,
     },
-    {
-        path:'/goodluck',
-        name:'Goodluck',
-        component:'Goodluck',
-    }
+    // {
+    //     path:'/goodluck',
+    //     name:'Goodluck',
+    //     component:'Goodluck',
+    // }
 ]
