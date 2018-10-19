@@ -16,5 +16,20 @@ export default [
     {path: '/sendweibo', component: SendWeibo},
     {path: 'details', components: {header: BlogHeader, default: details, footer: CommonFooter}},
     {path :'/cHead',component:cHead,name:'CommonHead'},
+    {
+        path: '/blog/passage',
+        redirect: "/blog/passage/report"
+    },
+    {
+        path: 'passage',
+        component: comment,
+        children:[
+            {
+                path:'report',
+                component:report,
+
+            }
+        ]
+    }
 
 ]
