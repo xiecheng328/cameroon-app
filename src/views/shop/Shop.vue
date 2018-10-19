@@ -42,10 +42,10 @@ export default {
       text-align: center;
   }
   .mu-icon-button{
-    background: url(./../../assets/img/search-icon1.png) center no-repeat;
+    background: url(../../../public/img/search-icon1.png) center no-repeat;
   }
   #shop-icon{
-    background: url(./../../assets/img/shop-icon.png) center no-repeat;
+    background: url(../../../public/img/shop-icon.png) center no-repeat;
   }
   .shop-search{
     margin-top: 46px;
@@ -59,7 +59,7 @@ export default {
       height: 46px;
       border-radius: 2rem;
       background-color: #eee !important;
-      background:url(./../../assets/img/search-icon.png) 1.3rem  no-repeat;
+      background:url(../../../public/img/search-icon.png) 1.3rem  no-repeat;
       background-size: 25px;
       text-align: center;
       font-weight: 400;

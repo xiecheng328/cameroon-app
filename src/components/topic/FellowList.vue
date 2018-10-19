@@ -79,7 +79,7 @@
             font-size: 13px;
         }
         #headPortrait{
-            background-image: url("../../assets/img/headPortrait.jpeg");
+            background-image: url("../../../public/img/headPortrait.jpeg");
             background-repeat: no-repeat;
             background-size:cover ;
             background-position: center;

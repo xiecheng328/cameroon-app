@@ -1,8 +1,8 @@
 ﻿import Mock from 'mockjs';
 // import hotImg from './../../../assets/img/farm-machinery2.png';
-import hotImg1 from './../../../assets/img/部件1.jpg';
-import hotImg2 from './../../../assets/img/部件2.jpg';
-import hotImg3 from './../../../assets/img/部件3.jpg';
+import hotImg1 from '../../../../public/img/部件1.jpg';
+import hotImg2 from '../../../../public/img/部件2.jpg';
+import hotImg3 from '../../../../public/img/部件3.jpg';
 var Random = Mock.Random;
 Random.extend({
     BRANDNAME: function(){

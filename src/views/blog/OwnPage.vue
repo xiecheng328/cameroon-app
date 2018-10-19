@@ -49,14 +49,14 @@
         height:100%;
     }
     #background{
-        background:url("component/img/bg.png") center no-repeat;
+        background:url("../../../public/img/bg.png") center no-repeat;
         background-size: 400px;
         height:210px;
         width: 100%;
         color:#ffffff;
         position:relative;
         & .bg-head-img{
-            background: url("component/img/head.png");
+            background: url("../../../public/img/head.png");
             position: absolute;
             top: 30%;
             left: 50%;

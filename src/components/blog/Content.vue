@@ -59,7 +59,7 @@
         }
     }
     #head-img {
-        background: url("img/head.png");
+        background: url("../../../../public/img/head.png");
         float: left;
         height: 68px;
         width: 66px;
@@ -87,7 +87,7 @@
             font-size: 18px;
             color:rgb(149,149,147);;
             & .pl{
-                background: url("img/pl.png") center no-repeat;
+                background: url("../../../../public/img/pl.png") center no-repeat;
                 background-size: 26px;
                 float: left;
                 margin-left: 16%;
@@ -96,7 +96,7 @@
 
             }
             & .zf{
-                background: url("img/zf.png") center no-repeat;
+                background: url("../../../../public/img/zf.png") center no-repeat;
                 background-size: 20px;
                 float: left;
                 margin-left: 16%;
@@ -104,7 +104,7 @@
                 height:46px;
             }
             & .xh{
-                background: url("img/xh.png") center no-repeat;
+                background: url("../../../../public/img/xh.png") center no-repeat;
                 background-size: 26px;
                 float: left;
                 margin-left: 16%;

@@ -84,7 +84,7 @@
         </ul>
         <div class="hot-nj-img-right">
           <span>东方红</span>
-          <img src="./../../assets/img/farm-machinery2.png" alt=""></div>
+          <img src="../../../public/img/farm-machinery2.png" alt=""></div>
       </div>
     </div>
 
@@ -182,21 +182,21 @@
 </div>
 </template>
 <script>
-import carouselImg1 from './../../assets/img/banner.png';
-import carouselImg2 from './../../assets/img/banner.png';
-import carouselImg3 from './../../assets/img/banner.png';
-import carouselImg4 from './../../assets/img/banner.png';
+import carouselImg1 from '../../../public/img/banner.png';
+import carouselImg2 from '../../../public/img/banner.png';
+import carouselImg3 from '../../../public/img/banner.png';
+import carouselImg4 from '../../../public/img/banner.png';
 //分类图片
-import menu01 from './../../assets/img/menu_01.png';
-import menu02 from './../../assets/img/menu_02.png';
-import menu03 from './../../assets/img/menu_03.png';
-import menu04 from './../../assets/img/menu_04.png';
-import menu05 from './../../assets/img/menu_05.png';
-import menu06 from './../../assets/img/menu_06.png';
-import menu07 from './../../assets/img/menu_07.png';
-import menu08 from './../../assets/img/menu_08.png';
-import menu09 from './../../assets/img/menu_09.png';
-import menu10 from './../../assets/img/menu_10.png';
+import menu01 from '../../../public/img/menu_01.png';
+import menu02 from '../../../public/img/menu_02.png';
+import menu03 from '../../../public/img/menu_03.png';
+import menu04 from '../../../public/img/menu_04.png';
+import menu05 from '../../../public/img/menu_05.png';
+import menu06 from '../../../public/img/menu_06.png';
+import menu07 from '../../../public/img/menu_07.png';
+import menu08 from '../../../public/img/menu_08.png';
+import menu09 from '../../../public/img/menu_09.png';
+import menu10 from '../../../public/img/menu_10.png';
 //引用axios
 import axios from 'axios';
 //数据模拟
@@ -339,10 +339,10 @@ export default {
       text-align: center;
   }
   .mu-icon-button{
-    background: url(./../../assets/img/search-icon1.png) center no-repeat;
+    background: url(../../../public/img/search-icon1.png) center no-repeat;
   }
   #shop-icon{
-    background: url(./../../assets/img/shop-icon.png) center no-repeat;
+    background: url(../../../public/img/shop-icon.png) center no-repeat;
   }
   .shop-search{
     margin-top: 46px;
@@ -356,7 +356,7 @@ export default {
       height: 46px;
       border-radius: 2rem;
       background-color: #eee !important;
-      background:url(./../../assets/img/search-icon.png) 1.3rem  no-repeat;
+      background:url(../../../public/img/search-icon.png) 1.3rem  no-repeat;
       background-size: 25px;
       text-align: center;
       font-weight: 400;

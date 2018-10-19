@@ -5,7 +5,7 @@
                 <div class="commodity-content">
                     <div class="commodity-content-shop">
                         <div class="commodity-content-shop-name">
-                            <img src="./../../../../../assets/img/shop-icon@1,5x.png" alt="">
+                            <img src="../../../../../../public/img/shop-icon@1,5x.png" alt="">
                             <span>{{item.shop}}</span>
                         </div>
                         <div></div>

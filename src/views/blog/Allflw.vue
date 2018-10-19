@@ -6,7 +6,7 @@
       <li>
         <!--<router-link to="/ownPage/weibos"></router-link>-->
           <div class="detail-content">
-              <img src="../../assets/img/mood (1).jpg" alt="" class="head-por">
+              <img src="../../../public/img/mood%20(1).jpg" alt="" class="head-por">
               <div class="con-name">
                   <div class="name-id">杂交水稻研究人</div>
                   <div class="name-time">1小时前</div>
@@ -19,14 +19,14 @@
           </span>
         </div>
         <div class="image">
-          <img src="../../assets/img/mood (1).jpg" alt="">
-          <img src="../../assets/img/mood (2).jpg" alt="">
-          <img src="../../assets/img/mood (3).jpg" alt="">
+          <img src="../../../public/img/mood%20(1).jpg" alt="">
+          <img src="../../../public/img/mood%20(2).jpg" alt="">
+          <img src="../../../public/img/mood%20(3).jpg" alt="">
         </div>
       </li>
       <li>
         <div class="detail-content">
-            <img src="../../assets/img/mood (2).jpg" alt="" class="head-por">
+            <img src="../../../public/img/mood%20(2).jpg" alt="" class="head-por">
             <div class="con-name">
               <div class="name-id">耕地人-小吴</div>
               <div class="name-time">1小时前</div>
@@ -38,14 +38,14 @@
           </span>
         </div>
         <div class="image">
-          <img src="../../assets/img/mood (4).jpg" alt="">
-          <img src="../../assets/img/mood (5).jpg" alt="">
-          <img src="../../assets/img/mood (6).jpg" alt="">
+          <img src="../../../public/img/mood%20(4).jpg" alt="">
+          <img src="../../../public/img/mood%20(5).jpg" alt="">
+          <img src="../../../public/img/mood%20(6).jpg" alt="">
         </div>
       </li>
       <li>
         <div class="detail-content">
-            <img src="../../assets/img/mood (3).jpg" alt="" class="head-por">
+            <img src="../../../public/img/mood%20(3).jpg" alt="" class="head-por">
               <div class="con-name">
               <div class="name-id">卖农机的-weCreate</div>
               <div class="name-time">1小时前</div>
@@ -57,9 +57,9 @@
           </span>
         </div>
         <div class="image">
-          <img src="../../assets/img/mood (1).jpg" alt="">
-          <img src="../../assets/img/mood (2).jpg" alt="">
-          <img src="../../assets/img/mood (3).jpg" alt="">
+          <img src="../../../public/img/mood%20(1).jpg" alt="">
+          <img src="../../../public/img/mood%20(2).jpg" alt="">
+          <img src="../../../public/img/mood%20(3).jpg" alt="">
         </div>
       </li>
     </ul>

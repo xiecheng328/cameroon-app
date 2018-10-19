@@ -1,7 +1,7 @@
 <template>
     <li>
         <div class="left">
-            <img src="../../../../assets/img/message_30a07a3203b47979cf5519981729f3d8.jpg" alt="">
+            <img src="../../../../../public/img/message_30a07a3203b47979cf5519981729f3d8.jpg" alt="">
         </div>
         <div class="right">
             <span class="name">{{list.name}}</span>

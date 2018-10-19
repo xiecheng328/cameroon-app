@@ -5,14 +5,14 @@
         </router-link>
 
         <div class="load" v-show="isShow">
-            <img src="../../../assets/img/loading.gif" alt="">
+            <img src="../../../public/img/loading.gif" alt="">
         </div>
             <div id="oShow" v-show="true">没文章了,去推荐看看</div>
     </div>
 </template>
 
 <script>
-    import fellowList from '../../../components/topic/fellowList'
+    import fellowList from '../../components/topic/FellowList'
     export default {
         name: "fellow",
         components:{
