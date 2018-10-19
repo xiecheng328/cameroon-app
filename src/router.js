@@ -77,7 +77,9 @@ base: process.env.BASE_URL,
                 default:Profile,
                 footer:CommonFooter
             },
-            children: profiles
+            children:
+                profiles
+
         },
     ]
 })
