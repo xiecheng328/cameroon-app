@@ -31,7 +31,7 @@ export default Mock.mock('msg',{
         machineryBrand: '@MBRAND',
         machineryTypeName:'@TYPENAME',
         machineryPartsName:'@MPARTS',
-        'id':1,
+        'id':0,
         "userName" : '@cname',
         'price|1000-5000':0,
         'img':hotImg1
@@ -40,7 +40,7 @@ export default Mock.mock('msg',{
         machineryBrand: '@MBRAND',
         machineryTypeName:'@TYPENAME',
         machineryPartsName:'@MPARTS',
-        'id':2,
+        'id':1,
         "userName" : '@cname',
         'price|1000-5000':0 ,
         'img':hotImg2
@@ -49,9 +49,37 @@ export default Mock.mock('msg',{
         machineryBrand: '@MBRAND',
         machineryTypeName:'@TYPENAME',
         machineryPartsName:'@MPARTS',
-        'id':3,
+        'id':2,
         "userName" : '@cname',
         'price|1000-5000':0,
         'img':hotImg3
-    },]
+    },{
+        brandName: '@BRANDNAME',
+        machineryBrand: '@MBRAND',
+        machineryTypeName:'@TYPENAME',
+        machineryPartsName:'@MPARTS',
+        'id':3,
+        "userName" : '@cname',
+        'price|1000-5000':0,
+        'img':hotImg1
+    },{
+        brandName: '@BRANDNAME',
+        machineryBrand: '@MBRAND',
+        machineryTypeName:'@TYPENAME',
+        machineryPartsName:'@MPARTS',
+        'id':4,
+        "userName" : '@cname',
+        'price|1000-5000':0,
+        'img':hotImg1
+    },{
+        brandName: '@BRANDNAME',
+        machineryBrand: '@MBRAND',
+        machineryTypeName:'@TYPENAME',
+        machineryPartsName:'@MPARTS',
+        'id':5,
+        "userName" : '@cname',
+        'price|1000-5000':0,
+        'img':hotImg1
+    }
+    ]
 })
