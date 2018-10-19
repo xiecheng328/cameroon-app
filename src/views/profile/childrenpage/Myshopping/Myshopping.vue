@@ -24,9 +24,9 @@
               </div>
             </li>
             <div class="product-trans">
-              <mu-button color="write"text-color="black" small="true">查看物流</mu-button>
-              <mu-button color="write"text-color="black" small="true">延长收货</mu-button>
-              <mu-button color="write"text-color="black" small="true">确认收货</mu-button>
+              <mu-button color="write" text-color="black" small="true">查看物流</mu-button>
+              <mu-button color="write" text-color="black" small="true">延长收货</mu-button>
+              <mu-button color="write" text-color="black" small="true">确认收货</mu-button>
             </div>
           </ul>
         </div>
@@ -44,9 +44,9 @@
               </div>
             </li>
             <div class="product-trans">
-              <mu-button color="write"text-color="black" small="true">取消订单</mu-button>
-              <mu-button color="write"text-color="black" small="true">朋友代付</mu-button>
-              <mu-button color="write"text-color="black" small="true">付款</mu-button>
+              <mu-button color="write" text-color="black" small="true">取消订单</mu-button>
+              <mu-button color="write" text-color="black" small="true">朋友代付</mu-button>
+              <mu-button color="write" text-color="black" small="true">付款</mu-button>
             </div>
           </ul>
         </div>
@@ -64,9 +64,9 @@
               </div>
             </li>
             <div class="product-trans">
-              <mu-button color="write"text-color="black" small="true">提醒发货</mu-button>
-              <mu-button color="write"text-color="black" small="true">延长收货</mu-button>
-              <mu-button color="write"text-color="black" small="true">确认收货</mu-button>
+              <mu-button color="write" text-color="black" small="true">提醒发货</mu-button>
+              <mu-button color="write" text-color="black" small="true">延长收货</mu-button>
+              <mu-button color="write" text-color="black" small="true">确认收货</mu-button>
             </div>
           </ul>
         </div>
@@ -84,9 +84,9 @@
               </div>
             </li>
             <div class="product-trans">
-              <mu-button color="write"text-color="black" small="true">查看物流</mu-button>
-              <mu-button color="write"text-color="black" small="true">延长收货</mu-button>
-              <mu-button color="write"text-color="black" small="true">确认收货</mu-button>
+              <mu-button color="write" text-color="black" small="true">查看物流</mu-button>
+              <mu-button color="write" text-color="black" small="true">延长收货</mu-button>
+              <mu-button color="write" text-color="black" small="true">确认收货</mu-button>
             </div>
           </ul>
         </div>
@@ -104,9 +104,9 @@
               </div>
             </li>
             <div class="product-trans">
-              <mu-button color="write"text-color="black" small="true">查看物流</mu-button>
-              <mu-button color="write"text-color="black" small="true">卖了换钱</mu-button>
-              <mu-button color="write"text-color="black" small="true">评价</mu-button>
+              <mu-button color="write" text-color="black" small="true">查看物流</mu-button>
+              <mu-button color="write" text-color="black" small="true">卖了换钱</mu-button>
+              <mu-button color="write" text-color="black" small="true">评价</mu-button>
             </div>
           </ul>
         </div>
