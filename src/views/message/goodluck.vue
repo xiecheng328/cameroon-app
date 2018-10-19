@@ -2,7 +2,7 @@
 <div class="report">
 
     <div class="header">
-<img src="../../assets/img/left.png" alt="" class="comeback">
+<img src="../../assets/img/left.png" alt="" class="comeback" @click="home()">
 <h3 class="remark">所有评论</h3>
 <h3 class="reset">设置</h3>
     </div>
@@ -39,6 +39,15 @@
 
 </div>
 </template>
+<script>
+    export default{
+    method:{
+        home(){
+            this.$router.push({name:'message.vue'});
+        }
+    }
+}
+</script>
 
  <style>
     li{
