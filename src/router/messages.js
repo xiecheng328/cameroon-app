@@ -15,6 +15,7 @@ export default [
     {path:'openSubScription_message',component:OpenSubScription_message},
     {path:'subScription_content',component:SubScription_content},
     {path:'subScription_message',component:SubScription_message},
+    {path:'chatroom',component:Chatroom},
     {
         path:'/report',
         name:'Report',
