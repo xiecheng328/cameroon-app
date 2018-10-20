@@ -24,7 +24,9 @@ export default [
     {path: '/repostwb', component: CommentWb,name: 'RepostWb'},
     {path: 'passage',redirect:"passage/comment"},
     {path: 'passage', component: Passage,children:[
-            {path: 'comment', component: report,}
+            {path: 'comment', component: report},
+            {path: 'commentwb', component: CommentWb},
+            {path: 'likeweibo', component: LikeWeibo}
         ]},
     {path:'/cHead',component:cHead,name:'CommonHead'},
     {path:'/talk',component:Talk,name:'Talk'},
