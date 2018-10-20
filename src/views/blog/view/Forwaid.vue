@@ -77,7 +77,6 @@
         top: 80px;
         left: 10px;
         background:none;
-
     }
     .app-bottom{
         position: fixed;
