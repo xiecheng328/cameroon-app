@@ -26,7 +26,7 @@ export default [
         path: '/blog',
         redirect: "/blog/details"
     },
-    {path: '/sendweibo', component: SendWeibo},
+    {path: 'sendweibo', component: SendWeibo},
     {path: 'details', components: {header: BlogHeader, default: details, footer: CommonFooter}},
     {path: '/answer', component: answer, name: 'answer'},
     {path: 'search', component: Search, name: 'Search'},
