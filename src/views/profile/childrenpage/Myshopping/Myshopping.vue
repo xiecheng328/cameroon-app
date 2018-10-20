@@ -156,7 +156,7 @@
     background: #fff;
     height: 180px;
     p {
-      margin: 8px 0;
+      margin: 0;
     }
   }
   .product-info{

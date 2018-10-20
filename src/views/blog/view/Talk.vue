@@ -1,13 +1,13 @@
 <template>
     <div class="apps">
         <div  class="app2">
-            <button class="app7"><router-link to="/ownPage"><img src="../../../assets/img/返回.png" height="24" width="14"/></router-link></button>
+            <button class="app7"><router-link to="/ownPage/weibos"><img src="../../../assets/img/返回.png"/></router-link></button>
             <div class="liaotian">聊天人昵称</div>
             <button class="shezhi">设置</button>
         </div>
         <div class="app-bottom">
             <div class="kongbai">
-                <button class="yinliang"><img src="../../../assets/img/音量.png" height="40" width="40"/></button>
+                <button class="yinliang"><img src="../../../assets/img/音量.png" /></button>
                 <input  class="shuchu"   type="text">
                 <button  class="fasong"  value="发送">发送</button>
             </div>
@@ -31,7 +31,6 @@
         background-color: #ffffff;
         text-align:center;
     }
-
     .app2 {
         position:fixed;
         left:0px;
@@ -42,7 +41,6 @@
         background-color: #ffffff;
         text-align:center;
     }
-
     .app7 {
         float: left;
         width: 14px;
@@ -66,21 +64,18 @@
         top: 30px;
         margin-left: -13%;
         line-height: 26px;
-
     }
     .shezhi{
         margin: 0;
         padding: 0;
         border: 1px solid transparent;
         background: white;
-
         float: left;
         position: absolute;
         right: 20px;
         top: 32px;
         width: 46px;
         height: 23px;
-
         color: #333333;
     }
     .yinliang {
@@ -92,7 +87,6 @@
         margin: 0;
         padding: 0;
         border: 1px solid transparent;
-
     }
 
     .shuchu {
@@ -105,7 +99,6 @@
         position:absolute;
         left: 15%;
         bottom: 15px;
-
     }
     .fasong {
         width: 60px;
@@ -117,14 +110,11 @@
         left: 80%;
         bottom: 15px;
         color: #ffffff;
-
     }
     .xxx{
         background: #eeeeee;
         width: 6.4rem;
     }
-
-
     .app-bottom{
         position: fixed;
         bottom: 0;
@@ -134,9 +124,7 @@
         width: 6.4rem;
         height: 60px;
         background: white;
-
     }
 </style>
 <style scoped lang="scss">
-
 </style>
