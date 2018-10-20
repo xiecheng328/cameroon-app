@@ -14,7 +14,7 @@
         </div>
         <div class="text">
           <router-link to="/blog/passage">
-            <span>
+            <span class="text_1">
               【河南夏邑借棚改之名强征千亩耕地 农业局称：土地权证发错了！】村里的一位老党员称，9月2日，乡政府组织村里开过一次村民代表大会，说的重点是棚户区改造的情况，当时乡党委书记董天成在会上明确表示，土地批文下来后才会征地。没想到会后第二天，就把耕地全部铲平了。
             </span>
           </router-link>
@@ -187,5 +187,8 @@
     top:50%;
     left: 10%;
     transform: translate(-50%,-50%);
+  }
+  .text_1{
+    color: #000;
   }
 </style>
