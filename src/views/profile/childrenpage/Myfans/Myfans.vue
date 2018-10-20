@@ -20,7 +20,8 @@
             <div class="demo-text-layer21"><Sex /></div>
         </div>
         <div class="demo-text" v-if="active1 === 2">
-            <p>“粉丝数排名”</p>
+            <Top />
+            <div class="demo-text-layer32"><Sum /></div>
         </div>
         </mu-container>
     </div>
@@ -30,11 +31,15 @@
 import Age from '@/views/profile/childrenpage/Myfans/Age.vue';
 import Age1 from '@/views/profile/childrenpage/Myfans/Age1.vue';
 import Sex from '@/views/profile/childrenpage/Myfans/Sex.vue';
+import Top from '@/views/profile/childrenpage/Myfans/Top.vue';
+import Sum from '@/views/profile/childrenpage/Myfans/Sum.vue';
 export default {
     components:{
       Age,
       Age1,
-      Sex
+      Sex,
+      Top,
+      Sum
     },
   data () {
     return { 
