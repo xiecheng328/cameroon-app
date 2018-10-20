@@ -7,7 +7,7 @@
             <div class="content">
                 <span class="color">昵称</span>
                 <div>
-                    评论内容评论内容评论内容评论内容评论内
+                    农机使用效果非常好
                 </div>
                 <span>1小时前</span>
             </div>
@@ -20,7 +20,7 @@
             <div class="content">
                 <span class="color">昵称</span>
                 <div>
-                    评论内容评论内容评论内容评论内容评论内容
+                    农机使用效果非常好
                 </div>
                 <span>1小时前</span>
             </div>
