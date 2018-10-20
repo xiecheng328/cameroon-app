@@ -2,8 +2,11 @@
   <div id="per-wrapper">
     <div class="per-focus">关注</div>
     <!--连接关注界面-->
-    <div class="per-focus">私信</div>
-    <!--连接私信界面-->
+    <router-link to="/talk">
+      <div class="per-focus">私信</div>
+      <!--连接私信界面-->
+    </router-link>
+
   </div>
 </template>
 <script>
@@ -18,6 +21,9 @@
     height: 48px;
     width: 100%;
     background: #ffffff;
+    a{
+      color:rgb(149,149,147) ;
+    }
     & .per-focus{
       float: left;
       height: 48px;
