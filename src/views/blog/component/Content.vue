@@ -85,6 +85,9 @@
             line-height: 48px;
             font-size: 18px;
             color:rgb(149,149,147);
+            a{
+                color:rgb(149,149,147) ;
+            }
             & .pl{
                 background: url("img/pl.png") center no-repeat;
                 background-size: 26px;
@@ -110,9 +113,6 @@
                 width: 46px;
                 height:46px;
             }
-        }
-        .send a{
-                color:rgb(149,149,147) ;
         }
     }
 </style>
