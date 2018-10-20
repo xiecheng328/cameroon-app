@@ -1,25 +1,15 @@
 <template>
 <div>
-  
     <div class="shop">
       <!-- 商城title -->
-      <mu-appbar style="width: 100%;left:0;right:0;top:0;position:fixed;" color="#FFFFFF" z-depth="0" textColor="#333333">
-      <mu-button icon slot="left" @click="goSearch()">
-      <mu-icon ></mu-icon>
-      </mu-button >
-      <div class="shop-title">商城</div>
-      <mu-button  icon slot="right" id="shop-icon" @click="goShoppingCart()"></mu-button>
-      </mu-appbar>
-       <router-view></router-view>
+      <router-view></router-view>
   </div>
 </div>
 </template>
 <script>
 export default {
-  
   name:"Shop",
   methods:{
-   
     goShoppingCart(){
       this.$router.push({
         path:'/shop/shophome'
