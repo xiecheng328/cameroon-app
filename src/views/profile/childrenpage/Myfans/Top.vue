@@ -1,11 +1,11 @@
 <template>
-    <div class="top">
-        <div class="top-title">
+    <div class="topt">
+        <div class="topt-title">
             <span>截止到6月份我们app用户粉丝排名榜前十</span>
         </div>
-        <div class="top-toplist">
+        <div class="topt-toplist">
             <ul>
-                <li v-for="(item,index) in toplist" :key="index" class="top-toplist-item">
+                <li v-for="(item,index) in toplist" :key="index" class="topt-toplist-item">
                     <p>第{{item.num}}名:{{item.name}}&nbsp;&nbsp;{{item.tag}}&nbsp;粉丝数:{{item.sum}}</p>
                 </li>
             </ul>
@@ -75,7 +75,8 @@ export default {
 
 
 <style lang="scss">
-.top{
+.topt{
+  margin-bottom: 0.36rem;
     &-title{
         text-align: center;
         font-size: 0.3rem;
