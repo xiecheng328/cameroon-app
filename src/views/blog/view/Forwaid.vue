@@ -1,7 +1,7 @@
 <template>
     <div class="apps">
         <!--<div  class="app2">-->
-        <button class="app7"><router-link to="/ownPage/weibos">取消</router-link></button>
+        <button class="app7"><router-link to="/ownPage/weibos" class="ys">取消</router-link></button>
         <div class="zhuanfa">转发圈子</div>
         <button class="fasong">发送</button>
         <span class="xian"></span>
@@ -45,7 +45,7 @@
         position: absolute;
         left: 10px;
         top: 32px;
-        color: #000;
+        color: #333333;
     }
     .zhuanfa {
         height: 29px;
@@ -72,7 +72,6 @@
         border: solid 1px #999999;
     }
     .pinglun{
-
         border:none;
         position: absolute;
         top: 80px;
@@ -88,7 +87,8 @@
         width: 6.4rem;
         height: 50px;
         background:none;
-        border-bottom: 1px solid #cccccc;
+        border-top: 1px solid #cccccc;
+
     }
     .xian {
         width: 6.4rem;
@@ -128,18 +128,20 @@
     .kuang{
         position: absolute;
         left: 2%;
-        bottom: 50px;
+        bottom: 55px;
     }
     .ziti{
         font-size: 15px;
-        /*line-height: 150px;*/
         letter-spacing: 0px;
         color: #999999;
         position: absolute;
         left: 7%;
-        bottom: 43px;
+        bottom: 48px;
         margin: 0;
         padding: 0;
+    }
+    .ys{
+        color: #333333;
     }
 </style>
 <style scoped lang="scss">
