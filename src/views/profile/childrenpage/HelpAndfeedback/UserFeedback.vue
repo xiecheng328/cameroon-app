@@ -28,10 +28,10 @@
             
 
                <div  style="color:red;margin-top:20px">请留下你的联系电话</div>
-           <input v-model.laz.trim="msg" />
+           <input v-model="msg" />
 
               <div  style="color:red;margin-top:20px">请留下你的电子邮箱</div>
-           <input v-model.laz.trim="msg2" />
+           <input v-model="msg2" />
 <br>
            </div>
           

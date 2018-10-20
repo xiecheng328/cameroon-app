@@ -1,126 +1,95 @@
 <template>
     <!--郑长庆-->
     <div id="container">
-        <h4 id="header">大学生如何在堕落的寝室中出淤泥而不染？</h4>
-        <div id="top">
-            <span>11693人关注&nbsp&nbsp&nbsp15条评论</span>
-            <button id="btn">+关注问题</button>
-        </div>
-        <div id="select">
-            <span id="selectL">
-                邀请回答
-            </span>
-            <span id="selectR">
-                添加回答
-            </span>
+        <div  id="header">
+            <div id="pad">
+                <h3>如何将农业发展的更好？</h3>
+                <div id="top">
+                    <span>11693人关注&nbsp;&nbsp;&nbsp;15条评论</span>
+                    <!--<input  >+关注问题</input>-->
+                    <input type="button" value="+关注问题" id="btn">
+                </div>
+            </div>
+            <div id="select">
+                <mu-button>邀请回答</mu-button>
+                <mu-button>添加回答</mu-button>
+            </div>
         </div>
         <div id="remind">
             <span>1119个回答</span>
             <span id="sort">默认排序&nbsp</span>
         </div>
-        <div id="asone">
-            <div class="head"></div>
-            <span>农机专业户</span>
-            <div id="contenta">
-                文章内容文章内容文章内容文章内容文
-                章内容文章内容文章内容文章内容文章内容文章内容文章内容
-                文章内容文章内容文章内容文章内容文章内容文章内容文章内容
-                文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文
-                章内容文章内容文章内容文章内容文章内容文章内容文章内容
-                文章内容文章内容文章内容文章内容文章内容文章内容文章内容
-                文章内容文章内容文章内容文章内容文章内容
-            </div>
-        <div id="astwo">
-            <div class="head"></div>
-            <span>农机行业领导者</span>
-            <div id="contentb">
-                文章内容文章内容文章内容文章内容文
-                章内容文章内容文章内容文章内容文章内容文章内容文章内容
-                文章内容文章内容文章内容文章内容文章内容文章内容文章内容
-                文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文
-                章内容文章内容文章内容文章内容文章内容文章内容文章内容
-                文章内容文章内容文章内容文章内容文章内容文章内容文章内容
-                文章内容文章内容文章内容文章内容文章内容
-            </div>
-        </div>
-        </div>
+
+        <articleListDetails v-for="i in 4"></articleListDetails>
     </div>
+
 </template>
 
 <script>
+    import articleListDetails from '../../components/topic/articleListDetails'
     export default {
-        name: "ArticleLists"
+        name: "ArticleLists",
+        components:{
+            articleListDetails
+        },
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
     *{
         margin: 0;
         padding: 0;
-    }
-    #header{
-        text-align: center;
-        height: 25px;
-        line-height: 25px;
-        margin-bottom: 10px;
-    }
-    #btn{
-        float: right;
-    }
-    #top{
-        margin-bottom: 10px;
-    }
-    #select{
-        height: 35px;
-        float: left;
-        line-height: 35px;
-        border: 1px solid #000;
-        margin-bottom: 2px;
-    }
-    #selectL{
-        border-right: 1.2px solid #ccc;
-        width: 178px;
-        display: block;
-        float: left;
-        text-align: center;
-    }
-    #selectR{
-        width: 178px;
-        display: block;
-        float: right;
-        text-align: center;
+        body{
+            background: #cccccc;
+            #container{
+                border-top: solid 0.25px;
+                #header{
+                    background-color: white;
+                    #pad{
+                        padding: 10px;
+                        #top{
+                            height: 40px;
+                            line-height: 40px;
+                            position: relative;
+                            #btn{
+                                margin-top: 5px;
+                                position: absolute;
+                                right: 10px;
+                                width: 80px;
+                                height: 30px;
+                                line-height: 30px;
+                                border-radius: 5px;
+                                border: 0;
+                                background-color: rgb(15, 136, 235);
+                                color: white;
+                                text-align: center;
+                            }
+                        }
+                    }
+                    #select{
+                        height: 36px;
+                        .mu-raised-button{
+                            border-top: solid 0.5px;
+                            position: relative;
+                            color: #8590a6;
+                            width: 50%;
+                            height: 100%;
+                        }
+                    }
+                }
+                #remind{
+                    padding: 5px;
+                    position: relative;
+                    #sort{
+                        position: absolute;
+                        right: 5px;
+                    }
+                }
+             }
+
         }
-    #remind{
-        background: #ccc;
-        height: 25px;
-        clear:both;
     }
-    #sort{
-        float: right;
-    }
-    #asone{
-        height: 200px;
-        margin-bottom: 10px;
-    }
-    #contenta{
-        margin-bottom: 10px;
-    }
-    #astwo{
-        height: 200px;
-        margin-bottom: 10px;
-    }
-    #contentb{
-        margin-bottom: 10px;
-    }
-    .head{
-        background-image: url("../../assets/img/headPortrait.jpeg");
-        background-repeat: no-repeat;
-        background-size:cover ;
-        background-position: center;
-        width: 25px;
-        height: 25px;
-        border-radius: 50%;
-        float: left;
-        margin-right: 5px;
-    }
+
+
+
 </style>

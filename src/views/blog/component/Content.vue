@@ -9,20 +9,19 @@
 
         </div>
         <div id="content-text">
-            <p>内容内容内容内容内容内容内容内容内容内容内容内容
-                内容内容内容内容内容内容内容内容内容内容内容内容
-                内容内容内容内容内容内容内容内容内容内容内容内容
-                内容内容内容内容内容内容内容内容内容内容内容内容
-                内容内容内容内容内容内容内容内容内容内容内容内容
-                内容内容内容内容内容内容内容内容内容内容内容内容
-                内容内容内容内容内容内容内容内容内容内容内容内容
+            <p>喀麦隆是非洲政治、经济强国之一,在非洲政治经济领域特别是撒哈拉以南非洲扮演了重要的角色。
+                21世纪以来,经济稳定增长,2011年国内生产总值达256.5亿美元,经济规模在撒哈拉以南的44个国家
+                中排名第七位,在中部非洲中仅次于尼日利亚和加纳。
                 <a href="">全文</a>
             </p>
         </div>
         <div id="operation">
             <div class="send">
-                <div class="zf"></div>
-                161
+                <router-link to="/forwaid">
+                    <div class="zf"></div>
+                    161
+                </router-link>
+
             </div>
             <div class="send">
                 <div class="pl"></div>
@@ -85,7 +84,10 @@
             height:48px;
             line-height: 48px;
             font-size: 18px;
-            color:rgb(149,149,147);;
+            color:rgb(149,149,147);
+            a{
+                color:rgb(149,149,147) ;
+            }
             & .pl{
                 background: url("img/pl.png") center no-repeat;
                 background-size: 26px;
