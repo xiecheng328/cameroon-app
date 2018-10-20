@@ -2,7 +2,7 @@
   <div class="HelpAndfeedback">
     
    
-    <h3 class="HelpAndfeedback-header">°ïÖúÓë·´À¡</h3>
+    <h3 class="HelpAndfeedback-header">å¸®åŠ©ä¸åé¦ˆ</h3>
    
     <div class="menuHelpAndfeedback">
       <div class="menuHelpAndfeedback-first">
@@ -25,18 +25,18 @@ export default {
        isClick:true,
        HelpAndfeedback: [{
          iconimg:"/img/profileicon1.png",
-         text:"ÓÃ»§³£¼ûÎÊÌâ",
+         text:"ç”¨æˆ·å¸¸è§é—®é¢˜",
          src:"Commonquestion",
          id:1,
 
        },{
         iconimg:"/img/profileicon1.png",
-         text:"ÓÃ»§Ê¹ÓÃÖ¸ÄÏ",
-         src:"UserUse",
+         text:"ç”¨æˆ·ä½¿ç”¨æŒ‡å—",
+         src:"UserGuide",
          id:2
        },{
         iconimg:"/img/profileicon1.png",
-         text:"ÓÃ»§·´À¡´°¿Ú",
+         text:"ç”¨æˆ·åé¦ˆçª—å£",
          src:"UserFeedback",
          id:3
        },],
