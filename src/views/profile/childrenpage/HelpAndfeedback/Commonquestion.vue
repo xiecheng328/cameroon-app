@@ -1,19 +1,20 @@
 <template>
-  <div class="HelpAndfeedback">
-    
+  <div class="Commonquestion">
+     <mu-button class="Commonquestion-back" flat @click="changeFatherC()">è¿”å›ž</mu-button>
    
-    <h3 class="HelpAndfeedback-header">°ïÖúÓë·´À¡</h3>
-     <h4>1. ÂÌÉ«ÕË»§ÓÐÊ²Ã´ÓÃ£¿</h4>
-     <h6>´ð£ºÂÌÉ«ÕË»§ÊÇÄþ²¨ÊÐÃñ¿¨APPµÄÏßÉÏÕË»§¡£ÔÚÊÖ»úAPP×ÔÐÐ³µ×â½ðÖ§¸¶¡¢Ìù¿¨³äÖµµÈ²Ù×÷Ê±£¬ÐèÒªÍ¨¹ýÂÌÉ«ÕË»§À´Íê³É¡£</h6>
-     <h4>2. ÂÌÉ«ÕË»§½ð¶îÉÏÏÞÊÇ¶àÉÙ£¿</h4>
-    <h6>´ð£ºÄ¿Ç°ÂÌÉ«ÕË»§µÄ½ð¶îÉÏÏÞÎª1000Ôª¡£</h6>
-     <h4>3. ÂÌÉ«ÕË»§ÀïµÄÓà¶î¿ÉÒÔÍËÂð£¿</h4>
-      <h6>´ð£º¿ÉÒÔ¡£¿ÉÒ²ÔÚÂÌÉ«ÕË»§Ò³ÃæÄÚÉêÇëÍË¿î¡£</h6>
-     <h4>4. ÂÌÉ«ÕË»§Óà¶îÍË¿îÇþµÀÓÐÄÄÐ©£¿</h4>
-      <h6>´ð£º£ºÄ¿Ç°µÄÍË¿îÇþµÀÊÇÖ§¸¶±¦ÍË¿î£¬ÇëÕýÈ·ÌîÐ´±¾ÈËÃûÏÂµÄÖ§¸¶±¦ÕËºÅ£¬ÎÒË¾¹¤×÷ÈËÔ±»áÔÚ3-5¸ö¹¤×÷ÈÕÄÚ´ò¿î£»ÒøÐÐ¿¨ÍË¿îÇþµÀÕýÔÚÍêÉÆÖÐ£¬¾´ÇëÆÚ´ý¡£</h6>
-     <h4>5. ¼¤»îÂÌÉ«ÕË»§µÄÌõ¼þÓÐÄÄÐ©£¿</h4>
-      <h6>´ð£ºÂÌÉ«ÕË»§ÊÇÄþ²¨ÊÐÃñ¿¨APPµÄÏßÉÏÕË»§¡£ÔÚÊÖ»úAPP×ÔÐÐ³µ×â½ðÖ§¸¶¡¢Ìù¿¨³äÖµµÈ²Ù×÷Ê±£¬ÐèÒªÍ¨¹ýÂÌÉ«ÕË»§À´Íê³É¡£</h6>
-     
+    <h3 class="Commonquestion-header">å¸®åŠ©ä¸Žåé¦ˆ</h3>
+     <h4>1. æ˜¯å¦å¯ä»¥å±è”½æœªå…³æ³¨äººæ¶ˆæ¯ï¼Ÿ</h4>
+     <h6>ç­”ï¼šå¯ä»¥ï¼Œåœ¨è®¾ç½®ä¸­çš„æ¶ˆæ¯è®¾ç½®ï¼Œå¯è°ƒæ•´æ˜¯å¦æŽ¥å—æœªå…³æ³¨äººçš„æ¶ˆæ¯</h6>
+     <h4>2.è´¦æˆ·ä½™é¢é€€æ¬¾æ¸ é“æœ‰å“ªäº›ï¼Ÿ</h4>
+    <h6>ç›®å‰çš„é€€æ¬¾æ¸ é“æ˜¯æ”¯ä»˜å®é€€æ¬¾ï¼Œè¯·æ­£ç¡®å¡«å†™æœ¬äººåä¸‹çš„æ”¯ä»˜å®è´¦å·ï¼Œæˆ‘å¸å·¥ä½œäººå‘˜ä¼šåœ¨3-5ä¸ªå·¥ä½œæ—¥å†…æ‰“æ¬¾ï¼›é“¶è¡Œå¡é€€æ¬¾æ¸ é“æ­£åœ¨å®Œå–„ä¸­ï¼Œæ•¬è¯·æœŸå¾…ã€‚</h6>
+     <h4>3.è´¦æˆ·é€šè¿‡è®¤è¯åŽæœ‰ä»€ä¹ˆç”¨ï¼Ÿ</h4>
+      <h6>ç­”ï¼šå¯ä»¥äº«å—å„ç§ä¼˜æƒ å’Œç‰¹æƒå¾…é‡ï¼Œæ•¬è¯·æœŸå¾…</h6>
+     <h4>4.è®¤è¯è´¦æˆ·çš„æ¡ä»¶æœ‰å“ªäº›ï¼Ÿ</h4>
+      <h6>ç­”ï¼šåœ¨å†œä¸šæ–¹é¢çš„æƒå¨æˆ–è€…æ˜¯æœ‰è‡ªå·±ç‹¬ç‰¹çš„è§è§£ç­‰</h6>
+     <h4>5.æ¯å¤©å¯ä»¥å‘é€å¤šå°‘ä¸ªé—®é¢˜ï¼Ÿ</h4>
+      <h6>ç­”ï¼šä¸é™æ¬¡æ•°ã€‚</h6>
+      <h4>6.å•†å“å¯ä»¥é€€å—ï¼Ÿ</h4>
+      <h6>ç­”ï¼šå¯ä»¥ã€‚å¯ä»¥è”ç³»å®¢æœæˆ–è€…åœ¨çº¿å–æ¶ˆè®¢å•ã€‚</h6>
     </div>
    
 </template>
@@ -26,7 +27,7 @@ import 'muse-ui/dist/muse-ui.css';
 
 </script>
 <style lang="scss" scoped>
-.HelpAndfeedback{
+.Commonquestion{
 
   &-header{
     margin-top: 0.4rem;
@@ -36,7 +37,11 @@ import 'muse-ui/dist/muse-ui.css';
     border-bottom: 1px solid #cccccc;
     background: #ffffff;
   }
- 
+ &-back{
+   float: left;
+   margin-left: 0.2rem;
+   
+ }
 }
 
 </style>

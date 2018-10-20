@@ -1,15 +1,25 @@
 <template>
     <div class="apps">
         <!--<div  class="app2">-->
-        <button class="app7"><router-link to="/ownPage/weibos" class="ys">取消</router-link></button>
+        <button class="app7"><router-link to="/blog/details" class="ys">取消</router-link></button>
         <div class="zhuanfa">转发圈子</div>
         <button class="fasong">发送</button>
         <span class="xian"></span>
         <!--</div>-->
-        <input class="pinglun"  type="text"value="写评论。。。">
+        <input class="pinglun"  type="text"value="分享心得...">
         <input class="kuang" type="checkbox" />
         <ul class="ziti">
             <span>同时转发</span></ul>
+        <div class="color">
+            <div>
+                <li class="tupian"><img src="../../../assets/img/图层 2.png" height="180" width="180"/></li>
+            </div>
+            <div class="word">
+                <h3 class="topic">分享标题</h3>
+                <span class="content">分享内容</span>
+            </div>
+
+        </div>
         <div class="app-bottom">
             <div class="kongbai">
                 <span></span>
@@ -142,6 +152,36 @@
     }
     .ys{
         color: #333333;
+    }
+    .color {
+        background: #EEEEEE;
+        width: 100%;
+
+        margin-top:75%;
+        display:flex;
+        margin-left: 8px;
+        margin-right: 8px;
+
+    }
+    .color img{
+        float:left;
+        margin:10px;
+        flex:5%;
+        width:65%;
+        text-align: center;
+
+    }
+    .color .word{
+        flex:95%;
+        left: 1%;
+    }
+    .color .topic{
+        font-size: 18px;
+        color: #333333;
+    }
+    .color .content{
+        font-size: 16px;
+        color:#cccc;
     }
 </style>
 <style scoped lang="scss">

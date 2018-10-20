@@ -3,8 +3,8 @@
     <div class="log">
         <!-- <img aria-checked="" -->
 
-        <router-link to="/myset"><img class="top-img" src="./img/return.png"></router-link>
-        <img src="./img/man.png" class="log-img">
+        <router-link to="/myset"><img class="top-img" src=""></router-link>
+        <img src="" class="log-img">
 
         <div class="printIn search">
             帐号：<input style="text" class="printIn-style"> 
