@@ -34,7 +34,14 @@
             </li>
             </ul>
         </div>
-       <router-view></router-view>
+        <div>
+            <div id="container-span">
+                <span @click="jump">转发109</span>
+                <span>评论8989</span>
+                <span>点赞908</span>
+            </div>
+            <router-view></router-view>
+        </div>
         <div id="center5">
             <Wrapper1></Wrapper1>
         </div>
@@ -53,6 +60,9 @@
             back(){
                 window.history.go(-1);
             },
+            jump(){
+                this.$router.push('/blog/passage');
+            }
         }
     }
 </script>
