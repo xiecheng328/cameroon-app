@@ -37,7 +37,7 @@
     <!-- 商城主页分类 -->
       <div class="gridlist-demo">
           <ul class="shop-list">
-            <li :style="{background:tile.color}" class="img" v-for="(tile, index) in list" :key="index" @click="goEnterList(index)">
+            <li :style="{background:tile.color}" class="img" v-for="(tile, index) in list" :key="index" @click="goEnterList(index),classify(index)">
               <img :src="tile.image" >
               <p>{{tile.shopName}}</p>
             </li>
@@ -273,6 +273,9 @@ export default {
   },
   methods:{
     goSearch(){
+      this.$router.push({
+        path:'/shop/search'
+      })
       console.log(123);
     },
     goShoppingCart(){
@@ -282,10 +285,24 @@ export default {
       let productList = this.list;
       console.log(productList[nowIndex].shopName);
     },
+    classify(nowIndex){
+      let productList = this.list;
+      let name = productList[nowIndex].shopName;
+      console.log(name);
+      if(name == "全部"){
+        this.$router.push({
+        path:'/shop/classify'
+      })
+      }
+    },
     goLookAll(){
+      
       console.log(123);
     },
     goHotAll(){
+      this.$router.push({
+        path:'/shop/shoplist'
+      })
       console.log(123);
     },
     goBrandAll(){
@@ -472,6 +489,7 @@ export default {
    
   .hot-sop-list{
     padding-left: 0.2rem;
+    text-align: center;
     .hot-img{
       float: left;
       width: 2rem;
@@ -483,7 +501,6 @@ export default {
         float: left;
         img{
         height: 1.2rem;
-        float: left;
     }
       }
       
@@ -522,7 +539,6 @@ export default {
         float: left;
         width: 50%;
         height: 2rem;
-        
         border-bottom: 1px solid #ccc;
         span{
             margin-left: 0.2rem;
@@ -574,13 +590,13 @@ export default {
       height: 2rem;
       .img{
         margin-top: 0.2rem;
-        margin-left: 0.2rem;
+        text-align: center;
         img{
           height: 1rem
         }
       }
       p{
-        margin-left: 0.2rem;
+        text-align: center;
       }
     }
   }
