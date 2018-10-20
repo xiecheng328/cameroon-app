@@ -9,6 +9,7 @@ import SubScription_message from '../views/message/ChildrenPages/subScription/su
 import Report from '../views/message/report';
 //import Goodluck from '../views/message/goodluck';
 import Chatroom from '../views/message/ChildrenPages/UnAttention/Chatroom';
+import Withme from '../views/message/Withme';
 
 export default [
     {path:'openSubScription_content',component:OpenSubScription_content},
@@ -16,6 +17,7 @@ export default [
     {path:'subScription_content',component:SubScription_content},
     {path:'subScription_message',component:SubScription_message},
     {path:'chatroom',component:Chatroom},
+    {path:'withme',component:Withme},
     {
         path:'/report',
         name:'Report',
