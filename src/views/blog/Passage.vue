@@ -1,9 +1,9 @@
 <template>
     <div class="blog">
         <div id="center1">
-            <img src="./passage-img/return.png" alt="" @click="back">
+            <img src="./component/img/返回.png" alt="" @click="back" class="img-left">
             <span class="center">圈子正文</span>
-            <img src="./passage-img/daohang.png" alt="" class="img-right">
+            <img src="./component/img/daohang.png" alt="" class="img-right">
         </div>
         <div id="center2">
             <ul>
@@ -71,6 +71,9 @@
         width: 0.5rem;
         height: 0.5rem;
         margin-top: 0.25rem;
+    }
+    & .img-left{
+        margin-left: 0.15rem;
     }
     & .center{
          text-align: center;
@@ -172,5 +175,4 @@
     border-bottom: 1px solid gainsboro;
     margin-bottom: .1rem;
 }
-
 </style>
