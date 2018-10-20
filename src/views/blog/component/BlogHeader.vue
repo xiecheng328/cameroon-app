@@ -5,7 +5,7 @@
         </mu-button>
         <mu-button class="allAttention" flat to="/blog/details">全部关注</mu-button>
         <mu-button class="topic" flat to="/blog/topic/recommend">话题</mu-button>
-        <mu-button class="add" flat to="">
+        <mu-button class="add" flat to="sendweibo">
             <img src="../../../assets/img/加号.png" alt="">
         </mu-button>
     </mu-appbar>

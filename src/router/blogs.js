@@ -17,7 +17,7 @@ import Forwaid from '@/views/blog/view/Forwaid.vue';
 import report from '@/views/blog/view/report.vue'
 export default [
     {path: '/blog', redirect: "/blog/details"},
-    {path: '/sendweibo', component: SendWeibo},
+    {path: 'sendweibo', component: SendWeibo},
     {path: 'details', components: {header: BlogHeader, default: details, footer: CommonFooter}},
     {path: '/likeweibo', component: LikeWeibo,name: 'LikeWeibo'},
     {path: '/commentwb', component: CommentWb,name: 'CommentWb'},
