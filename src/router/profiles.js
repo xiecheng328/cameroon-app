@@ -17,6 +17,7 @@ import Check from '@/views/profile/childrenpage/MySet/component/Check.vue';
 import Clear from '@/views/profile/childrenpage/MySet/component/Clear.vue';
 import Message from '@/views/profile/childrenpage/MySet/component/Message.vue';
 import UserGuide from '@/views/profile/childrenpage/HelpAndfeedback/UserGuide.vue';
+import Login from '@/views/profile/childrenpage/MySet/component/Login.vue';
 // import UserFeedback from '@/views/profile/childrenpage/HelpAndfeedback/UserFeedback.vue';
 // import Commonquestion from '@/views/profile/childrenpage/HelpAndfeedback/Commonquestion.vue';
 // Vue.use(Router);
@@ -69,6 +70,11 @@ export default [
                 path: '/myset/message',
                 name: 'Message',
                 component: Message,
+            },
+            {
+                path: '/myset/login',
+                name: 'Login',
+                component: Login,
             }
 
         ]
