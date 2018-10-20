@@ -8,6 +8,7 @@ import BlogHeader from '@/views/blog/component/BlogHeader.vue';
 import CommonFooter from '@/components/common/CommonFooter.vue';
 import SendWeibo from '@/views/blog/view/SendWeibo.vue';
 import comment from '@/views/blog/view/comment.vue';
+import Passage from '@/views/blog/Passage.vue';
 import LikeWeibo from '@/views/blog/view/LikeWeibo.vue';
 import CommentWb from '@/views/blog/view/CommentWb.vue';
 import RepostWb from '@/views/blog/view/RepostWb.vue';
@@ -20,7 +21,10 @@ export default [
     {path: '/likeweibo', component: LikeWeibo,name: 'LikeWeibo'},
     {path: '/commentwb', component: CommentWb,name: 'CommentWb'},
     {path: '/repostwb', component: CommentWb,name: 'RepostWb'},
-    {path: 'passage', component: comment,},
+    {path: 'passage',redirect:"passage/comment"},
+    {path: 'passage', component: Passage,children:[
+            {path: 'comment', component: comment}
+        ]},
     {path:'/cHead',component:cHead,name:'CommonHead'},
     {path:'/talk',component:Talk,name:'Talk'},
     {path:'/forwaid',component:Forwaid,name:'Forwaid'},
