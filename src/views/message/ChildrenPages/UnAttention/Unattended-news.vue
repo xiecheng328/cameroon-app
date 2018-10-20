@@ -18,10 +18,10 @@
                 list:[
                     {name:"zhangyu",time:"9:10",content:"农机的修理..."},
                     {name:"lixin",time:"昨天",content:"农机的维护问题..."},
-                    {name:"liutong",time:"10-01",content:"关于播种，那些你不知道的事"},
-                    {name:"lizhi",time:"05.21",content:"农机购买应注意的问题..."},
-                    {name:"wangyu",time:"05.21",content:"我想向您咨询点问题"},
-                    {name:"zhaoxin",time:"05.21",content:"请您现在有时间吗？"}
+                    {name:"liutong",time:"09-11",content:"关于播种，那些你不知道的事"},
+                    {name:"lizhi",time:"10-01",content:"农机购买应注意的问题..."},
+                    {name:"wangyu",time:"05-21",content:"我想向您咨询点问题"},
+                    {name:"zhaoxin",time:"08-21",content:"请您现在有时间吗？"}
                 ]
             }
         },
