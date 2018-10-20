@@ -5,7 +5,7 @@
             <div class="confirm-header-title">
             <a href="" class="confirm-header-title-return">返回</a>
             <a class="confirm-header-title-mine">我的订单</a>
-            <a href=""><img src="./img/省略号.png" alt=""></a>
+            <a href=""><img src="./img/ellipsis.png" alt=""></a>
             </div>
             <div class="confirm-header-content">
             <a href="" class="confirm-header-content-a1">全部</a>

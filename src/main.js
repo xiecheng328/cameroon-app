@@ -18,7 +18,9 @@ Vue.config.productionTip = false;
 //调用i18n
 import VueI18n from 'vue-i18n';
 import {getBrowserLanguage} from "./Unit/language";
-
+//调用echarts
+import echarts from 'echarts';
+Vue.prototype.$echarts = echarts ;
 Vue.use(MuseUI);
 Vue.use(VueI18n);
 const messages = {

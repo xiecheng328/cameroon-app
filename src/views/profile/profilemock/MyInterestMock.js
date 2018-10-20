@@ -42,10 +42,27 @@ const attention = function(){
         src:require('./../../../../public/img/profileicon1@2x.png'),
         intro:'分享种米的知识',
         deleteSlider:''
-    }]
+    }];
+    let recommend = [{
+        title:'大咖1号',
+        sum:1024,
+        src:require('./../../../assets/img/user.png'),
+        tag:'农业技术人员'
+    },{
+        title:'大咖2号',
+        sum:1024,
+        src:require('./../../../assets/img/user.png'),
+        tag:'农业技术人员'
+    },{
+        title:'大咖3号',
+        sum:1024,
+        src:require('./../../../assets/img/user.png'),
+        tag:'农业技术人员'
+    }];
     return {
         commodity:commodity,
         topic:topic,
+        recommend:recommend,
     }
 }
 

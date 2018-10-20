@@ -95,6 +95,7 @@ export default {
 
   &-header{
     height: 40px;
+    margin-top: 10px;
     line-height: 40px;
     text-align: center;
     border-bottom: 1px solid #cccccc;
