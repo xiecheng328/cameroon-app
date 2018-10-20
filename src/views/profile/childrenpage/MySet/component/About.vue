@@ -2,13 +2,13 @@
 
     <div class="top">
     <div>
-        <router-link to="/myset"><img class="top-img" src="./img/return.png"></router-link>
+        <router-link to="/myset"><img class="top-img" src=""></router-link>
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
         <span>设置</span>
     </div>
     
     <div class="top-pic">
-        <img class="pic-img" src="./img/app-ico.png">
+        <img class="pic-img" src="">
         <span>V 1.1.0</span>
     </div>
 
