@@ -1,14 +1,22 @@
 <template>
-    <div id="container-span">
-        <span>转发1098</span>
-        <span>评论8989</span>
-        <span>点赞908</span>
+    <div>
+        <div id="container-span">
+            <span @click="jump">转发109</span>
+            <span>评论8989</span>
+            <span>点赞908</span>
+        </div>
+        <router-view></router-view>
     </div>
 </template>
 
 <script>
 
     export default {
+        methods:{
+            jump(){
+                this.$router.push('/blog/passage/report');
+            }
+        }
 
     }
 </script>
@@ -17,8 +25,11 @@
     #container-span{
         background: white;
         height: .8rem;
+        display: flex;
     }
     span{
+        text-align: center;
+        flex: 1;
         height :100%;
         line-height: .8rem;
         color: gray;
@@ -30,3 +41,4 @@
         border-bottom: 1px solid blue;
     }
 </style>
+
