@@ -8,21 +8,25 @@ const attention = function(){
         img:require('./../../../assets/img/拖拉机1.jpg'),  
         shop:'官方拖拉机旗舰店',
         price:100,
+        value: false,
     },{
         name:'拖拉机',
         img:require('./../../../assets/img/拖拉机2.jpg'),
         shop:'官方拖拉机旗舰店',
         price:100,
+        value: false,
     },{
         name:'拖拉机',
         img:require('./../../../assets/img/拖拉机3.jpg'),
         shop:'官方拖拉机旗舰店',
-        price:100
+        price:100,
+        value: false,
     },{
         name:'拖拉机',
         img:require('./../../../assets/img/拖拉机4.jpg'),
         shop:'官方拖拉机旗舰店',
-        price:100
+        price:100,
+        value: false,
     }];
     let topic = [{
         title:'种田',

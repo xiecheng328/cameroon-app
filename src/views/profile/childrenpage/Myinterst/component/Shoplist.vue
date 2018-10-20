@@ -4,11 +4,15 @@
       <li v-for="(item,index) in commodity" :key="index">
         <div class="commodity-content">
           <div class="commodity-content-shop">
+            <div class="commodity-content-shop-select">
+              <mu-flex class="select-control-row">
+                <mu-checkbox v-model="item.value" uncheck-icon="panorama_fish_eye" checked-icon="adjust" color="#ff0036"></mu-checkbox>
+              </mu-flex>
+            </div>
             <div class="commodity-content-shop-name">
               <img src="./../../../../../assets/img/shop-icon@1,5x.png" alt="">
               <span>{{item.shop}}</span>
             </div>
-            <div></div>
           </div>
           <div class="commodity-content-list">
             <div class="commodity-content-list-left"> <img :src="item.img" alt=""></div>
@@ -27,6 +31,15 @@
 <script>
 export default {
   props: ["commodity"],
+  data() {
+    return {
+      checkbox: {
+        value1: [],
+        value2: false,
+        value3: false
+      }
+    };
+  },
   methods: {
     detele(index) {
       this.$props.commodity.splice(index, 1);
@@ -45,16 +58,18 @@ export default {
     background-color: #fff;
 
     &-shop {
-      border-bottom: 1px solid #ddd;
       border-top-left-radius: 0.2rem;
       border-top-right-radius: 0.2rem;
-      height: 0.6rem;
+      height: 0.8rem;
+      position: relative;
       &-name {
         position: relative;
-        line-height: 0.6rem;
+        line-height: 0.8rem;
+        margin-left: .5rem;
         span {
           margin-left: 0.35rem;
           color: rgb(164, 164, 164);
+          font-size: .28rem
         }
         img {
           height: 0.2rem;
@@ -64,6 +79,12 @@ export default {
           transform: translateY(-50%);
         }
       }
+      &-select {
+        position: absolute;
+        top: 50%;
+        left: .1rem;
+        transform: translateY(-50%);
+      }
     }
     &-list {
       display: flex;
@@ -71,7 +92,6 @@ export default {
       border-bottom-right-radius: 0.2rem;
       position: relative;
       &-left {
-        flex-grow: 1;
         border-bottom-left-radius: 0.2rem;
         img {
           border-bottom-left-radius: 0.2rem;
