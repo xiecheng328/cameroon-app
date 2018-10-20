@@ -55,19 +55,19 @@
                 arr: [],
                 hotList: [
                     {
-                        content: '拖拉机大减价',
+                        content: '小麦播种机使用方法',
 
                     },
                     {
-                        content: '玉米种子大甩卖',
+                        content: '农机补贴价格表',
 
                     },
                     {
-                        content: '挖掘机技术哪家强',
+                        content: '最新小型农业机械',
 
                     },
                     {
-                        content: '水稻一年种三季的秘密',
+                        content: '小麦玉米两用联合收割机',
 
                     },
                 ]

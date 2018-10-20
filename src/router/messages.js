@@ -10,6 +10,7 @@ import Report from '../views/message/report';
 //import Goodluck from '../views/message/goodluck';
 import Chatroom from '../views/message/ChildrenPages/UnAttention/Chatroom';
 //import Withme from '../views/message/Withme';
+import Unattended_news from '../views/message/ChildrenPages/UnAttention/Unattended-news';
 
 export default [
     {path:'openSubScription_content',component:OpenSubScription_content},
@@ -22,6 +23,10 @@ export default [
         path:'/report',
         name:'Report',
         component:Report,
+    },
+    {
+        path:'Unattended_news',
+        component:Unattended_news
     },
     // {
     //     path:'/goodluck',
