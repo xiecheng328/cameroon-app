@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="whole">
         <div class="comment">
             <div class="header">
                 <img src="../component/img/head.png" alt="">
@@ -7,7 +7,7 @@
             <div class="content">
                 <span class="color">昵称</span>
                 <div>
-                    评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容
+                    评论内容评论内容评论内容评论内容评论内
                 </div>
                 <span>1小时前</span>
             </div>
@@ -20,7 +20,7 @@
             <div class="content">
                 <span class="color">昵称</span>
                 <div>
-                    评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容
+                    评论内容评论内容评论内容评论内容评论内容
                 </div>
                 <span>1小时前</span>
             </div>
@@ -39,10 +39,14 @@
         margin:0;
         padding:0;
     }
+    #whole{
+        background: #ffffff;
+    }
     .header img{
         width:1rem;
         flex:1;
         float:left;
+        margin-left:20px;
         margin-right: 10px;
     }
     .content{

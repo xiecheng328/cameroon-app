@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="whole">
         <div class="like">
             <div class="header">
                 <img src="../component/img/head.png" alt="">
@@ -38,6 +38,9 @@
     *{
         margin:0;
         padding:0;
+    }
+    #whole{
+        background: #ffffff;
     }
     .like{
          display:flex;
