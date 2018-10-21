@@ -8,7 +8,10 @@ import SubScription_content from '../views/message/ChildrenPages/subScription/su
 import SubScription_message from '../views/message/ChildrenPages/subScription/subScription_message';
 import Report from '../views/message/report';
 import CopyList from '../views/message/copyList';
-
+import Newdetail from '../views/message/newdetail';
+import Chatroom from '../views/message/ChildrenPages/UnAttention/Chatroom';
+import Withme from '../views/message/Withme';
+import Unattended_news from '../views/message/ChildrenPages/UnAttention/Unattended-news';
 export default [
     {path:'/openSubScription_content',component:OpenSubScription_content},
     {path:'/openSubScription_message',component:OpenSubScription_message},
@@ -30,4 +33,5 @@ export default [
         name:'CopyList',
         component:CopyList,
     },
+    { path:"/Unattended_news" ,component:Unattended_news},
 ]
