@@ -1,7 +1,7 @@
 <template>
   <div class="chatroom">
       <div class="header">
-          <router-link to="unattenednews"><img src="@/assets/img/left.png" class="iconfont icon-logout"></router-link>
+          <router-link to="/Unattended_news"><img src="@/assets/img/left.png" class="iconfont icon-logout"></router-link>
           <p class="roomName">未关注人名字</p>
       </div>
       <div class="body">
