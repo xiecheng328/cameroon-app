@@ -87,7 +87,7 @@
             deleteAll() {
                 this.arr = []
             },
-        }
+        },
     }
 </script>
 

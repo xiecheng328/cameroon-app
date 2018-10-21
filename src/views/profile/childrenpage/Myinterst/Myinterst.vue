@@ -24,7 +24,7 @@
         <Shoplist :commodity="commodity" />
       </div>
       <div class="demo-text" v-if="active === 3">
-        <Topiclist :topic="topic"/>
+        <Topiclist :topic="topic" />
       </div>
       <div class="demo-text" v-if="active === 4">
         <Recommend />
@@ -40,20 +40,19 @@ import Shoplist from "./component/Shoplist.vue";
 import Topiclist from "./component/Topiclist.vue";
 import Recommend from "./component/Recommend.vue";
 
-
 require("./../../profilemock/MyInterestMock.js");
 export default {
   components: {
     Shoplist,
     Topiclist,
-    Recommend,
+    Recommend
   },
   data() {
     return {
       active: 0,
       commodity: [],
       topic: [],
-      recommend: [],
+      recommend: []
     };
   },
   methods: {
@@ -79,6 +78,7 @@ export default {
 <style scoped lang="scss">
 .interest {
   height: 100%;
+  margin-top: 0.4rem;
   &-head {
     height: 45px;
     width: 100%;
@@ -105,6 +105,5 @@ export default {
   padding: 0;
   height: 100%;
 }
-
 </style>
 
