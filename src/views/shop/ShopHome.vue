@@ -48,7 +48,7 @@
     <!-- 热门商品 -->
     <div class="hot-shop">
       <div class="hot-title"><p class="title">热门商品</p>
-      <mu-button flat class="all-shop" @click="goHotAll()">全部></mu-button>
+      <mu-button flat class="all-shop" @click="goHotAll('热门商品')">全部></mu-button>
     </div>
       <div class="hot-sop-list">
           <div v-for="(tile, index) in hotList" :key="index" @click="goHotDetails(index)">
@@ -68,7 +68,7 @@
      <!-- 品牌旗舰 -->
     <div class="brand-shop">
       <div class="hot-title"><p class="title"> 品牌旗舰</p>
-      <mu-button flat class="all-shop" @click="goBrandAll()">全部></mu-button>
+      <mu-button flat class="all-shop" @click="goBrandAll('品牌旗舰')">全部></mu-button>
     </div>
       <ul class="hot-nj">
         <li v-for="item in brandName" :key="item.id" @click="goFlagshipStore(item.id-1)">
@@ -105,7 +105,7 @@
     <div class="tractors-shop">
       <div class="tractors-title">
         <p class="title">播种机</p>
-        <mu-button flat class="all-shop"  @click="goSeederAll()">全部></mu-button>
+        <mu-button flat class="all-shop"  @click="goSeederAll('播种机')">全部></mu-button>
       </div>
         <ul class="tractors-list">
           <li v-for="(item, index) in tractors" :key="index" @click="goHotDetails(index)">
@@ -118,7 +118,7 @@
     <div class="tractors-shop">
       <div class="tractors-title">
         <p class="title">小麦收割机</p>
-        <mu-button flat class="all-shop" @click="goWheatAll()">全部></mu-button>
+        <mu-button flat class="all-shop" @click="goWheatAll('小麦收割机')">全部></mu-button>
       </div>
         <ul class="tractors-list">
           <li v-for="(item, index) in tractors" :key="index" @click="goHotDetails(index)">
@@ -131,7 +131,7 @@
     <div class="potato-shop">
       <div class="hot-title">
         <p class="title"> 马铃薯/经济作物</p>
-        <mu-button flat class="all-shop" @click="goPotatoAll()">全部></mu-button>
+        <mu-button flat class="all-shop" @click="goPotatoAll('马铃薯')">全部></mu-button>
       </div>
       <ul class="potato">
         <li v-for="(item, index) in potatoMachinery" :key="index" @click="goHotDetails(index)">
@@ -276,19 +276,21 @@ export default {
       this.$router.push({
         path:'/shop/search'
       })
-      console.log(123);
     },
     goShoppingCart(){
-      console.log(123);
+      this.$router.push({
+        path:'/shop/shopbuy'
+      })
     },
     goEnterList(nowIndex){
       let productList = this.list;
-      console.log(productList[nowIndex].shopName);
+      this.$router.push({
+        path:'/shop/shoplist'
+      })
     },
     classify(nowIndex){
       let productList = this.list;
       let name = productList[nowIndex].shopName;
-      console.log(name);
       if(name == "全部"){
         this.$router.push({
         path:'/shop/classify'
@@ -296,43 +298,56 @@ export default {
       }
     },
     goLookAll(){
-      
-      console.log(123);
+      this.$router.push({
+        path:'/shop/classify'
+      })
     },
     goHotAll(){
       this.$router.push({
         path:'/shop/shoplist'
       })
-      console.log(123);
     },
     goBrandAll(){
-      console.log(123);
+       this.$router.push({
+        path:'/shop/shoplist'
+      })
     },
-    goTractorAll(){
-      console.log(123);
+    goTractorAll(str){
+       this.$router.push({
+        path:'/shop/shoplist',
+      })
     },
     goSeederAll(){
-      console.log(123);
+       this.$router.push({
+        path:'/shop/shoplist'
+      })
     },
     goWheatAll(){
-      console.log(123);
+       this.$router.push({
+        path:'/shop/shoplist'
+      })
     },
-    goPotatoAll(){
-      console.log(123);
+    goPotatoAll(str){
+       this.$router.push({
+        path:'/shop/shoplist',
+        params: str
+      })
     },
     goPartsAll(){
-      console.log(123);
+       this.$router.push({
+        path:'/shop/partslist'
+      })
     },
     goFlagshipStore(index){
       let flagshipStore = this.brandName;
-      console.log(flagshipStore[index].brandName);
     },
     goHotDetails(nowIndex){
-      console.log(nowIndex);
+       this.$router.push({
+        path:'/shop/detail'
+      })
     }
   },
   mounted:function() {
-    // console.log(this.$router.children);
     axios.get('msg').then(res=>{
         this.parts = res.data.machineryProuct;
     });
@@ -617,7 +632,6 @@ export default {
     margin-top: 0.2rem;
     float: right;
     font-size: 16px;
-    
     letter-spacing: 3px;
   }
 </style>
