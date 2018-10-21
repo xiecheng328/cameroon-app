@@ -1,7 +1,7 @@
 <template>
 <div id="withme">
  <div id='messageTitle'>
-  <span style="margin-left: .1rem"><-</span>
+  <span style="margin-left: .1rem" @click="back" ><-</span>
   <h5>@我</h5>
  </div>
  <div class="titlehead">
@@ -51,6 +51,15 @@
 </div>
 </template>
 <script>
+ export default {
+     methods:{
+         back(){
+              this.$router.push('/message');
+              this.$emit('returnM')
+         }
+     }
+
+ }
 
 </script>
 <style scoped>

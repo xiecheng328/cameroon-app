@@ -1,6 +1,6 @@
 ﻿<template>
     <div>
-        <router-view v-show="isShow"  ></router-view>
+        <router-view v-show="isShow"   v-on:resetFatherp="resetF"></router-view>
         <div class="set"  v-show="!isShow">
 
             <mu-container>
@@ -13,19 +13,17 @@
                     <div class="set-user-slidetext"><h5>昵称</h5> <p>常住地:雅温得</p></div>
                 </div>
                 <div class="setList">
+                    <li ><img src="/../img/profileicon1.png" alt=""  ><span>夜间模式</span><button @click="changeModle">{{isTrue}}</button></li>
                     <li v-for="item in setList" :key="item.id"  @click="routerGo(item)" >
-
                         <img :src="item.iconimg" alt="">
                         <span>
                     {{item.name}}
                 </span>
 
                     </li>
-                    <li ><img src="/../img/profileicon1.png" alt=""  ><span>夜间模式</span><button @click="changeModle">{{isTrue}}</button></li>
+             >
                 </div>
-                <div class="logo">
-                    <p class="logo-word">退出当前登录</p>
-                </div>
+
 
 
 
@@ -77,6 +75,13 @@
                       isShow:false,
                       src:"About",
                   },
+                  {
+                      name:'退出当前登录',
+                      id:5,
+                      iconimg:"./../img/profileicon1.png",
+                      isShow:false,
+                      src:"Login",
+                  },
               ]
 
           }
@@ -84,6 +89,11 @@
       methods:{
           changeFatherC() {
               this.$emit('resetFatherp');
+          },
+          resetF(){
+              console.log("chufal!");
+              this.$router.push('/myset');
+              this.isShow=!this.isShow;
           },
           changeModle(){
               this.isTrue=!this.isTrue;
@@ -93,6 +103,7 @@
               this.$router.push({ name:`${a.src}`, params: { userId: 123 }})
               console.log(a)
           },
+
 
       }
   }

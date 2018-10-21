@@ -5,7 +5,7 @@
     <!--<router-link to="/message/withme">@与我相关</router-link>-->
     <!--<router-view></router-view>-->
     <!--=======-->
-    <router-view v-show="!isClick"></router-view>
+    <router-view v-show="!isClick" v-on:returnM='changecheck'></router-view>
 
     <!--  此处的子页面 v-show变量要通过各子页面的“返回按钮”的点击改变父组件的isClick的值，取反，（父子，子父组件传参）自己研究-->
 
@@ -16,7 +16,7 @@
       <div class="message-meau">
         <div class="message-meaulist">
           <!--<li v-for=" val in messagemeau" @click="Change(val)"><img src="../../assets/img/message-02.png" alt="" ><span>{{val.name}}</span> <span><img src="../../assets/img/message-01.png" alt="" ></span></li>-->
-          <li v-for=" val in messagemeau"><router-link :to="val.path"><img src="../../assets/img/message-02.png" alt="" ><span>{{val.name}}</span> <span><img src="../../assets/img/message-01.png" alt="" ></span></router-link></li>
+          <li v-for=" val in messagemeau" @click="Change()"><router-link :to=val.path><div><img src="../../assets/img/message-02.png" alt="" ><span>{{val.name}}</span> <span><img src="../../assets/img/message-01.png" alt="" ></span></div></router-link></li>
         </div>
       </div>
     </div>
@@ -41,7 +41,7 @@
                 },{
                     img:"/img/message-icon.png",
                     name:"评论",
-                    path:"/Report",
+                    path:"/report",
                     id:2
                 },{
                     img:"/img/message-icon.png",
@@ -51,22 +51,22 @@
                 },{
                     img:"/img/message-icon.png",
                     name:"订阅号消息",
-                    path:"/openSubScription_content",
+                    path:"/subScription_content",
                     id:4
                 },{
                     img:"/img/message-icon.png",
                     name:"未关注人消息",
-                    path:"/chatroom",
+                    path:"/Unattended_news",
                     id:5
                 },{
                     img:"/img/message-icon.png",
                     name:"联系人1",
-                    path:"people1",
+                    path:"/chatroom",
                     id:6
                 },{
                     img:"/img/message-icon.png",
                     name:"联系人2",
-                    path:"people2",
+                    path:"/chatroom",
                     id:7
                 }],
             }
@@ -77,10 +77,13 @@
 
 
         methods:{
-            Change(a){
-                console.log(a);
-
+            Change(){
+                this.isClick=!this.isClick;
             },
+            changecheck(){
+                this.isClick=!this.isClick;
+                console.log(this.isClick);
+            }
         }
     }
 

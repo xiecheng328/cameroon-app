@@ -1,17 +1,17 @@
 <template>
-<div class="report">
+<div class="copyList">
 
     <div class="header">
 <img src="../../assets/img/left.png" alt="" class="comeback" @click="home()">
 <h3 class="remark">所有评论</h3>
-<h3 class="reset">设置</h3>
+<h3 class="reset" @click="control()">设置</h3>
     </div>
     <ul class="body">
         <li><img src="../../assets/img/user.png" alt="" class="user-img">
             <span>张三</span>
             <span>10:10</span>
         </li>
-        <li class="goodmark">赞了这条评论</li>
+        <li class="goodluck">赞了这条评论</li>
         <li>回复：@李四  这个问题可以这样解决</li>
         <li>李四回复张三：那如果遇到这种问题怎么办？</li>
 </ul>
@@ -20,7 +20,7 @@
             <span>张三</span>
             <span>10:10</span>
         </li>
-         <li class="goodmark">赞了这条评论</li>
+         <li class="goodluck">赞了这条评论</li>
         <li>回复：@李四  这个问题可以这样解决</li>
         <li>李四回复张三：那如果遇到这种问题怎么办？</li>
 </ul>
@@ -29,7 +29,7 @@
             <span>张三</span>
             <span>10:10</span>
         </li>
-         <li class="goodmark">赞了这条评论</li>
+         <li class="goodluck">赞了这条评论</li>
         <li>回复：@李四  这个问题可以这样解决</li>
         <li>李四回复张三：那如果遇到这种问题怎么办？</li>
 </ul>
@@ -43,7 +43,10 @@
     export default{
     method:{
         home(){
-            this.$router.push({name:'message.vue'});
+            this.$router.push({name:'message/Message.vue'});
+        },
+        control(){
+            this.$router.push({name:'MySet/component/Message.vue'});
         }
     }
 }
@@ -73,9 +76,9 @@
         top:0;
         left:200px;
     }
-    .goodmark{
+    .goodluck{
         font-size:20px;
-        background: #ff0000;
+        background: pink;
     }
     </style>
 
