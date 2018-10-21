@@ -17,7 +17,7 @@
         methods:{
             xiangQing(){
                 this.$router.push({
-                    path:'/李晶的详情'
+                    path:'/newdetail'
                 })
             }
         }

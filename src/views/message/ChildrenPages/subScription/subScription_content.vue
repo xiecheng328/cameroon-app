@@ -30,9 +30,7 @@
                 })
             },
             ReturnPre(){
-                this.$router.push({
-                    path:'/message'
-                })
+                this.$router.push('/message');
             },
         },
         components:{
