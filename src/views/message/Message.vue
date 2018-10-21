@@ -5,7 +5,7 @@
     <!--<router-link to="/message/withme">@与我相关</router-link>-->
     <!--<router-view></router-view>-->
     <!--=======-->
-    <router-view v-show="!isClick"></router-view>
+    <router-view v-show="!isClick" v-on:returnM='changecheck'></router-view>
 
     <!--  此处的子页面 v-show变量要通过各子页面的“返回按钮”的点击改变父组件的isClick的值，取反，（父子，子父组件传参）自己研究-->
 
@@ -16,7 +16,7 @@
       <div class="message-meau">
         <div class="message-meaulist">
           <!--<li v-for=" val in messagemeau" @click="Change(val)"><img src="../../assets/img/message-02.png" alt="" ><span>{{val.name}}</span> <span><img src="../../assets/img/message-01.png" alt="" ></span></li>-->
-          <li v-for=" val in messagemeau" @click="Change()"><router-link :to="val.path"><img src="../../assets/img/message-02.png" alt="" ><span>{{val.name}}</span> <span><img src="../../assets/img/message-01.png" alt="" ></span></router-link></li>
+          <li v-for=" val in messagemeau" @click="Change()"><router-link :to=val.path><div><img src="../../assets/img/message-02.png" alt="" ><span>{{val.name}}</span> <span><img src="../../assets/img/message-01.png" alt="" ></span></div></router-link></li>
         </div>
       </div>
     </div>
@@ -78,8 +78,12 @@
 
         methods:{
             Change(){
-                this.isClick=false;
+                this.isClick=!this.isClick;
             },
+            changecheck(){
+                this.isClick=!this.isClick;
+                console.log(this.isClick);
+            }
         }
     }
 

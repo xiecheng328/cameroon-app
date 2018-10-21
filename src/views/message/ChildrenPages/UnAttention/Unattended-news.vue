@@ -32,7 +32,8 @@
             ReturnM(){
                 this.$router.push({
                     path:"/message"
-                })
+                });
+                this.$emit('returnM');
             }
         },
         name: "Unattended-news"
