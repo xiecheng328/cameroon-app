@@ -16,7 +16,7 @@
       <div class="message-meau">
         <div class="message-meaulist">
           <!--<li v-for=" val in messagemeau" @click="Change(val)"><img src="../../assets/img/message-02.png" alt="" ><span>{{val.name}}</span> <span><img src="../../assets/img/message-01.png" alt="" ></span></li>-->
-          <li v-for=" val in messagemeau"><router-link :to="val.path"><img src="../../assets/img/message-02.png" alt="" ><span>{{val.name}}</span> <span><img src="../../assets/img/message-01.png" alt="" ></span></router-link></li>
+          <li v-for=" val in messagemeau" @click="Change()"><router-link :to="val.path"><img src="../../assets/img/message-02.png" alt="" ><span>{{val.name}}</span> <span><img src="../../assets/img/message-01.png" alt="" ></span></router-link></li>
         </div>
       </div>
     </div>
@@ -41,7 +41,7 @@
                 },{
                     img:"/img/message-icon.png",
                     name:"评论",
-                    path:"/Report",
+                    path:"/report",
                     id:2
                 },{
                     img:"/img/message-icon.png",
@@ -61,12 +61,12 @@
                 },{
                     img:"/img/message-icon.png",
                     name:"联系人1",
-                    path:"people1",
+                    path:"/people1",
                     id:6
                 },{
                     img:"/img/message-icon.png",
                     name:"联系人2",
-                    path:"people2",
+                    path:"/people2",
                     id:7
                 }],
             }
@@ -77,8 +77,8 @@
 
 
         methods:{
-            Change(a){
-                console.log(a);
+            Change(){
+                this.isClick=false;
 
             },
         }
