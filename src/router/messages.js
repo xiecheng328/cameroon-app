@@ -7,11 +7,7 @@ import OpenSubScription_message from '../views/message/ChildrenPages/subScriptio
 import SubScription_content from '../views/message/ChildrenPages/subScription/subScription_content';
 import SubScription_message from '../views/message/ChildrenPages/subScription/subScription_message';
 import Report from '../views/message/report';
-import Goodluck from '../views/message/goodluck';
-import Chatroom from '../views/message/ChildrenPages/UnAttention/Chatroom';
-import Withme from '../views/message/Withme';
-import Unattended_news from '../views/message/ChildrenPages/UnAttention/Unattended-news';
-import Newdetail from '../views/message/newdetail';
+import CopyList from '../views/message/copyList;'
 
 export default [
     {path:'/openSubScription_content',component:OpenSubScription_content},
@@ -29,12 +25,9 @@ export default [
         component:Report,
     },
     {
-        path:'/Unattended_news',
-        component:Unattended_news
+
+        path:'/copyList',
+        name:'CopyList',
+        component:CopyList,
     },
-    // {
-    //     path:'/goodluck',
-    //     name:'Goodluck',
-    //     component:'Goodluck',
-    // }
 ]
