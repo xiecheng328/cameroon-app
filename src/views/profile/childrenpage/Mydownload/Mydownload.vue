@@ -19,7 +19,7 @@
                   <ul>
                       <li v-for="(item,index) in imgs" :key=index>
                           <img :src="item.imgurl">
-                          <p>vip用户专享</p>
+                              <p>vip用户专享</p>
                       </li>
                   </ul>
 
@@ -33,11 +33,10 @@
                   <ul>
                       <li v-for="(item,index) in imgs" :key=index>
                           <img :src="item.imgurl">
-                          <p>普通用户可看视频</p>
+                              <p>普通用户可看视频</p>
                       </li>
                   </ul>
               </div>
-              <!-- <Video/> -->
           </mu-container>
 
       </div>
@@ -123,9 +122,6 @@ export default {
   width: 100%;
   height:300px;
   position: relative;
-  p{
-    text-align: center;
-  }
   &-title1{ 
     position: relative;
     height: 40px;
@@ -149,21 +145,22 @@ export default {
     float: left;
     margin-left: 0.1rem;
     margin-bottom: 0.1rem;
+        margin-right: 0.2rem;
     img{
       margin-left: 0.4rem;
       margin-right: 0.4rem;
       width:100%;
       height:80%;
     }
+        p{
+           padding-left: 1rem;
+
+        }
   }
 }
 .download-text2{
   width: 100%;
   position: relative;
-  // background-color: antiquewhite;
-  p{
-    text-align: center;
-  }
   &-title2{ 
     position: relative;
     margin-top: 0.1rem;
@@ -186,6 +183,7 @@ export default {
     height: 100px;
     float: left;
     margin-left: 0.1rem;
+        margin-right: 0.2rem;
     margin-bottom: 0.1rem;
     img{
       margin-left: 0.4rem;
@@ -193,6 +191,9 @@ export default {
       width:100%;
       height:80%;
     }
+        p{
+            padding-left:1rem ;
+        }
   }
 }
  
