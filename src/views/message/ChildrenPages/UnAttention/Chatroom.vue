@@ -14,8 +14,8 @@
           </div>
       </div>
       <div class="footer">
-          <input type="text"  v-model="msg" class="footerInput">
-          <button class="footerSend">发送</button>
+          <input type="text"  v-model="msg" class="footerInput" @input="seeButton()">
+          <button class="footerSend" v-show="showButton">发送</button>
       </div>
   </div>
 </template>
@@ -32,7 +32,13 @@ export default {
     };
   },
   methods: {
-
+      seeButton(){
+          if(this.msg==''){
+              this.showButton=false;
+          }else {
+              this.showButton=true;
+          }
+      }
     }
 }
 </script>
@@ -73,7 +79,7 @@ export default {
   width: 100%;
   height: 40px;
   position: absolute;
-  bottom: 0;
+  bottom: 56px;
   display: -webkit-flex;
 }
 .footerInput{
