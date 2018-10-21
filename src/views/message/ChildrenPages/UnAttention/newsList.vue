@@ -1,9 +1,9 @@
 <template>
-    <li id="news">
-        <div class="left">
-            <img src="public/img/1230.jpg" alt="">
+    <li id="news"  @click="Chatroom">
+        <div class="news-left">
+            <img src="../../../../assets/img/head.jpeg" alt="">
         </div>
-        <div class="right">
+        <div class="news-right">
             <span class="name">{{list.name}}</span>
             <p class="time">{{list.time}}</p>
             <p class="content">{{list.content}}</p>
@@ -14,7 +14,14 @@
 <script>
     export default {
         name: "UnattendadnewsList",
-        props:["list"]
+        props:["list"],
+        methods:{
+            Chatroom(){
+                this.$router.push({
+                    path:"/Chatroom"
+                })
+            }
+        },
     }
 </script>
 
@@ -28,11 +35,11 @@
         height: 60px;
         background-color:#fffdef;
         margin-top: 5px;
-        & .left{
-            flex:0.6;
+        & .news-left{
+            flex: .6;
             margin-top: 10px;
         }
-        & .right{
+        & .news-right{
             flex: 3;
         }
         & img{

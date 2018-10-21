@@ -51,7 +51,7 @@
                 },{
                     img:"/img/message-icon.png",
                     name:"订阅号消息",
-                    path:"/openSubScription_content",
+                    path:"/subScription_content",
                     id:4
                 },{
                     img:"/img/message-icon.png",

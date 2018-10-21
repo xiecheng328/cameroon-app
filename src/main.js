@@ -2,6 +2,7 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 import store from './store';
+
 //muse-ui
 import MuseUI from 'muse-ui';
 import 'muse-ui/dist/muse-ui.css';
@@ -13,7 +14,7 @@ import 'mockjs';
 import './assets/js/rem.js';
 //引入css重置样式
 // import './assets/css/reset.css';
-import '@/views/blog/view/icon/iconfont.css';
+
 Vue.config.productionTip = false;
 //调用i18n
 import VueI18n from 'vue-i18n';
