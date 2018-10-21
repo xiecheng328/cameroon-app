@@ -31,6 +31,7 @@
             },
             ReturnPre(){
                 this.$router.push('/message');
+                this.$emit('returnM');
             },
         },
         components:{
