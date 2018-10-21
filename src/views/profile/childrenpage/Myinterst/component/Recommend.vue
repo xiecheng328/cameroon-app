@@ -146,13 +146,13 @@ export default {
                                     color: #333;
                                     font-weight: 700;
                                     font-size: 0.3rem;
-                                    margin: 0;
+                                    margin: -8px;
                                 }
 
                                 &-tag{
                                     color: #666;
                                     font-size: 0.2rem;
-                                    margin: 0;
+                                    margin: -8px;
                                 }
                             }
                             &-plus{

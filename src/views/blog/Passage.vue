@@ -37,8 +37,8 @@
         <div>
             <div id="container-span">
                 <span @click="jump">转发109</span>
-                <span>评论8989</span>
-                <span>点赞908</span>
+                <span @click="jump1">评论8989</span>
+                <span @click="jump2">点赞908</span>
             </div>
             <router-view></router-view>
         </div>
@@ -58,10 +58,16 @@
         },
         methods:{
             back(){
-                window.history.go(-1);
+                this.$router.push('/blog/details');
             },
             jump(){
                 this.$router.push('/blog/passage');
+            },
+            jump1(){
+                this.$router.push('/blog/passage/commentwb');
+            },
+            jump2(){
+                this.$router.push('/blog/passage/likeweibo');
             }
         }
     }

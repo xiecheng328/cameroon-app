@@ -12,11 +12,17 @@ import Myfans from '@/views/profile/childrenpage/Myfans/Myfans.vue';
 import Myinterst from '@/views/profile/childrenpage/Myinterst/Myinterst.vue';
 import Myset from '@/views/profile/childrenpage/MySet/Myset.vue';
 import Myshopping from '@/views/profile/childrenpage/Myshopping/Myshopping.vue';
-import Age from '@/views/profile/childrenpage/Myfans/Age.vue';
 import About from '@/views/profile/childrenpage/MySet/component/About.vue';
 import Check from '@/views/profile/childrenpage/MySet/component/Check.vue';
 import Clear from '@/views/profile/childrenpage/MySet/component/Clear.vue';
 import Message from '@/views/profile/childrenpage/MySet/component/Message.vue';
+import UserGuide from '@/views/profile/childrenpage/HelpAndfeedback/UserGuide.vue';
+import Login from '@/views/profile/childrenpage/MySet/component/Login.vue';
+import Vip from '@/views/profile/childrenpage/Mydownload/component/Vip.vue';
+import Video from '@/views/profile/childrenpage/Mydownload/component/Video.vue';
+import Manage from '@/views/profile/childrenpage/Mydownload/component/Manage.vue'
+// import UserFeedback from '@/views/profile/childrenpage/HelpAndfeedback/UserFeedback.vue';
+// import Commonquestion from '@/views/profile/childrenpage/HelpAndfeedback/Commonquestion.vue';
 // Vue.use(Router);
 export default [
     // mode: 'history',
@@ -43,6 +49,23 @@ export default [
         path: '/mydownload',
         name: 'Mydownload',
         component: Mydownload,
+        children:[
+            {
+                path: '/mydownload/vip',
+                name: 'Vip',
+                component: Vip,
+            },
+            {
+                path: '/mydownload/video',
+                name: 'Video',
+                component: Video,
+            },
+            {
+                path: '/mydownload/manage',
+                name: 'Manage',
+                component: Manage,
+            },
+        ]
       }, {
         path: '/myset',
         name: 'Myset',
@@ -67,6 +90,11 @@ export default [
                 path: '/myset/message',
                 name: 'Message',
                 component: Message,
+            },
+            {
+                path: '/myset/login',
+                name: 'Login',
+                component: Login,
             }
 
         ]
@@ -77,6 +105,25 @@ export default [
         path: '/helpAndfeedback',
         name: 'HelpAndfeedback',
         component: HelpAndfeedback,
-      },
+        children:[
+          {
+              path: '/commonquestion',
+              name: 'Commonquestion',
+              // component: Commonquestion,
+          },
+          {
+              path: '/userGuide',
+              name: 'UserGuide',
+              component: UserGuide,
+          },
+          {
+              path: '/userFeedback',
+              name: 'UserFeedback',
+              // component: UserFeedback,
+          },
+         
+
+      ] },
+     
     
 ];

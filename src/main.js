@@ -2,6 +2,7 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 import store from './store';
+
 //muse-ui
 import MuseUI from 'muse-ui';
 import 'muse-ui/dist/muse-ui.css';
@@ -13,6 +14,7 @@ import 'mockjs';
 import './assets/js/rem.js';
 //引入css重置样式
 // import './assets/css/reset.css';
+
 Vue.config.productionTip = false;
 //调用i18n
 import VueI18n from 'vue-i18n';
@@ -28,7 +30,7 @@ const messages = {
     fr: require('./Unit/lang/fra.js')
 };
 const i18n = new VueI18n({
-    locale: 'zh', // 语言标识
+    locale: 'fr', // 语言标识
     messages
 });
 new Vue({

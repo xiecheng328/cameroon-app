@@ -27,7 +27,9 @@
         <div class="bottom-details">
               <div>
                 <img src="./component/img/zf.png" alt="" class="img_1">
-                转发161
+                <router-link to="/forword" class="f-c">转发161</router-link>
+
+
               </div>
               <div>
                 <img src="./component/img/pl.png" alt="" class="img_1">
@@ -190,5 +192,8 @@
   }
   .text_1{
     color: #000;
+  }
+  .f-c{
+    color:black;
   }
 </style>

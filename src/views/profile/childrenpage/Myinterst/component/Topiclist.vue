@@ -1,35 +1,35 @@
 <template>
-    <div class="topic">
-        <div class="topic-search">
-        </div>
-        <div class="topic-content">
-            <div class="topic-content-list">
-                <ul>
-                    <li class="list-item" v-for="(item,index) in topic" @touchstart='touchStart(index)' @touchmove='touchMove' @touchend='touchEnd' :style="item.deleteSlider" :key="index">
-                        <div class="topic-content-list-content">
-                            <div class="topic-content-list-content-left"><img :src="item.src" alt=""></div>
-                            <div class="topic-content-list-content-right">
-                                <div>
-                                    <p>
-                                        {{item.title}}
-                                    </p>
-                                    <p>
-                                        简介：{{item.intro}}
-                                    </p>
-                                    <p>
-                                        关注人数：{{item.hot}}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="remove" ref='remove'>
-                            <button @click="detele(index)">取消关注</button>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
+  <div class="topic">
+    <div class="topic-search">
     </div>
+    <div class="topic-content">
+      <div class="topic-content-list">
+        <ul>
+          <li class="list-item" v-for="(item,index) in topic" :style="item.deleteSlider" :key="index">
+            <div class="topic-content-list-content" @touchstart.stop='touchStart(index)' @touchmove.stop='touchMove' @touchend.stop='touchEnd'>
+              <div class="topic-content-list-content-left"><img :src="item.src" alt=""></div>
+              <div class="topic-content-list-content-right">
+                <div>
+                  <p>
+                    {{item.title}}
+                  </p>
+                  <p>
+                    简介：{{item.intro}}
+                  </p>
+                  <p>
+                    关注人数：{{item.hot}}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="remove" ref='remove'>
+              <button @click.stop="detele(index)">取消关注</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -46,11 +46,12 @@ export default {
       e = e || event;
       this.nowindex = index;
       //tounches类数组，等于1时表示此时有只有一只手指在触摸屏幕
-    //   console.log(index);
+      //   console.log(index);
       if (e.touches.length == 1) {
         // 记录开始位置
         this.startX = e.touches[0].clientX;
       }
+      return false;
     },
     touchMove(e) {
       e = e || event;
@@ -64,25 +65,27 @@ export default {
         this.disX = this.startX - this.moveX;
         // 如果是向右滑动或者不滑动，不改变滑块的位置
         if (this.disX < 0 || this.disX == 0) {
-          this.$props.topic[this.nowindex].deleteSlider = "transform:translateX(0px)";
+          this.$props.topic[this.nowindex].deleteSlider =
+            "transform:translateX(0px)";
           // 大于0，表示左滑了，此时滑块开始滑动
         } else if (this.disX > 0) {
           //具体滑动距离我取的是 手指偏移距离*5。
           this.$props.topic[this.nowindex].deleteSlider =
-            "transform:translateX(-" + this.disX * 5 + "px)";
+            "transform:translateX(-" + this.disX + "px)";
 
           // 最大也只能等于删除按钮宽度
-          if (this.disX * 5 >= wd) {
+          if (this.disX >= wd) {
             this.$props.topic[this.nowindex].deleteSlider =
               "transform:translateX(-" + wd + "px)";
           }
         }
       }
+      return false;
     },
     touchEnd(e) {
       e = e || event;
-    //   let currentTarget = e.currentTarget;
-    //   console.log(e.currentTarget.style);
+      //   let currentTarget = e.currentTarget;
+      //   console.log(e.currentTarget.style);
       let wd = this.$refs.remove[0].offsetWidth;
       if (e.changedTouches.length == 1) {
         let endX = e.changedTouches[0].clientX;
@@ -90,22 +93,25 @@ export default {
         //如果距离小于删除按钮一半,强行回到起点
 
         if (this.disX * 5 < wd / 2) {
-          this.$props.topic[this.nowindex].deleteSlider = "transform:translateX(0px)";
+          this.$props.topic[this.nowindex].deleteSlider =
+            "transform:translateX(0px)";
         } else {
           //大于一半 滑动到最大值
           this.$props.topic[this.nowindex].deleteSlider =
             "transform:translateX(-" + wd + "px)";
         }
       }
+      return false;
     },
-    detele(index){
-        this.$props.topic.forEach((elem,indexx) => {
-            if(indexx==index){
-                this.nowindex = -1;
-                this.$props.topic.splice(index,1);
-                this.index=-1;
-            }
-        });
+    detele(index) {
+      this.$props.topic.forEach((elem, indexx) => {
+        if (indexx == index) {
+          this.nowindex = -1;
+          this.$props.topic.splice(index, 1);
+          this.index = -1;
+        }
+      });
+      return false;
     }
   }
 };
@@ -181,8 +187,12 @@ export default {
   position: absolute;
   top: 0;
   right: -2rem;
-  button{
-      color:#fff;
+  button {
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    background-color: #ff4949;
+    outline: none;
   }
 }
 </style>

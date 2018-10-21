@@ -1,7 +1,7 @@
 <template>
   <div class="HelpAndfeedback">
     
-   
+    <router-view v-show="!isClick" v-on:resetFatherp="resetF" ></router-view>
     <h3 class="HelpAndfeedback-header">帮助与反馈</h3>
    
     <div class="menuHelpAndfeedback">
