@@ -11,7 +11,7 @@ import Goodluck from '../views/message/goodluck';
 import Chatroom from '../views/message/ChildrenPages/UnAttention/Chatroom';
 import Withme from '../views/message/Withme';
 import Unattended_news from '../views/message/ChildrenPages/UnAttention/Unattended-news';
-import Newdetail from '../views/message/ChildrenPages/subScription/newdetail';
+import Newdetail from '../views/message/newdetail';
 
 export default [
     {path:'/openSubScription_content',component:OpenSubScription_content},
