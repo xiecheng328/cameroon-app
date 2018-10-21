@@ -5,9 +5,11 @@
             <h5 class="small-header">订阅消息</h5>
             <img class="addMore" src="../../../../assets/img/message_add.png" @click="addmore" alt="">
         </div>
-        <SubScription_message  v-for="val in list" :list="val"></SubScription_message>
+        <SubScription_message id="Sub" v-for="val in list" :list="val"></SubScription_message>
     </div>
-
+    <!--<div id="test">-->
+        <!--sss-->
+    <!--</div>-->
 </template>
 
 <script>
@@ -40,7 +42,11 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+    /*#test{*/
+        /*width: 100%;*/
+        /*background: #55a532;*/
+    /*}*/
     *{
         margin:0;
         padding:0;
@@ -50,6 +56,9 @@
         height:40px;
         line-height: 40px;
         font-size: 20px;
+    }
+    #Sub{
+        width: 100%;
     }
     .small-header{
         float: right;

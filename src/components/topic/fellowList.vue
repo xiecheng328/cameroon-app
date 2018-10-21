@@ -11,7 +11,8 @@
         <div id="TUT" class="headInformation HFborder">{{details.time}}</div>
         <div id="articleTitle">{{details.title}}</div>
         <div id="art" class="article" v-if=details.isShowVideo>
-            <video id="oVd" :src="details.videoSrc" preload controls>您的浏览器不支持video标签</video>
+            <video id="oVd" @click="(event)=>{event.stopPropagation();}"
+            :src="details.videoSrc" preload controls>您的浏览器不支持video标签</video>
         </div>
         <div id="article_img">
             <div id="articleDetails"><span>{{details.author}}：</span>
