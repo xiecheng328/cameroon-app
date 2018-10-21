@@ -18,6 +18,9 @@ import Clear from '@/views/profile/childrenpage/MySet/component/Clear.vue';
 import Message from '@/views/profile/childrenpage/MySet/component/Message.vue';
 import UserGuide from '@/views/profile/childrenpage/HelpAndfeedback/UserGuide.vue';
 import Login from '@/views/profile/childrenpage/MySet/component/Login.vue';
+import Vip from '@/views/profile/childrenpage/Mydownload/component/Vip.vue';
+import Video from '@/views/profile/childrenpage/Mydownload/component/Video.vue';
+import Manage from '@/views/profile/childrenpage/Mydownload/component/Manage.vue'
 // import UserFeedback from '@/views/profile/childrenpage/HelpAndfeedback/UserFeedback.vue';
 // import Commonquestion from '@/views/profile/childrenpage/HelpAndfeedback/Commonquestion.vue';
 // Vue.use(Router);
@@ -46,6 +49,23 @@ export default [
         path: '/mydownload',
         name: 'Mydownload',
         component: Mydownload,
+        children:[
+            {
+                path: '/mydownload/vip',
+                name: 'Vip',
+                component: Vip,
+            },
+            {
+                path: '/mydownload/video',
+                name: 'Video',
+                component: Video,
+            },
+            {
+                path: '/mydownload/manage',
+                name: 'Manage',
+                component: Manage,
+            },
+        ]
       }, {
         path: '/myset',
         name: 'Myset',

@@ -1,100 +1,96 @@
 
 <template>
+
   <div>
-        <mu-container>
-        <div class="download-title">
-          <mu-button class="download-title-back" flat @click="changeFatherB">返回</mu-button>
-          <h3 class="download-title-text">我的下载</h3>
-          <h4 class="download-title-manage">编辑</h4>
-        </div>
-        <hr/>
-        <mu-tabs :value.sync="active1" class="download-banner" center>
-            <mu-tab class="download-banner-vip">会员专享</mu-tab>
-            <mu-tab class="download-banner-general">下载视频</mu-tab>
-        </mu-tabs>
-        <hr/>
-        <div class="download-text" v-if="active1 === 0">
-          <div class="download-text-title">
-              <h4 class="download-text-title-vip">VIP视频</h4>
-              <h4 class="download-text-title-more">更多</h4>
-          </div>
-              <ul>
-                <li v-for="(item,index) in imgs" :key=index>
-                 <img v-bind:src="item.imgurl">
-                  <p>vip用户专享</p>
-                </li>
-              </ul>
-            <router-view></router-view>
-        </div>
-        <div class="download-text" v-if="active1 === 1">
-          <div class="download-text-title">
-            <h4 class="download-text-title-vip">视频</h4>
-            <h4 class="download-text-title-more">更多</h4>
-          </div>
-              <ul>
-                <li v-for="(item,index) in imgs" :key=index>
-                 <img :src="item.imgurl">
-                  <p>普通用户可看视频</p>
-                </li>
-              </ul>
-            <router-view></router-view>
-        </div>
-        </mu-container>
-    </div>
+      <router-view v-show="isShow"  v-on:resetFatherp="resetF" ></router-view>
+      <div v-show="!isShow" >
+          <mu-container >
+              <div class="download-title">
+                  <mu-button class="download-title-back" flat @click="changeFatherB">返回</mu-button>
+                  <h3 class="download-title-text">我的下载</h3>
+                  <span class="download-title-manage" @click="ff2">编辑</span>
+              </div>
+              <hr/>
+              <div class="download-text1">
+                  <div class="download-text1-title1">
+                      <h4 class="download-text1-title1-vip">VIP视频</h4>
+                      <span class="download-text1-title1-more" @click="ff1">更多</span>
+                  </div>
+                  <ul>
+                      <li v-for="(item,index) in imgs" :key=index>
+                          <img :src="item.imgurl">
+                          <p>vip用户专享</p>
+                      </li>
+                  </ul>
+
+              </div>
+              <hr/>
+              <div class="download-text2">
+                  <div class="download-text2-title2">
+                      <h4 class="download-text2-titl2-video">视频</h4>
+                      <span  class="download-text2-title2-more" @click="ff">更多</span>
+                  </div>
+                  <ul>
+                      <li v-for="(item,index) in imgs" :key=index>
+                          <img :src="item.imgurl">
+                          <p>普通用户可看视频</p>
+                      </li>
+                  </ul>
+              </div>
+              <!-- <Video/> -->
+          </mu-container>
+
+      </div>
+
+  </div>
 </template>
 
 <script>
+
 export default {
   name:"profile",
   data(){
     return{
-      active1:0,
-      /*imgs:[
+        isShow:false,
+      imgs:[
         {
-          imgurl:require('./../../../../../public/img.1/profilemydownload.jpg')
-        },
-        {
-          imgurl:require('./../../../../../public/img.1/profilemydownload.jpg')
+          imgurl:require('./../../../../assets/img/profilemydownload.jpg')
         },
         {
-          imgurl:require('./../../../../../public/img.1/profilemydownload.jpg')
+          imgurl:require('./../../../../assets/img/profilemydownload.jpg')
         },
         {
-          imgurl:require('./../../../../../public/img.1/profilemydownload.jpg')
+          imgurl:require('./../../../../assets/img/profilemydownload.jpg')
         },
         {
-          imgurl:require('./../../../../../public/img.1/profilemydownload.jpg')
+          imgurl:require('./../../../../assets/img/profilemydownload.jpg')
         },
-        {
-          imgurl:require('./../../../../../public/img.1/profilemydownload.jpg')
-        },
-        {
-          imgurl:require('./../../../../../public/img.1/profilemydownload.jpg')
-        },
-         {
-          imgurl:require('./../../../../../public/img.1/profilemydownload.jpg')
-        },
-        {
-          imgurl:require('./../../../../../public/img.1/profilemydownload.jpg')
-        },
-        {
-          imgurl:require('./../../../../../public/img.1/profilemydownload.jpg')
-        },
-        {
-          imgurl:require('./../../../../../public/img.1/profilemydownload.jpg')
-        },
-        {
-          imgurl:require('./../../../../../public/img.1/profilemydownload.jpg')
-        },
-      ]*/
+      ]
     };  
   },
   methods:{
     changeFatherB(){
       this.$emit('resetFatherp');
-    }
+    },
+      ff(){
+          this.$router.push('/mydownload/video');
+          this.isShow=!this.isShow;
+      },
+      ff1(){
+          this.$router.push('/mydownload/vip');
+          this.isShow=!this.isShow;
+      },
+      ff2(){
+          this.$router.push('/mydownload/manage');
+          this.isShow=!this.isShow;
+      },
+      resetF(){
 
-  }
+          this.$router.push('/mydownload');
+          this.isShow=!this.isShow;
+      }
+  },
+
 }
 </script>
 
@@ -107,7 +103,6 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #ffffff;
   &-back{
   margin-left: 0.2rem;
   }
@@ -120,28 +115,18 @@ export default {
   &-manage{
    position: absolute;
    top: 6%;
-   left: 80%;
-  }
-}
-.download-banner{
-  background-color:#fafafa;
-  height: 40px;
-  width: 100%;
-  &-vip,&-general{
-  color: #000000;
-  margin-right: 0.4rem;
+   left: 85%;
   }
 }
 
-.download-text{
+.download-text1{
   width: 100%;
-  height: 100%;
+  height:300px;
   position: relative;
-  // background-color: antiquewhite;
   p{
     text-align: center;
   }
-  &-title{ 
+  &-title1{ 
     position: relative;
     height: 40px;
     &-vip{
@@ -151,6 +136,45 @@ export default {
     }
     &-more{
 
+      color: #000000;
+     position: absolute;
+     top: 0;
+     right: 0.2rem;
+      }
+   }
+    li{
+      margin-top: 0.1rem;
+    width: 40%;
+    height: 100px;
+    float: left;
+    margin-left: 0.1rem;
+    margin-bottom: 0.1rem;
+    img{
+      margin-left: 0.4rem;
+      margin-right: 0.4rem;
+      width:100%;
+      height:80%;
+    }
+  }
+}
+.download-text2{
+  width: 100%;
+  position: relative;
+  // background-color: antiquewhite;
+  p{
+    text-align: center;
+  }
+  &-title2{ 
+    position: relative;
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+    height: 40px;
+    &-video{
+       color: #00000f;
+       margin-left: 0.3rem;
+       float: left;
+    }
+    &-more{
       color: #000000;
      position: absolute;
      top: 0;
@@ -168,11 +192,8 @@ export default {
       margin-right: 0.4rem;
       width:100%;
       height:80%;
-
     }
   }
-
 }
  
 </style>
-
