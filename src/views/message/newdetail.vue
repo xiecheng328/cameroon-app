@@ -1,7 +1,7 @@
 <template>
     <div>
         <div id="detailhead">
-            <h2 id="detailreturn"><--</h2>    <h2>订阅号-农业专家</h2>
+            <h2 id="detailreturn" @click="detailback()"><--</h2>    <h2>订阅号-农业专家</h2>
         </div>
         <div id="detailtext">
             <h5 style="margin: 0 auto ;width: 2rem">农机的使用</h5>
@@ -22,7 +22,13 @@
     </div>
 </template>
 <script>
-
+    export default {
+        methods:{
+            detailback(){
+                this.$router.push('openSubScription_content');
+            }
+        }
+    }
 </script>
 <style scoped>
     #detailhead{
