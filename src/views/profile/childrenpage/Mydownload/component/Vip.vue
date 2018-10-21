@@ -12,14 +12,14 @@
         </div>
         <div class="vip-handpick">
             <div class="vip-handpick-banner">
-                <p>——·精选视频·——</p>
+                <h5>——·精选视频·——</h5>
+            </div>
                 <ul>
                     <li v-for="(item,index) in vip" :key=index>
                         <img :src="item.imgurl">
                         <p>{{item.value}}</p>
                     </li>
                 </ul>
-            </div>
         </div>
         <div class="vip-recommend">
             <h4>小编推荐</h4>
@@ -136,16 +136,11 @@ export default {
   &-back{
   margin-left: 0.2rem;
   }
-  &-text{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%)
-  }
-  &-father{
-   position: absolute;
-   top: 6%;
-   left: 85%;
+  &-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%)
   }
 }
 
@@ -183,16 +178,21 @@ export default {
     &-banner{
         width: 100%;
         height: 20px;
-        p{
+        h5{
             text-align: center;
         }
-        li{
-            width: 30%;
-            height: 100px;
-            float: left;
-            margin: 0.1rem;
-        }
+
     }
+    li{
+         width: 30%;
+         height: 100px;
+         float: left;
+         margin: 0.1rem;
+        img{
+        width: 100px;
+        height: 80px;
+        }
+     }
 }
 
 .vip-recommend{
@@ -204,13 +204,25 @@ export default {
     select{
         width: 60%;
         height: 30px;
-        margin-left: 0.4rem;
+        margin-left: 0.3rem;
     }
     button{
         width: 60px;
         // margin-left: 0.3rem;
     }
 }
+    .vip-content{
+        width: 100%;
+        li{
+            margin-left: 0.3rem;
+            float: left;
+            width: 45%;
+            img{
+                width: 150px;
+                height: 80px;
+            }
+        }
+    }
 </style>
 
 
