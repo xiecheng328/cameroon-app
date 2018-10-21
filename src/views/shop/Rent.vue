@@ -44,25 +44,26 @@
     </mu-form-item>
     <mu-form-item prop="city" label="收货地址" style="margin: 0 0.15rem; background:#fff">
       <mu-select v-model="form.select">
-        <mu-option v-for="(option,index) in options" :key="index" :label="option" :value="option"></mu-option>
+        <mu-option v-for="(option,index) in citys" :key="index" :label="option" :value="option"></mu-option>
       </mu-select>
     </mu-form-item>
+    <mu-form-item prop="date" label="租赁开始日期" style="margin: 0 0.15rem; background:#fff">
+        <mu-date-input v-model="form.date" type="dateTime" actions></mu-date-input>
+    </mu-form-item>
+    <mu-form-item prop="date" label="租赁结束日期" style="margin: 0 0.15rem;margin-bottom:56px; background:#fff">
+      <mu-date-input v-model="form.date" type="dateTime" actions></mu-date-input>
+    </mu-form-item>
   </mu-form>
-  <mu-row gutter>
-    <mu-col span="12" lg="4" sm="6">
-      <mu-date-input  icon="today" v-model="value7" label="租赁开始日期" type="date" label-float full-width style="margin: 0 0.1rem; background:#fff"></mu-date-input>
-    </mu-col>
-    <mu-col span="12" lg="4" sm="6">
-      <mu-date-input  icon="today" v-model="value7" label="租赁结束日期" type="date" label-float full-width style="margin: 0 0.1rem; background:#fff"></mu-date-input>
-    </mu-col>
-  </mu-row>
 </div>
   
-  <mu-flex justify-content="center">
-    <mu-bottom-nav>
-			        <mu-button @click="openFullscreenDialog" flat full-width style="width:50%;font-size:16px;height:1rem;left:0;position:fixed;"> <mu-icon right value="search"></mu-icon>租赁联系</mu-button>
+
+
+
+  <!-- 底部bar -->
+    <mu-container class="bar">
+			    <mu-button @click="openFullscreenDialog"  full-width style="width:50%;font-size:16px">租赁联系</mu-button>
             <mu-dialog width="360" transition="slide-bottom" fullscreen :open.sync="openFullscreen">
-              <mu-appbar color="primary" title="租赁联系">
+              <mu-appbar color="primary" title="农机询问">
               <mu-button slot="left" icon @click="closeFullscreenDialog">
                 <mu-icon value="close"></mu-icon>
               </mu-button>
@@ -74,10 +75,8 @@
               对不起,目前没有拖拉机啦,但是我们还类似的农机,小型拖拉机
               </div>
             </mu-dialog>
-            
-            <mu-bottom-nav-item to="/shop/forgood" title="立即租赁" icon="shop" style="width:50%;height:1rem;right:0;bottom:0;position:fixed;"></mu-bottom-nav-item>
-        </mu-bottom-nav>
-  </mu-flex>
+          <mu-button full-width style="width:50%;font-size:16px" @click="goRent()" >立即租赁</mu-button>
+    </mu-container>
 </div>
 </template>
 
@@ -86,7 +85,10 @@ export default {
     data () {
     return {
       options: [
-        '送货上门', '自取', '喀麦隆'
+        '送货上门', '自取'
+      ],
+      citys: [
+        '哈尔滨', '唯创', '喀麦隆'
       ],
       labelPosition: 'top',
       form: {
@@ -119,6 +121,11 @@ export default {
     },
     closeFullscreenDialog () {
       this.openFullscreen = false;
+    },
+    goRent(){
+      this.$router.push({
+        path:'/shop/forgood'
+      })
     }
   },
    
@@ -131,6 +138,13 @@ export default {
   width: 100%;
   max-width: 360px;
  
+}
+.bar{
+  // background: #000;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 56px;
 }
 .shop{
     height: 100%;
