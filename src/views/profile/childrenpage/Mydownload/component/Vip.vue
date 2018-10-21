@@ -123,7 +123,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .download-title{
   margin-top: 0.4rem;
   height: 40px;
