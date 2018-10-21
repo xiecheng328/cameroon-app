@@ -14,6 +14,7 @@ import Forgood from '../views/shop/Forgood.vue';
 import ShopManage from '../views/shop/ShopManage.vue';
 import Review from '../views/shop/Review.vue';
 import Receipt from '../views/shop/Receipt.vue';
+import Collect from '../views/shop/Collect.vue';
 export default [
     {path:'shophome',component:ShopHome,name:ShopHome},
     {path:'classify',component:Classify,name:Classify},
@@ -26,5 +27,6 @@ export default [
     {path:'forgood',component:Forgood,name:Forgood},
     {path:'review',component:Review,name:Review},
     {path:'receipt',component:Receipt,name:Receipt},
+    {path:'collect',component:Collect,name:Collect},
     {path:'shopmanage',component:ShopManage,name:ShopManage},
 ]

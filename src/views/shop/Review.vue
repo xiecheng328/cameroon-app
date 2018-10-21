@@ -10,23 +10,6 @@
         <div id="review">
             <img class="product" src="./img/2.jpg" alt="">
             <p class="describe">描述相符</p>
-            <!-- <ul>
-                <li>
-                    <img src="./img/xingxing.png" alt="">
-                </li>
-                <li>
-                    <img src="./img/xingxing.png" alt="">
-                </li>
-                <li>
-                    <img src="./img/xingxing.png" alt="">
-                </li>
-                <li>
-                    <img src="./img/xingxing.png" alt="">
-                </li>
-                <li>
-                    <img src="./img/xingxing.png" alt="">
-                </li>
-            </ul> -->
             <p class="well">非常好</p>
             <div id="review-content">
                 <textarea class="write-review" rows="10" placeholder="宝贝满足你的期待吗？说说它的优点和美中不足的地方吧"></textarea>
@@ -48,43 +31,9 @@
                 </div>
                 <div class="wuliu-service">
                     <p class="item6">物流服务</p>
-                    <!-- <ul class="wuliu-service-list">
-                        <li>
-                            <img src="./img/xingxing.png" alt="">
-                        </li>
-                        <li>
-                            <img src="./img/xingxing.png" alt="">
-                        </li>
-                        <li>
-                            <img src="./img/xingxing.png" alt="">
-                        </li>
-                        <li>
-                            <img src="./img/xingxing.png" alt="">
-                        </li>
-                        <li>
-                            <img src="./img/xingxing.png" alt="">
-                        </li>
-                    </ul> -->
                 </div>
                 <div class="service-attitude">
                     <p class="item7">服务态度</p>
-                    <!-- <ul>
-                        <li>
-                            <img src="./img/xingxing.png" alt="">
-                        </li>
-                        <li>
-                            <img src="./img/xingxing.png" alt="">
-                        </li>
-                        <li>
-                            <img src="./img/xingxing.png" alt="">
-                        </li>
-                        <li>
-                            <img src="./img/xingxing.png" alt="">
-                        </li>
-                        <li>
-                            <img src="./img/xingxing.png" alt="">
-                        </li>
-                    </ul> -->
                 </div>
             </div>
         </div>

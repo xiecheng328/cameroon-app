@@ -21,18 +21,18 @@
           <mu-list slot="content" >
             <mu-list-item button  @click="gotoSearch()">
               <mu-list-item-content>
-                <mu-button>产品搜索</mu-button>
+                <mu-button flat>产品搜索</mu-button>
               </mu-list-item-content>
             </mu-list-item>
-            <mu-list-item button    @click="gotoQuery()">
+            <mu-list-item button  @click="gotoQuery()">
               <mu-list-item-content >
-                <mu-button>补贴查询</mu-button>
+                <mu-button flat>补贴查询</mu-button>
               </mu-list-item-content>
             </mu-list-item>
             <mu-list-item button  >
               <mu-list-item-content >
                  <mu-menu >
-                <mu-button style="width:1.5rem">浏览历史</mu-button>
+                <mu-button flat style="width:1.5rem">浏览历史</mu-button>
                 <mu-list slot="content">
                   <FootPrint/>
                 </mu-list>
@@ -68,7 +68,7 @@
             <mu-button icon color="primary">
                 <mu-icon value="favorite"></mu-icon>   
             </mu-button>
-           <span> 收藏</span>
+           <span @click="goCollect()"> 收藏</span>
           </mu-list-item-title>
         </mu-list-item>
        
@@ -97,15 +97,9 @@
       </mu-list>
 
     <!-- 详情介绍 -->
-
-
-
-
-
     <!-- 底部bar -->
-    <mu-container>
-        <mu-bottom-nav>
-			        <mu-button @click="openFullscreenDialog" flat full-width style="width:50%;font-size:16px"> <mu-icon right value="search"></mu-icon>询价</mu-button>
+    <mu-container class="bar">
+			    <mu-button @click="openFullscreenDialog"  full-width style="width:50%;font-size:16px"> 询价</mu-button>
             <mu-dialog width="360" transition="slide-bottom" fullscreen :open.sync="openFullscreen">
               <mu-appbar color="primary" title="农机询问">
               <mu-button slot="left" icon @click="closeFullscreenDialog">
@@ -117,8 +111,7 @@
               你好,请问最近农机有拖拉机吗?
               </div>
             </mu-dialog>
-            <mu-bottom-nav-item title="租赁" icon="shop" to="/shop/rent"></mu-bottom-nav-item>
-        </mu-bottom-nav>
+          <mu-button full-width style="width:50%;font-size:16px" @click="goRent()" >租赁</mu-button>
     </mu-container>
   </div>
 </template>
@@ -195,6 +188,16 @@ import FootPrint from './FootPrint.vue';
     },
     closeFullscreenDialog () {
       this.openFullscreen = false;
+    },
+    goRent(){
+      this.$router.push({
+        path:'/shop/rent'
+      })
+    },
+    goCollect(){
+      this.$router.push({
+        path:'/shop/collect'
+      })
     }
     
   },created(){
@@ -214,7 +217,16 @@ import FootPrint from './FootPrint.vue';
     
   }
 }
-
+.bar{
+  // background: #000;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 56px;
+}
+.mu-list {
+  margin-bottom: 30px;
+}
 .mu-carousel{
   padding: .1rem;
   height: 300px;
