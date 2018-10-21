@@ -8,12 +8,6 @@ import SubScription_content from '../views/message/ChildrenPages/subScription/su
 import SubScription_message from '../views/message/ChildrenPages/subScription/subScription_message';
 import Report from '../views/message/report';
 import CopyList from '../views/message/copyList';
-<<<<<<< HEAD
-=======
-import Newdetail from '../views/message/newdetail';
-import Withme from '../views/message/Withme';
-import Chatroom from '../views/message/ChildrenPages/UnAttention/Chatroom';
->>>>>>> 39cb0ee31af0869a53dfc252ecf078082619c352
 
 export default [
     {path:'/openSubScription_content',component:OpenSubScription_content},
