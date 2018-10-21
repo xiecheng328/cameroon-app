@@ -29,7 +29,7 @@ const messages = {
     fr: require('./Unit/lang/fra.js')
 };
 const i18n = new VueI18n({
-    locale: 'zh', // 语言标识
+    locale: 'fr', // 语言标识
     messages
 });
 new Vue({

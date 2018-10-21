@@ -64,7 +64,11 @@
               btnName: this.btnName
             });
             }
-            console.log(this.isNull)
+            if((this.btnName == '拖拉机')||(this.btnName == '小麦收割机') ){
+              this.$router.push({
+                path:'/shop/shoplist'
+              })
+            }
           },
           goHome(){
             this.$router.go(-1);

@@ -21,14 +21,23 @@
 </template>
 
 <script>
+    import Search from '@/views/topic/Search.vue'
     export default {
         name: "CommonHeader",
+        data(){
+            return{
+                // open: false
+            }
+        },
         methods:{
             //search跳转页面路由
             jumptoSearch(){
                 this.$router.push('/blog/search')
             }
             //search跳转页面路由
+        },
+        components:{
+            Search
         }
     }
 </script>

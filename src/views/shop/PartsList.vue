@@ -4,12 +4,14 @@
       <li v-for="(item, key) in data">{{item}}</li>
     </ul> -->
     <mu-container>
-    <mu-appbar style="width: 100%;left:0;right:0;top:0;position:fixed;" color="#FFFFFF" z-depth="0" textColor="#333333">
+        <mu-appbar style="width: 100%;left:0;right:0;top:0;position:fixed;" color="#FFFFFF" z-depth="0" textColor="#333333">
       <mu-button icon slot="left" @click="goLeft()">
       <mu-icon ></mu-icon>
       </mu-button >
-      <div class="shop-title">整机产品</div>
-    </mu-appbar>
+      <div class="shop-title">农机配件</div>
+      
+      </mu-appbar>
+   
     <div class="search-listN-bg">
       <div class="search-circle" :style="'display:'+(searchText.length?'none':'block')"></div>
       <input class="search" type="text" @keyup="searchInput()" v-model="searchText" placeholder="输入企业名称/品牌/型号"/>
@@ -43,7 +45,7 @@
             <div class="product-left left">
                 <a >
                   <!-- http://img.nongji360.com/n/zyd/product/2016/08/15/093915939192_180x135.jpg -->
-                  <img class="product-image" :src="item.photo[1]"  @click="goToDetail()">
+                  <img class="product-image" :src="item.photo[0]"  @click="goToDetail()">
                 </a>
             </div>
             <div class="product-right right">
@@ -60,7 +62,7 @@
                 <p class="degree">
                   <a>关注度:{{item.attention_degree}}</a>
                 </p>
-                <button class="news-add-btn" @click="addShopCar()">加入购物车</button>
+                <button class="news-add-btn">加入购物车</button>
               </div>
             </div>
           </li>
@@ -215,6 +217,7 @@
           </div>
       </div>
     </div>
+  </div>
   </mu-container>
 </template>
 
@@ -240,6 +243,7 @@ export default {
       mounted:function() {
         axios.get('/api/data').then(res => {
           this.data = res.data.data;
+          console.log(res.data);
         }).catch(res => {
           alert('wrong');
         })
@@ -262,23 +266,17 @@ export default {
                 
             },
             searchInput () {
-                 this.$router.push({
-                    path:'/shop/list'
-                })
+                console.log(this.searchText);
                 
             },
             goLeft(){
                 this.$router.go(-1);
+                console.log(123);
             },
             goToDetail(){
+                
                 this.$router.push({
-                    path:'/shop/detail',
-                    params:'列表'
-                })
-            },
-            addShopCar(){
-                this.$router.push({
-                    path:'/shop/Shopbuy'
+                    path:'/shop/detail'
                 })
             }
       }
