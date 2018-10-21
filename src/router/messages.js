@@ -7,6 +7,7 @@ import OpenSubScription_message from '../views/message/ChildrenPages/subScriptio
 import SubScription_content from '../views/message/ChildrenPages/subScription/subScription_content';
 import SubScription_message from '../views/message/ChildrenPages/subScription/subScription_message';
 import Report from '../views/message/report';
+import Message from '../views/message/Message';
 import CopyList from '../views/message/copyList';
 import Newdetail from '../views/message/newdetail';
 import Chatroom from '../views/message/ChildrenPages/UnAttention/Chatroom';
@@ -34,4 +35,6 @@ export default [
         component:CopyList,
     },
     { path:"/Unattended_news" ,component:Unattended_news},
+    { path:"/message" ,component:Message},
+
 ]
