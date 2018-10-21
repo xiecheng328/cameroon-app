@@ -27,7 +27,7 @@
         <Topiclist :topic="topic"/>
       </div>
       <div class="demo-text" v-if="active === 4">
-        <p>推荐</p>
+        <Recommend />
       </div>
     </mu-container>
   </div>
@@ -38,18 +38,22 @@
 import axios from "axios";
 import Shoplist from "./component/Shoplist.vue";
 import Topiclist from "./component/Topiclist.vue";
+import Recommend from "./component/Recommend.vue";
+
 
 require("./../../profilemock/MyInterestMock.js");
 export default {
   components: {
     Shoplist,
     Topiclist,
+    Recommend,
   },
   data() {
     return {
       active: 0,
       commodity: [],
-      topic: []
+      topic: [],
+      recommend: [],
     };
   },
   methods: {
@@ -58,6 +62,7 @@ export default {
         this.commodity = res.data.commodity;
         this.topic = res.data.topic;
         console.log(this.topic);
+        this.userMenu = res.data.recommend;
       });
     },
     goback() {

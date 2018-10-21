@@ -13,7 +13,8 @@
     }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
+
     .mu-elevation-4{
         -webkit-box-shadow:none;
         box-shadow:none;
