@@ -6,7 +6,7 @@
                 <mu-icon value="close" flat>返回</mu-icon>
             </mu-button>
             <div class="cameroon-title"><h4>提问</h4></div>
-            <mu-button flat slot="right" to="/topic/alists">发布</mu-button>
+            <mu-button   flat slot="right" to="/topic/alists" >发布</mu-button>
         </mu-appbar>
         <mu-container>
             <mu-text-field v-model="value15" placeholder="标题" :max-length="10"></mu-text-field><br/>
@@ -32,9 +32,12 @@
         data () {
             return {
                 value15: '',
-                value16: ''
+                value16: '',
+
             }
         }
+
+
     }
 </script>
 
