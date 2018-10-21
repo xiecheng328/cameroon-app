@@ -4,7 +4,7 @@
     <div class="header">
 <img src="../../assets/img/left.png" alt="" class="comeback" @click="home()">
 <h3 class="remark">所有评论</h3>
-<h3 class="reset">设置</h3>
+<h3 class="reset" @click="control()">设置</h3>
     </div>
     <ul class="body">
         <li><img src="../../assets/img/user.png" alt="" class="user-img">
@@ -43,7 +43,10 @@
     export default{
     method:{
         home(){
-            this.$router.push({name:'message.vue'});
+            this.$router.push({name:'message/Message.vue'});
+        },
+        control(){
+            this.$router.push({name:'MySet/component/Message.vue'});
         }
     }
 }
