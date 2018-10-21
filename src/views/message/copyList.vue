@@ -11,7 +11,7 @@
             <span>张三</span>
             <span>10:10</span>
         </li>
-        <li class="goodmark">赞了这条评论</li>
+        <li class="goodluck">赞了这条评论</li>
         <li>回复：@李四  这个问题可以这样解决</li>
         <li>李四回复张三：那如果遇到这种问题怎么办？</li>
 </ul>
@@ -20,7 +20,7 @@
             <span>张三</span>
             <span>10:10</span>
         </li>
-         <li class="goodmark">赞了这条评论</li>
+         <li class="goodluck">赞了这条评论</li>
         <li>回复：@李四  这个问题可以这样解决</li>
         <li>李四回复张三：那如果遇到这种问题怎么办？</li>
 </ul>
@@ -29,7 +29,7 @@
             <span>张三</span>
             <span>10:10</span>
         </li>
-         <li class="goodmark">赞了这条评论</li>
+         <li class="goodluck">赞了这条评论</li>
         <li>回复：@李四  这个问题可以这样解决</li>
         <li>李四回复张三：那如果遇到这种问题怎么办？</li>
 </ul>
@@ -73,7 +73,7 @@
         top:0;
         left:200px;
     }
-    .goodmark{
+    .goodluck{
         font-size:20px;
         background: pink;
     }
