@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="header">
-            <<
+            <span @click="ReturnM"><<</span>
             <h5 class="small-header">未关注人消息</h5>
         </div>
         <NewsList  v-for="val in list" :list="val"></NewsList>
@@ -27,6 +27,13 @@
         },
         components:{
             NewsList
+        },
+        methods:{
+            ReturnM(){
+                this.$router.push({
+                    path:"/message"
+                })
+            }
         },
         name: "Unattended-news"
     }

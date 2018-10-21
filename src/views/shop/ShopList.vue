@@ -3,13 +3,13 @@
     <!-- <ul>
       <li v-for="(item, key) in data">{{item}}</li>
     </ul> -->
-
-    <div class="shop clearfix">
-    <header>
-      <img class="leftjiantou" src="./img/leftjiantou.png" @click="goLeft()">
-      <h3 class="header-h">农机部件</h3>
-    </header>
-    <!-- search input -->
+    <mu-container>
+    <mu-appbar style="width: 100%;left:0;right:0;top:0;position:fixed;" color="#FFFFFF" z-depth="0" textColor="#333333">
+      <mu-button icon slot="left" @click="goLeft()">
+      <mu-icon ></mu-icon>
+      </mu-button >
+      <div class="shop-title">整机产品</div>
+    </mu-appbar>
     <div class="search-listN-bg">
       <div class="search-circle" :style="'display:'+(searchText.length?'none':'block')"></div>
       <input class="search" type="text" @keyup="searchInput()" v-model="searchText" placeholder="输入企业名称/品牌/型号"/>
@@ -41,33 +41,30 @@
       <ul class="product-list-bg clearfix">
           <li class="clearFloat clearfix" v-for="(item, key) in data" :key="key">
             <div class="product-left left">
-                <a href="">
+                <a >
                   <!-- http://img.nongji360.com/n/zyd/product/2016/08/15/093915939192_180x135.jpg -->
-                  <img class="product-image" :src="item.photo">
+                  <img class="product-image" :src="item.photo[1]"  @click="goToDetail()">
                 </a>
             </div>
-
             <div class="product-right right">
               <!-- 部件名称 时风欧II发动机-->
               <div class="name-of-parts">
-                <a href="">{{item.title}}</a>
+                <a >{{item.title}}</a>
               </div>
               <!-- 企业名称 山东时风-->
               <p class="product-right-tit">
-                <a href="">{{item.company}}</a>
+                <a >{{item.company}}</a>
               </p>
               <!-- 关注度&&加入购物车 -->
               <div class="news-add clearfix">
                 <p class="degree">
                   <a>关注度:{{item.attention_degree}}</a>
                 </p>
-                <button class="news-add-btn">加入购物车</button>
+                <button class="news-add-btn" @click="addShopCar()">加入购物车</button>
               </div>
             </div>
           </li>
         </ul>
-    
-
     <!-- 遮罩层 -->
       <div class="cover" :style="'display:'+(nIndex!='-1'?'block':'none')" @click="onClick()">
         <!-- 店铺 -->
@@ -218,9 +215,7 @@
           </div>
       </div>
     </div>
-
-    
-  </div>
+  </mu-container>
 </template>
 
 <script>
@@ -245,44 +240,58 @@ export default {
       mounted:function() {
         axios.get('/api/data').then(res => {
           this.data = res.data.data;
-          console.log(res.data);
         }).catch(res => {
           alert('wrong');
         })
       },
       methods:{
+        
           selectStyle (i, key) {
 　　　　　　　　this.items.forEach(function (item) {
 　　　　　　　　　　Vue.set(item,'active',false);
 　　　　　　　　});
 　　　　　　　　Vue.set(i,'active',true);
                 this.nIndex = key;
+                
 　　　　　　},
             onClick () {
                 this.nIndex = '-1';
                 this.items.forEach(function (item) {
 　　　　　　　　　　Vue.set(item,'active',false);
 　　　　　　　　});
+                
             },
             searchInput () {
-                console.log(this.searchText);
+                 this.$router.push({
+                    path:'/shop/list'
+                })
                 
             },
             goLeft(){
                 this.$router.go(-1);
-                console.log(123);
+            },
+            goToDetail(){
+                this.$router.push({
+                    path:'/shop/detail',
+                    params:'列表'
+                })
+            },
+            addShopCar(){
+                this.$router.push({
+                    path:'/shop/Shopbuy'
+                })
             }
       }
 }
 </script>
 
 
-<style scoped>
+<style lang='scss' scoped>
 element.style{
     font-size: 16px !important;
 }
 html{
-    font-size: 16px !important;
+    font-size: 0% !important;
 }
 .clearfix {
   display: block;
@@ -299,7 +308,44 @@ ul {
   padding: 0px;
   margin: 0px;
 }
-
+ .shop{
+    height: 100%;
+  }
+  .shop-title{
+      text-align: center;
+  }
+  .mu-icon-button{
+    background: url(./img/leftjiantou.png) center no-repeat;
+  }
+  #shop-icon{
+    background: url(./../../assets/img/shop-icon.png) center no-repeat;
+  }
+  .shop-search{
+    margin-top: 46px;
+    width: 100%;
+    background: #fff !important;
+    height: 46px;
+    input{
+      border-style:none; 
+      margin-top: 0.1rem;
+      width: 6rem;
+      height: 46px;
+      border-radius: 2rem;
+      background-color: #eee !important;
+      background:url(./../../assets/img/search-icon.png) 1.3rem  no-repeat;
+      background-size: 25px;
+      text-align: center;
+      font-weight: 400;
+      font-size: 16px;
+      outline: none;
+    }
+    text-align: center;
+    width:100%;
+    height:54px;
+    margin-top: 56px;
+    background: #ffffff;
+  }
+  
 .check-style {
     border-bottom: none !important;
     border-top: 1px solid #ececec;
@@ -318,7 +364,7 @@ ul {
 }
 /*  header style start*/
 .leftjiantou {
-    width: 2rem;
+    width: 0.6rem;
 }
 .header-h {
   display: inline-block;
@@ -329,12 +375,15 @@ ul {
 
 /*search style start*/
 .search-listN-bg {
+  margin-top: 1.1rem;
   position: relative;
 }
 .search {
-  width: 100%;
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+  width: 94%;
   border-radius: 20px;
-  height: 2rem;
+  height: 0.8rem;
   border: 0px;
   background-color:	#F0F0F0;
   outline: none;
@@ -342,12 +391,12 @@ ul {
 }
 .search-listN-bg .search-circle {
     position: absolute;
-    left: 5rem;
-    top: 1.1rem;
+    left: 1.3rem;
+    top: 0.4rem;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
-    height: 1.2rem;
-    width: 1.2rem;
+    height: 0.5rem;
+    width: 0.5rem;
     background: url(./img/search-sm.png) 100% 100% / 100% 100% no-repeat;
 }
 /*search style end*/
@@ -363,30 +412,30 @@ ul {
     border-left: none;
     width: 25%;
     float: left;
-    padding: .7rem 0 .7rem 0;
+    padding: .2rem 0 .2rem 0;
     text-align: center;
     position: relative;
     border-bottom: 1px solid #f0f0f0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    margin-top: .5rem;
+    margin-top: .2rem;
 }
 
 .search-banner li span:nth-child(1) {
     color: #888;
     position: relative;
-    width: 5.2rem;
+    /* width: 1.8rem; */
     overflow: hidden;
     display: block;
 }
 
 .search-banner li span:nth-child(2) {
-    height: 1rem;
-    width: 1rem;
+    height: 0.15rem;
+    width: 0.2rem;
     background: url('./img/bottomjiantou.png') 100% 100% / 100% 100% no-repeat;
     position: absolute;
-    right: .37rem;
-    top: 1rem;
+    right: 0.05rem;
+    top: 0.3rem;
 }
 /*banner style end*/ 
 
@@ -398,14 +447,13 @@ ul {
 .product-list-bg li {
     width: 100%;
     margin: 0 auto;
-    /* padding: 1rem 0; */
     border-bottom: 1px solid #eee;
     position: relative;
-    height: 8rem;
+    height: 2rem;
 }
 .product-list-bg li .product-left {
-    width: 32%;
-    height: 8.4rem;
+    width: 30%;
+    height: 2rem;
     position: relative;
 }
 .left {
@@ -420,10 +468,10 @@ ul {
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
-    margin-left: .4rem;
+    margin-left: .2rem;
 }
 .product-list-bg li .product-right {
-    width: 64%;
+    width: 60%;
 }
 .right {
     float: right !important;
@@ -431,39 +479,33 @@ ul {
 
 
 .name-of-parts a {
-    font-size: 1rem;
+    font-size: 0.3rem;
     color: #666;
-    line-height: 1rem;
     overflow: hidden;
     display: block;
     font-weight: 600;
-    padding-top: 1rem;
+    padding-top: 0.3rem;
 }
 
 
 .product-right-tit {
-    margin-top: 1.5rem;
-    margin-bottom: .5rem;
+    margin-top: 0.2rem;
 }
 .news-add {
-  /* margin: 1rem 0 0 0; */
+  
 }
 .news-add .degree {
     float: left;
-    line-height: 2rem;
     display: block;
-    margin: 0;
-    height: 1.5rem;
+    
 }
 .news-add-btn {
     float: right;
     background-color: dodgerblue;
     border-radius: 5px;
-    height: 2rem;
     border: 0;
     color: white;
-    margin-right: .5rem;
-    width: 5.5rem;
+    margin-right: 0.2rem;
 }
 /*banner style end*/ 
 
@@ -478,7 +520,6 @@ ul {
     left: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.5);
-    /* display: none; */
     z-index: 3;
     top: 0;
     bottom: 0;
@@ -493,14 +534,13 @@ ul {
 }
 .product-sort ul li, .product-store ul li {
     border-bottom: 1px solid #ececec;
-    height: 2.5rem;
+    height: 0.6rem;
     color: #666;
-    line-height: 2.5rem;
+    line-height: 0.6rem;
     text-align: center;
     box-sizing: border-box;
 }
 .product-store ul li a {
-    font-size: .9rem;
     color: #666;
     display: block;
 }
@@ -511,12 +551,11 @@ ul {
  
 /*class style start*/
 .category-inner-cont {
-    padding: 0 1rem;
+    padding: 0 0.2rem;
     display: block;
     background-color: #fafafa;
 }
 .category-cont-1-title:before {
-    height: 1.2rem;
     width: 3px;
     background: #ff8400;
     left: 0;
@@ -525,9 +564,9 @@ ul {
     content: '';
 }
 .category-cont-1-title {
-    font-size: .9rem;
-    line-height: 1.5em;
-    padding: .8rem 0 .2rem .5rem;
+    font-size: .3rem;
+    line-height: 0.3rem;
+    padding: .2rem 0.2rem .2rem;
     color: #666;
     font-weight: bolder;
     border-bottom: 1px solid #e5e5e5;
@@ -542,7 +581,6 @@ ul {
 }
 .category-image {
     width: 100%;
-    height: 4rem !important;
     position: relative;
 }
 .category-image img {
@@ -554,7 +592,7 @@ ul {
     -webkit-transform: translate(-50%,-50%);
 }
 .category-cont-2-title {
-    font-size: .9rem;
+    font-size: .3rem;
     color: #666;
     text-align: center;
     overflow-y: hidden;
@@ -574,7 +612,6 @@ ul {
     -webkit-overflow-scrolling: touch;
 }
 .product-brand-bg h2 {
-    font-size: .9rem;
     color: #9f9f9f;
     margin: .2rem 0 .4rem .4rem;
 }
@@ -584,7 +621,6 @@ ul {
 .product-brand {
     width: 100%;
     border-top: 1px solid #e5e5e5;
-    padding-top: .4rem;
 }
 .product-brand li {
     width: 23%;
@@ -594,16 +630,14 @@ ul {
 .product-brand li div {
     width: 100%;
     text-align: center;
-    font-size: .9rem;
     color: #666;
-    margin-top: 3rem;
 }
 .product-brand li span {
     position: relative;
     display: block;
     width: 100%;
     float: left;
-    height: 3rem;
+    height: 1rem;
     border: 1px solid #f0f0f0;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -624,13 +658,10 @@ ul {
     height: 100%;
 }
 .brand_list .letter_title {
-    font-size: 1.1rem;
     font-weight: bold;
     color: #666;
-    line-height: 1.6rem;
     border-bottom: 1px solid #ededed;
     text-align: left;
-    margin-top: 1rem;
 }
 .brand_list .brand_box ul {
     width: 100%;
@@ -638,21 +669,17 @@ ul {
 }
 .brand_list .brand_box ul li {
     width: 30%;
-    height: 2.6rem;
     border: 1px solid #f0f0f0;
     float: left;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 3px;
-    margin-top: .5rem;
     text-align: center;
     overflow: hidden;
-    margin-right: .6rem;
 }
 .brand_list .brand_box ul li a {
-    font-size: .9rem;
     color: #666;
-    line-height: 2.5rem;
+    line-height: 0.5rem;
 }
 /*pinpai style end*/
 
