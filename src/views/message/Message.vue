@@ -56,17 +56,17 @@
                 },{
                     img:"/img/message-icon.png",
                     name:"未关注人消息",
-                    path:"/chatroom",
+                    path:"/Unattended_news",
                     id:5
                 },{
                     img:"/img/message-icon.png",
                     name:"联系人1",
-                    path:"/people1",
+                    path:"/chatroom",
                     id:6
                 },{
                     img:"/img/message-icon.png",
                     name:"联系人2",
-                    path:"/people2",
+                    path:"/chatroom",
                     id:7
                 }],
             }
@@ -79,7 +79,6 @@
         methods:{
             Change(){
                 this.isClick=false;
-
             },
         }
     }
