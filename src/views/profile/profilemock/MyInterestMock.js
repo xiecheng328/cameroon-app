@@ -8,21 +8,29 @@ const attention = function(){
         img:require('./../../../assets/img/拖拉机1.jpg'),  
         shop:'官方拖拉机旗舰店',
         price:100,
+        value: false,
+        select:false
     },{
         name:'拖拉机',
         img:require('./../../../assets/img/拖拉机2.jpg'),
         shop:'官方拖拉机旗舰店',
         price:100,
+        value: false,
+        select:false
     },{
         name:'拖拉机',
         img:require('./../../../assets/img/拖拉机3.jpg'),
         shop:'官方拖拉机旗舰店',
-        price:100
+        price:100,
+        value: false,
+        select:false
     },{
         name:'拖拉机',
         img:require('./../../../assets/img/拖拉机4.jpg'),
         shop:'官方拖拉机旗舰店',
-        price:100
+        price:100,
+        value: false,
+        select:false
     }];
     let topic = [{
         title:'种田',
@@ -42,10 +50,27 @@ const attention = function(){
         src:require('./../../../../public/img/profileicon1@2x.png'),
         intro:'分享种米的知识',
         deleteSlider:''
-    }]
+    }];
+    let recommend = [{
+        title:'大咖1号',
+        sum:1024,
+        src:require('./../../../assets/img/user.png'),
+        tag:'农业技术人员'
+    },{
+        title:'大咖2号',
+        sum:1024,
+        src:require('./../../../assets/img/user.png'),
+        tag:'农业技术人员'
+    },{
+        title:'大咖3号',
+        sum:1024,
+        src:require('./../../../assets/img/user.png'),
+        tag:'农业技术人员'
+    }];
     return {
         commodity:commodity,
         topic:topic,
+        recommend:recommend,
     }
 }
 

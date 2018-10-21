@@ -13,11 +13,14 @@ import 'mockjs';
 import './assets/js/rem.js';
 //引入css重置样式
 // import './assets/css/reset.css';
+import '@/views/blog/view/icon/iconfont.css';
 Vue.config.productionTip = false;
 //调用i18n
 import VueI18n from 'vue-i18n';
 import {getBrowserLanguage} from "./Unit/language";
-
+//调用echarts
+import echarts from 'echarts';
+Vue.prototype.$echarts = echarts ;
 Vue.use(MuseUI);
 Vue.use(VueI18n);
 const messages = {
@@ -26,7 +29,7 @@ const messages = {
     fr: require('./Unit/lang/fra.js')
 };
 const i18n = new VueI18n({
-    locale: 'zh', // 语言标识
+    locale: 'fr', // 语言标识
     messages
 });
 new Vue({

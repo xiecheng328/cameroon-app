@@ -107,7 +107,7 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #05c2a9;
+  background-color: #ffffff;
   &-back{
   margin-left: 0.2rem;
   }
