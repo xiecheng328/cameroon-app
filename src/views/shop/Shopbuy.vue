@@ -406,7 +406,7 @@ export default {
 }
 .footerup {
   background: #fff;
-  bottom: 48px;
+  margin-bottom: 48px;
   position: fixed;
   width: 100%;
   line-height: 64px;

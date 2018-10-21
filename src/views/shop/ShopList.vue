@@ -22,18 +22,6 @@
           <span :class="{'style-color':item.active}">{{item.select}}</span>
           <span :class="{'top-jiantou':item.active}"></span>
         </li>
-        <!-- <li>
-          <span>收货机械</span>
-          <span></span>
-        </li>
-        <li>
-          <span>品牌</span>
-          <span></span>
-        </li>
-        <li>
-          <span>排序</span>
-          <span></span>
-        </li> -->
       </ul>
     </div>
     <!-- list things -->
@@ -458,6 +446,8 @@ ul {
 }
 .left {
     float: left;
+    margin: 0;
+    left: 0;
 }
 
 .product-list-bg li .product-left .product-image {
@@ -475,6 +465,8 @@ ul {
 }
 .right {
     float: right !important;
+    margin: 0;
+    right: 0;
 }
 
 

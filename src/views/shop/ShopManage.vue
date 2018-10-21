@@ -73,8 +73,6 @@
       </mu-card>
     </div>
   </mu-container>
-		<!-- <ConfirmReceipt/> -->
-    
     <div class="ui-flex ui-cont-sa s_btns">
 			<span></span>
       <mu-button color="primary">查看物流</mu-button>
@@ -88,12 +86,11 @@
 </template>
 
 <script>
-import ConfirmReceipt from './ConfirmReceipt.vue';
+
 import Review from './Review.vue';
 import Receipt from './Receipt.vue';
 export default {
   components:{
-    ConfirmReceipt,
     Review
   },
   data () {
@@ -114,6 +111,12 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+.s_btns{
+  position: fixed;
+  bottom: 56px;
+  right: 0;
+  padding-bottom: 0 !important;
+}
 .demo-text {
   padding: 16px;
   background: #fff;

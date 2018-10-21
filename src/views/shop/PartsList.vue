@@ -217,7 +217,6 @@
           </div>
       </div>
     </div>
-  </div>
   </mu-container>
 </template>
 
