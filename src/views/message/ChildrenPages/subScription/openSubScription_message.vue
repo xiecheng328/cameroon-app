@@ -19,7 +19,7 @@
                 this.$router.push({
                     path:'/newdetail'
                 })
-            }
+            },
         }
     }
 </script>

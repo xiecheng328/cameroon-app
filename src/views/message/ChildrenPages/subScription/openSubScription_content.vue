@@ -3,7 +3,6 @@
         <div class="header">
             <span class="ReturnCon" @click="ReturnCon"><<</span>
             <h5 class="small-header">农机使用</h5>
-            <img class="MoreCon" src="../../../../assets/img/message_more.png" alt="">
         </div>
         <OpenSubScription_message  v-for="val in list" :list="val"></OpenSubScription_message>
     </div>
@@ -52,13 +51,6 @@
         float: right;
         font-size: 20px;
         padding-right: 2.5rem;
-    }
-    .MoreCon{
-        height: 20px;
-        width: 20px;
-        float: right;
-        margin-right: -3.5rem;
-        margin-top: 11px;
     }
     .ReturnCon{
         margin-left: 10px;
