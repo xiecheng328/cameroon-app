@@ -11,12 +11,16 @@ import Goodluck from '../views/message/goodluck';
 import Chatroom from '../views/message/ChildrenPages/UnAttention/Chatroom';
 import Withme from '../views/message/Withme';
 import Unattended_news from '../views/message/ChildrenPages/UnAttention/Unattended-news';
+import Newdetail from '../views/message/ChildrenPages/subScription/newdetail';
 
 export default [
     {path:'/openSubScription_content',component:OpenSubScription_content},
     {path:'/openSubScription_message',component:OpenSubScription_message},
     {path:'/subScription_content',component:SubScription_content},
     {path:'/subScription_message',component:SubScription_message},
+    {
+        path:'/newdetail',component:Newdetail
+    },
     {path:'/chatroom',component:Chatroom},
     {path:'/withme',component:Withme},
     {
