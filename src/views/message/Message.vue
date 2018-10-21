@@ -46,7 +46,7 @@
                 },{
                     img:"/img/message-icon.png",
                     name:"赞",
-                    path:"/goodluck",
+                    path:"/copyList",
                     id:3
                 },{
                     img:"/img/message-icon.png",
