@@ -52,6 +52,13 @@
         font-size: 20px;
         padding-right: 2.5rem;
     }
+    .MoreCon{
+        height: 20px;
+        width: 20px;
+        float: right;
+        margin-right: -3.5rem;
+        margin-top: 11px;
+    }
     .ReturnCon{
         margin-left: 10px;
         font-size: 20px;

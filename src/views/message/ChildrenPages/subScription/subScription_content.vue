@@ -26,7 +26,7 @@
         methods:{
             addmore(){
                 this.$router.push({
-                    path:'/推荐'
+                    path:'myinterst',
                 })
             },
             ReturnPre(){
