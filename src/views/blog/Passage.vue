@@ -58,7 +58,7 @@
         },
         methods:{
             back(){
-                window.history.go(-1);
+                this.$router.push('/blog/details');
             },
             jump(){
                 this.$router.push('/blog/passage');
