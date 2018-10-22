@@ -1,6 +1,6 @@
 <template>
     <div id="recommend">
-        <div class="container" v-for="i in 4">
+        <div class="container" v-for="i in 9">
             <div class="header">
            <img src="../../assets/img/headPortrait.jpeg"/>
                 <span class="name">工农联盟</span>
@@ -19,7 +19,6 @@
                 </div>
             </div>
             <div class="video">
-                
             </div>
             <div class="footer">
                 <span>100赞同</span><span>99评论</span>
@@ -68,6 +67,7 @@ export default {
   display: flex;
   flex-direction: row;
   margin: 0 10px 10px 10px;
+    /*background-color: #fff;*/
   /* height: 150px; */
 }
 .leftText {
@@ -95,5 +95,6 @@ export default {
 }
 .footer >span{
     margin-right: 10px;
+    /*background-color: #fff;*/
 }
 </style>
