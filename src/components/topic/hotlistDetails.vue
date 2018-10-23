@@ -6,7 +6,7 @@
           {{val.title}}
             <!--<div id="">1130万热度</div>-->
             <!--<div>sss</div>-->
-            <div id="praise" >{{val.hot}}万热度</div>
+            <div id="praise" >{{val.hot}}  {{topic.comment}}</div>
         </div>
         <div id="IMG" :style="{'background-image':'url('+val.src+')'}"></div>
     </div>
@@ -17,6 +17,24 @@
     export default {
         name: "hotlistDetails",
         props:['val','index'],
+        data(){
+            return{
+                topic: {
+                    allConcerns: this.$t('topic.allConcerns'),
+                    topic: this.$t('topic.topic'),
+                    watch: this.$t('topic.watch'),
+                    askQuestion: this.$t('topic.askQuestion'),
+                    recommend: this.$t('topic.recommend'),
+                    hotList: this.$t('topic.hotList'),
+                    everyoneSearching: this.$t('topic.everyoneSearching'),
+                    historicalResearch: this.$t('topic.historicalResearch'),
+                    endorsed: this.$t('topic.endorsed'),
+                    comment: this.$t('topic.comment'),
+                    minutesAgo: this.$t('topic.minutesAgo'),
+                    attention: this.$t('topic.attention'),
+                }
+            }
+        }
     }
 </script>
 

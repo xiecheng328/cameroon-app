@@ -15,7 +15,7 @@
   <div class="demo-text" v-if="active2 === 0">
     <mu-card style="width: 100%; max-width: 375px; margin: 0 auto;">
         <mu-card-media title="天人" sub-title="6行玉米割机">
-          <img src="./../../assets/img/部件1.jpg">
+          <img src="./../../assets/img/parts1.jpg">
         </mu-card-media>
         <mu-card-text>
           摘穗单行性能、结构、强度、可靠性全面提升；铝合金齿轮箱，质量轻，散热效果好，润滑效果好
@@ -26,7 +26,7 @@
     <div class="demo-text" v-if="active2 === 1">
       <mu-card style="width: 100%; max-width: 375px; margin: 0 auto;">
         <mu-card-media title="天人" sub-title="6行玉米割机">
-          <img src="./../../assets/img/部件1.jpg">
+          <img src="./../../assets/img/parts1.jpg">
         </mu-card-media>
         <mu-card-text>
           摘穗单行性能、结构、强度、可靠性全面提升；铝合金齿轮箱，质量轻，散热效果好，润滑效果好
@@ -39,7 +39,7 @@
     <div class="demo-text" v-if="active2 === 2">
       <mu-card style="width: 100%; max-width: 375px; margin: 0 auto;">
         <mu-card-media title="东方红" sub-title="采油机">
-          <img src="./../../assets/img/部件3.jpg">
+          <img src="./../../assets/img/parts3.jpg">
         </mu-card-media>
         <mu-card-text>
           摘穗单行性能、结构、强度、可靠性全面提升；铝合金齿轮箱，质量轻，散热效果好，润滑效果好
@@ -51,7 +51,7 @@
     <div class="demo-text" v-if="active2 === 3">
       <mu-card style="width: 100%; max-width: 375px; margin: 0 auto;">
         <mu-card-media title="谷物及光" sub-title="TB80">
-          <img src="./../../assets/img/小麦收割机2.jpg">
+          <img src="./../../assets/img/wheat2.jpg">
         </mu-card-media>
         <mu-card-text>
           摘穗单行性能、结构、强度、可靠性全面提升；铝合金齿轮箱，质量轻，散热效果好，润滑效果好
@@ -63,7 +63,7 @@
     <div class="demo-text" v-if="active2 === 4">
       <mu-card style="width: 100%; max-width: 375px; margin: 0 auto;">
         <mu-card-media title="五证" sub-title="GA70">
-          <img src="./../../assets/img/小麦收割机1.jpg">
+          <img src="./../../assets/img/wheat1.jpg">
         </mu-card-media>
         <mu-card-text>
           摘穗单行性能、结构、强度、可靠性全面提升；铝合金齿轮箱，质量轻，散热效果好，润滑效果好

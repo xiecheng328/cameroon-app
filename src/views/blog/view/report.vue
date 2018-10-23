@@ -3,51 +3,51 @@
         <div class="reportt">
             <img src="../../../assets/img/mood (2).jpg" alt="" class="head-por">
             <div class="detail-content">
-                <div class="name-id">耕地人-小吴</div>
+                <div class="name-id">{{pageMessage.hybridRiceResearcher}}</div>
                 <span>
-                        农机推广服务中心直播演示活动
+                        {{pageMessage.agriculturalPromotion}}
                 </span>
-                <div class="name-time">1小时前</div>
+                <div class="name-time">{{pageMessage.nHoursAgo}}</div>
             </div>
         </div>
         <div class="reportt">
             <img src="../../../assets/img/mood (2).jpg" alt="" class="head-por">
             <div class="detail-content">
-                <div class="name-id">耕地人-小吴</div>
+                <div class="name-id">{{pageMessage.hybridRiceResearcher}}</div>
                 <span>
-                        农机推广服务中心直播演示活动
+                        {{pageMessage.agriculturalPromotion}}
                 </span>
-                <div class="name-time">1小时前</div>
+                <div class="name-time">{{pageMessage.nHoursAgo}}</div>
             </div>
         </div>
         <div class="reportt">
             <img src="../../../assets/img/mood (2).jpg" alt="" class="head-por">
             <div class="detail-content">
-                <div class="name-id">耕地人-小吴</div>
+                <div class="name-id">{{pageMessage.hybridRiceResearcher}}</div>
                 <span>
-                        农机推广服务中心直播演示活动
+                        {{pageMessage.agriculturalPromotion}}
                 </span>
-                <div class="name-time">1小时前</div>
+                <div class="name-time">{{pageMessage.nHoursAgo}}</div>
             </div>
         </div>
         <div class="reportt">
             <img src="../../../assets/img/mood (2).jpg" alt="" class="head-por">
             <div class="detail-content">
-                <div class="name-id">耕地人-小吴</div>
+                <div class="name-id">{{pageMessage.hybridRiceResearcher}}</div>
                 <span>
-                        农机推广服务中心直播演示活动
+                        {{pageMessage.agriculturalPromotion}}
                 </span>
-                <div class="name-time">1小时前</div>
+                <div class="name-time">{{pageMessage.nHoursAgo}}</div>
             </div>
         </div>
         <div class="reportt">
             <img src="../../../assets/img/mood (2).jpg" alt="" class="head-por">
             <div class="detail-content">
-                <div class="name-id">耕地人-小吴</div>
+                <div class="name-id">{{pageMessage.hybridRiceResearcher}}</div>
                 <span>
-                        农机推广服务中心直播演示活动
+                        {{pageMessage.agriculturalPromotion}}
                 </span>
-                <div class="name-time">1小时前</div>
+                <div class="name-time">{{pageMessage.nHoursAgo}}</div>
             </div>
         </div>
 
@@ -56,7 +56,16 @@
 
 <script>
     export default {
-        name: "report"
+        name: "report",
+        data(){
+            return {
+                pageMessage:{
+                    hybridRiceResearcher:this.$t('blog.hybridRiceResearcher'),
+                    agriculturalPromotion:this.$t('blog.agriculturalPromotion'),
+                    nHoursAgo:this.$t('blog.nHoursAgo'),
+                }
+            }
+        },
     }
 </script>
 

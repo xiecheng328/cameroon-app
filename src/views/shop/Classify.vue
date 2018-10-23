@@ -195,17 +195,17 @@
         ],
         imgList:[
           {
-            url:require('../../assets/img/拖拉机1.jpg'),
+            url:require('../../assets/img/tractors1.jpg'),
             name: '机械1',
             id:'1'
           },
           {
-            url:require('../../assets/img/拖拉机2.jpg'),            
+            url:require('../../assets/img/tractors2.jpg'),            
             name: '机械2',
             id: '2'
           },
           {
-            url:require('../../assets/img/拖拉机1.jpg'),
+            url:require('../../assets/img/tractors1.jpg'),
             name: '机械3',
             id: '3'
           }

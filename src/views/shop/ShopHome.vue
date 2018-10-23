@@ -209,6 +209,7 @@ export default {
   data () {
     return {
       list: [{
+        // allShop:this.$t(shop.allShop),
         image: menu01,
         shopName:"拖拉机",
         color:'#FCBD1D',

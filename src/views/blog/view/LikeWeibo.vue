@@ -4,25 +4,25 @@
             <div class="header">
                 <img src="../component/img/head.png" alt="">
             </div>
-            <div class="content">昵称</div>
+            <div class="content">{{pageMessage.nickname}}</div>
         </div>
         <div class="like">
             <div class="header">
                 <img src="../component/img/head.png" alt="">
             </div>
-            <div class="content">昵称</div>
+            <div class="content">{{pageMessage.nickname}}</div>
         </div>
         <div class="like">
             <div class="header">
                 <img src="../component/img/head.png" alt="">
             </div>
-            <div class="content">昵称</div>
+            <div class="content">{{pageMessage.nickname}}</div>
         </div>
         <div class="like">
             <div class="header">
                 <img src="../component/img/head.png" alt="">
             </div>
-            <div class="content">昵称</div>
+            <div class="content">{{pageMessage.nickname}}</div>
         </div>
     </div>
 
@@ -30,7 +30,15 @@
 
 <script>
     export default {
-        name: "LikeWeibo"
+        name: "LikeWeibo",
+        data(){
+            return {
+                pageMessage:{
+                    nickname:this.$t('blog.nickname'),
+
+                }
+            }
+        },
     }
 </script>
 

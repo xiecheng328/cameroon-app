@@ -5,14 +5,14 @@
             <div id="pad">
                 <h3>如何将农业发展的更好？</h3>
                 <div id="top">
-                    <span>11693人关注&nbsp;&nbsp;&nbsp;15条评论</span>
+                    <span>11693 {{topic.watch}}&nbsp;&nbsp;&nbsp;15 {{topic.comment}}</span>
                     <!--<input  >+关注问题</input>-->
-                    <input type="button" value="+关注问题" id="btn">
+                    <input type="button" :value="topic.watch" id="btn">
                 </div>
             </div>
             <div id="select">
-                <mu-button>邀请回答</mu-button>
-                <mu-button>添加回答</mu-button>
+                <mu-button>{{topic.invitationAnswer}}</mu-button>
+                <mu-button>{{topic.addAnswer}}</mu-button>
             </div>
         </div>
         <div id="remind">
@@ -29,6 +29,27 @@
     import articleListDetails from '../../components/topic/articleListDetails'
     export default {
         name: "ArticleLists",
+        data(){
+            return{
+                topic: {
+                    allConcerns: this.$t('topic.allConcerns'),
+                    topic: this.$t('topic.topic'),
+                    watch: this.$t('topic.watch'),
+                    askQuestion: this.$t('topic.askQuestion'),
+                    recommend: this.$t('topic.recommend'),
+                    hotList: this.$t('topic.hotList'),
+                    everyoneSearching: this.$t('topic.everyoneSearching'),
+                    historicalResearch: this.$t('topic.historicalResearch'),
+                    endorsed: this.$t('topic.endorsed'),
+                    comment: this.$t('topic.comment'),
+                    minutesAgo: this.$t('topic.minutesAgo'),
+                    attention: this.$t('topic.attention'),
+                    invitationAnswer:this.$t('topic.invitationAnswer'),
+                    addAnswer: this.$t('topic.addAnswer')
+                },
+            }
+        },
+
         components:{
             articleListDetails
         },

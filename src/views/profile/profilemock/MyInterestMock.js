@@ -5,28 +5,28 @@ const Random = Mock.Random;
 const attention = function(){
     let commodity = [{
         name:'拖拉机',
-        img:require('./../../../assets/img/拖拉机1.jpg'),  
+        img:require('./../../../assets/img/tractors1.jpg'),  
         shop:'官方拖拉机旗舰店',
         price:100,
         value: false,
         select:false
     },{
         name:'拖拉机',
-        img:require('./../../../assets/img/拖拉机2.jpg'),
+        img:require('./../../../assets/img/tractors2.jpg'),
         shop:'官方拖拉机旗舰店',
         price:100,
         value: false,
         select:false
     },{
         name:'拖拉机',
-        img:require('./../../../assets/img/拖拉机3.jpg'),
+        img:require('./../../../assets/img/tractors3.jpg'),
         shop:'官方拖拉机旗舰店',
         price:100,
         value: false,
         select:false
     },{
         name:'拖拉机',
-        img:require('./../../../assets/img/拖拉机4.jpg'),
+        img:require('./../../../assets/img/tractors4.jpg'),
         shop:'官方拖拉机旗舰店',
         price:100,
         value: false,
