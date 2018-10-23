@@ -2,9 +2,9 @@
     <div>
         <div class="header">
             <span class="ReturnCon" @click="ReturnCon"><<</span>
-            <h5 class="small-header">农机使用</h5>
+            <h5 class="small-header">{{pagemessage.useA}}</h5>
         </div>
-        <OpenSubScription_message  v-for="val in list" :list="val"></OpenSubScription_message>
+        <OpenSubScription_message  v-for="val in pagemessage.list" :list="val"></OpenSubScription_message>
     </div>
 
 </template>
@@ -15,12 +15,16 @@
     export default {
         data(){
             return{
-                list:[
-                    {title:"专家某遇到的问题",time:"星期一 9:10"},
-                    {title:"专家某总结的经验",time:"昨天 4:27"},
-                    {title:"对此我们总结的经验是",time:"10-01 18:30"},
+                pagemessage:{
+                    list:this.$t("message.sublist"),
+                    useA:this.$t("message.useA"),
 
-                ]
+                },
+                // list:[
+                //     {title:"专家某遇到的问题",time:"星期一 9:10"},
+                //     {title:"专家某总结的经验",time:"昨天 4:27"},
+                //     {title:"对此我们总结的经验是",time:"10-01 18:30"},
+                // ]
             }
         },
         methods:{
