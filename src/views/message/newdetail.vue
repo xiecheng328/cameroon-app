@@ -1,21 +1,19 @@
 <template>
     <div>
         <div id="detailhead">
-            <h2 id="detailreturn" @click="detailback()"><--</h2>    <h2>订阅号-农业专家</h2>
+            <h2 id="detailreturn" @click="detailback()"><--</h2>    <h2> numéro d'abonnement</h2>
         </div>
         <div id="detailtext">
-            <h5 style="margin: 0 auto ;width: 2rem">农机的使用</h5>
-            <div> 随着农业机械化的普及，越来越多的农业机械出现在农户家中，新农机的使用问题便显得十分重要。<br/>
+            <h6 style="margin: 0 auto ;width: 2rem">Utilisation de machines agricoles</h6>
+            <div> Avec la généralisation de la mécanisation agricole, de machines agricoles apparaissent de plus en plus les maisons, la question de l'utilisation de nouvelles machines agricoles est très important.<br/>
 
-                　　一是阅读说明书。在新购买到新机具后，发动机使用前，首先要认真细读该机使用说明书，特别注意要使用规定牌号的柴油，用前要充分沉淀与过滤，加油器要保持清洁。润滑油要保持清洁，加进油料要足够，并定期更换，使用牌号要与规定相符。空气滤清要经常注意保养，要注意添加冷却水，特别是不要使发动机处在缺水的状态下工作。要经常注意检查，紧固有关的螺栓、螺母，特别是连杆螺栓，传动轴上的螺栓和飞轮上锁紧螺母，车轮的固紧螺母。<br/>
+                　　C'est de lire la notice.Dans le nouveau acheter de nouvelles machines, le moteur avant de l'utiliser, il faut d'abord lire notice sérieusement à l'aide de ladite machine, une attention particulière doit être d'utiliser les dispositions de marques de diesel, avant d'utiliser pleinement la précipitation et de filtrage, un dispositif de ravitaillement en carburant à nettoyer.De l'huile de lubrification à nettoyer, et à ajouter de l'huile doit être suffisamment et régulièrement de remplacement, l'utilisation de la marque doit être conforme à la réglementation.Filtre à air pour toujours attention à l'entretien, à l'attention de ne pas ajouter de l'eau de refroidissement, et, en particulier, de sorte que le moteur est à l'état de fonctionnement de la pénurie d'eau.Toujours vérifier, la fixation des boulons, écrous, en particulier le boulon de bielle, un arbre d'entraînement du volant sur le boulon et l'écrou de blocage, un écrou de fixation de roue.<br/>
 
-                　　二是试运转磨合。购新机后，不要马上带负荷作业，应按照说明书的要求对其进行试运转磨合。待磨合结束后，清洗该机机油滤网及清除机油中的残留杂质，有必要的还要对其机油进行更换，并清洗油底壳。<br/>
+                Le deuxième est l'essai de rodage.L'achat de nouvelles machines, pas tout de suite avec la charge de travail, doit être en conformité avec les instructions de fonctionnement d'essai de rodage.Après la fin de la machine de meulage, de nettoyage de filtre d'huile et le retrait de l'huile dans les impuretés résiduelles, il est nécessaire également pour son huile de remplacement et de nettoyage de carter d'huile.<br/>
+                　　Ce n'est pas à la charge de travail.Lorsque la nouvelle machine de travail, doit être strictement conformément aux exigences des instructions du fabricant, de ne pas surcharger, pas d'excès de vitesse, pas de super - alimentation, pas à long terme de la charge de travail.<br/>
 
-                　　三是不超负荷工作。新机进行作业时，要严格按照厂家的说明书的要求去做，不超载、不超速、不超喂入、不长期超负荷工作。<br/>
-
-                　　四是不能随意对新机具进行改装和任意调高发动机的转速。有些用户为了使机子跑得快，就随意调高压油泵的供油量和供油压力，有些还把调速弹簧用铁丝扎起来，那就更是错误。<br/>
-
-                　　合理使用新农机，减少机械故障，延长机械寿命，提高农业生产。<br/>
+                Quatre, c'est pas libre pour de nouvelles machines de réparer et arbitraire de réglage à vitesse de rotation élevée du moteur.Certains utilisateurs afin de permettre à la machine de courir plus vite, de la quantité d'alimentation en huile de pression d'alimentation en carburant et éventuellement de régulation de haute pression de la pompe à huile, certains également un ressort de régulation de vitesse avec du fil de ligature, c'est une erreur.<br/>
+                　　L'utilisation rationnelle de nouvelles machines agricoles, la réduction de défaillance mécanique, de prolonger la durée de vie de machines, d'améliorer la production agricole.<br/>
             </div>
 
         </div>
