@@ -13,8 +13,8 @@
         </div>
         <div class="topSearch">
             <mu-list>
-                <span class="subtitle">大家都在搜</span>
-                <!--<mu-sub-header class="subtitle">大家都在搜</mu-sub-header>-->
+                <span class="subtitle"></span>
+                <mu-sub-header class="subtitle">{{topic.everyoneSearching}}</mu-sub-header>
                 <ul>
                     <li v-for="(val,index) in hotList" class="excel">
                         {{index + 1}} {{val.content}}
@@ -26,7 +26,7 @@
         <div class="searchHistory">
             <mu-list>
                 <div id="historyHeight">
-                    <span id="history" class="subtitle">搜索历史</span>
+                    <span id="history" class="subtitle">{{topic.historicalResearch}}</span>
                     <mu-button icon slot="right" id="icon" @click="deleteAll()">
                         <mu-icon value="delete"></mu-icon>
                     </mu-button>
@@ -53,6 +53,20 @@
             return {
                 val: '',
                 arr: [],
+                topic: {
+                    allConcerns: this.$t('topic.allConcerns'),
+                    topic: this.$t('topic.topic'),
+                    watch: this.$t('topic.watch'),
+                    askQuestion: this.$t('topic.askQuestion'),
+                    recommend: this.$t('topic.recommend'),
+                    hotList: this.$t('topic.hotList'),
+                    everyoneSearching: this.$t('topic.everyoneSearching'),
+                    historicalResearch: this.$t('topic.historicalResearch'),
+                    endorsed: this.$t('topic.endorsed'),
+                    comment: this.$t('topic.comment'),
+                    minutesAgo: this.$t('topic.minutesAgo'),
+                    attention: this.$t('topic.attention'),
+                },
                 hotList: [
                     {
                         content: '小麦播种机使用方法',
