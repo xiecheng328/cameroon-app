@@ -34,7 +34,13 @@ export default {
         album:'Album',
         hybridRiceResearcher:'Hybrid rice researcher',
         forward:'Forward',
-        forwardingCircle:'Forwarding  circle'
+        forwardingCircle:'Forwarding  circle',
+        copyLink:'Copy link',
+        report:'Report',
+        agriculturalUseGood:'The use of agricultural machinery is very good.',
+        agriculturalPromotion:'Agricultural Machinery Promotion Service Center Live Demo Event',
+        circletext:'Circle text',
+        review:'Write a review'
     },
     topic:{
 

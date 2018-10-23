@@ -34,7 +34,13 @@ export default {
         album:'Album',
         hybridRiceResearcher:'Chercheur de riz hybride',
         forward:'Transférer',
-        forwardingCircle:'Cercle de renvoi'
+        forwardingCircle:'Cercle de renvoi',
+        copyLink:'Copier le lien',
+        report:'Rapport',
+        agriculturalUseGood:'L`utilisation de machines agricoles est très bonne',
+        agriculturalPromotion:'Démonstration en direct du Centre de service pour la promotion des machines agricoles',
+        circletext:'Texte de cercle',
+        review:'Écrire une critique'
     },
     topic:{
 

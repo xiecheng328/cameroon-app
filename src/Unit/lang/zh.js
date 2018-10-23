@@ -34,7 +34,13 @@ export default {
         album:'相册',
         hybridRiceResearcher:'杂交水稻研究人',
         forward:'转发',
-        forwardingCircle:'转发圈子'
+        forwardingCircle:'转发圈子',
+        copyLink:'复制链接',
+        report:'举报',
+        agriculturalUseGood:'农机的使用效果非常好',
+        agriculturalPromotion:'农机推广服务中心直播演示活动',
+        circletext:'圈子正文',
+        review:'写评论'
     },
     topic:{
 
