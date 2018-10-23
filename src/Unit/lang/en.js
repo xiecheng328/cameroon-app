@@ -68,42 +68,42 @@ export default {
         addAnswer:'add a answer'
     },
     message:{
-        unattendedNews:"未关注人消息",
+        unattendedNews:"Unattended news",
         list:[
-            {name:"zhangyu",time:"9:10",content:"农机的修理..."},
-            {name:"lixin",time:"09-23",content:"农机的维护问题..."},
-            {name:"liutong",time:"09-11",content:"关于播种，那些你不知道的事"},
-            {name:"lizhi",time:"10-01",content:"农机购买应注意的问题..."},
-            {name:"wangyu",time:"05-21",content:"我想向您咨询点问题"},
-            {name:"zhaoxin",time:"08-21",content:"请您现在有时间吗？"}
+            {name:"zhangyu",time:"9:10",content:"Repair of agricultural machinery"},
+            {name:"lixin",time:"09-23",content:"Maintenance of agricultural machinery"},
+            {name:"liutong",time:"09-11",content:"About planting, things you don't know"},
+            {name:"lizhi",time:"10-01",content:"Attention should be paid to agricultural machinery purchase"},
+            {name:"wangyu",time:"05-21",content:"I would like to ask you some questions"},
+            {name:"zhaoxin",time:"08-21",content:"Do you have time now?"}
         ],
 
-        news:"消息",
-        everysearch:"大家都在搜商品名",
+        news:"message",
+        everysearch:"Everyone is searching for commodity name",
         messagemeau: [{
             img:"../../assets/img/message-icon.png",
-            name:"与我相关",
+            name:"It's about me",
             path:"/withme",
             id:1,
 
         },{
             img:"/img/message-icon.png",
-            name:"评论",
+            name:"Comment",
             path:"/report",
             id:2
         },{
             img:"/img/message-icon.png",
-            name:"赞",
+            name:"Prasise",
             path:"/copyList",
             id:3
         },{
             img:"/img/message-icon.png",
-            name:"订阅号消息",
+            name:"Public account message",
             path:"/subScription_content",
             id:4
         },{
             img:"/img/message-icon.png",
-            name:"未关注人消息",
+            name:"Unattended news",
             path:"/Unattended_news",
             id:5
         },{
@@ -118,32 +118,31 @@ export default {
             id:7
         }],
 
-        alllcomment:"所有评论",
-        setting:"设置",
-        zancomment:"赞了这条评论",
-        huifu:"回复@李四 这个问题可以这样解决",
-        how:"那如果遇到这种问题怎么办",
+        alllcomment:"All comment",
+        setting:"Set up",
+        zancomment:"Praise this comment",
+        huifu:"Replay to lisi:this problem can be solved in this way",
+        how:"What should I do when I encouter such problems",
 
-        send:'发送',
-        hello:"你好",
-        unattendedname:"未关注人姓名",
+        send:'send',
+        hello:"Hello",
+        unattendedname:"Unconcerned people's names",
 
-        read:"阅读全文",
+        read:"Read the whole passage",
         sublist:[
-            {title:"专家某遇到的问题",time:"09-10 9:10"},
-            {title:"专家某总结的经验",time:"09-20 4:27"},
-            {title:"对此我们总结的经验是",time:"10-01 18:30"},
+            {title:"Problems encountered by experts",time:"09-10 9:10"},
+            {title:" Experts summed up the experience is",time:"09-20 4:27"},
+            {title:"The experience we summed up is that",time:"10-01 18:30"},
         ],
         openlist:[
-            {name:"农机使用",content:"农机的使用注意事项，农机的各种特性。。。"},
-            {name:"农机维护",content:"如果其中的这个部件出现故障，原因是。。。"},
-            {name:"农机研发",content:"某个部件是由铁和钢制造而成，其中最重要的是。。。"}
+            {name:"Agricultural machinery use",content:"Various characteristics of agricultural machinery"},
+            {name:"Agricultural machinery maintenance",content:"If one of these components fails, the reason is"},
+            {name:"Agricultural machinery research and development",content:"A part is made of steel and iron, the most important."}
         ],
-        Subscribe:"订阅消息",
-        useA:"农机使用",
-        texingA:"农机的各种特性",
-        proA:"专家某在今天使用农机时遇到的问题汇总"
-
+        Subscribe:"Subscribe",
+        useA:"Agricultural machinery use",
+        mattersA:"Matters needing attention in the use of agricultural machinery",
+        proA:"Summary of problems encountered by experts today in the use of agricultural machinery"
     },
     profile:{
 
