@@ -6,18 +6,18 @@
         <img src="" class="log-img">
 
         <div class="printIn search">
-            帐号：<input type="text" class="printIn-style">
+            {{account}}：<input type="text" class="printIn-style">
             <br />
-            密码：<input type="password" class="print-style">
+            {{password}}：<input type="password" class="print-style">
         </div>
-        <button class="gray left">忘记密码</button>
-        <button class="gray right">注册账号</button>
+        <button class="gray left">{{forgetPs}}</button>
+        <button class="gray right">{{registered}}</button>
 
 
 
         <div class="up">
             <!-- <p>{{sContent}}</p> -->
-            <button class="white">切换其他登陆方式</button>
+            <button class="white">{{switchOther}}</button>
         </div>
     </div>
 </template>
@@ -136,8 +136,16 @@
     export default{
         data(){
             return {
-                sWho:"This is recept01",
-                sPasswd:"This is recept02"
+                account:'compte',
+                password:'passe',
+                forgetPs:'oublier passe',
+                registered:'Enregistré compte',
+                switchOther:'Changez de mode de signalisation',
+                func:'Présentation des fonctions',
+                checkVersion:'Vérifiez la version mise à jour',
+                website:'Réseau de',
+                serviceTerm:'Conditions de service',
+                privacy:'Accords de confidentialité',
             }
         },
         methods:{
@@ -145,6 +153,6 @@
                 this.$emit('resetFatherp');
             },
 
-    }
+        }
     }
 </script>

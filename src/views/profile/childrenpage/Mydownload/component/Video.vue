@@ -2,20 +2,20 @@
     <div>
          <mu-container>
         <div class="download-title">
-             <mu-button class="download-title-back" flat @click="changeFatherB">返回</mu-button>
-             <h3 class="download-title-text">视频</h3>
+             <mu-button class="download-title-back" flat @click="changeFatherB">{{video.return}}</mu-button>
+             <h3 class="download-title-text">{{video.Video}}</h3>
         </div>
         <hr/>
         <div class="video-input">
-            <input type="text" placeholder="搜索自己喜欢的视频">
-            <button>搜索</button>
+            <input type="text">
+            <button>{{video.Search}}</button>
         </div>
         
         <div class="video-content">
             <ul>
                 <li v-for="(item,index) in imgs" :key=index>
                  <img :src="item.imgurl">
-                  <p>普通和VIP用户可看视频</p>
+                  <p>{{video.RegularAndVIPUsersCanWatchVideo}}</p>
                 </li>
             </ul>
 
@@ -30,6 +30,12 @@ export default {
   name:"profile",
   data(){
     return{
+        video:{
+            return:this.$t('profile.return'),
+            Video:this.$t('profile.Video'),
+            Search:this.$t('profile.Search'),
+            RegularAndVIPUsersCanWatchVideo:this.$t('profile.RegularAndVIPUsersCanWatchVideo'),
+        },
          imgs:[
         {
           imgurl:require('../../../../../assets/img/profilemydownload.jpg')

@@ -1,25 +1,24 @@
 
 <template>
-
   <div>
       <router-view v-show="isShow"  v-on:resetFatherp="resetF" ></router-view>
       <div v-show="!isShow" >
           <mu-container >
               <div class="download-title">
-                  <mu-button class="download-title-back" flat @click="changeFatherB">返回</mu-button>
-                  <h3 class="download-title-text">我的下载</h3>
-                  <span class="download-title-manage" @click="ff2">编辑</span>
+                  <mu-button class="download-title-back" flat @click="changeFatherB">{{myDownload.return}}</mu-button>
+                  <h3 class="download-title-text">{{myDownload.myDownload}}</h3>
+                  <span class="download-title-manage" @click="ff2">{{myDownload.manage}}</span>
               </div>
               <hr/>
               <div class="download-text1">
                   <div class="download-text1-title1">
-                      <h4 class="download-text1-title1-vip">VIP视频</h4>
-                      <span class="download-text1-title1-more" @click="ff1">更多</span>
+                      <h4 class="download-text1-title1-vip">{{myDownload. VipVideo}}</h4>
+                      <span class="download-text1-title1-more" @click="ff1">{{myDownload.More}}</span>
                   </div>
                   <ul>
                       <li v-for="(item,index) in imgs" :key=index>
                           <img :src="item.imgurl">
-                              <p>vip用户专享</p>
+                              <p>{{myDownload.VipUserExclusive}}</p>
                       </li>
                   </ul>
 
@@ -27,13 +26,13 @@
               <hr/>
               <div class="download-text2">
                   <div class="download-text2-title2">
-                      <h4 class="download-text2-titl2-video">视频</h4>
-                      <span  class="download-text2-title2-more" @click="ff">更多</span>
+                      <h4 class="download-text2-titl2-video">{{myDownload.Video}}</h4>
+                      <span  class="download-text2-title2-more" @click="ff">{{myDownload.More}}</span>
                   </div>
                   <ul>
                       <li v-for="(item,index) in imgs" :key=index>
                           <img :src="item.imgurl">
-                              <p>普通用户可看视频</p>
+                              <p>{{myDownload.OrdinaryUsersSee}}</p>
                       </li>
                   </ul>
               </div>
@@ -51,6 +50,16 @@ export default {
   data(){
     return{
         isShow:false,
+        myDownload:{
+            return:this.$t('profile.return'),
+            myDownload:this.$t('profile.Mydownload'),
+            manage:this.$t('profile.Manage'),
+            VipVideo:this.$t('profile.VipVideo'),
+            VipUserExclusive:this.$t('profile.VipUserExclusive'),
+            More:this.$t('profile.More'),
+            Video:this.$t('profile.Video'),
+            OrdinaryUsersSee:this.$t('profile.OrdinaryUsersSee'),
+        },
       imgs:[
         {
           imgurl:require('./../../../../assets/img/profilemydownload.jpg')
