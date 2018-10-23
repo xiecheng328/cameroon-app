@@ -57,9 +57,11 @@
         font-size: 20px;
     }
     .small-header{
-        float: right;
-        padding-right: 2.5rem;
+        position: absolute;
+        top: 0;
+        right:91px;
         font-size: 20px;
+        text-align: center;
     }
     .addMore{
         height: 20px;

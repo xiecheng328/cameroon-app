@@ -22,7 +22,7 @@ import Vip from '@/views/profile/childrenpage/Mydownload/component/Vip.vue';
 import Video from '@/views/profile/childrenpage/Mydownload/component/Video.vue';
 import Manage from '@/views/profile/childrenpage/Mydownload/component/Manage.vue'
 // import UserFeedback from '@/views/profile/childrenpage/HelpAndfeedback/UserFeedback.vue';
-// import Commonquestion from '@/views/profile/childrenpage/HelpAndfeedback/Commonquestion.vue';
+import Commonquestion from '@/views/profile/childrenpage/HelpAndfeedback/Commonquestion.vue';
 // Vue.use(Router);
 export default [
     // mode: 'history',
@@ -109,7 +109,7 @@ export default [
           {
               path: '/commonquestion',
               name: 'Commonquestion',
-              // component: Commonquestion,
+              component: Commonquestion,
           },
           {
               path: '/userGuide',
