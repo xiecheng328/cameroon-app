@@ -8,7 +8,33 @@ export default {
         shop:'商城'
     },
     blog:{
-        allBlog:'全部微博'
+        allBlog:'全部微博',
+        topic:'话题',
+        nickname:'昵称',
+        nHoursAgo:'n小时前',
+        nMonth:'n月',
+        supertalk:'超话',
+        like:'点赞',
+        send:'发送',
+        shareTitle:'分享标题',
+        shareContent:'分享内容',
+        share:'分享心得',
+        shareSomethingNew:'分享新鲜事',
+        fans:'粉丝',
+        attention:'关注',
+        shooting:'拍摄',
+        comment:'评论',
+        cancel:'取消',
+        circle:'圈子',
+        setting:'设置',
+        collection:'收藏',
+        privateLetters:'私信',
+        addMoreAttachments:'添加更多附件',
+        simultaneousForwarding:'同时转发',
+        album:'相册',
+        hybridRiceResearcher:'杂交水稻研究人',
+        forward:'转发',
+        forwardingCircle:'转发圈子'
     },
     topic:{
 
