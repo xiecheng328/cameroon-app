@@ -3,7 +3,7 @@
     <div id="container">
         <div  id="header">
             <div id="pad">
-                <h3>如何将农业发展的更好？</h3>
+                <h3>Comment va mieux le développement agricole?</h3>
                 <div id="top">
                     <span>11693 {{topic.watch}}&nbsp;&nbsp;&nbsp;15 {{topic.comment}}</span>
                     <!--<input  >+关注问题</input>-->
@@ -60,10 +60,19 @@
     *{
         margin: 0;
         padding: 0;
+        a{
+            color: #000 !important;
+        }
         body{
             background: #cccccc;
             #container{
                 border-top: solid 0.25px;
+                #contenta{
+                    #article{
+                        color: #000000 !important;
+                    }
+                }
+
                 #header{
                     background-color: white;
                     #pad{
@@ -98,6 +107,7 @@
                         }
                     }
                 }
+
                 #remind{
                     padding: 5px;
                     position: relative;

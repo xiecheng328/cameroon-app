@@ -2,10 +2,10 @@
     <div>
         <div class="header">
             <span class="ReturnPre" @click="ReturnPre"><<</span>
-            <h5 class="small-header">订阅消息</h5>
+            <h5 class="small-header">{{pagemessage.Subscribe}}</h5>
             <img class="addMore" src="../../../../assets/img/message_add.png" @click="addmore" alt="">
         </div>
-        <SubScription_message  v-for="val in list" :list="val"></SubScription_message>
+        <SubScription_message  v-for="val in pagemessage.list" :list="val"></SubScription_message>
     </div>
 
 </template>
@@ -16,11 +16,15 @@
     export default {
         data(){
             return{
-                list:[
-                    {name:"农机使用",content:"农机的使用注意事项，农机的各种特性。。。"},
-                    {name:"农机维护",content:"如果其中的这个部件出现故障，原因是。。。"},
-                    {name:"农机研发",content:"某个部件是由铁和钢制造而成，其中最重要的是。。。"}
-                ]
+                // list:[
+                //     {name:"农机使用",content:"农机的使用注意事项，农机的各种特性。。。"},
+                //     {name:"农机维护",content:"如果其中的这个部件出现故障，原因是。。。"},
+                //     {name:"农机研发",content:"某个部件是由铁和钢制造而成，其中最重要的是。。。"}
+                // ]
+                pagemessage:{
+                    list:this.$t("message.openlist"),
+                    Subscribe:this.$t("message.Subscribe")
+                }
             }
         },
         methods:{

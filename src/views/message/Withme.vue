@@ -2,27 +2,26 @@
 <div id="withme">
  <div id='messageTitle'>
   <span style="margin-left: .1rem" @click="back" ><-</span>
-  <h5>@我</h5>
+  <h5>@Je</h5>
  </div>
  <div class="titlehead">
   <img class="messagehead" src="../../assets/img/messagesHead.png" alt="">
    <ul>
     <li>
-     昵称1
+     Spécialiste de riz
     </li>
     <li>
      5-22 16:40
     </li>
    </ul>
  </div>
- <p>//@昵称1 ：转发消息</p>
+ <p>//@Spécialiste de riz ：Le message de transfert</p>
   <div class="messagecontain">
    <img class="messageconent" src="../../assets/img/messageConent.png" alt="">
    <div class="containtext">
-   <span>@昵称2</span>
-   <div class="containtext">内容内容内容内容内容内容内容内容
-  内容内容内容内容内容内容内容内容
-  内容
+   <span>@Expert de maïs</span>
+   <div class="containtext">Le maïs à 40 cm, pour le maïs est appliquée, de fumier, de la promotion de la croissance
+
    </div>
    </div>
  </div>
@@ -30,21 +29,20 @@
   <img class="messagehead" src="../../assets/img/messagesHead.png" alt="">
   <ul>
    <li>
-    昵称3
+    Expert de soja
    </li>
    <li>
     5-22 16:40
    </li>
   </ul>
  </div>
- <p>评论内容@昵称1</p>
+ <p>Commentaires@Spécialiste de riz</p>
  <div class="messagecontain">
   <img class="messageconent" src="../../assets/img/messageConent.png" alt="">
   <div class="containtext">
-   <span>@昵称3</span>
-   <div class="containtext">内容内容内容内容内容内容内容内容
-    内容内容内容内容内容内容内容内容
-    内容
+   <span>@Expert de soja</span>
+   <div class="containtext">
+    La plantation de riz doit d'abord, puis à traiter le lit de semences de riz paddy, après traitement de stérilisation et à la désinfection de graine de nouveau, après transplantation de semis de riz, on a à faire, c'est de combler les lacunes et de consultation de l'irrigation, de suivi et d'engrais, de travail et de LIRIOMYZA de feuilles de prévention.
    </div>
   </div>
  </div>
@@ -66,7 +64,7 @@
  h5{
   float: right;
   margin-right: 3.1rem;
-
+ margin-top: 0.01rem;
  }
 .messagehead{
  width:.7rem!important;
@@ -102,6 +100,10 @@
   display: flex;
   flex-direction: column;
   margin-left: .2rem;
+  margin-right: .1rem;
+  height: 1.3rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
  }
  #withme{
   margin:0 .1rem;
