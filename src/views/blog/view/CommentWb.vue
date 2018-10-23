@@ -5,11 +5,11 @@
                 <img src="../component/img/head.png" alt="">
             </div>
             <div class="content">
-                <span class="color">昵称</span>
+                <span class="color">{{pageMessage.nickname}}</span>
                 <div>
-                    农机使用效果非常好
+                    {{pageMessage.agriculturalUseGood}}
                 </div>
-                <span>1小时前</span>
+                <span>{{pageMessage.nHoursAgo}}</span>
             </div>
 
         </div>
@@ -18,11 +18,11 @@
                 <img src="../component/img/head.png" alt="">
             </div>
             <div class="content">
-                <span class="color">昵称</span>
+                <span class="color">{{pageMessage.nickname}}</span>
                 <div>
-                    农机使用效果非常好
+                    {{pageMessage.agriculturalUseGood}}
                 </div>
-                <span>1小时前</span>
+                <span>{{pageMessage.nHoursAgo}}</span>
             </div>
 
         </div>
@@ -31,7 +31,16 @@
 </template>
 <script>
     export default {
-        name: "CommentWb"
+        name: "CommentWb",
+        data(){
+            return {
+                pageMessage:{
+                    nickname:this.$t('blog.nickname'),
+                    agriculturalUseGood:this.$t('blog.agriculturalUseGood'),
+                    nHoursAgo:this.$t('blog.nHoursAgo'),
+                }
+            }
+        },
     }
 </script>
 <style scoped lang="scss">

@@ -1,9 +1,10 @@
 <template>
     <div id="container">
+        <router-link to="/topic/answer">
         <div id="asone">
             <div id="title">
                 <div class="head"></div>
-                <span>农机专业户</span>
+                <span>Des ménages agricoles</span>
             </div>
             <div id="contenta">
                <div id="iMg">
@@ -13,15 +14,15 @@
                    <img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2055644088,766142526&fm=27&gp=0.jpg" alt="">
                </div>
                 <div id="article">
-                    随着时代的进步，农业发展直接关乎生产力，而农业生产中最主要的就是农业机械技术的使用，
-                    重视农业机械技术首先应该关注的就是如何维护农业机械技术，
+                    Avec la progression de l'époque, le développement agricole est directement lié à la productivité, et l'utilisation de la production agricole le plus important, c'est de la technologie des machines agricoles, de l'importance de la machine agricole, il convient tout d'abord de l'attention est à la manière de préserver la technologie des machines agricoles,
                 </div>
             </div>
         </div>
         <div id="articleListBottom" class="HFborder">
-            <span>2,095赞同</span><span>&nbsp;·&nbsp;</span><span>3,758评论</span>
+            <span>2,095 start</span><span>&nbsp;·&nbsp;</span><span>3,758 comment</span>
             <span>&nbsp;·&nbsp;</span><span>三天前</span>
         </div>
+        </router-link>
     </div>
 </template>
 
@@ -51,10 +52,15 @@
                         border-radius: 50%;
                         float: left;
                         margin-right: 5px;
+                        color: #000;
                     }
+                    color: #000;
                 }
 
                 #contenta{
+                    #article{
+                        color: #000;
+                    }
                     #iMg{
                         display: flex;
                         img{
