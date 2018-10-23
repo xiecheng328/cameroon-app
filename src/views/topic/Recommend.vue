@@ -3,16 +3,15 @@
         <div class="container" v-for="i in 9">
             <div class="header">
                 <img src="../../assets/img/headPortrait.jpeg"/>
-                <span class="name">工农联盟</span>
+                <span class="name">L'Alliance</span>
                 <!-- <span class="time">4分钟前</span> -->
                 <div class="logo">+{{topic.watch}}</div>
             </div>
             <div class="contant">
-                <h3>农广天地间——黑土</h3>
+                <h3>Entre ciel et terre agricole large - noir</h3>
                 <div class="contain">
                     <div class="leftText">
-                        中国拖拉机工业的起点以东方红拖拉机的诞生为标志。1958年,大功率的机器的出现，到现在的建三江的农业自动化，都是的农业的光辉历程！中国农业的成熟。
-                    </div>
+                        Le point de départ de la Chine industrie du tracteur pour la naissance du tracteur est rouge comme un symbole.En 1958, l'émergence de la machine de grande puissance, à l'agriculture de l'automatisation de construction Sanjiang maintenant, histoire glorieuse de l'agriculture, c'est tout!La maturité de l'agriculture.  </div>
                     <div class="rightImg">
                     <img src="../../assets/img/wheat1.jpg"/>
                     </div>
@@ -83,7 +82,7 @@
         width: 45px;
         float: right;
         background-color: #ddd;
-        text-align: center；
+        text-align: center;
 
     }
 

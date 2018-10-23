@@ -76,6 +76,10 @@ export default [
         path: 'search',
         component: () => import('@/views/topic/Search.vue'),
         name: 'search'
+    },{
+        path: 'answer',
+        component: () => import('@/views/topic/Answer.vue'),
+        name: 'answer'
     }
 ]
 

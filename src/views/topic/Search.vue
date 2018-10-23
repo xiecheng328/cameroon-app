@@ -69,19 +69,19 @@
                 },
                 hotList: [
                     {
-                        content: '小麦播种机使用方法',
+                        content: 'Semoir de blé et procédé d\'utilisation',
 
                     },
                     {
-                        content: '农机补贴价格表',
+                        content: 'Liste des prix des subventions agricoles',
 
                     },
                     {
-                        content: '最新小型农业机械',
+                        content: 'Le nouveau petit de machines agricoles',
 
                     },
                     {
-                        content: '小麦玉米两用联合收割机',
+                        content: 'Froment (blé) et le maïs à double usage de la moissonneuse - batteuse',
 
                     },
                 ]

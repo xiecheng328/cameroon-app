@@ -13,10 +13,10 @@
                 </mu-card-media>
                 <mu-card-title title="Content Title" sub-title="Content Title"></mu-card-title>
                 <mu-card-text>
-                    散落在指尖的阳光，我试着轻轻抓住光影的踪迹，它却在眉宇间投下一片淡淡的阴影。
-                    调皮的阳光掀动了四月的心帘，温暖如约的歌声渐起。
-                    似乎在诉说着，我也可以在漆黑的角落里，找到阴影背后的阳光，
-                    找到阳光与阴影奏出和谐的旋律。我要用一颗敏感赤诚的心迎接每一缕滑过指尖的阳光！
+                    La lumière diffusée dans le bout des doigts, j'ai essayé de saisir la lumière légèrement trace, c'est dans l'ombre de la lumière entre le Front de la feuille suivante.
+                    L'inclinaison de la lumière du soleil vilain rideau de coeur en avril, une chanson chaud là.
+                    Il semble dire, moi aussi, je peux être dans le coin sombre, trouver le soleil derrière l'ombre,
+                    Trouver le soleil et de l'ombre sur l'harmonie à la mélodie.Je vais utiliser un coeur sensible à la sincérité de rencontrer le soleil Chaque rayon de glisser tes doigts!
                 </mu-card-text>
                 <!--<mu-card-actions>-->
                     <!--<mu-button flat>Action 1</mu-button>-->
