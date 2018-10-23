@@ -3,7 +3,11 @@
     
     <router-view v-show="!isClick" v-on:resetFatherp="resetF" ></router-view>
       <div v-show="isClick">
-    <h3 class="HelpAndfeedback-header">帮助与反馈</h3>
+      <div class="HelpAndfeedback-title">
+        <mu-button class="download-title-back" flat @click="changeFatherB">{{pageMessage.return}}</mu-button>
+                  <h3 class="HelpAndfeedback-title-text">{{pageMessage.HelpFeedback}}</h3>
+                 
+              </div>
    
     <div class="menuHelpAndfeedback">
       <div class="menuHelpAndfeedback-first">
@@ -24,20 +28,27 @@ export default {
    data(){
      return{
        isClick:true,
+        pageMessage:{
+        return:this.$t('profile.return'),
+        HelpFeedback:this.$t('profile.HelpFeedback'),
+       
+        
+        
+      },
        HelpAndfeedback: [{
          iconimg:"/img/profileicon1.png",
-         text:"用户常见问题",
+        commonquestion:this.$t('profile.commonquestion'),
          src:"Commonquestion",
          id:1,
 
        },{
         iconimg:"/img/profileicon1.png",
-         text:"用户使用指南",
+         userGuide:this.$t('profile.userGuide'),
          src:"UserGuide",
          id:2
        },{
         iconimg:"/img/profileicon1.png",
-         text:"用户反馈窗口",
+        userFeedback:this.$t('profile.userFeedback'),
          src:"UserFeedback",
          id:3
        },],
@@ -50,6 +61,9 @@ export default {
 
    
    methods:{
+     changeFatherB(){
+      this.$emit('resetFatherp');
+    },
     routerGo(a){
       this.isClick=false;
       this.$router.push({ name:`${a.src}`, params: { userId: 123 }})
@@ -60,23 +74,32 @@ export default {
         console.log("chufal!");
         this.$router.push('/HelpAndfeedback');
        this.isClick=!this.isClick;
-     }
+     },
+   
    }
 }
 </script>
 <style lang="scss" scoped>
-.HelpAndfeedback{
-
-  &-header{
-    margin-top: 0.4rem;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    border-bottom: 1px solid #cccccc;
-    background: #ffffff;
+.HelpAndfeedback-title{
+  margin-top: 0.4rem;
+  height: 40px;
+  line-height: 40px;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  &-back{
+  margin-left: 0.2rem;
   }
- 
+  &-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%)
+  }
+  
 }
+
 .menuHelpAndfeedback{
   
   li{

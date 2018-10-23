@@ -1,35 +1,36 @@
 <template>
   <div class="Message">
     
-    <mu-button class="Message-back" flat @click="changeFatherC()">返回</mu-button>
-    <h3 class="Message-header">聊天设置</h3>
+    <mu-button class="Message-back" flat @click="changeFatherC()">{{pageMessage.return}}</mu-button>
+    <h3 class="Message-header">{{pageMessage.messageset}}</h3>
    
     <div class="Message">
       <div class="Message-first">
-       <li><h5>互动提醒</h5></li> 
-       <li><h5>允许评论</h5>
+       <li><h5>{{pageMessage.InteractiveReminding}}</h5></li> 
+       <li><h5>{{pageMessage.Allowcomments}}</h5>
        <select class="selectfirst">
-  <option value="volvo"><a href="">所有人</a></option>
-  <option value="saab"><a href="">我关注的人</a></option>
-  <option value="opel"><a href="">关闭</a></option>
+
+  <option value="volvo"><a href="">{{pageMessage.allPerson}}</a></option>
+  <option value="saab"><a href="">{{pageMessage.PeopleIcareabout}}</a></option>
+  <option value="opel"><a href="">{{pageMessage. Close}}</a></option>
  
 </select>
        </li> 
-       <li><h5>接收@我的消息</h5>
+       <li><h5>{{pageMessage.acceptTheNews}}</h5>
        <select class="selectfirst">
-  <option value="volvo"><a href="">所有人</a></option>
-  <option value="saab"><a href="">我关注的人</a></option>
-  <option value="opel"><a href="">关闭</a></option>
+  <option value="volvo"><a href="">{{pageMessage.allPerson}}</a></option>
+  <option value="saab"><a href="">{{pageMessage.PeopleIcareabout}}</a></option>
+  <option value="opel"><a href="">{{pageMessage.Close}}</a></option>
  
 </select>
        </li> 
-       <li><h5>私信</h5></li> 
-        <li><h5>未关注人消息 </h5>
+       <li><h5>{{pageMessage.Privateletter}}</h5></li> 
+        <li><h5>{{pageMessage.Unattendednews}} </h5>
 
           <select class="selectsecond">
-  <option value="volvo"><a href="">接收</a></option>
+  <option value="volvo"><a href="">{{pageMessage.Receive}}</a></option>
   
-  <option value="opel"><a href="">不接收</a></option>
+  <option value="opel"><a href="">{{pageMessage.notReceive}}</a></option>
  
 </select>
         </li> 
@@ -48,10 +49,30 @@ import MuseUI from 'muse-ui';
 import 'muse-ui/dist/muse-ui.css';
 
 export default {
+  data(){
+    return {
+      pageMessage:{
+        return:this.$t('profile.return'),
+        messageset:this.$t('profile.messageset'),
+        InteractiveReminding:this.$t('profile.InteractiveReminding'),
+        Allowcomments:this.$t('profile.Allowcomments'),
+        allPerson:this.$t('profile.allPerson'),
+        PeopleIcareabout:this.$t('profile.PeopleIcareabout'),
+        Close:this.$t('profile.Close'),
+        acceptTheNews:this.$t('profile.acceptTheNews'),
+       Privateletter:this.$t('profile.Privateletter'),
+        Unattendednews:this.$t('profile.Unattendednews'),
+        Receive:this.$t('profile.Receive'),
+        notReceive:this.$t('profile.notReceive'),
+        
+      }
+    }
+  },
   
    methods: {
       changeFatherC() {
                  this.$emit('resetFatherp');
+
           },
    }
   
