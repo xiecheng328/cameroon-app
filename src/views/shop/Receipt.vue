@@ -3,12 +3,12 @@
          <div class="cover">
           <mu-flex justify-content="center" class="cover-button">
             <mu-button @click="openBotttomSheet">验证指纹
-                <img src="./img/指纹.png" alt="">
+                <img src="./img/fingerprint.png" alt="">
             </mu-button>
         </mu-flex>
         <mu-bottom-sheet :open.sync="open" class="cover-reminder">
             <mu-list @item-click="closeBottomSheet" class="cover-reminder-style">
-                <h2>付款成功<img src="./img/对号.png" alt=""></h2>
+                <h2>付款成功<img src="./img/right.png" alt=""></h2>
             </mu-list>
   </mu-bottom-sheet>
          </div>
@@ -38,7 +38,6 @@ export default {
     .receipt{
             width: 375px;
             height:555px;
-            // background: url("./img/对号.png") no-repeat;
             background-size: cover;
              }
          .cover{           

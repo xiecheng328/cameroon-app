@@ -14,7 +14,7 @@
                         中国拖拉机工业的起点以东方红拖拉机的诞生为标志。1958年,大功率的机器的出现，到现在的建三江的农业自动化，都是的农业的光辉历程！中国农业的成熟。
                     </div>
                     <div class="rightImg">
-                        <img src="../../assets/img/小麦收割机1.jpg"/>
+                    <img src="../../assets/img/wheat1.jpg"/>
                     </div>
                 </div>
             </div>

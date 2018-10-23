@@ -20,9 +20,9 @@
 </template>
 
 <script>
-import img1 from './../../assets/img/拖拉机1.jpg';
-import img2 from './../../assets/img/拖拉机2.jpg';
-import img3 from './../../assets/img/拖拉机3.jpg';
+import img1 from './../../assets/img/tractors1.jpg';
+import img2 from './../../assets/img/tractors2.jpg';
+import img3 from './../../assets/img/tractors3.jpg';
 export default {
     data(){
         return{

@@ -13,11 +13,11 @@
         <!--标题-->
         <div  id="box">
             <ul>
-                <li v-for="(v,index) in json.list" :key="index">
+                <li v-for="(v,index) in list" :key="index">
                     <div class="img">
-                        <img src="./img/2.jpg" alt="">
+                        <img :src="v.img" alt="">
                     </div>
-                    <h4>{{v.des}}</h4>
+                    <h4>{{v.brandName}}</h4>
                     <p>{{v.price}}</p>
                     
                 </li>
@@ -27,44 +27,18 @@
 </template>
 
 <script>
+    import axios from 'axios';
+    import './mock/shopList.js';
     export default {
     data(){
         return{
-            json:{
-                list:[
-                    {
-                        src:'./img/2.jpg',
-                        des:'这是第一个描述',
-                        price:198
-                    },
-                    {
-                        src:'./img/2.jpg',
-                        des:'这是第二个描述',
-                        price:198
-                    },
-                    {
-                        src:'./img/2.jpg',
-                        des:'这是第三个描述',
-                        price:200
-                    },
-                    {
-                        src:'./img/2.jpg',
-                        des:'这是第一个描述',
-                        price:198
-                    },
-                    {
-                        src:'./img/2.jpg',
-                        des:'这是第二个描述',
-                        price:100
-                    },
-                    {
-                        src:'./img/2.jpg',
-                        des:'这是第三个描述',
-                        price:457
-                    }
-                ]
-            }
+            list:[]
         }
+        },
+        mounted() {
+             axios.get('msg').then(res=>{
+                this.list = res.data.machineryProuct;
+             })
         },
         methods:{
             goLeft(){

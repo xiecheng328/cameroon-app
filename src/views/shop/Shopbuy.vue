@@ -28,7 +28,7 @@
                     <div class="thing">
                         <i :class="List[index].shoped?'dis iconfont icon-xuanze': ' iconfont icon-xuanze'" @click="xuanze(index)"></i>
                         <i :class="!List[index].shoped?'nodis iconfont icon-xuanze1': ' iconfont icon-xuanze1'" @click="xuanze(index)"></i>
-                        <img class="thing-img" src="@/assets/img/小麦收割机1.jpg" alt="">
+                        <img class="thing-img" src="@/assets/img/wheat1.jpg" alt="">
                     </div>
                     <div class="info">
                         <p class="info-info">{{List[index].info}}</p>
@@ -45,7 +45,7 @@
             <p class="middle"><span>——></span><span>你可能还喜欢</span><span>——</span></p>
                     <ul class="middle-bottom">
                     <li class="bottom-list" v-for="(item,index) in Lista" :key="index">
-                        <img src="@/assets/img/小麦收割机1.jpg" alt="" class="bottom-img">
+                        <img src="@/assets/img/wheat1.jpg" alt="" class="bottom-img">
                     </li>
                 </ul>
             <div class="footerup">

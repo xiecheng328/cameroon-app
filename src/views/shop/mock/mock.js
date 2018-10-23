@@ -1,6 +1,6 @@
 //引入mockjs
-import hotImg1 from './../../../assets/img/部件1.jpg';
-import tractorImg1 from './../../../assets/img/小麦收割机1.jpg';
+import hotImg1 from './../../../assets/img/parts1.jpg';
+import tractorImg1 from './../../../assets/img/wheat1.jpg';
 const Mock = require('mockjs')
 // 获取 mock.Random 对象
 const Random = Mock.Random;
