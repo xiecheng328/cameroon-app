@@ -7,4 +7,17 @@ export default {
         profile:'Profile',
         shop:'Boutique'
     },
+    blog:{
+        allBlog:'Tous les micro-blog'
+    },
+    message:{
+
+    },
+    profile:{
+
+    },
+    shop:{
+
+    }
+
 };

@@ -7,4 +7,18 @@ export default {
         profile:'Profile',
         shop:'Shop'
     },
+    blog:{
+        allBlog:'All micro-blog'
+    },
+    message:{
+
+    },
+    profile:{
+
+    },
+    shop:{
+
+    }
+
+
 };
