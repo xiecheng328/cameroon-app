@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="identity-title">
-          <mu-button class="identity-title-back" flat @click="changeFatherB">返回</mu-button>
-          <h3 class="identity-title-text">VIP认证</h3>
+          <mu-button class="identity-title-back" flat @click="changeFatherB">{{pageIdentity.return}}</mu-button>
+          <h3 class="identity-title-text">{{pageIdentity.VIPMembershipCertification}}</h3>
     </div>
     <div class="identity-content">
       <div class="identity-content-user">
@@ -10,27 +10,26 @@
         <h3 class="identity-content-user-username">UserName</h3>
       </div>
       <div class="identity-content-apply1">
-        <h3 class="identity-content-apply1-title">认证成为大V:</h3>
+        <h3 class="identity-content-apply1-title">{{pageIdentity.certificationToBeVIP}}</h3>
         <button class="identity-content-apply1-content1">
-          <h5>请求人工审核</h5>
-          <span>（注：人工审核较慢且通过率较低，如果您非业界专业人士，
-            请选择其他两种方式！）</span>
+          <h5>{{pageIdentity.requestManualAudit}}</h5>
+          <span>{{pageIdentity.attention}}</span>
         </button>
       </div>
       <div class="identity-content-apply2">
-        <h3 class="identity-content-apply2-title">免费成为VIP:</h3>
+        <h3 class="identity-content-apply2-title">{{pageIdentity.freeToBecomeVIP}}</h3>
         <div class="identity-content-apply2-need">
-          <p>经验值达到100，您已获得0，还需要100；</p>
-          <p>粉丝数量达到100，您已获得0，还需要100；</p>
-          <p>积分达到100，您已获得0，还需要100；</p>
+          <p>{{pageIdentity.empiricalValue}}</p>
+          <p>{{pageIdentity.theNumberOfFans}}</p>
+          <p>{{pageIdentity.integral}}</p>
         </div>
-        <button class="identity-content-apply2-content2">成为VIP</button>
+        <button class="identity-content-apply2-content2">{{pageIdentity.becomeVIP}}</button>
       </div>
       <div class="identity-content-apply3">
-        <h3 class="identity-content-apply3-title">或者:</h3>
+        <h3 class="identity-content-apply3-title">{{pageIdentity.or}}</h3>
         <button class="identity-content-apply3-content3">
           <h5>Buy It</h5>
-          <span>（$25/month）</span>
+          <span>{{pageIdentity.money}}</span>
         </button>
       </div>
     </div>
@@ -42,7 +41,20 @@ export default {
     name: "profile",
   data () {
     return {
-      active1: 0
+      pageIdentity:{
+          VIPMembershipCertification:this.$t('profile.VIPMembershipCertification'),
+          return:this.$t('profile.return'),
+          certificationToBeVIP:this.$t('profile.certificationToBeVIP'),
+          requestManualAudit:this.$t('profile.requestManualAudit'),
+          attention:this.$t('profile.attention'),
+          freeToBecomeVIP:this.$t('profile.freeToBecomeVIP'),
+          empiricalValue:this.$t('profile.empiricalValue'),
+          theNumberOfFans:this.$t('profile.theNumberOfFans'),
+          integral:this.$t('profile.integral'),
+          becomeVIP:this.$t('profile.becomeVIP'),
+          or:this.$t('profile.or'),
+          money:this.$t('profile.money')
+      }
     };
   },
   methods:{
