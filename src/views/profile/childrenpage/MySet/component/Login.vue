@@ -134,18 +134,19 @@
 
 <script>
     export default{
+        name:"profile",
         data(){
             return {
-                account:'compte',
-                password:'passe',
-                forgetPs:'oublier passe',
-                registered:'Enregistré compte',
-                switchOther:'Changez de mode de signalisation',
-                func:'Présentation des fonctions',
-                checkVersion:'Vérifiez la version mise à jour',
-                website:'Réseau de',
-                serviceTerm:'Conditions de service',
-                privacy:'Accords de confidentialité',
+                account:this.$t('profile.account'),
+                password:this.$t('profile.password'),
+                forgetPs:this.$t('profile.forgetPs'),
+                registered:this.$t('profile.registered'),
+                switchOther:this.$t('profile.switchOther'),
+                func:this.$t('profile.func'),
+                checkVersion:this.$t('profile.checkVersion'),
+                website:this.$t('profile.account'),
+                serviceTerm:this.$t('website.serviceTerm'),
+                privacy:this.$t('profile.privacy'),
             }
         },
         methods:{
@@ -155,4 +156,3 @@
 
         }
     }
-</script>
