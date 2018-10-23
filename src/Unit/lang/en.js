@@ -10,6 +10,9 @@ export default {
     blog:{
         allBlog:'All micro-blog'
     },
+    topic:{
+
+    },
     message:{
 
     },

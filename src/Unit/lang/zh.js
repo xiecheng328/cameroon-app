@@ -10,6 +10,9 @@ export default {
     blog:{
         allBlog:'全部微博'
     },
+    topic:{
+
+    },
     message:{
 
     },
