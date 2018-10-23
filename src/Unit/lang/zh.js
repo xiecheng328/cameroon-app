@@ -1,5 +1,5 @@
 // 中文
-module.exports = {
+export default {
     //App 底部导航栏
     bottomBar: {
         blog: '圈子',
@@ -7,4 +7,20 @@ module.exports = {
         profile:'我的',
         shop:'商城'
     },
+    blog:{
+        allBlog:'全部微博'
+    },
+    topic:{
+
+    },
+    message:{
+
+    },
+    profile:{
+
+    },
+    shop:{
+
+    }
+
 };

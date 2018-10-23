@@ -1,5 +1,5 @@
 // 法语
-module.exports = {
+export default {
     //App 底部导航栏
     bottomBar: {
         blog: 'Blogue',
@@ -7,4 +7,20 @@ module.exports = {
         profile:'Profile',
         shop:'Boutique'
     },
+    blog:{
+        allBlog:'Tous les micro-blog'
+    },
+    topic:{
+
+    },
+    message:{
+
+    },
+    profile:{
+
+    },
+    shop:{
+
+    }
+
 };

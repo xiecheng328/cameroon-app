@@ -1,25 +1,24 @@
 <template>
     <div id="recommend">
-        <div class="container" v-for="i in 4">
+        <div class="container" v-for="i in 9">
             <div class="header">
-                <img src="../../assets/img/headPortrait.jpeg" alt="">
-                <span class="name">目在远方</span>
+           <img src="../../assets/img/headPortrait.jpeg"/>
+                <span class="name">工农联盟</span>
                 <!-- <span class="time">4分钟前</span> -->
                 <div class="logo">+ 关注</div>
             </div>
             <div class="contant">
-                <h3>这是标题</h3>
+                <h3>农广天地间——黑土</h3>
                 <div class="contain">
                     <div class="leftText">
-                        文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文
+                        中国拖拉机工业的起点以东方红拖拉机的诞生为标志。1958年,大功率的机器的出现，到现在的建三江的农业自动化，都是的农业的光辉历程！中国农业的成熟。
                     </div>
                     <div class="rightImg">
-                      <img src="../../assets/img/headPortrait.jpeg" alt="">
+                    <img src="../../assets/img/小麦收割机1.jpg"/>
                     </div>
                 </div>
             </div>
             <div class="video">
-                
             </div>
             <div class="footer">
                 <span>100赞同</span><span>99评论</span>
@@ -68,12 +67,19 @@ export default {
   display: flex;
   flex-direction: row;
   margin: 0 10px 10px 10px;
+    /*background-color: #fff;*/
   /* height: 150px; */
 }
 .leftText {
   flex-grow: 3;
   height: 100px;
   width: 300px;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  /*white-space:nowrap;*/
+  /*detail-text:t-ellipsis(3);*/
+
+
   /* background-color: #f60; */
 }
 .rightImg {
@@ -89,5 +95,6 @@ export default {
 }
 .footer >span{
     margin-right: 10px;
+    /*background-color: #fff;*/
 }
 </style>

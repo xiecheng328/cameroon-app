@@ -242,7 +242,6 @@ export default {
       mounted:function() {
         axios.get('/api/data').then(res => {
           this.data = res.data.data;
-          console.log(res.data);
         }).catch(res => {
           alert('wrong');
         })
@@ -265,12 +264,10 @@ export default {
                 
             },
             searchInput () {
-                console.log(this.searchText);
                 
             },
             goLeft(){
                 this.$router.go(-1);
-                console.log(123);
             },
             goToDetail(){
                 
@@ -455,6 +452,8 @@ ul {
 }
 .left {
     float: left;
+    margin: 0;
+    left: 0;
 }
 
 .product-list-bg li .product-left .product-image {
@@ -472,6 +471,8 @@ ul {
 }
 .right {
     float: right !important;
+    margin: 0;
+    right: 0;
 }
 
 
