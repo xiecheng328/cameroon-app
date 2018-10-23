@@ -25,7 +25,7 @@
                 fList:[
                     {
                         focusPeople:"json",
-                        time:"七分钟前",
+                        time:"7",
                         title:"今天开始收割",
                         videoSrc:"./../../test.mp4",
                         author:"steven",
@@ -39,7 +39,7 @@
                     },
                     {
                         focusPeople:"ritle",
-                        time:"四分钟前",
+                        time:"4",
                         title:"如何加强农业发展",
                         videoSrc:"",
                         author:"rose",
@@ -56,7 +56,7 @@
                     },
                     {
                         focusPeople:"json",
-                        time:"八分钟前",
+                        time:"8",
                         title:"推广机制落后",
                         videoSrc:"",
                         author:"Micheal",
@@ -72,7 +72,7 @@
 
                     }, {
                         focusPeople:"json",
-                        time:"七分钟前",
+                        time:"7",
                         title:"推广信息内容落后",
                         videoSrc:"./../../test.mp4",
                         author:"steven",
@@ -86,7 +86,7 @@
                     },
                     {
                         focusPeople:"ritle",
-                        time:"四分钟前",
+                        time:"4",
                         title:"乡镇农业机械技术推广主体配备差",
                         videoSrc:"",
                         author:"rose",
@@ -99,7 +99,7 @@
                         isShowImg:true
                     },{
                         focusPeople:"json",
-                        time:"七分钟前",
+                        time:"7",
                         title:"今天开始收割",
                         videoSrc:"./../../test.mp4",
                         author:"steven",
@@ -113,7 +113,7 @@
                     },
                     {
                         focusPeople:"ritle",
-                        time:"四分钟前",
+                        time:"4",
                         title:"如何加强农业发展",
                         videoSrc:"",
                         author:"rose",
@@ -130,7 +130,7 @@
                     },
                     {
                         focusPeople:"json",
-                        time:"八分钟前",
+                        time:"8",
                         title:"推广机制落后",
                         videoSrc:"",
                         author:"Micheal",
@@ -146,7 +146,7 @@
 
                     }, {
                         focusPeople:"json",
-                        time:"七分钟前",
+                        time:"7",
                         title:"推广信息内容落后",
                         videoSrc:"./../../test.mp4",
                         author:"steven",
@@ -160,7 +160,7 @@
                     },
                     {
                         focusPeople:"ritle",
-                        time:"四分钟前",
+                        time:"4",
                         title:"乡镇农业机械技术推广主体配备差",
                         videoSrc:"",
                         author:"rose",
@@ -173,7 +173,7 @@
                         isShowImg:true
                     },{
                         focusPeople:"json",
-                        time:"七分钟前",
+                        time:"7",
                         title:"今天开始收割",
                         videoSrc:"./../../test.mp4",
                         author:"steven",
@@ -187,7 +187,7 @@
                     },
                     {
                         focusPeople:"ritle",
-                        time:"四分钟前",
+                        time:"4",
                         title:"大学生如何在堕落寝室",
                         videoSrc:"",
                         author:"rose",
@@ -204,7 +204,7 @@
                     },
                     {
                         focusPeople:"json",
-                        time:"八分钟前",
+                        time:"8",
                         title:"推广机制落后",
                         videoSrc:"",
                         author:"Micheal",
@@ -220,7 +220,7 @@
 
                     }, {
                         focusPeople:"json",
-                        time:"七分钟前",
+                        time:"7",
                         title:"推广信息内容落后",
                         videoSrc:"./../../test.mp4",
                         author:"steven",
@@ -234,7 +234,7 @@
                     },
                     {
                         focusPeople:"ritle",
-                        time:"四分钟前",
+                        time:"4",
                         title:"乡镇农业机械技术推广主体配备差",
                         videoSrc:"",
                         author:"rose",
@@ -247,7 +247,7 @@
                         isShowImg:true
                     },{
                         focusPeople:"json",
-                        time:"七分钟前",
+                        time:"7",
                         title:"今天开始收割",
                         videoSrc:"./../../test.mp4",
                         author:"steven",
@@ -261,7 +261,7 @@
                     },
                     {
                         focusPeople:"ritle",
-                        time:"四分钟前",
+                        time:"4",
                         title:"如何加强农业发展",
                         videoSrc:"",
                         author:"rose",
@@ -278,7 +278,7 @@
                     },
                     {
                         focusPeople:"json",
-                        time:"八分钟前",
+                        time:"8",
                         title:"推广机制落后",
                         videoSrc:"",
                         author:"Micheal",
@@ -294,7 +294,7 @@
 
                     }, {
                         focusPeople:"json",
-                        time:"七分钟前",
+                        time:"7",
                         title:"推广信息内容落后",
                         videoSrc:"./../../test.mp4",
                         author:"steven",
@@ -308,7 +308,7 @@
                     },
                     {
                         focusPeople:"ritle",
-                        time:"四分钟前",
+                        time:"4",
                         title:"乡镇农业机械技术推广主体配备差",
                         videoSrc:"",
                         author:"rose",

@@ -20,7 +20,7 @@
                           </p>                   
                         </div>
                         <div class="Interst-content-user-list-item-plus" >
-                          <img src="./../../../../../assets/img/加号.png" alt="">
+                          <img src="./../../../../../assets/img/add.png" alt="">
                           <p>加关注</p>
                         </div>
                     </div>

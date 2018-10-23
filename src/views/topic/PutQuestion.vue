@@ -5,12 +5,12 @@
             <mu-button  flat slot="left" to="/topic/recommend">
                 <mu-icon value="close" flat>返回</mu-icon>
             </mu-button>
-            <div class="cameroon-title"><h4>提问</h4></div>
-            <mu-button   flat slot="right" to="/topic/alists" >发布</mu-button>
+            <div class="cameroon-title"><h4>{{topic.askQuestion}}</h4></div>
+            <mu-button   flat slot="right" to="/topic/alists" >OK</mu-button>
         </mu-appbar>
         <mu-container>
-            <mu-text-field v-model="value15" placeholder="标题" :max-length="10"></mu-text-field><br/>
-            <mu-text-field v-model="value16" placeholder="添加问题描述" multi-line :rows="3" :max-length="100"></mu-text-field><br/>
+            <mu-text-field v-model="value15" :placeholder="topic.title" :max-length="10"></mu-text-field><br/>
+            <mu-text-field v-model="value16" :placeholder="topic.addDescription" multi-line :rows="3" :max-length="100"></mu-text-field><br/>
         </mu-container>
         <mu-appbar style="width: 100%;background: #fff;" >
              <img class="bottom-img" src="../../assets/img/Aa.png" alt="">
@@ -33,7 +33,22 @@
             return {
                 value15: '',
                 value16: '',
-
+                topic: {
+                    allConcerns: this.$t('topic.allConcerns'),
+                    topic: this.$t('topic.topic'),
+                    watch: this.$t('topic.watch'),
+                    askQuestion: this.$t('topic.askQuestion'),
+                    recommend: this.$t('topic.recommend'),
+                    hotList: this.$t('topic.hotList'),
+                    everyoneSearching: this.$t('topic.everyoneSearching'),
+                    historicalResearch: this.$t('topic.historicalResearch'),
+                    endorsed: this.$t('topic.endorsed'),
+                    comment: this.$t('topic.comment'),
+                    minutesAgo: this.$t('topic.minutesAgo'),
+                    attention: this.$t('topic.attention'),
+                    title:this.$t('topic.title'),
+                    addDescription:this.$t('topic.addDescription')
+                }
             }
         }
 
