@@ -2,17 +2,17 @@
     <div>
          <mu-container>
         <div class="download-title">
-             <mu-button class="download-title-back" flat @click="changeFatherB">返回</mu-button>
-             <h3 class="download-title-text">VIP视频</h3>
+             <mu-button class="download-title-back" flat @click="changeFatherB">{{Vip.return}}</mu-button>
+             <h3 class="download-title-text">{{Vip.VipVideo}}</h3>
         </div>
         <hr/>
         <div class="vip-input">
-            <input type="text" placeholder="搜索自己喜欢的视频">
-            <button>搜索</button>
+            <input type="text" >
+            <button>{{Vip.Search}}</button>
         </div>
         <div class="vip-handpick">
             <div class="vip-handpick-banner">
-                <h5>——·精选视频·——</h5>
+                <h5>{{Vip.SelectedVideo}}</h5>
             </div>
                 <ul>
                     <li v-for="(item,index) in vip" :key=index>
@@ -22,17 +22,17 @@
                 </ul>
         </div>
         <div class="vip-recommend">
-            <h4>小编推荐</h4>
+            <h4>{{Vip.SmallMakeUpRecommend}}</h4>
             <select v-model="selected" center>
                 <option v-for="option in options">{{option.text}}</option>
             </select>
-            <button>搜索</button>
+            <button>{{Vip.Search}}</button>
         </div>
         <div class="vip-content">
             <ul>
                 <li v-for="(item,index) in imgs" :key=index>
                  <img :src="item.imgurl">
-                  <p>vip用户专享</p>
+                  <p>{{Vip.VipUserExclusive}}</p>
                 </li>
             </ul>
 
@@ -47,18 +47,28 @@ export default {
   name:"profile",
   data(){
     return{
+        Vip:{
+            return:this.$t('profile.return'),
+            VipVideo:this.$t('profile.VipVideo'),
+            Search:this.$t('profile.Search'),
+            SelectedVideo:this.$t('profile.SelectedVideo'),
+            SmallMakeUpRecommend:this.$t('profile.SmallMakeUpRecommend'),
+            VipUserExclusive:this.$t('profile.VipUserExclusive'),
+            FarmMachinery:this.$t('profile.FarmMachinery'),
+            SearchForVideoYouLike:this.$t('profile.SearchForVideoYouLike'),
+        },
         vip:[
              {
                 imgurl:require('../../../../../assets/img/profilemydownloadvip.jpg'),
-                value:'好用的农机'
+                value:this.$t('profile.UsefulFarmMachine'),
              },
              {
                 imgurl:require('../../../../../assets/img/profilemydownloadvip.jpg'),
-                value:'如何使用农机'
+                value:this.$t('profile.HowToUseAgriculturalMachinery'),
              },
              {
                 imgurl:require('../../../../../assets/img/profilemydownloadvip.jpg'),
-                value:'为什么使用农机'    
+                value:this.$t('profile.WhyFarmMachines'),
             }        
         ],
         imgs:[
@@ -95,23 +105,23 @@ export default {
       ],
       options:[
           {
-              text:'农机',
+              text:this.$t('profile.FarmMachinery'),
               value:'0',
           },
            {
-              text:'土豆',
+              text:this.$t('profile.Potato'),
               value:'1',
           },
            {
-              text:'玉米',
+              text:this.$t('profile.Maize'),
               value:'2',
           },
            {
-              text:'农机',
+              text:this.$t('profile.FarmMachinery'),
               value:'3',
           },
       ],
-      selected:'农机'
+      selected:this.$t('profile.FarmMachinery'),
     };  
     
   },
