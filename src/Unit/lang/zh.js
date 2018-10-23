@@ -1,5 +1,5 @@
 // 中文
-module.exports = {
+export default {
     //App 底部导航栏
     bottomBar: {
         blog: '圈子',
