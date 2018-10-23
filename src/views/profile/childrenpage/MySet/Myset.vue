@@ -13,7 +13,7 @@
                     <div class="set-user-slidetext"><h5>{{this.setOther.name}}</h5> <p>{{this.setOther.home}}<span>{{this.setOther.location}}</span></p></div>
                 </div>
                 <div class="setList">
-                    <li ><img src="/../img/profileicon1.png" alt=""  ><span>{{setList[0].name}}</span><button @click="changeModle">{{isTrue}}</button></li>
+                    <li ><img src="/../img/profileicon1.png" alt=""  ><span>{{setOther.night}}</span><button @click="changeModle">{{isTrue}}</button></li>
                     <li v-for="item in setList" :key="item.id"  @click="routerGo(item)" >
                         <img :src="item.iconimg" alt="">
                         <span>
@@ -52,6 +52,7 @@
                   set:this.$t('profile.Setting'),
                   location:this.$t('profile.Yaounde'),
                   home:this.$t('profile.PermanentR'),
+                  night:this.$t('profile.setnight'),
 
 
               },
@@ -72,21 +73,21 @@
                       src:"Check",
                   },
                   {
-                      name:'消息设置',//他们的
+                      name:this.$t('profile.setmessage'),
                       id:3,
                       iconimg:"././img/profileicon1.png",
                       isShow:false,
                       src:"Message",
                   },
                   {
-                      name:'关于',//他们的
+                      name:this.$t('profile.setabout'),//他们的
                       id:4,
                       iconimg:"./../img/profileicon1.png",
                       isShow:false,
                       src:"About",
                   },
                   {
-                      name:'退出当前登录',//他们的
+                      name:this.$t('profile.exitlogin'),//他们的
                       id:5,
                       iconimg:"./../img/profileicon1.png",
                       isShow:false,
