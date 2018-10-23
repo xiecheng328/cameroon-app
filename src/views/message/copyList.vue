@@ -1,58 +1,71 @@
 <template>
-<div class="copyList">
+    <div class="copyList">
 
-    <div class="header">
-<img src="../../assets/img/left.png" alt="" class="comeback" @click="home()">
-<h3 class="remark">所有评论</h3>
-<router-link to="/myset/message"><h3 class="reset">设置</h3></router-link>
+        <div class="header">
+            <img src="../../assets/img/left.png" alt="" class="comeback" @click="home">
+            <h3 class="remark">{{pagemessage.alllcomment}}</h3>
+            <router-link to="/myset/message"><h3 class="reset">{{pagemessage.setting}}</h3></router-link>
+        </div>
+        <ul class="body">
+            <li><img src="../../assets/img/user.png" alt="" class="user-img">
+                <span>zhangsan</span>
+                <span>10:10</span>
+            </li>
+            <li class="goodluck">{{pagemessage.zancomment}}</li>
+            <li>{{pagemessage.huifu}}</li>
+            <li>{{pagemessage.how}}</li>
+        </ul>
+        <ul class="body">
+            <li><img src="../../assets/img/user.png" alt="" class="user-img">
+                <span>zhangsan</span>
+                <span>10:10</span>
+            </li>
+            <li class="goodluck">{{pagemessage.zancomment}}</li>
+            <li>{{pagemessage.huifu}}</li>
+            <li>{{pagemessage.how}}</li>
+        </ul>
+        <ul class="body">
+            <li><img src="../../assets/img/user.png" alt="" class="user-img">
+                <span>zhangsan</span>
+                <span>10:10</span>
+            </li>
+            <li class="goodluck">{{pagemessage.zancomment}}</li>
+            <li>{{pagemessage.huifu}}</li>
+            <li>{{pagemessage.how}}</li>
+        </ul>
+
+
+
+
     </div>
-    <ul class="body">
-        <li><img src="../../assets/img/user.png" alt="" class="user-img">
-            <span>张三</span>
-            <span>10:10</span>
-        </li>
-        <li class="goodluck">赞了这条评论</li>
-        <li>回复：@李四  这个问题可以这样解决</li>
-        <li>李四回复张三：那如果遇到这种问题怎么办？</li>
-</ul>
- <ul class="body">
-        <li><img src="../../assets/img/user.png" alt="" class="user-img">
-            <span>张三</span>
-            <span>10:10</span>
-        </li>
-         <li class="goodluck">赞了这条评论</li>
-        <li>回复：@李四  这个问题可以这样解决</li>
-        <li>李四回复张三：那如果遇到这种问题怎么办？</li>
-</ul>
- <ul class="body">
-        <li><img src="../../assets/img/user.png" alt="" class="user-img">
-            <span>张三</span>
-            <span>10:10</span>
-        </li>
-         <li class="goodluck">赞了这条评论</li>
-        <li>回复：@李四  这个问题可以这样解决</li>
-        <li>李四回复张三：那如果遇到这种问题怎么办？</li>
-</ul>
-
-
-
-
-</div>
 </template>
 <script>
     export default{
-    method:{
-        home(){
-            this.$router.push({name:'message/Message.vue'});
+        data(){
+            return{
+                pagemessage:{
+                    alllcomment:this.$t("message.alllcomment"),
+                    setting:this.$t("message.setting"),
+                    zancomment:this.$t("message.zancomment"),
+                    huifu:this.$t("message.huifu"),
+                    how:this.$t("message.how")
+
+                }
+            }
         },
-        control(){
-            this.$router.push({name:'MySet/component/Message.vue'});
+        methods:{
+            home(){
+                this.$router.push({path:'/message'});
+                this.$emit('returnM');
+            },
+            control(){
+                this.$router.push({name:'MySet/component/Message.vue'});
+            }
         }
     }
-}
 </script>
 
- <style>
+<style>
     li{
         list-style: none;
     }
@@ -80,5 +93,5 @@
         font-size:20px;
         background: pink;
     }
-    </style>
+</style>
 
