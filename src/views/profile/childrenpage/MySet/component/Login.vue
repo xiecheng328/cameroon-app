@@ -6,18 +6,18 @@
         <img src="" class="log-img">
 
         <div class="printIn search">
-            帐号：<input type="text" class="printIn-style">
+            {{account}}：<input type="text" class="printIn-style">
             <br />
-            密码：<input type="password" class="print-style">
+            {{password}}：<input type="password" class="print-style">
         </div>
-        <button class="gray left">忘记密码</button>
-        <button class="gray right">注册账号</button>
+        <button class="gray left">{{forgetPs}}</button>
+        <button class="gray right">{{registered}}</button>
 
 
 
         <div class="up">
             <!-- <p>{{sContent}}</p> -->
-            <button class="white">切换其他登陆方式</button>
+            <button class="white">{{switchOther}}</button>
         </div>
     </div>
 </template>
@@ -134,10 +134,19 @@
 
 <script>
     export default{
+        name:"profile",
         data(){
             return {
-                sWho:"This is recept01",
-                sPasswd:"This is recept02"
+                account:this.$t('profile.account'),
+                password:this.$t('profile.password'),
+                forgetPs:this.$t('profile.forgetPs'),
+                registered:this.$t('profile.registered'),
+                switchOther:this.$t('profile.switchOther'),
+                func:this.$t('profile.func'),
+                checkVersion:this.$t('profile.checkVersion'),
+                website:this.$t('profile.account'),
+                serviceTerm:this.$t('website.serviceTerm'),
+                privacy:this.$t('profile.privacy'),
             }
         },
         methods:{
@@ -145,6 +154,6 @@
                 this.$emit('resetFatherp');
             },
 
-    }
+        }
     }
 </script>
