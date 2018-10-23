@@ -2,16 +2,16 @@
 
     <mu-container class="check">
         <div class="check-title" >
-            <mu-button class="check-title-back" flat @click="changeFatherC()">返回</mu-button>
-            <h3 class="check-title-header">检查更新</h3>
+            <mu-button class="check-title-back" flat @click="changeFatherC()">{{this.other.return}}</mu-button>
+            <h3 class="check-title-header">{{this.other.name}}</h3>
         </div>
         <div class="check-img">
             <div>
                 <img src="@/assets/img/app1.jpg" alt="">
             </div>
-            <p>应用版本为1.0.0</p>
-            <li ><span>去评分</span></li>
-            <li ><span>版本更新</span></li>
+            <p>{{this.other.version}}1.0.0</p>
+            <li ><span>{{this.other.score}}</span></li>
+            <li ><span>{{this.other.update}}</span></li>
         </div>
 
 
@@ -21,6 +21,14 @@
     export default {
         data(){
             return{
+                other:{
+                    return:this.$t('profile.return'),
+                    name: this.$t('profile.setclear'),
+                    space:this.$t('profile.appversion'),
+                    score:this.$t('profile.goscore'),
+                    update:this.$t('profile.versionupdate'),
+
+            }
 
             }
         },
