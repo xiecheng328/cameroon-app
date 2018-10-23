@@ -65,9 +65,84 @@ export default {
         title:'titre',
         addDescription:'Ajouter une description',
         invitationAnswer:'Invitation',
-        addAnswer:'Ajouter une réponse',
+        addAnswer:'Ajouter réponse',
     },
     message:{
+        unattendedNews:"Pas sur le message",
+        list:[
+            {name:"zhangyu",time:"9:10",content:"Réparation de machines agricoles"},
+            {name:"lixin",time:"09-23",content:"Les problèmes de maintenance des machines agricoles"},
+            {name:"liutong",time:"09-11",content:"Sur qui tu ne sais rien d'ensemencement"},
+            {name:"lizhi",time:"10-01",content:"Des questions agricoles attention"},
+            {name:"wangyu",time:"05-21",content:"Je pense que la question à votre Conseil"},
+            {name:"zhaoxin",time:"08-21",content:"Vous avez un moment?"}
+        ],
+
+        news:"nouvelle",
+        everysearch:"Tout le monde cherche le nom de la marchandise",
+        messagemeau: [{
+            img:"../../assets/img/message-icon.png",
+            name:"Il a un rapport avec moi",
+            path:"/withme",
+            id:1,
+
+        },{
+            img:"/img/message-icon.png",
+            name:"Commentaire",
+            path:"/report",
+            id:2
+        },{
+            img:"/img/message-icon.png",
+            name:"Louer",
+            path:"/copyList",
+            id:3
+        },{
+            img:"/img/message-icon.png",
+            name:"Numéro du public Message",
+            path:"/subScription_content",
+            id:4
+        },{
+            img:"/img/message-icon.png",
+            name:"Pas sur le message",
+            path:"/Unattended_news",
+            id:5
+        },{
+            img:"/img/message-icon.png",
+            name:"zhangsan",
+            path:"/chatroom",
+            id:6
+        },{
+            img:"/img/message-icon.png",
+            name:"lisi",
+            path:"/chatroom",
+            id:7
+        }],
+
+        alllcomment:"Tous les commentaires",
+        setting:"Ensemble",
+        zancomment:"Bon ce commentaire",
+        huifu:"La réponse lisa Ce problème  peut être résolu  ence  que",
+        how:"Alors si une telle question",
+
+        send:'Envoyer',
+        hello:"Bonjour",
+        unattendedname:"Inconnu",
+
+        read:"Lire",
+        sublist:[
+            {title:"Le problème rencontré des experts",time:"09-10 9:10"},
+            {title:" Résumé de l'expérience des experts est",time:"09-20 4:27"},
+            {title:"L'expérience nous résumer est",time:"10-01 18:30"},
+        ],
+        openlist:[
+            {name:"Utilisation de machines agricoles",content:"Diverses caractéristiques de machines agricoles"},
+            {name:"Entretien de machines agricoles",content:"Si ce composant dont la défaillance, à cause de"},
+            {name:"Développement agricole",content:"Un composant est constitué par du fer et de l'acier, dont le plus important"}
+        ],
+        Subscribe:"Le message d'abonnement",
+        useA:"Utilisation de machines agricoles",
+        mattersA:"Attention à l'utilisation de machines agricoles",
+        proA:"Résumé de la question des experts dans l'aide de machines agricoles lors de la rencontre d'aujourd'hui"
 
     },
     profile:{

@@ -5,13 +5,21 @@
         <div  class="container">
             <img src="../../../../assets/img/message_30a07a3203b47979cf5519981729f3d8.jpg" alt="">
             <div class="line">--------------------------</div>
-            <div class="full" @click="xiangQing">阅读全文</div>
+            <div class="full" @click="xiangQing">{{pagemessage.read}}</div>
         </div>
     </div>
 </template>
 
 <script>
     export default {
+        data(){
+            return {
+                pagemessage: {
+                    read: this.$t("message.read"),
+
+                },
+            }
+        },
         name: "openSubScription_message",
         props:["list"],
         methods:{

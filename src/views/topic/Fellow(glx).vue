@@ -26,25 +26,63 @@
                     {
                         focusPeople:"json",
                         time:"7",
-                        title:"今天开始收割",
+                        title: "Le début de la récolte aujourd'hui",
                         videoSrc:"./../../test.mp4",
                         author:"steven",
-                        article:"机器不错，天气也很好，稻子很干",
+                        article:"Machine de bien, c'est très bien, le riz est sèche",
                         agreeNum:2155,
                         commentNum:7588,
                         imgSrc:"",
                         isShowVideo:true,
                         isShowImg:false
-
                     },
                     {
                         focusPeople:"ritle",
                         time:"4",
-                        title:"如何加强农业发展",
+                        title: "Comment renforcer le développement de l'agriculture",
                         videoSrc:"",
                         author:"rose",
-                        article:"现代农业发展的一个重要指标就是农业机械化的发展。农业机械化发展是发展现代农业、" +
-                            "推进农业产业化、集约化，推进农村经济发展的重要条件。",
+                        article:"Un indicateur important pour le développement de l'agriculture moderne est la mécanisation agricole de développement.Machine agricole de développement est le développement de l'agriculture moderne, "+
+                            "La promotion de l'industrie, de l'agriculture intensive, condition essentielle pour promouvoir le développement de l'économie rurale.",
+                        agreeNum:7878,
+                        commentNum:96696,
+                        imgSrc:"https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2856070669,1185745263&fm=27&gp=0.jpg",
+                        isShowVideo:false,
+                        isShowImg:true
+                    },
+                    {
+                        focusPeople:"json",
+                        time:"8",
+                        title:"Le mécanisme d'extension vers l'arrière",
+                        videoSrc:"",
+                        author:"Micheal",
+                        article:"Sur la base du système d'amélioration continue de l'économie de marché, le marché agricole peut être complètement ouverte, ",
+                        agreeNum:366,
+                        commentNum:12,
+                        imgSrc:"",
+                        isShowVideo:false,
+                        isShowImg:false
+                    }, {
+                        focusPeople:"json",
+                        time:"7",
+                        title: "Le début de la récolte aujourd'hui",
+                        videoSrc:"./../../test.mp4",
+                        author:"steven",
+                        article:"Machine de bien, c'est très bien, le riz est sèche",
+                        agreeNum:2155,
+                        commentNum:7588,
+                        imgSrc:"",
+                        isShowVideo:true,
+                        isShowImg:false
+                    },
+                    {
+                        focusPeople:"ritle",
+                        time:"4",
+                        title: "Comment renforcer le développement de l'agriculture",
+                        videoSrc:"",
+                        author:"rose",
+                        article:"Un indicateur important pour le développement de l'agriculture moderne est la mécanisation agricole de développement.Machine agricole de développement est le développement de l'agriculture moderne, "+
+                            "La promotion de l'industrie, de l'agriculture intensive, condition essentielle pour promouvoir le développement de l'économie rurale.",
                         agreeNum:7878,
                         commentNum:96696,
                         imgSrc:"https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2856070669,1185745263&fm=27&gp=0.jpg",
@@ -57,53 +95,23 @@
                     {
                         focusPeople:"json",
                         time:"8",
-                        title:"推广机制落后",
+                        title:"Le mécanisme d'extension vers l'arrière",
                         videoSrc:"",
                         author:"Micheal",
-                        article:"在市场经济体系不断完善的基础上，农机市场得以全面开放，" +
-                            "这种开放式的农机市场使原有的农机推广方式发生了一定的变革，" +
-                            "农民不再是农业机械技术推广的被动接受者，而是变被动为主动，" ,
-                        agreeNum:366,
+                        article:"Sur la base du système d'amélioration continue de l'économie de marché, le marché agricole peut être complètement ouverte, ",
+                          agreeNum:366,
                         commentNum:12,
                         imgSrc:"",
                         isShowVideo:false,
                         isShowImg:false
-
-
-                    }, {
-                        focusPeople:"json",
-                        time:"7",
-                        title:"推广信息内容落后",
-                        videoSrc:"./../../test.mp4",
-                        author:"steven",
-                        article:"部分乡镇存在忽视农业经济发展的现象，由于对农业发展缺乏重视，在进行农业生产时还采用原有的技术，没有根据农业技术的发展进行技术更新，致使农业发展长时间停留在一个阶段。",
-                        agreeNum:2155,
-                        commentNum:7588,
-                        imgSrc:"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3375143504,581016811&fm=27&gp=0.jpg",
-                        isShowVideo:true,
-                        isShowImg:false
-
                     },
                     {
-                        focusPeople:"ritle",
-                        time:"4",
-                        title:"乡镇农业机械技术推广主体配备差",
-                        videoSrc:"",
-                        author:"rose",
-                        article:"虽然，近些年我国已经认识到农业经济发展的重要性，" +
-                            "针对农业机械技术的推广工作给予了更多的支持，" ,
-                        agreeNum:7878,
-                        commentNum:96696,
-                        imgSrc:"https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=684603144,15627662&fm=200&gp=0.jpg",
-                        isShowVideo:false,
-                        isShowImg:true
-                    },{
                         focusPeople:"json",
                         time:"7",
-                        title:"今天开始收割",
+                        title: "Le début de la récolte aujourd'hui",
                         videoSrc:"./../../test.mp4",
                         author:"steven",
-                        article:"机器不错，天气也很好，稻子很干",
+                        article:"Machine de bien, c'est très bien, le riz est sèche",
                         agreeNum:2155,
                         commentNum:7588,
                         imgSrc:"",
@@ -114,11 +122,11 @@
                     {
                         focusPeople:"ritle",
                         time:"4",
-                        title:"如何加强农业发展",
+                        title: "Comment renforcer le développement de l'agriculture",
                         videoSrc:"",
                         author:"rose",
-                        article:"现代农业发展的一个重要指标就是农业机械化的发展。农业机械化发展是发展现代农业、" +
-                            "推进农业产业化、集约化，推进农村经济发展的重要条件。",
+                        article:"Un indicateur important pour le développement de l'agriculture moderne est la mécanisation agricole de développement.Machine agricole de développement est le développement de l'agriculture moderne, "+
+                            "La promotion de l'industrie, de l'agriculture intensive, condition essentielle pour promouvoir le développement de l'économie rurale.",
                         agreeNum:7878,
                         commentNum:96696,
                         imgSrc:"https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2856070669,1185745263&fm=27&gp=0.jpg",
@@ -131,53 +139,22 @@
                     {
                         focusPeople:"json",
                         time:"8",
-                        title:"推广机制落后",
+                        title:"Le mécanisme d'extension vers l'arrière",
                         videoSrc:"",
                         author:"Micheal",
-                        article:"在市场经济体系不断完善的基础上，农机市场得以全面开放，" +
-                            "这种开放式的农机市场使原有的农机推广方式发生了一定的变革，" +
-                            "农民不再是农业机械技术推广的被动接受者，而是变被动为主动，" ,
+                        article:"Sur la base du système d'amélioration continue de l'économie de marché, le marché agricole peut être complètement ouverte, ",
                         agreeNum:366,
                         commentNum:12,
                         imgSrc:"",
                         isShowVideo:false,
                         isShowImg:false
-
-
                     }, {
                         focusPeople:"json",
                         time:"7",
-                        title:"推广信息内容落后",
+                        title: "Le début de la récolte aujourd'hui",
                         videoSrc:"./../../test.mp4",
                         author:"steven",
-                        article:"部分乡镇存在忽视农业经济发展的现象，由于对农业发展缺乏重视，在进行农业生产时还采用原有的技术，没有根据农业技术的发展进行技术更新，致使农业发展长时间停留在一个阶段。",
-                        agreeNum:2155,
-                        commentNum:7588,
-                        imgSrc:"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3375143504,581016811&fm=27&gp=0.jpg",
-                        isShowVideo:true,
-                        isShowImg:false
-
-                    },
-                    {
-                        focusPeople:"ritle",
-                        time:"4",
-                        title:"乡镇农业机械技术推广主体配备差",
-                        videoSrc:"",
-                        author:"rose",
-                        article:"虽然，近些年我国已经认识到农业经济发展的重要性，" +
-                            "针对农业机械技术的推广工作给予了更多的支持，" ,
-                        agreeNum:7878,
-                        commentNum:96696,
-                        imgSrc:"https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=684603144,15627662&fm=200&gp=0.jpg",
-                        isShowVideo:false,
-                        isShowImg:true
-                    },{
-                        focusPeople:"json",
-                        time:"7",
-                        title:"今天开始收割",
-                        videoSrc:"./../../test.mp4",
-                        author:"steven",
-                        article:"机器不错，天气也很好，稻子很干",
+                        article:"Machine de bien, c'est très bien, le riz est sèche",
                         agreeNum:2155,
                         commentNum:7588,
                         imgSrc:"",
@@ -188,11 +165,11 @@
                     {
                         focusPeople:"ritle",
                         time:"4",
-                        title:"大学生如何在堕落寝室",
+                        title: "Comment renforcer le développement de l'agriculture",
                         videoSrc:"",
                         author:"rose",
-                        article:"现代农业发展的一个重要指标就是农业机械化的发展。农业机械化发展是发展现代农业、" +
-                            "推进农业产业化、集约化，推进农村经济发展的重要条件。",
+                        article:"Un indicateur important pour le développement de l'agriculture moderne est la mécanisation agricole de développement.Machine agricole de développement est le développement de l'agriculture moderne, "+
+                            "La promotion de l'industrie, de l'agriculture intensive, condition essentielle pour promouvoir le développement de l'économie rurale.",
                         agreeNum:7878,
                         commentNum:96696,
                         imgSrc:"https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2856070669,1185745263&fm=27&gp=0.jpg",
@@ -205,53 +182,23 @@
                     {
                         focusPeople:"json",
                         time:"8",
-                        title:"推广机制落后",
+                        title:"Le mécanisme d'extension vers l'arrière",
                         videoSrc:"",
                         author:"Micheal",
-                        article:"在市场经济体系不断完善的基础上，农机市场得以全面开放，" +
-                            "这种开放式的农机市场使原有的农机推广方式发生了一定的变革，" +
-                            "农民不再是农业机械技术推广的被动接受者，而是变被动为主动，" ,
+                        article:"Sur la base du système d'amélioration continue de l'économie de marché, le marché agricole peut être complètement ouverte, ",
                         agreeNum:366,
                         commentNum:12,
                         imgSrc:"",
                         isShowVideo:false,
                         isShowImg:false
-
-
-                    }, {
-                        focusPeople:"json",
-                        time:"7",
-                        title:"推广信息内容落后",
-                        videoSrc:"./../../test.mp4",
-                        author:"steven",
-                        article:"部分乡镇存在忽视农业经济发展的现象，由于对农业发展缺乏重视，在进行农业生产时还采用原有的技术，没有根据农业技术的发展进行技术更新，致使农业发展长时间停留在一个阶段。",
-                        agreeNum:2155,
-                        commentNum:7588,
-                        imgSrc:"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3375143504,581016811&fm=27&gp=0.jpg",
-                        isShowVideo:true,
-                        isShowImg:false
-
                     },
                     {
-                        focusPeople:"ritle",
-                        time:"4",
-                        title:"乡镇农业机械技术推广主体配备差",
-                        videoSrc:"",
-                        author:"rose",
-                        article:"虽然，近些年我国已经认识到农业经济发展的重要性，" +
-                            "针对农业机械技术的推广工作给予了更多的支持，" ,
-                        agreeNum:7878,
-                        commentNum:96696,
-                        imgSrc:"https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=684603144,15627662&fm=200&gp=0.jpg",
-                        isShowVideo:false,
-                        isShowImg:true
-                    },{
                         focusPeople:"json",
                         time:"7",
-                        title:"今天开始收割",
+                        title: "Le début de la récolte aujourd'hui",
                         videoSrc:"./../../test.mp4",
                         author:"steven",
-                        article:"机器不错，天气也很好，稻子很干",
+                        article:"Machine de bien, c'est très bien, le riz est sèche",
                         agreeNum:2155,
                         commentNum:7588,
                         imgSrc:"",
@@ -262,63 +209,29 @@
                     {
                         focusPeople:"ritle",
                         time:"4",
-                        title:"如何加强农业发展",
+                        title: "Comment renforcer le développement de l'agriculture",
                         videoSrc:"",
                         author:"rose",
-                        article:"现代农业发展的一个重要指标就是农业机械化的发展。农业机械化发展是发展现代农业、" +
-                            "推进农业产业化、集约化，推进农村经济发展的重要条件。",
+                        article:"Un indicateur important pour le développement de l'agriculture moderne est la mécanisation agricole de développement.Machine agricole de développement est le développement de l'agriculture moderne, "+
+                            "La promotion de l'industrie, de l'agriculture intensive, condition essentielle pour promouvoir le développement de l'économie rurale.",
                         agreeNum:7878,
                         commentNum:96696,
                         imgSrc:"https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2856070669,1185745263&fm=27&gp=0.jpg",
                         isShowVideo:false,
                         isShowImg:true
-
-
-
                     },
                     {
                         focusPeople:"json",
                         time:"8",
-                        title:"推广机制落后",
+                        title:"Le mécanisme d'extension vers l'arrière",
                         videoSrc:"",
                         author:"Micheal",
-                        article:"在市场经济体系不断完善的基础上，农机市场得以全面开放，" +
-                            "这种开放式的农机市场使原有的农机推广方式发生了一定的变革，" +
-                            "农民不再是农业机械技术推广的被动接受者，而是变被动为主动，" ,
-                        agreeNum:366,
+                        article:"Sur la base du système d'amélioration continue de l'économie de marché, le marché agricole peut être complètement ouverte, ",
+                           agreeNum:366,
                         commentNum:12,
                         imgSrc:"",
                         isShowVideo:false,
                         isShowImg:false
-
-
-                    }, {
-                        focusPeople:"json",
-                        time:"7",
-                        title:"推广信息内容落后",
-                        videoSrc:"./../../test.mp4",
-                        author:"steven",
-                        article:"部分乡镇存在忽视农业经济发展的现象，由于对农业发展缺乏重视，在进行农业生产时还采用原有的技术，没有根据农业技术的发展进行技术更新，致使农业发展长时间停留在一个阶段。",
-                        agreeNum:2155,
-                        commentNum:7588,
-                        imgSrc:"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3375143504,581016811&fm=27&gp=0.jpg",
-                        isShowVideo:true,
-                        isShowImg:false
-
-                    },
-                    {
-                        focusPeople:"ritle",
-                        time:"4",
-                        title:"乡镇农业机械技术推广主体配备差",
-                        videoSrc:"",
-                        author:"rose",
-                        article:"虽然，近些年我国已经认识到农业经济发展的重要性，" +
-                            "针对农业机械技术的推广工作给予了更多的支持，" ,
-                        agreeNum:7878,
-                        commentNum:96696,
-                        imgSrc:"https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=684603144,15627662&fm=200&gp=0.jpg",
-                        isShowVideo:false,
-                        isShowImg:true
                     },
                 ]
             }
