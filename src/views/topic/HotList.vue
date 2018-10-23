@@ -16,6 +16,7 @@
         },
         data(){
             return{
+
                 hList:[{
                     title:"农业机械化发展问题及对策",
                     hot:2536,

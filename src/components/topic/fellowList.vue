@@ -6,13 +6,13 @@
     <div  id="container">
         <div id="headPortrait" class="headInformation HFborder"></div>
         <span class="headInformation"> &nbsp;</span>
-        <span id="name" class="headInformation HFborder">{{details.focusPeople}}赞了你的回答</span>
+        <span id="name" class="headInformation HFborder">{{details.focusPeople}}{{topic.endorsed}}</span>
         <span id="dian" class="headInformation HFborder">&nbsp;·&nbsp;</span>
-        <div id="TUT" class="headInformation HFborder">{{details.time}}</div>
+        <div id="TUT" class="headInformation HFborder">{{details.time}}{{topic.minutesAgo}}</div>
         <div id="articleTitle">{{details.title}}</div>
         <div id="art" class="article" v-if=details.isShowVideo>
             <video id="oVd" @click="(event)=>{event.stopPropagation();}"
-            :src="details.videoSrc" preload controls>您的浏览器不支持video标签</video>
+            :src="details.videoSrc" preload controls>your phone different support this  video frame</video>
         </div>
         <div id="article_img">
             <div id="articleDetails"><span>{{details.author}}：</span>
@@ -21,7 +21,7 @@
             <div id="pB" v-if=details.isShowImg class="publicityPictures" :style="{'background-image':'url('+details.imgSrc+')'}"></div>
         </div>
         <div id="fellowListBottom" class="HFborder">
-            <span>{{details.agreeNum}}赞同</span><span>&nbsp;·&nbsp;</span><span>{{details.commentNum}}评论</span>
+            <span>{{details.agreeNum}}  {{topic.endorsed}}</span><span>&nbsp;·&nbsp;</span><span>{{details.commentNum}}  {{topic.comment}}</span>
         </div>
         </div>
 
@@ -33,7 +33,21 @@
         props:['details'],
         data(){
             return{
-                det:{}
+                det:{},
+                topic: {
+                    allConcerns: this.$t('topic.allConcerns'),
+                    topic: this.$t('topic.topic'),
+                    watch: this.$t('topic.watch'),
+                    askQuestion: this.$t('topic.askQuestion'),
+                    recommend: this.$t('topic.recommend'),
+                    hotList: this.$t('topic.hotList'),
+                    everyoneSearching: this.$t('topic.everyoneSearching'),
+                    historicalResearch: this.$t('topic.historicalResearch'),
+                    endorsed: this.$t('topic.endorsed'),
+                    comment: this.$t('topic.comment'),
+                    minutesAgo: this.$t('topic.minutesAgo'),
+                    attention: this.$t('topic.attention'),
+                }
             }
         },
         created(){

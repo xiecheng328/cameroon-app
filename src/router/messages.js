@@ -16,12 +16,12 @@ import Unattended_news from '../views/message/ChildrenPages/UnAttention/Unattend
 export default [
     {path:'/openSubScription_content',component:OpenSubScription_content},
     {path:'/openSubScription_message',component:OpenSubScription_message},
-    {path:'/subScription_content',component:SubScription_content},
+   {path:'/subScription_content',component:SubScription_content},
     {path:'/subScription_message',component:SubScription_message},
     {
         path:'/newdetail',component:Newdetail
     },
-    {path:'/chatroom',component:Chatroom},
+   {path:'/chatroom',component:Chatroom},
     {path:'/withme',component:Withme},
     {
         path:'/report',
