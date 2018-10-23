@@ -1,6 +1,6 @@
 <template>
     <div id="photo">
-        <span>十月</span>
+        <span>{{pageMessage.September}}</span>
         <ul>
             <img src="./photo/1.jpg">
             <img src="./photo/2.jpg">
@@ -12,7 +12,7 @@
             <img src="./photo/8.jpg">
             <img src="./photo/9.jpg">
         </ul>
-        <span>九月</span>
+        <span>{{pageMessage.October}}</span>
         <ul>
             <img src="./photo/1.jpg">
             <img src="./photo/2.jpg">
@@ -27,7 +27,18 @@
     </div>
 </template>
 <script>
-
+    export default {
+        data(){
+            return {
+                pageMessage:{
+                    September:this.$t('blog.September'),
+                    October:this.$t('blog.October'),
+                }
+            }
+        },
+        methods:{
+        }
+    }
 </script>
 <style scoped lang="scss">
     #photo span{

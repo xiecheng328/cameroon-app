@@ -8,15 +8,13 @@
             <img src="../../assets/img/mood (1).jpg" alt="" class="head-por">
           </router-link>
           <div class="con-name">
-            <div class="name-id">杂交水稻研究人</div>
-            <div class="name-time">1小时前</div>
+            <div class="name-id">{{pageMessage.hybridRiceResearcher}}</div>
+            <div class="name-time">{{pageMessage.nHoursAgo}}</div>
           </div>
         </div>
         <div class="text">
           <router-link to="/blog/passage">
-            <span class="text_1">
-              【河南夏邑借棚改之名强征千亩耕地 农业局称：土地权证发错了！】村里的一位老党员称，9月2日，乡政府组织村里开过一次村民代表大会，说的重点是棚户区改造的情况，当时乡党委书记董天成在会上明确表示，土地批文下来后才会征地。没想到会后第二天，就把耕地全部铲平了。
-            </span>
+            <span class="text_1">{{pageMessage.text}}</span>
           </router-link>
         </div>
         <div class="image">
@@ -27,17 +25,17 @@
         <div class="bottom-details">
               <div>
                 <img src="./component/img/zf.png" alt="" class="img_1">
-                <router-link to="/forword" class="f-c">转发161</router-link>
+                <router-link to="/forword" class="f-c">{{pageMessage.forward}}161</router-link>
 
 
               </div>
               <div>
                 <img src="./component/img/pl.png" alt="" class="img_1">
-                评论281
+                {{pageMessage.comment}}281
               </div>
               <div>
                 <img src="./component/img/xh.png" alt="" class="img_1">
-                点赞3390
+                {{pageMessage.like}}3390
               </div>
         </div>
       </li>
@@ -47,14 +45,12 @@
           <img src="../../assets/img/mood (2).jpg" alt="" class="head-por">
           </router-link>
           <div class="con-name">
-            <div class="name-id">耕地人-小吴</div>
-            <div class="name-time">1小时前</div>
+            <div class="name-id">{{pageMessage.hybridRiceResearcher}}</div>
+            <div class="name-time">{{pageMessage.nHoursAgo}}</div>
           </div>
         </div>
         <div class="text">
-          <span>
-            12日，江夏区安山街农机推广服务中心在安山街普安村组织旋耕施肥播种机进行油菜机械直播演示活动，区农机办主任王永红、农机推广站站长李义平、农业推广站站长田仕本等领导参加此次活动，活动还吸引了来自不同街道的50多位农户及机手观摩学习
-          </span>
+          <span>{{pageMessage.text}}</span>
         </div>
         <div class="image">
           <img src="../../assets/img/mood (4).jpg" alt="">
@@ -64,15 +60,15 @@
         <div class="bottom-details">
           <div>
             <img src="./component/img/zf.png" alt="" class="img_1">
-            转发161
+            {{pageMessage.forward}}161
           </div>
           <div>
             <img src="./component/img/pl.png" alt="" class="img_1">
-            评论281
+            {{pageMessage.comment}}281
           </div>
           <div>
             <img src="./component/img/xh.png" alt="" class="img_1">
-            点赞3390
+            {{pageMessage.like}}3390
           </div>
         </div>
       </li>
@@ -80,14 +76,12 @@
         <div class="detail-content">
           <img src="../../assets/img/mood (3).jpg" alt="" class="head-por">
           <div class="con-name">
-            <div class="name-id">卖农机的-weCreate</div>
-            <div class="name-time">1小时前</div>
+            <div class="name-id">{{pageMessage.hybridRiceResearcher}}</div>
+            <div class="name-time">{{pageMessage.nHoursAgo}}</div>
           </div>
         </div>
         <div class="text">
-          <span>
-            【河南夏邑借棚改之名强征千亩耕地 农业局称：土地权证发错了！】村里的一位老党员称，9月2日，乡政府组织村里开过一次村民代表大会，说的重点是棚户区改造的情况，当时乡党委书记董天成在会上明确表示，土地批文下来后才会征地。没想到会后第二天，就把耕地全部铲平了。
-          </span>
+          <span>{{pageMessage.text}}</span>
         </div>
         <div class="image">
           <img src="../../assets/img/mood (1).jpg" alt="">
@@ -97,21 +91,40 @@
         <div class="bottom-details">
           <div>
             <img src="./component/img/zf.png" alt="" class="img_1">
-            转发161
+            {{pageMessage.forward}}161
           </div>
           <div>
             <img src="./component/img/pl.png" alt="" class="img_1">
-            评论281
+            {{pageMessage.comment}}281
           </div>
           <div>
             <img src="./component/img/xh.png" alt="" class="img_1">
-            点赞3390
+            {{pageMessage.like}}3390
           </div>
         </div>
       </li>
     </ul>
   </div>
 </template>
+
+<script>
+    export default {
+        data(){
+            return {
+                pageMessage:{
+                    hybridRiceResearcher:this.$t('blog.hybridRiceResearcher'),
+                    nHoursAgo:this.$t('blog.nHoursAgo'),
+                    forward:this.$t('blog.forward'),
+                    comment:this.$t('blog.comment'),
+                    like:this.$t('blog.like'),
+                    text:this.$t('blog.text'),
+
+                }
+            }
+        },
+    }
+</script>
+
 <style lang="scss">
   .detail{
     margin-top: .2rem;

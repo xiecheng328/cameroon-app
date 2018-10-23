@@ -28,6 +28,7 @@ export default {
         circle:'圈子',
         setting:'设置',
         collection:'收藏',
+        collected:'已收藏',
         privateLetters:'私信',
         addMoreAttachments:'添加更多附件',
         simultaneousForwarding:'同时转发',
@@ -40,7 +41,13 @@ export default {
         agriculturalUseGood:'农机的使用效果非常好',
         agriculturalPromotion:'农机推广服务中心直播演示活动',
         circletext:'圈子正文',
-        review:'写评论'
+        review:'写评论',
+        text:'12日，江夏区安山街农机推广服务中心在安山街普安村组织旋耕施肥播种机进行油菜机械直播演示活动，区农机办主任王永红、农机推广站站长李义平、农业推广站站长田仕本等领导参加此次活动，活动还吸引了来自不同街道的50多位农户及机手观摩学习',
+        Cameroon:'喀麦隆是非洲政治、经济强国之一,在非洲政治经济领域特别是撒哈拉以南非洲扮演了重要的角色。 21世纪以来,经济稳定增长,2011年国内生产总值达256.5亿美元,经济规模在撒哈拉以南的44个国家中排名第七位,在中部非洲中仅次于尼日利亚和加纳。',
+        September:'九月',
+        October:'十月',
+        introductionContent:'简介内容',
+        blog:'微博'
     },
     topic:{
         allConcerns:'全部关注',

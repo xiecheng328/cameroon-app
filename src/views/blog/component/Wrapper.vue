@@ -1,9 +1,9 @@
 <template>
   <div id="per-wrapper">
-    <div class="per-focus">关注</div>
+    <div class="per-focus">{{pageMessage.attention}}</div>
     <!--连接关注界面-->
     <router-link to="/talk">
-      <div class="per-focus">私信</div>
+      <div class="per-focus">{{pageMessage.privateLetters}}</div>
       <!--连接私信界面-->
     </router-link>
 
@@ -11,6 +11,14 @@
 </template>
 <script>
     export default {
+        data(){
+            return {
+                pageMessage:{
+                    attention:this.$t('blog.attention'),
+                    privateLetters:this.$t('blog.privateLetters'),
+                }
+            }
+        },
 
     }
 </script>

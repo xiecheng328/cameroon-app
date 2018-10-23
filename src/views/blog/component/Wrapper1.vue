@@ -1,20 +1,26 @@
 <template>
     <div id="per-wrapper">
-        <div class="per-focus" @click="change">{{col}}</div>
-        <div class="per-focus jubao">举报</div>
-        <div class="per-focus">复制链接</div>
+        <div class="per-focus" @click="change">{{pageMessage.collection}}</div>
+        <div class="per-focus jubao">{{pageMessage.report}}</div>
+        <div class="per-focus">{{pageMessage.copyLink}}</div>
     </div>
 </template>
 <script>
     export default {
         data(){
             return {
-                col:"收藏"
+                pageMessage:{
+                    collection:this.$t('blog.collection'),
+                    report:this.$t('blog.report'),
+                    copyLink:this.$t('blog.copyLink'),
+                    collected:this.$t('blog.collected'),
+
+                }
             }
         },
         methods:{
             change(){
-                this.col='已收藏'
+                this.pageMessage.collection=this.pageMessage.collected;
             }
         }
     }
