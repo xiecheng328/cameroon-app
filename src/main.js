@@ -21,13 +21,16 @@ import VueI18n from 'vue-i18n';
 import {getBrowserLanguage} from "./Unit/language";
 //调用echarts
 import echarts from 'echarts';
+import zh from './Unit/lang/zh.js';
+import en from './Unit/lang/en.js';
+import fr from './Unit/lang/fra.js';
 Vue.prototype.$echarts = echarts ;
 Vue.use(MuseUI);
 Vue.use(VueI18n);
 const messages = {
-    zh: require('./Unit/lang/zh.js'),
-    en: require('./Unit/lang/en.js'),
-    fr: require('./Unit/lang/fra.js')
+    zh: zh,
+    en: en,
+    fr: fr
 };
 const i18n = new VueI18n({
     locale: 'fr', // 语言标识
