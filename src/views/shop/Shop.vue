@@ -14,7 +14,7 @@ export default {
       this.$router.push({
         path:'/shop/shophome'
       })
-      console.log(this.$router.options.routes[2]);
+      
     },
   },
   mounted(){

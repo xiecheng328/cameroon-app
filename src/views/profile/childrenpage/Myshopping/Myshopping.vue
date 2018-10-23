@@ -16,7 +16,7 @@
                 <div>
                     <ul>
                         <li  >
-                            <div class="product-img"><img src="./../../../../assets/img/拖拉机2.jpg" alt=""></div>
+                            <div class="product-img"><img src="./../../../../assets/img/tractors2.jpg" alt=""></div>
                             <div class="product-info">
                                 <div class="product-info-title"><span>商品名称：</span></div>
                                 <div class="product-info-title"><span>订单编号：</span></div>
@@ -36,7 +36,7 @@
                 <div>
                     <ul>
                         <li  >
-                            <div class="product-img"><img src="./../../../../assets/img/拖拉机2.jpg" alt=""></div>
+                            <div class="product-img"><img src="./../../../../assets/img/tractors2.jpg" alt=""></div>
                             <div class="product-info">
                                 <div class="product-info-title"><span>商品名称：</span></div>
                                 <div class="product-info-title"><span>订单编号：</span></div>
@@ -56,7 +56,7 @@
                 <div>
                     <ul>
                         <li  >
-                            <div class="product-img"><img src="./../../../../assets/img/拖拉机2.jpg" alt=""></div>
+                            <div class="product-img"><img src="./../../../../assets/img/tractors2.jpg" alt=""></div>
                             <div class="product-info">
                                 <div class="product-info-title"><span>商品名称：</span></div>
                                 <div class="product-info-title"><span>订单编号：</span></div>
@@ -76,7 +76,7 @@
                 <div>
                     <ul>
                         <li  >
-                            <div class="product-img"><img src="./../../../../assets/img/拖拉机2.jpg" alt=""></div>
+                            <div class="product-img"><img src="./../../../../assets/img/tractors2.jpg" alt=""></div>
                             <div class="product-info">
                                 <div class="product-info-title"><span>商品名称：</span></div>
                                 <div class="product-info-title"><span>订单编号：</span></div>
@@ -96,7 +96,7 @@
                 <div>
                     <ul>
                         <li  >
-                            <div class="product-img"><img src="./../../../../assets/img/拖拉机2.jpg" alt=""></div>
+                            <div class="product-img"><img src="./../../../../assets/img/tractors2.jpg" alt=""></div>
                             <div class="product-info">
                                 <div class="product-info-title"><span>商品名称：</span></div>
                                 <div class="product-info-title"><span>订单编号：</span></div>

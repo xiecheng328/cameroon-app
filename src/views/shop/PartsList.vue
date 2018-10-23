@@ -45,22 +45,22 @@
             <div class="product-left left">
                 <a >
                   <!-- http://img.nongji360.com/n/zyd/product/2016/08/15/093915939192_180x135.jpg -->
-                  <img class="product-image" :src="item.photo[0]"  @click="goToDetail()">
+                  <img class="product-image" :src="item.img"  @click="goToDetail()">
                 </a>
             </div>
             <div class="product-right right">
               <!-- 部件名称 时风欧II发动机-->
               <div class="name-of-parts">
-                <a >{{item.title}}</a>
+                <a >{{item.brandName}}</a>
               </div>
               <!-- 企业名称 山东时风-->
               <p class="product-right-tit">
-                <a >{{item.company}}</a>
+                <a >{{item.machineryPartsName}}</a>
               </p>
               <!-- 关注度&&加入购物车 -->
               <div class="news-add clearfix">
                 <p class="degree">
-                  <a>关注度:{{item.attention_degree}}</a>
+                  <a>关注度:{{item.price}}</a>
                 </p>
                 <button class="news-add-btn">加入购物车</button>
               </div>
@@ -223,7 +223,8 @@
 <script>
 import axios from 'axios'
 import Vue from 'vue'
-import './mock/mock.js';
+// import './mock/mock.js';
+import './mock/shopList.js';
 export default {
       data() {
         return {
@@ -240,8 +241,8 @@ export default {
         }
       },
       mounted:function() {
-        axios.get('/api/data').then(res => {
-          this.data = res.data.data;
+        axios.get('msg').then(res => {
+          this.data = res.data.machineryProuct;
         }).catch(res => {
           alert('wrong');
         })
