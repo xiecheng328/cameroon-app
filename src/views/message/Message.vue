@@ -11,12 +11,12 @@
 
     <div v-show="isClick">
 
-      <h3 class="message-header">消息</h3>
-      <div class="message-search"><input type="text" id="search" value="大家都在搜“商品名”" ></div>
+      <h3 class="message-header">{{pagemessage.news}}</h3>
+      <div class="message-search"><input type="text" id="search" :value="pagemessage.everysearch" ></div>
       <div class="message-meau">
         <div class="message-meaulist">
           <!--<li v-for=" val in messagemeau" @click="Change(val)"><img src="../../assets/img/message-02.png" alt="" ><span>{{val.name}}</span> <span><img src="../../assets/img/message-01.png" alt="" ></span></li>-->
-          <li v-for=" val in messagemeau" @click="Change()"><router-link :to=val.path><div><img src="../../assets/img/message-02.png" alt="" ><span>{{val.name}}</span> <span><img src="../../assets/img/message-01.png" alt="" ></span></div></router-link></li>
+          <li v-for=" val in pagemessage.messagemeau" @click="Change()"><router-link :to=val.path><div><img src="../../assets/img/message-02.png" alt="" ><span>{{val.name}}</span> <span><img src="../../assets/img/message-01.png" alt="" ></span></div></router-link></li>
         </div>
       </div>
     </div>
@@ -32,43 +32,12 @@
         data(){
             return{
                 isClick:true,
-                messagemeau: [{
-                    img:"../../assets/img/message-icon.png",
-                    name:"与我相关",
-                    path:"/withme",
-                    id:1,
+                pagemessage:{
+                    news:this.$t("message.news"),
+                    everysearch:this.$t("message.everysearch"),
+                    messagemeau:this.$t("message.messagemeau"),
 
-                },{
-                    img:"/img/message-icon.png",
-                    name:"评论",
-                    path:"/report",
-                    id:2
-                },{
-                    img:"/img/message-icon.png",
-                    name:"赞",
-                    path:"/copyList",
-                    id:3
-                },{
-                    img:"/img/message-icon.png",
-                    name:"订阅号消息",
-                    path:"/subScription_content",
-                    id:4
-                },{
-                    img:"/img/message-icon.png",
-                    name:"未关注人消息",
-                    path:"/Unattended_news",
-                    id:5
-                },{
-                    img:"/img/message-icon.png",
-                    name:"联系人1",
-                    path:"/chatroom",
-                    id:6
-                },{
-                    img:"/img/message-icon.png",
-                    name:"联系人2",
-                    path:"/chatroom",
-                    id:7
-                }],
+                }
             }
         },
         created() {

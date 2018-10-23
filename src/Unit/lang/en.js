@@ -68,7 +68,81 @@ export default {
         addAnswer:'add a answer'
     },
     message:{
+        unattendedNews:"Unattended news",
+        list:[
+            {name:"zhangyu",time:"9:10",content:"Repair of agricultural machinery"},
+            {name:"lixin",time:"09-23",content:"Maintenance of agricultural machinery"},
+            {name:"liutong",time:"09-11",content:"About planting, things you don't know"},
+            {name:"lizhi",time:"10-01",content:"Attention should be paid to agricultural machinery purchase"},
+            {name:"wangyu",time:"05-21",content:"I would like to ask you some questions"},
+            {name:"zhaoxin",time:"08-21",content:"Do you have time now?"}
+        ],
 
+        news:"message",
+        everysearch:"Everyone is searching for commodity name",
+        messagemeau: [{
+            img:"../../assets/img/message-icon.png",
+            name:"It's about me",
+            path:"/withme",
+            id:1,
+
+        },{
+            img:"/img/message-icon.png",
+            name:"Comment",
+            path:"/report",
+            id:2
+        },{
+            img:"/img/message-icon.png",
+            name:"Prasise",
+            path:"/copyList",
+            id:3
+        },{
+            img:"/img/message-icon.png",
+            name:"Public account message",
+            path:"/subScription_content",
+            id:4
+        },{
+            img:"/img/message-icon.png",
+            name:"Unattended news",
+            path:"/Unattended_news",
+            id:5
+        },{
+            img:"/img/message-icon.png",
+            name:"zhangsan",
+            path:"/chatroom",
+            id:6
+        },{
+            img:"/img/message-icon.png",
+            name:"lisi",
+            path:"/chatroom",
+            id:7
+        }],
+
+        alllcomment:"All comment",
+        setting:"Set up",
+        zancomment:"Praise this comment",
+        huifu:"Replay to lisi:this problem can be solved in this way",
+        how:"What should I do when I encouter such problems",
+
+        send:'send',
+        hello:"Hello",
+        unattendedname:"Unconcerned people's names",
+
+        read:"Read the whole passage",
+        sublist:[
+            {title:"Problems encountered by experts",time:"09-10 9:10"},
+            {title:" Experts summed up the experience is",time:"09-20 4:27"},
+            {title:"The experience we summed up is that",time:"10-01 18:30"},
+        ],
+        openlist:[
+            {name:"Agricultural machinery use",content:"Various characteristics of agricultural machinery"},
+            {name:"Agricultural machinery maintenance",content:"If one of these components fails, the reason is"},
+            {name:"Agricultural machinery research and development",content:"A part is made of steel and iron, the most important."}
+        ],
+        Subscribe:"Subscribe",
+        useA:"Agricultural machinery use",
+        mattersA:"Matters needing attention in the use of agricultural machinery",
+        proA:"Summary of problems encountered by experts today in the use of agricultural machinery"
     },
     profile:{
 
