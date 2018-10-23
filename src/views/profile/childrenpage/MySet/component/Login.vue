@@ -2,8 +2,11 @@
     <div class="log">
         <!-- <img aria-checked="" -->
 
-        <div @click="changeFatherC()"><img class="top-img" src=""></div>
-        <img src="" class="log-img">
+        <div @click="changeFatherC()">
+            <img class="top-img" @click="changeFatherC" src="@/assets/img/return.png">
+            <!--<mu-button class="check-title-back" flat @click="changeFatherC()">返回</mu-button>-->
+        </div>
+        <img src="@/assets/img/man.png" class="log-img">
 
         <div class="printIn search">
             {{account}}：<input type="text" class="printIn-style">
@@ -133,22 +136,24 @@
 
 
 <script>
-    export default{
-        data(){
+    export default {
+        name: "profile",
+        data() {
             return {
-                account:'compte',
-                password:'passe',
-                forgetPs:'oublier passe',
-                registered:'Enregistré compte',
-                switchOther:'Changez de mode de signalisation',
-                func:'Présentation des fonctions',
-                checkVersion:'Vérifiez la version mise à jour',
-                website:'Réseau de',
-                serviceTerm:'Conditions de service',
-                privacy:'Accords de confidentialité',
+                Setting: this.$t('profile.Setting'),
+                account: this.$t('profile.account'),
+                password: this.$t('profile.password'),
+                forgetPs: this.$t('profile.forgetPs'),
+                registered: this.$t('profile.registered'),
+                switchOther: this.$t('profile.switchOther'),
+                func: this.$t('profile.func'),
+                checkVersion: this.$t('profile.checkVersion'),
+                website: this.$t('profile.website'),
+                serviceTerm: this.$t('profile.serviceTerm'),
+                privacy: this.$t('profile.privacy'),
             }
         },
-        methods:{
+        methods: {
             changeFatherC() {
                 this.$emit('resetFatherp');
             },

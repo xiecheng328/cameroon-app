@@ -2,13 +2,13 @@
 
     <div class="top">
         <div>
-            <router-link to="/myset"><img class="top-img" src=""></router-link>
+            <router-link to="/myset"><img class="top-img" @click="" src="@/assets/img/return.png"></router-link>
             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
             <span>{{Setting}}</span>
         </div>
 
         <div class="top-pic">
-            <img class="pic-img" src="">
+            <img class="pic-img" src="@/assets/img/app-ico.png">
             <span>V 1.1.0</span>
         </div>
 
@@ -93,20 +93,25 @@
 
 <script >
     export default{
+        name:"profile",
         data(){
             return {
-                Setting:'Setting',
-                account:'compte',
-                password:'passe',
-                forgetPs:'oublier passe',
-                registered:'Enregistré compte',
-                switchOther:'Changez de mode de signalisation',
-                func:'Présentation des fonctions',
-                checkVersion:'Vérifiez la version mise à jour',
-                website:'Réseau de',
-                serviceTerm:'Conditions de service',
-                privacy:'Accords de confidentialité',
+                Setting:this.$t('profile.Setting'),
+                account:this.$t('profile.account'),
+                password:this.$t('profile.password'),
+                forgetPs:this.$t('profile.forgetPs'),
+                registered:this.$t('profile.registered'),
+                switchOther:this.$t('profile.switchOther'),
+                func:this.$t('profile.func'),
+                checkVersion:this.$t('profile.checkVersion'),
+                website:this.$t('profile.website'),
+                serviceTerm:this.$t('profile.serviceTerm'),
+                privacy:this.$t('profile.privacy'),
             }
-        }
+        },
+        changeFatherC() {
+            this.$emit('resetFatherp');
+        },
+
     }
 </script>
