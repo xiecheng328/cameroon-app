@@ -8,7 +8,7 @@ export default {
         shop:'Boutique'
     },
     blog:{
-        allBlog:'Tous les micro-blog',
+        allBlog:'micro-blog',
         topic:'Sujet',
         nickname:'Surnom',
         nHoursAgo:'il y a n heures',
