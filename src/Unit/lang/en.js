@@ -28,6 +28,7 @@ export default {
         circle:'Circle',
         setting:'Setting',
         collection:'Collection',
+        collected:'collected',
         privateLetters:'Private letters',
         addMoreAttachments:'Add more attachments',
         simultaneousForwarding:'Simultaneous forwarding',
@@ -40,7 +41,13 @@ export default {
         agriculturalUseGood:'The use of agricultural machinery is very good.',
         agriculturalPromotion:'Agricultural Machinery Promotion Service Center Live Demo Event',
         circletext:'Circle text',
-        review:'Write a review'
+        review:'Write a review',
+        text:'On the 12th, the Agricultural Machinery Promotion Service Center of Anshan Street in Jiangxia District organized a rotary tillage and fertilizer planter in the Pu\'an Village of Anshan Street to conduct a live demonstration of rapeseed machinery. Wang Yonghong, Director of the Agricultural Machinery Office, Li Yiping, Director of the Agricultural Machinery Promotion Station, and Tian Shiben, Director of the Agricultural Extension Station The leaders also participated in the event, which also attracted more than 50 farmers and operators from different streets to observe and learn.',
+        Cameroon:'Cameroon is one of the political and economic powers in Africa and plays an important role in the political economy of Africa, especially in sub-Saharan Africa. Since the beginning of the 21st century, the economy has grown steadily. In 2011, its GDP reached US$25.65 billion. The economy is ranked seventh in 44 countries in sub-Saharan Africa and second only in Nigeria and Ghana in Central Africa.',
+        September:'September',
+        October:'October',
+        introductionContent:'Introduction content',
+        blog:'Blog'
     },
     topic:{
 

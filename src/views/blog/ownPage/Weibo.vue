@@ -1,6 +1,6 @@
 <template>
     <div class="ownPage">
-        <div class="all-weibo">全部微博（59）</div>
+        <div class="all-weibo">{{pageMessage.allBlog}}（59）</div>
         <div class="com">
             <Content></Content>
         </div>
@@ -10,6 +10,13 @@
     import Content  from '@/views/blog/component/Content.vue';
 
     export default {
+        data() {
+            return {
+                pageMessage: {
+                    allBlog: this.$t('blog.allBlog'),
+                }
+            }
+        },
         components: {
             Content
         },

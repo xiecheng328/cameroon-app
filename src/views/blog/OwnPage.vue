@@ -5,24 +5,24 @@
                 <div id="return"></div>
             </router-link>
             <div class="bg-head-img"></div>
-            <span>昵称</span>
+            <span>{{pageMessage.nickname}}</span>
             <div class="bg-attention">
                 <div class="bg-fans-1">
-                    关注：100
+                    {{pageMessage.attention}}：100
                 </div>
                 <div class="bg-fans">
-                    粉丝：200
+                    {{pageMessage.fans}}：200
                 </div>
             </div>
 
-            <div class="introduction">简介内容</div>
+            <div class="introduction">{{pageMessage.introductionContent}}</div>
         </div>
         <div class="nav">
             <div class="nav-detail">
-                <div><router-link to="/ownPage/weibos">微博</router-link></div>
+                <div><router-link to="/ownPage/weibos">{{pageMessage.blog}}</router-link></div>
             </div>
             <div class="nav-detail">
-                <div><router-link to="/ownPage/photos">相册</router-link></div>
+                <div><router-link to="/ownPage/photos">{{pageMessage.album}}</router-link></div>
             </div>
         </div>
         <router-view></router-view>
@@ -40,6 +40,18 @@
     import Content from '@/views/blog/component/Content.vue';
 
     export default {
+        data(){
+          return {
+              pageMessage:{
+                  nickname:this.$t('blog.nickname'),
+                  attention:this.$t('blog.attention'),
+                  fans:this.$t('blog.fans'),
+                  album:this.$t('blog.album'),
+                  introductionContent:this.$t('blog.introductionContent'),
+                  blog:this.$t('blog.blog'),
+              }
+          }
+        },
         components: {
             Wrapper,Content
         },
@@ -89,34 +101,41 @@
         & .bg-attention{
             font-size: .2rem;
             height:.6rem;
-            width: 3rem;
+           width: 100%;
             position: absolute;
             top: 76%;
             left: 50%;
+            clear: both;
+
             transform: translate(-50%,-50%);
+            display: flex;
 
             & .bg-fans-1{
-                float: left;
+                z-index: 1;
                 height: .4rem;
-                width: 1.5rem;
+                flex: 1;
                 border-right: 1px solid #fff;
-                padding: 0 .1rem;
+                padding-right: .2rem;
+                text-align: right;
+
             }
             & .bg-fans{
-                position: absolute;
-                left:50%;
+                z-index: 1;
+
                 height:.4rem;
-                width: 1.5rem;
-                padding-left: .4rem;
+                flex: 1;
+                margin-left: .2rem;
+
             }
         }
         & .introduction{
             position: absolute;
             top: 84%;
-            left: 42%;
+            left: 30%;
         }
     }
     .nav{
+        display: flex;
 
     }
     .nav-msg{
@@ -127,20 +146,23 @@
 
     }
     .nav-detail{
+        flex: 1;
         float: left;
-        width: 50%;
+        width: 100%;
         height:100%;
         display: flex;
     }
     .nav-detail div{
-        float: left;
-        flex: 0.5;
+        margin: 0 auto;
+        width: 100%;
+        flex: 1;
         height: 100%;
-        margin-left: 28%;
         font-size: 18px;
         text-align: center;
         line-height: 250%;
         a{
+            display:block;
+            width: 100%;
             color:rgb(149,149,147);
             padding: 10px;
             &.router-link-exact-active {

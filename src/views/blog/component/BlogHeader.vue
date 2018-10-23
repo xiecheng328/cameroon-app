@@ -4,7 +4,7 @@
             <img src="../../../assets/img/cameralogo.png" alt="">
         </mu-button>
         <mu-button class="allAttention" flat to="/blog/details">{{pageMessage.allBlog}}</mu-button>
-        <mu-button class="topic" flat to="/topic/recommend">话题</mu-button>
+        <mu-button class="topic" flat to="/topic/recommend">{{pageMessage.topic}}</mu-button>
         <mu-button class="add" flat to="sendweibo">
             <img src="../../../assets/img/addlogo.png" alt="">
         </mu-button>
@@ -18,6 +18,7 @@
             return {
                 pageMessage:{
                     allBlog:this.$t('blog.allBlog'),
+                    topic:this.$t('blog.topic'),
                 }
             }
         },

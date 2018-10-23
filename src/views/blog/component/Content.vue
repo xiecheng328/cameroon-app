@@ -3,17 +3,13 @@
         <div id="head-portrait">
             <div id="head-img"></div>
             <div class="describe">
-                <div class="username">昵称</div>
-                <div class="content-time">1小时前</div>
+                <div class="username">{{pageMessage.nickname}}</div>
+                <div class="content-time">{{pageMessage.nHoursAgo}}</div>
             </div>
 
         </div>
         <div id="content-text">
-            <p>喀麦隆是非洲政治、经济强国之一,在非洲政治经济领域特别是撒哈拉以南非洲扮演了重要的角色。
-                21世纪以来,经济稳定增长,2011年国内生产总值达256.5亿美元,经济规模在撒哈拉以南的44个国家
-                中排名第七位,在中部非洲中仅次于尼日利亚和加纳。
-                <a href="">全文</a>
-            </p>
+            <p>{{pageMessage.Cameroon}}</p>
         </div>
         <div id="operation">
             <div class="send">
@@ -37,6 +33,15 @@
 <script>
 
     export default {
+        data(){
+            return {
+                pageMessage:{
+                    nickname:this.$t('blog.nickname'),
+                    nHoursAgo:this.$t('blog.nHoursAgo'),
+                    Cameroon:this.$t('blog.Cameroon')
+                }
+            }
+        },
 
     }
 </script>
