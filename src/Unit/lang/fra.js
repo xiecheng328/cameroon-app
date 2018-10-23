@@ -65,7 +65,7 @@ export default {
         title:'titre',
         addDescription:'Ajouter une description',
         invitationAnswer:'Invitation',
-        addAnswer:'Ajouter une réponse'
+        addAnswer:'Ajouter une réponse',
     },
     message:{
 

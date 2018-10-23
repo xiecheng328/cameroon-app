@@ -2,14 +2,14 @@
     <div class="apps">
         <div  class="app2">
             <button class="app7"><router-link to="/ownPage/weibos"><img src="../../../assets/img/返回.png"/></router-link></button>
-            <div class="liaotian">聊天人昵称</div>
-            <button class="shezhi">设置</button>
+            <div class="liaotian">{{pageMessage.nickname}}</div>
+            <button class="shezhi">{{pageMessage.setting}}</button>
         </div>
         <div class="app-bottom">
             <div class="kongbai">
                 <button class="yinliang"><img src="../../../assets/img/音量.png" /></button>
                 <input  class="shuchu"   type="text">
-                <button  class="fasong"  value="发送">发送</button>
+                <button  class="fasong"  value="发送">{{pageMessage.send}}</button>
             </div>
         </div>
     </div>
@@ -17,7 +17,16 @@
 <script>
     export default {
 
-        name:"Talk"
+        name:"Talk",
+        data(){
+            return {
+                pageMessage:{
+                    nickname:this.$t('blog.nickname'),
+                    setting:this.$t('blog.setting'),
+                    send:this.$t('blog.send'),
+                }
+            }
+        },
 
     }
 </script>
