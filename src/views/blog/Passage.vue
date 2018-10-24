@@ -2,7 +2,7 @@
     <div class="blog">
         <div id="center1">
             <img src="./component/img/返回.png" alt="" @click="back" class="img-left">
-            <span class="center">圈子正文</span>
+            <span class="center">{{pageMessage.circletext}}</span>
             <img src="./component/img/daohang.png" alt="" class="img-right">
         </div>
         <div id="center2">
@@ -14,16 +14,14 @@
                     </router-link>
 
                     <div class="con-name">
-                        <div class="name-id">杂交水稻研究人</div>
-                        <div class="name-time">1小时前</div>
+                        <div class="name-id">{{pageMessage.hybridRiceResearcher}}</div>
+                        <div class="name-time">{{pageMessage.nHoursAgo}}</div>
                     </div>
                 </div>
 
                 <div class="text">
 
-            <span>
-              【河南夏邑借棚改之名强征千亩耕地 农业局称：土地权证发错了！】村里的一位老党员称，9月2日，乡政府组织村里开过一次村民代表大会，说的重点是棚户区改造的情况，当时乡党委书记董天成在会上明确表示，土地批文下来后才会征地。没想到会后第二天，就把耕地全部铲平了。
-            </span>
+            <span>{{pageMessage.text}}</span>
 
                 </div>
                 <div class="image">
@@ -36,9 +34,9 @@
         </div>
         <div>
             <div id="container-span">
-                <span @click="jump">转发109</span>
-                <span @click="jump1">评论8989</span>
-                <span @click="jump2">点赞908</span>
+                <span @click="jump">{{pageMessage.forward}}109</span>
+                <span @click="jump1">{{pageMessage.comment}}8989</span>
+                <span @click="jump2">{{pageMessage.like}}908</span>
             </div>
             <router-view></router-view>
         </div>
@@ -53,6 +51,20 @@
     import Content from '@/views/blog/component/Content.vue';
 
     export default {
+        data(){
+            return {
+                pageMessage:{
+                    circletext:this.$t('blog.circletext'),
+                    text:this.$t('blog.text'),
+                    hybridRiceResearcher:this.$t('blog.hybridRiceResearcher'),
+                    nHoursAgo:this.$t('blog.nHoursAgo'),
+                    like:this.$t('blog.like'),
+                    forward:this.$t('blog.forward'),
+                    comment:this.$t('blog.comment'),
+
+                }
+            }
+        },
         components: {
             Wrapper1,Content
         },

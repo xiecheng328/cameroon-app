@@ -1,9 +1,9 @@
 <template>
     <div>
         <div id="container-span">
-            <span @click="jump">转发109</span>
-            <span>评论8989</span>
-            <span>点赞908</span>
+            <span @click="jump">{{pageMessage.forward}}109</span>
+            <span>{{pageMessage.comment}}8989</span>
+            <span>{{pageMessage.like}}908</span>
         </div>
         <router-view></router-view>
     </div>
@@ -12,6 +12,15 @@
 <script>
 
     export default {
+        data(){
+            return {
+                pageMessage:{
+                    forward:this.$t('blog.forward'),
+                    comment:this.$t('blog.comment'),
+                    like:this.$t('blog.like'),
+                }
+            }
+        },
         methods:{
             jump(){
                 this.$router.push('/blog/passage/report');

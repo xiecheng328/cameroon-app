@@ -5,15 +5,15 @@
 
             <mu-container>
                 <div class="set-title" >
-                    <mu-button class="set-title-back" flat @click="changeFatherC()">返回</mu-button>
-                    <h3 class="set-title-header">设置</h3>
+                    <mu-button class="set-title-back" flat @click="changeFatherC()">{{this.setOther.return}}</mu-button>
+                    <h3 class="set-title-header">{{this.setOther.set}}</h3>
                 </div>
                 <div class="set-user">
                     <div class="set-user-slideimg"><img src="@/assets/img/user.png" alt="" class="set-user-slideimg-uersimg"></div>
-                    <div class="set-user-slidetext"><h5>昵称</h5> <p>常住地:雅温得</p></div>
+                    <div class="set-user-slidetext"><h5>{{this.setOther.name}}</h5> <p>{{this.setOther.home}}<span>{{this.setOther.location}}</span></p></div>
                 </div>
                 <div class="setList">
-                    <li ><img src="/../img/profileicon1.png" alt=""  ><span>夜间模式</span><button @click="changeModle">{{isTrue}}</button></li>
+                    <li ><img src="/../img/profileicon1.png" alt=""  ><span>{{setOther.night}}</span><button @click="changeModle">{{isTrue}}</button></li>
                     <li v-for="item in setList" :key="item.id"  @click="routerGo(item)" >
                         <img :src="item.iconimg" alt="">
                         <span>
@@ -46,37 +46,48 @@
           return{
               isTrue:false,
               isShow:false,
+              setOther:{
+                  return:this.$t('profile.return'),
+                  name:this.$t('profile.Nickname'),
+                  set:this.$t('profile.Setting'),
+                  location:this.$t('profile.Yaounde'),
+                  home:this.$t('profile.PermanentR'),
+                  night:this.$t('profile.setnight'),
+
+
+              },
+
               setList:[
                   {
-                      name:'清除缓存',
+                      name:this.$t('profile.setclear'),
                       id:1,
                       iconimg:"./../img/profileicon1.png",
                       isShow:false,
                       src:"Clear",
                   },
                   {
-                      name:'检查更新',
+                      name:this.$t('profile.checkupdate'),
                       id:2,
                       iconimg:"./../img/profileicon1.png",
                       isShow:false,
                       src:"Check",
                   },
                   {
-                      name:'消息设置',
+                      name:this.$t('profile.setmessage'),
                       id:3,
                       iconimg:"././img/profileicon1.png",
                       isShow:false,
                       src:"Message",
                   },
                   {
-                      name:'关于',
+                      name:this.$t('profile.setabout'),//他们的
                       id:4,
                       iconimg:"./../img/profileicon1.png",
                       isShow:false,
                       src:"About",
                   },
                   {
-                      name:'退出当前登录',
+                      name:this.$t('profile.exitlogin'),//他们的
                       id:5,
                       iconimg:"./../img/profileicon1.png",
                       isShow:false,

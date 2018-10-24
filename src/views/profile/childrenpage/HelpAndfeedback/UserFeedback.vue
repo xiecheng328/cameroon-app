@@ -5,37 +5,37 @@
       <!-- 用户反馈窗口title -->
       <mu-appbar style="width: 100%;left:0;right:0;top:0;position:fixed;" color="#FFFFFF" z-depth="0" textColor="#333333">
       
-      <div class="help-title">用户反馈窗口</div>
+      <div class="help-title">{{userFeedback}}</div>
       <mu-button  icon slot="right" ></mu-button>
       </mu-appbar>
        
   </div>
   <div class="con">
-    <div   style="color:red;margin-top:1rem">请选择你要反馈的板块</div>
+    <div   style="color:red;margin-top:1rem">{{pleaseSmyFu}}</div>
             <div>
                 <select v-model="selected">
                     <option disabled value=""></option>
-                    <option>请选择</option>
-                    <option>圈子</option>
-                    <option>信息</option>
-                    <option>商城</option>
-                    <option>我的</option>
+                    <option>{{pleaseC}}</option>
+                    <option>{{cirC}}</option>
+                    <option>{{infotM}}</option>
+                    <option>{{mall}}</option>
+                    <option>{{mine}}</option>
                 </select>
               
            </div>
-                       <div  style="color:red;margin-top:20px">反馈内容</div>
-            <textarea v-model="message" placeholder="请在此编辑~"></textarea>
+                       <div  style="color:red;margin-top:20px">{{feedCon}}</div>
+            <textarea v-model="message" placeholder="{{pleaseEditH}}~"></textarea>
             
 
-               <div  style="color:red;margin-top:20px">请留下你的联系电话</div>
+               <div  style="color:red;margin-top:20px">{{pleaseLP}}</div>
            <input v-model="msg" />
 
-              <div  style="color:red;margin-top:20px">请留下你的电子邮箱</div>
+              <div  style="color:red;margin-top:20px">{{pleaseLEM}}</div>
            <input v-model="msg2" />
 <br>
            </div>
           
-           <button class="button-help">点击提交</button>
+           <button class="button-help">{{clickSub}}</button>
           
 </div>
 
@@ -49,24 +49,56 @@ export default {
          checked: true,
             checkedNames: ['John'],
             picked: 'One',
-            selected: '请选择',
+            selected: '{{pleaseC}}',
             selectedMulit:['B','C'],
             selectedAutoSign: 'A',
-            msg:"请输入电话号",
-            msg2:"请输入e-mail",  
-     
+            msg:"{{pleaseEpPh}}",
+            msg2:"{{pleaseEMail}}",  
+            pageMessage1:{
+                userFeedW:this.$t('profile.userFeedback'),
+            },
+             pageMessage2:{
+                pleaseS:this.$t('profile.pleaseS'),
+            },
+             pageMessage3:{
+                pleaseC:this.$t('profile.pleaseC'),
+            },
+             pageMessage4:{
+                cirC:this.$t('profile.cirC'),
+            },
+             pageMessage5:{
+                infotM:this.$t('profile.infotM'),
+            },
+             pageMessage6:{
+                mall:this.$t('profile.mall'),
+            },
+             pageMessage7:{
+                mine:this.$t('profile.mine'),
+            },
+             pageMessage8:{
+                feedCon:this.$t('profile.feedCon'),
+            },
+             pageMessage9:{
+                pleaseLP:this.$t('profile.pleaseLP'),
+            },
+             pageMessage10:{
+                pleaseLEM:this.$t('profile.pleaseLEM'),
+            },
+             pageMessage11:{
+                clickSub:this.$t('profile.clickSub'),
+            },
+             pageMessage12:{
+                pleaseEpPh:this.$t('profile.pleaseEpPh'),
+            },
+             pageMessage13:{
+                pleaseEMail:this.$t('profile.pleaseEMail'),
+            },
         imgList:[
         
-        ]
-      };
-
-    },
-
-  name:"help-2",
-  methods:{
-   
-  
-  }
+        ],
+  name:"UserFeedback",
+      }
+    }
 }
 </script>
 <style lang="scss" scoped>

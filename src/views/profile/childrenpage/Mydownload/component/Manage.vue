@@ -2,18 +2,18 @@
     <div>
          <mu-container>
         <div class="download-title">
-             <mu-button class="download-title-back" flat @click="changeFatherB">返回</mu-button>
-             <h3 class="download-title-text">离线</h3>
+             <mu-button class="download-title-back" flat @click="changeFatherB">{{manage.return}}</mu-button>
+             <h3 class="download-title-text">{{manage.OffLine}}</h3>
         </div>
         <hr/>
         <div class="download-locality">
             <img src="../../../../../assets/img/profilemydownloadvip1.png" alt="">
-           <p>本地视频</p>
+           <p>{{manage.localVideo}}</p>
         </div>
         <hr/>
         <div class="manage-off">
             <img src="../../../../../assets/img/profilemydownload.png" alt="">
-            <p>离线视频</p>
+            <p>{{manage.OfflineVideo}}</p>
         </div>
         <hr/>
         <div>
@@ -29,6 +29,12 @@ export default {
   name:"profile",
   data(){
     return{
+        manage:{
+            return:this.$t('profile.return'),
+            OffLine:this.$t('profile.return'),
+            localVideo:this.$t('profile.localVideo'),
+            OfflineVideo:this.$t('profile. OfflineVideo'),
+        }
     };  
   },
   methods:{

@@ -1,15 +1,16 @@
 <template>
     <div class="apps">
         <!--<div  class="app2">-->
-        <button class="app7"><router-link to="/ownPage/weibos" class="ys">取消</router-link></button>
-        <div class="zhuanfa">转发圈子</div>
-        <button class="fasong">发送</button>
+        <button class="app7"><router-link to="/ownPage/weibos" class="ys">{{pageMessage.cancel}}</router-link></button>
+        <div class="zhuanfa">{{pageMessage.forwardingCircle}}</div>
+        <button class="fasong">{{pageMessage.send}}</button>
         <span class="xian"></span>
         <!--</div>-->
-        <input class="pinglun"  type="text"value="写评论。。。">
+        <input class="pinglun"  type="text" value="写评论。。。">
         <input class="kuang" type="checkbox" />
         <ul class="ziti">
-            <span>同时转发</span></ul>
+            <span>{{pageMessage.simultaneousForwarding}}</span>
+        </ul>
         <div class="app-bottom">
             <div class="kongbai">
                 <span></span>
@@ -22,7 +23,18 @@
 <script>
     export default {
 
-        name:"Forwaid"
+        name:"Forwaid",
+        data(){
+            return {
+                pageMessage:{
+                    cancel:this.$t('blog.cancel'),
+                    forwardingCircle:this.$t('blog.forwardingCircle'),
+                    send:this.$t('blog.send'),
+                    simultaneousForwarding:this.$t('blog.simultaneousForwarding'),
+                    review:this.$t('blog.review'),
+                }
+            }
+        },
 
     }
 </script>
