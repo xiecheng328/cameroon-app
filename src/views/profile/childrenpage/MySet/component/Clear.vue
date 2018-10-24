@@ -2,16 +2,16 @@
 
     <mu-container class="clear">
         <div class="clear-title" >
-            <mu-button class="clear-title-back" flat @click="changeFatherC()">返回</mu-button>
-            <h3 class="clear-title-header">清理缓存</h3>
+            <mu-button class="clear-title-back" flat @click="changeFatherC()">{{this.other.return}}</mu-button>
+            <h3 class="clear-title-header">{{this.other.name}}</h3>
         </div>
         <div class="clear-app">
-            <p>应用已用空间:</p>
+            <p>{{this.other.space}}:</p>
             <hr>
             <p class="clear-app-space">1.00 GB</p>
         </div>
         <div class="clear-app-button">
-            <button>清理缓存</button>
+            <button>{{this.other.name}}</button>
         </div>
 
 
@@ -22,6 +22,13 @@
     export default {
         data(){
             return{
+                other:{
+                    return:this.$t('profile.return'),
+                    name: this.$t('profile.setclear'),
+                    space:this.$t('profile.clearspace'),
+
+
+                }
 
             }
         },

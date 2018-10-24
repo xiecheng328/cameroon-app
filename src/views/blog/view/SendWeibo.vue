@@ -2,10 +2,10 @@
     <!--<link rel="stylesheet" href="icon/iconfont.css">-->
     <div>
         <div id="header">
-            <span @click="go()">取消</span>
-            <span class="f">发微博</span>
-            <span class="name">昵称</span>
-            <button @click="send()">发送</button>
+            <span @click="go()">{{pageMessage.cancel}}</span>
+            <span class="f">{{pageMessage.send}}{{pageMessage.blog}}</span>
+            <span class="name">{{pageMessage.nickname}}</span>
+            <button @click="send()">{{pageMessage.send}}</button>
         </div>
         <div id="body">
             <mu-text-field placeholder="分享新鲜事......" multi-line :rows="11" full-width solo>
@@ -17,7 +17,7 @@
             </div>
         </div>
         <div id="annex">
-            <p>添加更多附件</p>
+            <p>{{pageMessage.addMoreAttachments}}</p>
             <div id="blank"></div>
             <div id="container">
                 <div id="photo">
@@ -34,18 +34,35 @@
                 </div>
             </div>
             <div id="container-span">
-                <span>相册</span>
-                <span>拍摄</span>
-                <span>超话</span>
-                <span>话题</span>
+                <span>{{pageMessage.album}}</span>
+                <span>{{pageMessage.shooting}}</span>
+                <span>{{pageMessage.supertalk}}</span>
+                <span>{{pageMessage.topic}}</span>
             </div>
         </div>
     </div>
 </template>
 <script>
     export default {
+        data(){
+            return {
+                pageMessage:{
+                    cancel:this.$t('blog.cancel'),
+                    send:this.$t('blog.send'),
+                    nickname:this.$t('blog.nickname'),
+                    addMoreAttachments:this.$t('blog.addMoreAttachments'),
+                    blog:this.$t('blog.blog'),
+                    album:this.$t('blog.album'),
+                    shooting:this.$t('blog.shooting'),
+                    supertalk:this.$t('blog.supertalk'),
+                    topic:this.$t('topic.topic'),
+                    shareSomethingNew:this.$t('topic.shareSomethingNew'),
+                }
+            }
+        },
 
         methods:{
+
             go(){
                 this.$router.go(-1);
             },

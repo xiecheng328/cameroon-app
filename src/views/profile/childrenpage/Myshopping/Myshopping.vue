@@ -2,15 +2,15 @@
     <div>
         <mu-container>
             <div class="shopping-title">
-                <mu-button class="fan-title-back" flat @click="changeFatherB">返回</mu-button>
-                <h3 class="shopping-title-text">订单详情</h3>
+                <mu-button class="fan-title-back" flat @click="changeFatherB">{{pageMessage.return}}</mu-button>
+                <h3 class="shopping-title-text">{{pageMessage.orderDetails}}</h3>
             </div>
             <mu-tabs :value.sync="active1" inverse color="secondary" text-color="rgba(0, 0, 0, .54)"  center>
-                <mu-tab >全部</mu-tab>
-                <mu-tab >待付款</mu-tab>
-                <mu-tab >代发货</mu-tab>
-                <mu-tab >待收货</mu-tab>
-                <mu-tab >待评价</mu-tab>
+                <mu-tab >{{pageMessage.All}}</mu-tab>
+                <mu-tab >{{pageMessage.PendingPayment}}</mu-tab>
+                <mu-tab >{{pageMessage.toBeDelivered}}</mu-tab>
+                <mu-tab >{{pageMessage.WaitingForReception}}</mu-tab>
+                <mu-tab >{{pageMessage.WaitingToBeEvaluated}}</mu-tab>
             </mu-tabs>
             <div class="demo-text" v-if="active1 === 0">
                 <div>
@@ -18,15 +18,15 @@
                         <li  >
                             <div class="product-img"><img src="./../../../../assets/img/tractors2.jpg" alt=""></div>
                             <div class="product-info">
-                                <div class="product-info-title"><span>商品名称：</span></div>
-                                <div class="product-info-title"><span>订单编号：</span></div>
-                                <div class="product-info-title"><span>配送方：</span></div>
+                                <div class="product-info-title"><span>{{pageMessage.productName}}：</span></div>
+                                <div class="product-info-title"><span>{{pageMessage.OrderNumber}}：</span></div>
+                                <div class="product-info-title"><span>{{pageMessage.DeliveryEvening}}：</span></div>
                             </div>
                         </li>
                         <div class="product-trans">
-                            <mu-button color="write" text-color="black" small>查看物流</mu-button>
-                            <mu-button color="write" text-color="black" small>延长收货</mu-button>
-                            <mu-button color="write" text-color="black" small>确认收货</mu-button>
+                            <mu-button color="write" text-color="black" small>{{pageMessage.ViewLogistics}}</mu-button>
+                            <mu-button color="write" text-color="black" small>{{pageMessage.ExtendedReceipt}}</mu-button>
+                            <mu-button color="write" text-color="black" small>{{pageMessage.ConfirmReceipt}}</mu-button>
                         </div>
                     </ul>
                 </div>
@@ -38,15 +38,15 @@
                         <li  >
                             <div class="product-img"><img src="./../../../../assets/img/tractors2.jpg" alt=""></div>
                             <div class="product-info">
-                                <div class="product-info-title"><span>商品名称：</span></div>
-                                <div class="product-info-title"><span>订单编号：</span></div>
-                                <div class="product-info-title"><span>配送方：</span></div>
+                                <div class="product-info-title"><span>{{pageMessage.productName}}：</span></div>
+                                <div class="product-info-title"><span>{{pageMessage.OrderNumber}}：</span></div>
+                                <div class="product-info-title"><span>{{pageMessage.DeliveryEvening}}：</span></div>
                             </div>
                         </li>
                         <div class="product-trans">
-                            <mu-button color="write" text-color="black" small>取消订单</mu-button>
-                            <mu-button color="write" text-color="black" small>朋友代付</mu-button>
-                            <mu-button color="write" text-color="black" small>付款</mu-button>
+                            <mu-button color="write" text-color="black" small>{{pageMessage.CancelTheOrder}}</mu-button>
+                            <mu-button color="write" text-color="black" small>{{pageMessage.MyFriendPaid}}</mu-button>
+                            <mu-button color="write" text-color="black" small>{{pageMessage.payment}}</mu-button>
                         </div>
                     </ul>
                 </div>
@@ -58,15 +58,15 @@
                         <li  >
                             <div class="product-img"><img src="./../../../../assets/img/tractors2.jpg" alt=""></div>
                             <div class="product-info">
-                                <div class="product-info-title"><span>商品名称：</span></div>
-                                <div class="product-info-title"><span>订单编号：</span></div>
-                                <div class="product-info-title"><span>配送方：</span></div>
+                                <div class="product-info-title"><span>{{pageMessage.productName}}：</span></div>
+                                <div class="product-info-title"><span>{{pageMessage.OrderNumber}}：</span></div>
+                                <div class="product-info-title"><span>{{pageMessage.DeliveryEvening}}：</span></div>
                             </div>
                         </li>
                         <div class="product-trans">
-                            <mu-button color="write" text-color="black" small>提醒发货</mu-button>
-                            <mu-button color="write" text-color="black" small>延长收货</mu-button>
-                            <mu-button color="write" text-color="black" small>确认收货</mu-button>
+                            <mu-button color="write" text-color="black" small>{{pageMessage.RemindTheDelivery}}</mu-button>
+                            <mu-button color="write" text-color="black" small>{{pageMessage.ExtendedReceipt}}</mu-button>
+                            <mu-button color="write" text-color="black" small>{{pageMessage.ConfirmReceipt}}</mu-button>
                         </div>
                     </ul>
                 </div>
@@ -78,15 +78,15 @@
                         <li  >
                             <div class="product-img"><img src="./../../../../assets/img/tractors2.jpg" alt=""></div>
                             <div class="product-info">
-                                <div class="product-info-title"><span>商品名称：</span></div>
-                                <div class="product-info-title"><span>订单编号：</span></div>
-                                <div class="product-info-title"><span>配送方：</span></div>
+                                <div class="product-info-title"><span>{{pageMessage.productName}}：</span></div>
+                                <div class="product-info-title"><span>{{pageMessage.OrderNumber}}：</span></div>
+                                <div class="product-info-title"><span>{{pageMessage.DeliveryEvening}}：</span></div>
                             </div>
                         </li>
                         <div class="product-trans">
-                            <mu-button color="write" text-color="black" small>查看物流</mu-button>
-                            <mu-button color="write" text-color="black" small>延长收货</mu-button>
-                            <mu-button color="write" text-color="black" small>确认收货</mu-button>
+                            <mu-button color="write" text-color="black" small>{{pageMessage.ViewLogistics}}</mu-button>
+                            <mu-button color="write" text-color="black" small>{{pageMessage.ExtendedReceipt}}</mu-button>
+                            <mu-button color="write" text-color="black" small>{{pageMessage.ConfirmReceipt}}</mu-button>
                         </div>
                     </ul>
                 </div>
@@ -98,15 +98,15 @@
                         <li  >
                             <div class="product-img"><img src="./../../../../assets/img/tractors2.jpg" alt=""></div>
                             <div class="product-info">
-                                <div class="product-info-title"><span>商品名称：</span></div>
-                                <div class="product-info-title"><span>订单编号：</span></div>
-                                <div class="product-info-title"><span>配送方：</span></div>
+                                <div class="product-info-title"><span>{{pageMessage.productName}}：</span></div>
+                                <div class="product-info-title"><span>{{pageMessage.OrderNumber}}：</span></div>
+                                <div class="product-info-title"><span>{{pageMessage.DeliveryEvening}}：</span></div>
                             </div>
                         </li>
                         <div class="product-trans">
-                            <mu-button color="write" text-color="black" small>查看物流</mu-button>
-                            <mu-button color="write" text-color="black" small>卖了换钱</mu-button>
-                            <mu-button color="write" text-color="black" small>评价</mu-button>
+                            <mu-button color="write" text-color="black" small>{{pageMessage.ViewLogistics}}</mu-button>
+                            <mu-button color="write" text-color="black" small>{{pageMessage.SoldForCash}}</mu-button>
+                            <mu-button color="write" text-color="black" small>{{pageMessage.evaluation}}</mu-button>
                         </div>
                     </ul>
                 </div>
@@ -121,7 +121,29 @@
         name: "profile",
         data () {
             return {
-                active1: 0
+                active1: 0,
+                pageMessage:{
+                    return:this.$t('profile.return'),
+                    orderDetails:this.$t('profile.orderDetails'),
+                    All:this.$t('profile.All'),
+                    PendingPayment:this.$t('profile.PendingPayment'),
+                    toBeDelivered:this.$t('profile.toBeDelivered'),
+                    WaitingForReception:this.$t('profile.WaitingForReception'),
+                    WaitingToBeEvaluated:this.$t('profile.WaitingToBeEvaluated'),
+                    productName:this.$t('profile.productName'),
+                    OrderNumber:this.$t('profile.OrderNumber'),
+                    DeliveryEvening:this.$t('profile.DeliveryEvening'),
+                    ViewLogistics:this.$t('profile.ViewLogistics'),
+                    ExtendedReceipt:this.$t('profile.ExtendedReceipt'),
+                    ConfirmReceipt:this.$t('profile.ConfirmReceipt'),
+                    CancelTheOrder:this.$t('profile.CancelTheOrder'),
+                    MyFriendPaid:this.$t('profile.MyFriendPaid'),
+                    RemindTheDelivery:this.$t('profile.RemindTheDelivery'),
+                    SoldForCash:this.$t('profile.SoldForCash'),
+                    evaluation:this.$t('profile.evaluation'),
+
+
+                }
             };
         },
         methods:{

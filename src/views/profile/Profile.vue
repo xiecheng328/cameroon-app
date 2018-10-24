@@ -6,14 +6,14 @@
 
     <div v-show="isClick">
    
-    <h3 class="profile-header">我的</h3>
+    <h3 class="profile-header">{{pageMessage.Myprofile}}</h3>
     <div class="profile-user">
       <div class="profile-user-slideimg"><img src="@/assets/img/user.png" alt="" class="profile-user-slideimg-uersimg"></div>
-      <div class="profile-user-slidetext"><h5>昵称</h5> <p>常住地:雅温得</p></div>
+      <div class="profile-user-slidetext"><h5>{{pageMessage.Nickname}}</h5> <p>{{pageMessage.PermanentR}}:{{pageMessage.Yaounde}}</p></div>
     </div>
     <div class="menuprofile">
       <div class="menuprofile-first">
-        <li v-for=" item in profileMenu" :key="item.id" @click="routerGo(item)"><img :src="item.iconimg" alt="" ><span>{{item.text}}</span></li>
+        <li v-for=" item in pageMessage.profileMenu" :key="item.id" @click="routerGo(item)"><img :src="item.iconimg" alt="" ><span>{{item.text}}</span></li>
       </div>
     </div>
     </div>
@@ -29,44 +29,51 @@ import 'muse-ui/dist/muse-ui.css';
 export default {
    data(){
      return{
-       isClick:true,
+      isClick:true,
+      pageMessage:{
+         Myprofile:this.$t('profile.Myprofile'),
+         Nickname:this.$t('profile.Nickname'),
+         PermanentR:this.$t('profile.PermanentR'),
+         Yaounde:this.$t('profile.Yaounde'),
+        
        profileMenu: [{
          iconimg:"/img/profileicon1.png",
-         text:"我的关注",
+         text:this.$t('profile.Myfocus'),
          src:"Myinterst",
          id:1,
 
        },{
         iconimg:"/img/profileicon1.png",
-         text:"我的粉丝",
+         text:this.$t('profile.Myfans'),
          src:"Myfans",
          id:2
        },{
         iconimg:"/img/profileicon1.png",
-         text:"我的购买记录",
+         text:this.$t('profile.MyPRecord'),
          src:"Myshopping",
          id:3
        },{
          iconimg:"/img/profileicon1.png",
-         text:"认证通道",
+         text:this.$t('profile.CertChannel'),
          src:"Identification",
          id:4
        },{
         iconimg:"/img/profileicon1.png",
-         text:"我的下载",
+         text:this.$t('profile.Mydownload'),
          src:"Mydownload",
          id:5
        },{
         iconimg:"/img/profileicon1.png",
-         text:"设置",
+         text:this.$t('profile.Setting'),
          src:"Myset",
          id:6
        },{
          iconimg:"/img/profileicon1.png",
-         text:"帮助与反馈",
+         text:this.$t('profile.HelpFeedback'),
          src:"HelpAndfeedback",
          id:7
        }],
+     }
      }
    },
    created() {

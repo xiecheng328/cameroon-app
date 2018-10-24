@@ -5,11 +5,9 @@
                 <img src="../component/img/head.png" alt="">
             </div>
             <div class="content">
-                <span class="color">昵称</span>
-                <div>
-                    评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容
-                </div>
-                <span>1小时前</span>
+                <span class="color">{{pageMessage.nickname}}</span>
+                <div>{{pageMessage.comment}}{{pageMessage.comment}}{{pageMessage.comment}}</div>
+                <span>{{pageMessage.nHoursAgo}}</span>
             </div>
 
         </div>
@@ -18,11 +16,10 @@
                 <img src="../component/img/head.png" alt="">
             </div>
             <div class="repost">
-                <span class="color">昵称</span>
+                <span class="color">{{pageMessage.nickname}}</span>
                 <div>
-                    评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容
-                </div>
-                <span>1小时前</span>
+                    {{pageMessage.comment}}{{pageMessage.comment}}{{pageMessage.comment}}                </div>
+                <span>{{pageMessage.nHoursAgo}}</span>
             </div>
 
         </div>
@@ -31,7 +28,17 @@
 </template>
 <script>
     export default {
-        name: "RepostWb"
+        name: "RepostWb",
+        data(){
+            return {
+                pageMessage:{
+                    nickname:this.$t('blog.nickname'),
+                    nHoursAgo:this.$t('blog.nHoursAgo'),
+                    comment:this.$t('blog.comment'),
+
+                }
+            }
+        },
     }
 </script>
 <style scoped lang="scss">

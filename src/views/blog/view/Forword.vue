@@ -1,22 +1,22 @@
 <template>
     <div class="apps">
         <!--<div  class="app2">-->
-        <button class="app7"><router-link to="/blog/details" class="ys">取消</router-link></button>
-        <div class="zhuanfa">转发圈子</div>
-        <button class="fasong">发送</button>
+        <button class="app7"><router-link to="/blog/details" class="ys">{{pageMessage.cancel}}</router-link></button>
+        <div class="zhuanfa">{{pageMessage.forwardingCircle}}</div>
+        <button class="fasong">{{pageMessage.send}}</button>
         <span class="xian"></span>
         <!--</div>-->
-        <input class="pinglun"  type="text"value="分享心得...">
+        <input class="pinglun"  type="text" value="分享心得...">
         <input class="kuang" type="checkbox" />
         <ul class="ziti">
-            <span>同时转发</span></ul>
+            <span>{{pageMessage.simultaneousForwarding}}</span></ul>
         <div class="color">
             <div>
                 <li class="tupian"><img src="../../../assets/img/图层 2.png" height="180" width="180"/></li>
             </div>
             <div class="word">
-                <h3 class="topic">分享标题</h3>
-                <span class="content">分享内容</span>
+                <h3 class="topic">{{pageMessage.shareTitle}}</h3>
+                <span class="content">{{pageMessage.shareContent}}</span>
             </div>
 
         </div>
@@ -32,7 +32,22 @@
 <script>
     export default {
 
-        name:"Forwaid"
+        name:"Forwaid",
+        data(){
+            return {
+                pageMessage:{
+                    cancel:this.$t('blog.cancel'),
+                    forwardingCircle:this.$t('blog.forwardingCircle'),
+                    send:this.$t('blog.send'),
+                    simultaneousForwarding:this.$t('blog.simultaneousForwarding'),
+                    review:this.$t('blog.review'),
+                    shareTitle:this.$t('blog.shareTitle'),
+                    shareContent:this.$t('blog.shareContent'),
+                    share:this.$t('blog.share'),
+
+                }
+            }
+        },
 
     }
 </script>
