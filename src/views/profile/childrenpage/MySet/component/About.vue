@@ -2,7 +2,10 @@
 
     <div class="top">
         <div>
-            <router-link to="/myset"><img class="top-img" @click="" src="@/assets/img/return.png"></router-link>
+            <!--<router-link to="/myset">-->
+            <div @click="changeFatherC()"><img class="top-img" src="@/assets/img/return.png"></div>
+                <!--<img class="top-img" @click="" src="@/assets/img/return.png">-->
+            <!--</router-link>-->
             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
             <span>{{Setting}}</span>
         </div>
@@ -109,9 +112,11 @@
                 privacy:this.$t('profile.privacy'),
             }
         },
-        changeFatherC() {
-            this.$emit('resetFatherp');
-        },
+        methods:{
+            changeFatherC() {
+                this.$emit('resetFatherp');
+            },
 
+        }
     }
 </script>

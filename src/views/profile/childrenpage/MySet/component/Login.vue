@@ -2,8 +2,8 @@
     <div class="log">
         <!-- <img aria-checked="" -->
 
-        <div @click="changeFatherC()"><img class="top-img" src=""></div>
-        <img src="" class="log-img">
+        <div @click="changeFatherC()"><img class="top-img" src="@/assets/img/return.png"></div>
+        <img src="@/assets/img/man.png" class="log-img">
 
         <div class="printIn search">
             {{account}}：<input type="text" class="printIn-style">
