@@ -17,9 +17,9 @@
             <img class="bottom-img" src="../../assets/img/photo.png" alt="">
             <img class="bottom-img" src="../../assets/img/video.png" alt="">
             <img class="bottom-img" src="../../assets/img/add.png" alt="">
-            <img class="bottom-img" src="../../assets/img/左箭头.png" alt="">
-            <img class="bottom-img" src="../../assets/img/右箭头.png" alt="">
-            <img class="bottom-img" src="../../assets/img/设置.png" alt="">
+            <img class="bottom-img" src="../../assets/img/left-arrow.png" alt="">
+            <img class="bottom-img" src="../../assets/img/right-arrow.png" alt="">
+            <img class="bottom-img" src="../../assets/img/settings.png" alt="">
         </mu-appbar>
 
 
