@@ -6,9 +6,9 @@
         <img src="@/assets/img/man.png" class="log-img">
 
         <div class="printIn search">
-            {{account}}：<input type="text" class="printIn-style">
+            {{account}}：<input type="text" class="prints">
             <br />
-            {{password}}：<input type="password" class="print-style">
+            {{password}}：<input type="password" class="prints">
         </div>
         <button class="gray left">{{forgetPs}}</button>
         <button class="gray right">{{registered}}</button>
@@ -47,18 +47,23 @@
     }
 
     .printIn{
-        margin-top: 15%;
-        margin-left: 0.5rem;
+        background-color: #ccc;
+        margin-top: 20%;
         font-size: 0.3rem;
         font-weight: 600;
         border: 1px solid rgba(255,255,255,.8);
     }
 
+    .prints{
+        float: right;
+        margin-top: 1%;
+        margin-right: 5%;
+    }
 
     .up{
         position: absolute;
         bottom: 10%;
-        margin-left: 2.3rem;
+        margin-left: 25%;
     }
 
     .gray {
@@ -85,13 +90,13 @@
     .left {
         position: relative;
         margin: 0.2rem;
-        left: 1.2rem;
+        left: 12%;
     }
 
     .right {
         position: relative;
         margin: 0.2rem;
-        right: -2.9rem;
+        right: -20%;
     }
 
 
