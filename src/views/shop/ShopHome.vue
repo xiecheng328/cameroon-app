@@ -7,14 +7,14 @@
       <mu-appbar style="width: 100%;left:0;right:0;top:0;position:fixed;" color="#FFFFFF" z-depth="0" textColor="#333333">
       <mu-button icon slot="left" @click="goSearch()">
       <mu-icon ></mu-icon>
-      </mu-button >
-      <div class="shop-title">商城</div>
+      </mu-button>
+      <div class="shop-title">{{shopData.mall}}</div>
       <mu-button  icon slot="right" id="shop-icon" @click="goShoppingCart()"></mu-button>
       </mu-appbar>
       
       <!-- 商城搜索框 -->
       <div class="shop-search">
-        <input type="text" value="" placeholder="大家都在搜拖拉机">
+        <input type="text" value="" :placeholder="shopData.searchContent1" style="font-size:14px">
       </div>
       <!-- 商城主页轮播图 -->
        
@@ -39,7 +39,7 @@
           <ul class="shop-list">
             <li :style="{background:tile.color}" class="img" v-for="(tile, index) in list" :key="index" @click="goEnterList(index),classify(index)">
               <img :src="tile.image" >
-              <p>{{tile.shopName}}</p>
+              <p style="font-size:12px;margin-top:10px">{{tile.shopName}}</p>
             </li>
           </ul>
            
@@ -48,7 +48,7 @@
     <!-- 热门商品 -->
     <div class="hot-shop">
       <div class="hot-title"><p class="title">热门商品</p>
-      <mu-button flat class="all-shop" @click="goHotAll('热门商品')">全部></mu-button>
+      <mu-button flat class="all-shop" @click="goHotAll('热门商品')">{{shopData.all}}></mu-button>
     </div>
       <div class="hot-sop-list">
           <div v-for="(tile, index) in hotList" :key="index" @click="goHotDetails(index)">
@@ -67,8 +67,8 @@
 
      <!-- 品牌旗舰 -->
     <div class="brand-shop">
-      <div class="hot-title"><p class="title"> 品牌旗舰</p>
-      <mu-button flat class="all-shop" @click="goBrandAll('品牌旗舰')">全部></mu-button>
+      <div class="hot-title"><p class="title">{{shopData.brandFlagship}}</p>
+      <mu-button flat class="all-shop" @click="goBrandAll('品牌旗舰')">{{shopData.all}}></mu-button>
     </div>
       <ul class="hot-nj">
         <li v-for="item in brandName" :key="item.id" @click="goFlagshipStore(item.id-1)">
@@ -91,7 +91,7 @@
     <!-- 拖拉机 -->
     <div class="tractors-shop">
       <div class="tractors-title">
-        <p class="title"> 拖拉机</p><mu-button flat class="all-shop"  @click="goTractorAll()">全部></mu-button>
+        <p class="title"> {{shopData.tractor}}</p><mu-button flat class="all-shop"  @click="goTractorAll()">{{shopData.all}}></mu-button>
       </div>
         <ul class="tractors-list">
           <li v-for="(item, index) in tractors" :key="index" @click="goHotDetails(index)">
@@ -104,8 +104,8 @@
      <!-- 播种机 -->
     <div class="tractors-shop">
       <div class="tractors-title">
-        <p class="title">播种机</p>
-        <mu-button flat class="all-shop"  @click="goSeederAll('播种机')">全部></mu-button>
+        <p class="title">{{shopData.seeder}}</p>
+        <mu-button flat class="all-shop"  @click="goSeederAll('播种机')">{{shopData.all}}></mu-button>
       </div>
         <ul class="tractors-list">
           <li v-for="(item, index) in tractors" :key="index" @click="goHotDetails(index)">
@@ -117,8 +117,8 @@
     <!-- 小麦收割机 -->
     <div class="tractors-shop">
       <div class="tractors-title">
-        <p class="title">小麦收割机</p>
-        <mu-button flat class="all-shop" @click="goWheatAll('小麦收割机')">全部></mu-button>
+        <p class="title">{{shopData.wheatHarvester}}</p>
+        <mu-button flat class="all-shop" @click="goWheatAll('小麦收割机')">{{shopData.all}}></mu-button>
       </div>
         <ul class="tractors-list">
           <li v-for="(item, index) in tractors" :key="index" @click="goHotDetails(index)">
@@ -130,8 +130,8 @@
     <!--  马铃薯/经济作物 -->
     <div class="potato-shop">
       <div class="hot-title">
-        <p class="title"> 马铃薯/经济作物</p>
-        <mu-button flat class="all-shop" @click="goPotatoAll('马铃薯')">全部></mu-button>
+        <p class="title"> {{shopData.potato}}</p>
+        <mu-button flat class="all-shop" @click="goPotatoAll('马铃薯')">{{shopData.all}}></mu-button>
       </div>
       <ul class="potato">
         <li v-for="(item, index) in potatoMachinery" :key="index" @click="goHotDetails(index)">
@@ -157,8 +157,8 @@
     <!--  零部件 -->
     <div class="parts-shop">
       <div class="hot-title">
-        <p class="title">零部件</p>
-        <mu-button flat class="all-shop" @click="goPartsAll()">全部></mu-button>
+        <p class="title">{{shopData.parts}}</p>
+        <mu-button flat class="all-shop" @click="goPartsAll()">{{shopData.all}}></mu-button>
       </div>
       <div class="hot-sop-list">
           <div v-for="(tile, index) in parts" :key="index" @click="goHotDetails(index)">
@@ -175,7 +175,7 @@
       </div>
     </div>
     <div class="allProduct">
-     <mu-button full-width textColor="#2196F3" style="font-size:16px" @click="goLookAll()">查看全部产品</mu-button>
+     <mu-button full-width textColor="#2196F3" style="font-size:16px" @click="goLookAll()">{{shopData.viewAllProducts}}</mu-button>
     </div>
   </div>
   <router-view></router-view>
@@ -208,55 +208,67 @@ export default {
   name:"Shop",
   data () {
     return {
+      shopData:{
+        mall:this.$t('shop.mall'),
+        searchContent1:this.$t('shop.searchContent'),
+        all:this.$t('shop.all'),
+        brandFlagship:this.$t('shop.brandFlagship'),
+        tractor:this.$t('shop.tractor'),
+        seeder:this.$t('shop.seeder'),
+        wheatHarvester:this.$t('shop.wheatHarvester'),
+        potato:this.$t('shop.potato'),
+        parts:this.$t('shop.parts'),
+        viewAllProducts:this.$t('shop.viewAllProducts')
+      },
       list: [{
         // allShop:this.$t(shop.allShop),
         image: menu01,
-        shopName:"拖拉机",
+        shopName:this.$t('shop.shopName[0]'),
         color:'#FCBD1D',
         id:1
       }, {
         image: menu02,
-        shopName:"深松机",
+        shopName:this.$t('shop.shopName[1]'),
         color:'#FF355B',
         id:2
       }, {
         image: menu03,
-        shopName:"采棉机",
+        shopName:this.$t('shop.shopName[2]'),
         color:'#05C2A9',
         id:3
       }, {
         image: menu04,
-        shopName:"播种机",
+        shopName:this.$t('shop.shopName[3]'),
         color:'#3292E1',
         id:4
       }, {
         image: menu05,
-        shopName:"旋耕机",
+        shopName:this.$t('shop.shopName[4]'),
         color:'#05C2A9',
         id:5
       }, {
         image: menu06,
-        shopName:"玉米机",
+        shopName:this.$t('shop.shopName[5]'),
         color:'#7146FB',
         id:6
       }, {
         image: menu07,
-        shopName:"植保机",
+        shopName:this.$t('shop.shopName[6]'),
         color:'#FB0D69',
         id:7
       }, {
         image: menu08,
-        shopName:"排灌机",
+        shopName:this.$t('shop.shopName[7]'),
         color:'#33B7D4',
         id:8
       }, {
         image: menu09,
-        shopName:"配件",
+        shopName:this.$t('shop.shopName[8]'),
         color:'#2697F3',
         id:9
       }, {
         image: menu10,
-        shopName:"全部",
+        shopName:this.$t('shop.shopName[9]'),
         color:'#2697F3',
         id:10
       }],

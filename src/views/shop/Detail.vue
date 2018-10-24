@@ -21,18 +21,18 @@
           <mu-list slot="content" >
             <mu-list-item button  @click="gotoSearch()">
               <mu-list-item-content>
-                <mu-button flat>产品搜索</mu-button>
+                <mu-button flat>{{this.$t('shop.productSearch')}}</mu-button>
               </mu-list-item-content>
             </mu-list-item>
             <mu-list-item button  @click="gotoQuery()">
               <mu-list-item-content >
-                <mu-button flat>补贴查询</mu-button>
+                <mu-button flat>{{this.$t('shop.SubsidyInquiry')}}</mu-button>
               </mu-list-item-content>
             </mu-list-item>
             <mu-list-item button  >
               <mu-list-item-content >
                  <mu-menu >
-                <mu-button flat style="width:1.5rem">浏览历史</mu-button>
+                <mu-button flat style="width:1.5rem">{{this.$t('shop.BrowsingHistory')}}</mu-button>
                 <mu-list slot="content">
                   <FootPrint/>
                 </mu-list>
@@ -68,7 +68,7 @@
             <mu-button icon color="primary">
                 <mu-icon value="favorite"></mu-icon>   
             </mu-button>
-           <span @click="goCollect()"> 收藏</span>
+           <span @click="goCollect()"> {{dt.col}}</span>
           </mu-list-item-title>
         </mu-list-item>
        
@@ -77,10 +77,10 @@
         </mu-card-text>
         <mu-list-item button :ripple="false" class="accessConcer">
           <mu-list-item-action>
-            访问量：{{item.ItemAccess}} 次
+            关注度：{{item.ItemAccess}} 次
           </mu-list-item-action>
           <mu-list-item-action>
-            关注度：{{item.ItemConcer}}  次
+            {{dt.views}}：{{item.ItemConcer}}  次
           </mu-list-item-action>
         </mu-list-item>
 
@@ -101,17 +101,17 @@
     <mu-container class="bar">
 			    <mu-button @click="openFullscreenDialog"  full-width style="width:50%;font-size:16px"> 询价</mu-button>
             <mu-dialog width="360" transition="slide-bottom" fullscreen :open.sync="openFullscreen">
-              <mu-appbar color="primary" title="农机询问">
+              <mu-appbar color="primary" :title="this.$t('shop.chat[0]')">
               <mu-button slot="left" icon @click="closeFullscreenDialog">
                 <mu-icon value="close"></mu-icon>
               </mu-button>
               
               </mu-appbar>
               <div style="padding: 24px;">
-              你好,请问最近农机有拖拉机吗?
+              {{this.$t('shop.chat[1]')}}
               </div>
             </mu-dialog>
-          <mu-button full-width style="width:50%;font-size:16px" @click="goRent()" >租赁</mu-button>
+          <mu-button full-width style="width:50%;font-size:16px" @click="goRent()" >{{this.$t('shop.con[2]')}}</mu-button>
     </mu-container>
   </div>
 </template>
@@ -129,8 +129,12 @@ import FootPrint from './FootPrint.vue';
    },
      data () {
     return {
+      dt:{
+        views:this.$t('shop.Views'),
+        col:this.$t('shop.Collection')
+      },
       openFullscreen: false,
-        smallBar:[{title:"产品"},{title:'详情'},{title:"参数"},{title:"推荐"}],
+        smallBar:[{title:this.$t('shop.product')},{title:this.$t('shop.detail')},{title:this.$t('shop.parameter')},{title:this.$t('shop.recommend')}],
         open: false,
         dataL:[
             {
@@ -139,16 +143,16 @@ import FootPrint from './FootPrint.vue';
                 ItemAccess:'63',
                 ItemConcer:'999',
                 itemDetail:[{
-                                name:'生产商',
+                                name:this.$t('shop.manufacturer'),
                                 detail:'中国一拖集团有限公司'
                             },{
-                                name:"品牌",
+                                name:this.$t('shop.brand'),
                                 detail:"光明"
                             },{
-                                name:"价格",
+                                name:this.$t('shop.price'),
                                 detail:"面议"
                             },{
-                                name:"型号",
+                                name:this.$t('shop.model'),
                                 detail:"X-saDEE"
                             }]
             }

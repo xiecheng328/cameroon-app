@@ -2,15 +2,15 @@
 	<div>
 		<div class="s_header">
 			<b><img src="./img/return.png" @click="goLeft()"></b>
-			订单管理
+			{{this.$t('shop.orderManagement[0]')}}
 		</div>
     <mu-container>
   <mu-tabs :value.sync="active2" color="primary" indicator-color="#fff" full-width>
-    <mu-tab>全部</mu-tab>
-    <mu-tab>待付款</mu-tab>
-    <mu-tab>待发货</mu-tab>
-    <mu-tab>待收货</mu-tab>
-    <mu-tab>待评价</mu-tab>
+    <mu-tab>{{this.$t('shop.orderManagement[1]')}}</mu-tab>
+    <mu-tab>{{this.$t('shop.orderManagement[2]')}}</mu-tab>
+    <mu-tab>{{this.$t('shop.orderManagement[3]')}}</mu-tab>
+    <mu-tab>{{this.$t('shop.orderManagement[4]')}}</mu-tab>
+    <mu-tab>{{this.$t('shop.orderManagement[5]')}}</mu-tab>
   </mu-tabs>
   <div class="demo-text" v-if="active2 === 0">
     <mu-card style="width: 100%; max-width: 375px; margin: 0 auto;">
@@ -32,8 +32,8 @@
           摘穗单行性能、结构、强度、可靠性全面提升；铝合金齿轮箱，质量轻，散热效果好，润滑效果好
           护罩，分禾器选用高强度工程塑料，寿命更高；摘穗板间隙液压调节；封闭式油浴润滑
         </mu-card-text>
-        <mu-button color="primary">在线支付</mu-button>
-        <mu-button color="primary">货到付款</mu-button>
+        <mu-button color="primary">{{this.$t('shop.orderManagement[10]')}}</mu-button>
+        <mu-button color="primary">{{this.$t('shop.orderManagement[11]')}}</mu-button>
       </mu-card>
     </div>
     <div class="demo-text" v-if="active2 === 2">
@@ -69,15 +69,15 @@
           摘穗单行性能、结构、强度、可靠性全面提升；铝合金齿轮箱，质量轻，散热效果好，润滑效果好
           护罩，分禾器选用高强度工程塑料，寿命更高；摘穗板间隙液压调节；封闭式油浴润滑
         </mu-card-text>
-        <mu-button color="primary" to="/shop/review">立即评论</mu-button>
+        <mu-button color="primary" to="/shop/review">{{this.$t('shop.orderManagement[6]')}}</mu-button>
       </mu-card>
     </div>
   </mu-container>
     <div class="ui-flex ui-cont-sa s_btns">
 			<span></span>
-      <mu-button color="primary">查看物流</mu-button>
-			<mu-button color="primary">延长收货</mu-button>
-			<mu-button color="primary" to="/shop/receipt">确认收货</mu-button>
+      <mu-button color="primary">{{this.$t('shop.orderManagement[7]')}}</mu-button>
+			<mu-button color="primary">{{this.$t('shop.orderManagement[8]')}}</mu-button>
+			<mu-button color="primary" to="/shop/receipt">{{this.$t('shop.orderManagement[9]')}}</mu-button>
 		</div>
 		
 
