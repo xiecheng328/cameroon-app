@@ -3,13 +3,13 @@
 
         <mu-container>
         <div class="fan-title">
-          <mu-button class="fan-title-back" flat @click="changeFatherB">返回</mu-button>
-          <h3 class="fan-title-text">我的粉丝</h3>
+          <mu-button class="fan-title-back" flat @click="changeFatherB">{{pageMessage.return}}</mu-button>
+          <h3 class="fan-title-text">{{pageMessage.Myfans}}</h3>
         </div>
         <mu-tabs :value.sync="active1" inverse color="secondary" text-color="rgba(0, 0, 0, .54)"  center>
-            <mu-tab >粉丝年龄集中</mu-tab>
-            <mu-tab >粉丝性别分布</mu-tab>
-            <mu-tab >粉丝数排名</mu-tab>
+            <mu-tab >{{pageMessage.Fansofage}}</mu-tab>
+            <mu-tab >{{pageMessage.FanGenderDistribution}}</mu-tab>
+            <mu-tab >{{pageMessage.FanRrank}}</mu-tab>
         </mu-tabs>
         <div class="demo-text" v-if="active1 === 0">
           <div class="demo-text-layer11"><Age class="imglayer1" /></div> 
@@ -43,7 +43,14 @@ export default {
     },
   data () {
     return { 
-      active1: 0
+      active1: 0,
+        pageMessage:{
+         return:this.$t('profile.return'),
+         Myfans:this.$t('profile.Myfans'),
+         FanGenderDistribution:this.$t('profile.FanGenderDistribution'),
+         FanRrank:this.$t('profile.FanRrank'),
+          Fansofage:this.$t('profile.Fansofage'),
+         }
     };
   },
   methods:{
