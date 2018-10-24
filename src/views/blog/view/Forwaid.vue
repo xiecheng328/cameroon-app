@@ -14,8 +14,8 @@
         <div class="app-bottom">
             <div class="kongbai">
                 <span></span>
-                <button  class="zhaopian" ><img src="../../../assets/img/图层 4.png" /></button>
-                <button  class="biaoqing" ><img src="../../../assets/img/图层 5.png" /></button>
+                <button  class="zhaopian" ><img src="../../../assets/img/coverage4.png" /></button>
+                <button  class="biaoqing" ><img src="../../../assets/img/coverage5.png" /></button>
             </div>
         </div>
     </div>

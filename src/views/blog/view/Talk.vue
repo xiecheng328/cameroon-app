@@ -1,13 +1,13 @@
 <template>
     <div class="apps">
         <div  class="app2">
-            <button class="app7"><router-link to="/ownPage/weibos"><img src="../../../assets/img/返回.png"/></router-link></button>
+            <button class="app7"><router-link to="/ownPage/weibos"><img src="../../../assets/img/back.png"/></router-link></button>
             <div class="liaotian">{{pageMessage.nickname}}</div>
             <button class="shezhi">{{pageMessage.setting}}</button>
         </div>
         <div class="app-bottom">
             <div class="kongbai">
-                <button class="yinliang"><img src="../../../assets/img/音量.png" /></button>
+                <button class="yinliang"><img src="../../../assets/img/volume.png" /></button>
                 <input  class="shuchu"   type="text">
                 <button  class="fasong"  value="发送">{{pageMessage.send}}</button>
             </div>

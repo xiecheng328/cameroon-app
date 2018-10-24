@@ -52,7 +52,7 @@ export default {
                 myFu:this.$t('profile.myFu'),
             },
        
-  name:{"UserGuide"},
+  name:"UserGuide",
       }
   }
 }
