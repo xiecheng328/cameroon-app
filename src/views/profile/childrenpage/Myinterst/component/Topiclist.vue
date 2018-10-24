@@ -14,16 +14,16 @@
                     {{item.title}}
                   </p>
                   <p>
-                    简介：{{item.intro}}
+                    {{intro}}: {{item.intro}}
                   </p>
                   <p>
-                    关注人数：{{item.hot}}
+                    {{attpeople}}: {{item.hot}}
                   </p>
                 </div>
               </div>
             </div>
             <div class="remove" ref='remove'>
-              <button @click.stop="detele(index)">取消关注</button>
+              <button @click.stop="detele(index)">{{unfollow}}</button>
             </div>
           </li>
         </ul>
@@ -34,11 +34,32 @@
 
 <script>
 export default {
-  props: ["topic"],
   data() {
     return {
       startX: 0,
-      endX: 0
+      endX: 0,
+      attpeople:this.$t('profile.attpeople'),
+      intro:this.$t('profile.intro'),
+      unfollow:this.$t('profile.unfollow'),
+      topic :[{
+        title:this.$t('profile.Seedfield'),
+        hot:2087,
+        src:require('./../../../../../../public/img/profileicon1@2x.png'),
+        intro:this.$t('profile.topicfarm'),
+        deleteSlider:''
+    },{
+        title:this.$t('profile.nofarm'),
+        hot:10242,
+        src:require('./../../../../../../public/img/profileicon1@2x.png'),
+        intro:this.$t('profile.harmfarming'),
+        deleteSlider:''
+    },{
+        title:this.$t('profile.howrice'),
+        hot:61824,
+        src:require('./../../../../../../public/img/profileicon1@2x.png'),
+        intro:this.$t('profile.shareknow'),
+        deleteSlider:''
+    }]
     };
   },
   methods: {
@@ -65,17 +86,17 @@ export default {
         this.disX = this.startX - this.moveX;
         // 如果是向右滑动或者不滑动，不改变滑块的位置
         if (this.disX < 0 || this.disX == 0) {
-          this.$props.topic[this.nowindex].deleteSlider =
+          this.topic[this.nowindex].deleteSlider =
             "transform:translateX(0px)";
           // 大于0，表示左滑了，此时滑块开始滑动
         } else if (this.disX > 0) {
           //具体滑动距离我取的是 手指偏移距离*5。
-          this.$props.topic[this.nowindex].deleteSlider =
+          this.topic[this.nowindex].deleteSlider =
             "transform:translateX(-" + this.disX + "px)";
 
           // 最大也只能等于删除按钮宽度
           if (this.disX >= wd) {
-            this.$props.topic[this.nowindex].deleteSlider =
+            this.topic[this.nowindex].deleteSlider =
               "transform:translateX(-" + wd + "px)";
           }
         }
@@ -93,21 +114,21 @@ export default {
         //如果距离小于删除按钮一半,强行回到起点
 
         if (this.disX * 5 < wd / 2) {
-          this.$props.topic[this.nowindex].deleteSlider =
+          this.topic[this.nowindex].deleteSlider =
             "transform:translateX(0px)";
         } else {
           //大于一半 滑动到最大值
-          this.$props.topic[this.nowindex].deleteSlider =
+          this.topic[this.nowindex].deleteSlider =
             "transform:translateX(-" + wd + "px)";
         }
       }
       return false;
     },
     detele(index) {
-      this.$props.topic.forEach((elem, indexx) => {
+      this.topic.forEach((elem, indexx) => {
         if (indexx == index) {
           this.nowindex = -1;
-          this.$props.topic.splice(index, 1);
+          this.topic.splice(index, 1);
           this.index = -1;
         }
       });
@@ -178,7 +199,7 @@ export default {
   width: 2rem;
   height: 1.8rem;
   background: #ff4949;
-  font-size: 0.3rem;
+  font-size: 0.2rem;
   color: #fff;
   border-top: 0.5px solid rgb(208, 208, 208);
   border-bottom: 0.5px solid rgb(208, 208, 208);
