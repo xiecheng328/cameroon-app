@@ -1,76 +1,80 @@
 <template>
-<div id="withme">
- <div id='messageTitle'>
-  <span style="margin-left: .1rem" @click="back" ></span>
-  <h5>@{{pagemessage.withme}}</h5>
- </div>
- <div class="titlehead">
-  <img class="messagehead" src="../../assets/img/messagesHead.png" alt="">
+ <div id="withme">
+  <div id='messageTitle'>
+   <span style="margin-left: .1rem" @click="back" ><-</span>
+   <h5>@{{pagemessage.withme}}</h5>
+  </div>
+  <div class="titlehead">
+   < img class="messagehead" src="../../assets/img/messagesHead.png" alt="">
    <ul>
     <li>
-     {{pagemessage.withmerice}}
+     {{pagemessage.withmepersonA}}
     </li>
     <li>
      5-22 16:40
     </li>
    </ul>
- </div>
- <!-- <p>//@{{pagemessage.withmerice}} ：{{pagemessage.withmetransfert}}</p> -->
+  </div>
+  <p>//@{{pagemessage.withmepersonA}} ：{{pagemessage.withmetransfert}}</p >
   <div class="messagecontain">
-   <img class="messageconent" src="../../assets/img/messageConent.png" alt="">
+   < img class="messageconent" src="../../assets/img/messageConent.png" alt="">
    <div class="containtext">
-   <span>@{{pagemessage.withmepersonB}}</span>
-   <div class="containtext">{{pagemessage.withmecorn}}
+    <span>@{{pagemessage.withmepersonB}}</span>
+    <div class="containtext">{{pagemessage.withmecorn}}
+    </div>
    </div>
-   </div>
- </div>
- <div class="titlehead">
-  <img class="messagehead" src="../../assets/img/messagesHead.png" alt="">
-  <ul>
-   <li>
-    {{pagemessage.withmepersonA}}
-   </li>
-   <li>
-    5-22 16:40
-   </li>
-  </ul>
- </div>
- <p>{{pagemessage.withmecomment}}@{{pagemessage.withmepersonA}}</p>
- <div class="messagecontain">
-  <img class="messageconent" src="../../assets/img/messageConent.png" alt="">
-  <div class="containtext">
-   <span>@{{pagemessage.withmepersonC}}</span>
+  </div>
+  <div class="titlehead">
+   < img class="messagehead" src="../../assets/img/messagesHead.png" alt="">
+   <ul>
+    <li>
+     {{pagemessage.withmepersonA}}
+    </li>
+    <li>
+     5-22 16:40
+    </li>
+   </ul>
+  </div>
+  <p>{{pagemessage.withmecomment}}@{{pagemessage.withmepersonA}}</p >
+  <div class="messagecontain">
+   < img class="messageconent" src="../../assets/img/messageConent.png" alt="">
    <div class="containtext">
-    {{pagemessage.withmerice}}
+    <span>@{{pagemessage.withmepersonC}}</span>
+    <div class="containtext">
+     {{pagemessage.withmerice}}
+    </div>
+   </div>
   </div>
  </div>
-</div>
-</div>
 </template>
 <script>
- export default {
-     data(){
-         return{
-             withmepersonA:this.$t("message.withmepersonA"),
-             withmepersonB:this.$t("message.withmepersonB"),
-             withmepersonC:this.$t("message.withmepersonC"),
-             withmecorn:this.$t("message.withmecorn"),
-             withmerice:this.$t("message.withmerice"),
-             withmecomment:this.$t("message.withmecomment"),
-             withme:this.$t("message.withme"),
-             withmetransfert:this.$t("message.withmetransfert"),
-         }
-     },
-     methods:{
-         back(){
-              this.$router.push('/message');
-              this.$emit('returnM')
-         }
-     }
+    export default {
+        data(){
+            return{
+                pagemessage:{
+                    withmepersonA:this.$t("message.withmepersonA"),
+                    withmepersonB:this.$t("message.withmepersonB"),
+                    withmepersonC:this.$t("message.withmepersonC"),
+                    withmecorn:this.$t("message.withmecorn"),
+                    withmerice:this.$t("message.withmerice"),
+                    withmecomment:this.$t("message.withmecomment"),
+                    withme:this.$t("message.withme"),
+                    withmetransfert:this.$t("message.withmetransfert")
+                },
 
- }
+            }
+        },
+        methods:{
+            back(){
+                this.$router.push('/message');
+                this.$emit('returnM')
+            }
+        }
+
+    }
 
 </script>
+
 <style scoped>
  h5{
   float: right;

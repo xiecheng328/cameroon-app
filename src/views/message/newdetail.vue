@@ -1,7 +1,7 @@
 <template>
     <div>
         <div id="detailhead">
-            <h2 id="detailreturn" @click="detailback()"><--</h2>    <h2> {{{pagemessage.newdetailSubscribe}}</h2>
+            <h2 id="detailreturn" @click="detailback()"><--</h2>    <h2> {{pagemessage.newdetailSubscribe}}</h2>
         </div>
         <div id="detailtext">
             <h6 style="margin: 0 auto ;width: 2rem">{{pagemessage.newdetailtitle}}</h6>
@@ -16,10 +16,12 @@
     export default {
         data(){
             return{
-                newdetailSubscribe:this.$t("message.newdetailSubscribe"),
-                newdetailtitle:this.$t("message.newdetailtitle"),
-                newdetailtext:this.$t("message.newdetailtext"),
+                pagemessage:{
+                    newdetailSubscribe:this.$t("message.newdetailSubscribe"),
+                    newdetailtitle:this.$t("message.newdetailtitle"),
+                    newdetailtext:this.$t("message.newdetailtext"),
 
+                },
             }
         },
         methods:{
