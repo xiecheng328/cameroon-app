@@ -73,7 +73,8 @@ export default {
 
    
 
-  name:{"UserGuide"},
+  name:"UserGuide"
+
       }
   }
 }
