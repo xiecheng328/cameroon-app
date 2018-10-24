@@ -1,7 +1,7 @@
 <template>
 <div id="withme">
  <div id='messageTitle'>
-  <span style="margin-left: .1rem" @click="back" ><-</span>
+  <span style="margin-left: .1rem" @click="back" ></span>
   <h5>@{{pagemessage.withme}}</h5>
  </div>
  <div class="titlehead">
@@ -15,7 +15,7 @@
     </li>
    </ul>
  </div>
- <p>//@{{pagemessage.withmerice}} ：{{pagemessage.withmetransfert}}</p>
+ <!-- <p>//@{{pagemessage.withmerice}} ：{{pagemessage.withmetransfert}}</p> -->
   <div class="messagecontain">
    <img class="messageconent" src="../../assets/img/messageConent.png" alt="">
    <div class="containtext">
@@ -44,6 +44,7 @@
     {{pagemessage.withmerice}}
   </div>
  </div>
+</div>
 </div>
 </template>
 <script>
