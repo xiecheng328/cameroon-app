@@ -1,11 +1,11 @@
 <template>
   <div class="commodity">
     <div class="commodity-operation" v-show="isselect">
-      <p><span>当前选中数量：{{count}}</span></p>
-      <button class="commodity-operation-detele" @click="DeteleAll">删除</button>
+      <p>{{this.$t('profile.currentsel')}}:{{count}}</p>
+      <button class="commodity-operation-detele" @click="DeteleAll">{{this.$t('profile.delete')}}</button>
     </div>
     <ul>
-      <li v-for="(item,index) in commodity1" :key="index">
+      <li v-for="(item,index) in commodity" :key="index">
         <div class="commodity-content">
           <div class="commodity-content-shop">
             <div class="commodity-content-shop-select">
@@ -21,10 +21,10 @@
           <div class="commodity-content-list">
             <div class="commodity-content-list-left"> <img :src="item.img" alt=""></div>
             <div class="commodity-content-list-right">
-              <p><span>名称：</span>{{item.name}}</p>
-              <p><span>价格：¥</span>{{item.price}}</p>
+              <p><span>{{name}}</span>：{{item.name}}</p>
+              <p><span>{{price}}：¥</span>{{item.price}}</p>
             </div>
-            <div class="commodity-content-list-cancel" @click="detele(index)"><button>取消关注</button></div>
+            <div class="commodity-content-list-cancel" @click="detele(index)"><button>{{unfollow}}</button></div>
           </div>
         </div>
       </li>
@@ -34,30 +34,65 @@
 
 <script>
 export default {
-  props: ["commodity"],
   data() {
     return {
       isselect: false,
-      commodity1: [],
-      count:0,
+      count: 0,
+      name:this.$t('profile.name'),
+      price:this.$t('profile.price'),
+      unfollow:this.$t('profile.unfollow'),
+
       checkbox: {
         value1: [],
         value2: false,
         value3: false
-      }
+      },
+      commodity: [
+        {
+          name: this.$t('profile.Tractor'),
+          img: require("./../../../../../assets/img/tractors1.jpg"),
+          shop: this.$t('profile.officialstore'),
+          price: 100,
+          value: false,
+          select: false
+        },
+        {
+          name: this.$t('profile.Tractor'),
+          img: require("./../../../../../assets/img/tractors2.jpg"),
+          shop: this.$t('profile.officialstore'),
+          price: 100,
+          value: false,
+          select: false
+        },
+        {
+          name: this.$t('profile.Tractor'),
+          img: require("./../../../../../assets/img/tractors3.jpg"),
+          shop: this.$t('profile.officialstore'),
+          price: 100,
+          value: false,
+          select: false
+        },
+        {
+          name: this.$t('profile.Tractor'),
+          img: require("./../../../../../assets/img/tractors4.jpg"),
+          shop: this.$t('profile.officialstore'),
+          price: 100,
+          value: false,
+          select: false
+        }
+      ]
     };
   },
   created() {
-    this.commodity1 = this.$props.commodity;
     this.DeteleAll();
   },
   methods: {
     detele(index) {
-      this.commodity1.splice(index, 1);
+      this.commodity.splice(index, 1);
     },
     isshow() {
-      this.count=0;
-      this.commodity1.forEach(elem => {
+      this.count = 0;
+      this.commodity.forEach(elem => {
         if (elem.select) {
           this.count++;
         }
@@ -69,7 +104,7 @@ export default {
       }
     },
     select(index) {
-      this.commodity1[index].select = !this.commodity1[index].select;
+      this.commodity[index].select = !this.commodity[index].select;
       this.isshow();
     },
     DeteleAll() {
@@ -77,8 +112,8 @@ export default {
         return elem.select == false;
       }
       let array = [];
-      array = this.commodity1.filter(selectitem);
-      this.commodity1 = array;
+      array = this.commodity.filter(selectitem);
+      this.commodity = array;
       this.isshow();
     }
   }
@@ -90,20 +125,20 @@ export default {
   overflow: hidden;
   background-color: #fafafa;
   &-operation {
-    height: 0.7rem;
     background: #ffff;
     position: relative;
-    p{
-      line-height: .7rem;
-      font-size: .3rem;
-      padding-left: .3rem;
+    p {
+      line-height: 0.7rem;
+      font-size: 0.3rem;
+      padding-left: 0.3rem;
+      width: 4.5rem;
+      word-wrap: break-word；;
     }
     button {
       border-radius: 0.2rem;
       border: 1px solid #f01544;
       background-color: #fff;
       color: #f01544;
-      width: 1.2rem;
       position: absolute;
       right: 0.2rem;
       top: 50%;
@@ -168,7 +203,6 @@ export default {
           font-size: 0.2rem;
           color: #fff;
           outline: none;
-          width: 1.4rem;
           height: 0.5rem;
           line-height: 0.5rem;
         }

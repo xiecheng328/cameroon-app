@@ -2,13 +2,13 @@
 
     <div class="top">
         <div>
-            <router-link to="/myset"><img class="top-img" src=""></router-link>
+            <router-link to="/myset"><img class="top-img" @click="" src="@/assets/img/return.png"></router-link>
             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
             <span>{{Setting}}</span>
         </div>
 
         <div class="top-pic">
-            <img class="pic-img" src="">
+            <img class="pic-img" src="@/assets/img/app-ico.png">
             <span>V 1.1.0</span>
         </div>
 
@@ -108,6 +108,10 @@
                 serviceTerm:this.$t('profile.serviceTerm'),
                 privacy:this.$t('profile.privacy'),
             }
-        }
+        },
+        changeFatherC() {
+            this.$emit('resetFatherp');
+        },
+
     }
 </script>

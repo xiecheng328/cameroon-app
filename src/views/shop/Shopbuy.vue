@@ -4,13 +4,13 @@
             <mu-button icon slot="left" @click="goLeft()">
             <mu-icon ></mu-icon>
             </mu-button >
-            <div class="shop-title">购物车</div>
-            <mu-button slot="right" @click="goManage()" flat large>管理</mu-button >
+            <div class="shop-title">{{shopCart.cart}}</div>
+            <mu-button slot="right" @click="goManage()" flat large>{{shopCart.managememt}}</mu-button >
           </mu-appbar>
             <div class="bg">
             </div>
             <div id="header"> 
-                <mu-button @click="guan()" class="use" flat>删除</mu-button> 
+                <mu-button @click="guan()" class="use" flat>{{shopCart.de}}</mu-button> 
             </div>
             <div class="list">
                 <i :class=" shoped?'dis iconfont icon-xuanze': ' iconfont icon-xuanze'" @click="xuanze1()"></i>
@@ -42,7 +42,7 @@
                 </li>
             </ul>
 
-            <p class="middle"><span>——></span><span>你可能还喜欢</span><span>——</span></p>
+            <p class="middle"><span>——></span><span>{{shopCart.youLove}}</span><span>——</span></p>
                     <ul class="middle-bottom">
                     <li class="bottom-list" v-for="(item,index) in Lista" :key="index">
                         <img src="@/assets/img/wheat1.jpg" alt="" class="bottom-img">
@@ -51,12 +51,12 @@
             <div class="footerup">
                 <i :class=" shoped?'dis iconfont icon-xuanze': ' iconfont icon-xuanze'" @click="xuanze1()"></i>
                 <i :class=" !shoped?'nodis iconfont icon-xuanze1': ' iconfont icon-xuanze1'" @click="xuanze1()"></i>
-                <span @click="xuanze1()" class="footerup-all">全选</span> 
+                <span @click="xuanze1()" class="footerup-all">{{shopCart.selectAll}}</span> 
                 <div class="zong">
-                  <span class="footerup-he">合计:</span>
+                  <span class="footerup-he">{{shopCart.total}}:</span>
                 <span class="footerup-p">{{num}}</span>  
                 </div>
-                <mu-button flat small @click="goAccount()">结算</mu-button>
+                <mu-button flat small @click="goAccount()">{{shopCart.settlement}}</mu-button>
             </div>
                 
              <div class="footer"></div>   
@@ -79,6 +79,15 @@ export default {
       large: 0,
       shoped: false,
       num: 0,
+      shopCart:{
+        cart:this.$t('shop.shopCart'),
+        managememt:this.$t('shop.management'),
+        de:this.$t('shop.delete'),
+        selectAll:this.$t('shop.selectAll'),
+        total:this.$t('shop.total'),
+        settlement:this.$t('shop.settlement'),
+        youLove:this.$t('shop.youLove')
+      },
       List: [
         {
           productName: "深松机",

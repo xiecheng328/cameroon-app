@@ -12,7 +12,7 @@
             <span>{{pageMessage.simultaneousForwarding}}</span></ul>
         <div class="color">
             <div>
-                <li class="tupian"><img src="../../../assets/img/图层 2.png" height="180" width="180"/></li>
+                <li class="tupian"><img src="../../../assets/img/coverage2.png" height="180" width="180"/></li>
             </div>
             <div class="word">
                 <h3 class="topic">{{pageMessage.shareTitle}}</h3>
@@ -23,8 +23,8 @@
         <div class="app-bottom">
             <div class="kongbai">
                 <span></span>
-                <button  class="zhaopian" ><img src="../../../assets/img/图层 4.png" /></button>
-                <button  class="biaoqing" ><img src="../../../assets/img/图层 5.png" /></button>
+                <button  class="zhaopian" ><img src="../../../assets/img/coverage4.png" /></button>
+                <button  class="biaoqing" ><img src="../../../assets/img/coverage5.png" /></button>
             </div>
         </div>
     </div>

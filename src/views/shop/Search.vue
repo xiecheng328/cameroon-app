@@ -3,8 +3,8 @@
         <div class="head">
           <img src="./img/leftjiantou.png" alt="" class="lt" @click="goHome()">
           <div class="search">
-            <input type="text" placeholder="大家都在搜“商品名”" class="ipt" v-model="btnName"  >
-            <button class="btn" @click="add">搜索</button>
+            <input type="text" :placeholder="ser.searchcon" class="ipt" v-model="btnName"  >
+            <button class="btn" @click="add">{{ser.searchbtn}}</button>
           </div>
           <div class="recommend">
             <span>推荐搜索</span>
@@ -38,6 +38,13 @@
     export default {
         data(){
           return{
+          ser:{
+            searchcon:this.$t('shop.searchContent'),
+            searchbtn:this.$t('shop.buttonSearch'),
+            searchfl:this.$t('shop.searchContent'),
+            searchcon1:this.$t('shop.searchContent'),
+            searchcon2:this.$t('shop.searchContent'),
+          },
           btnAll:[{
             btnName:'小麦机',
           },

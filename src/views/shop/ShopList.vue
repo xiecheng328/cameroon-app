@@ -12,7 +12,7 @@
     </mu-appbar>
     <div class="search-listN-bg">
       <div class="search-circle" :style="'display:'+(searchText.length?'none':'block')"></div>
-      <input class="search" type="text" @keyup="searchInput()" v-model="searchText" placeholder="输入企业名称/品牌/型号"/>
+      <input class="search" type="text" @keyup="searchInput()" v-model="searchText" :placeholder="listData.searchContent"/>
     </div>
     
     <!-- search nav -->
@@ -46,9 +46,9 @@
               <!-- 关注度&&加入购物车 -->
               <div class="news-add clearfix">
                 <p class="degree">
-                  <a>关注度:{{item.price}}</a>
+                  <a>{{listData.attention}}:{{item.price}}</a>
                 </p>
-                <button class="news-add-btn" @click="addShopCar()">加入购物车</button>
+                <button class="news-add-btn" @click="addShopCar()">{{listData.addShopPingCart}}</button>
               </div>
             </div>
           </li>
@@ -58,23 +58,23 @@
         <!-- 店铺 -->
           <div class="product-store product-same" :style="'display:'+(nIndex=='0'?'block':'none')">
             <ul>
-                <li><a href="" class="">全部</a></li>
-                <li><a href="" class="">整机店</a></li>
-                <li><a href="" class="same-color">部件店</a></li>
-                <li><a href="" class="">经销店</a></li>
+                <li><a href="" class="">{{this.$t('shop.Shop[1]')}}</a></li>
+                <li><a href="" class="">{{this.$t('shop.Shop[2]')}}</a></li>
+                <li><a href="" class="same-color">{{this.$t('shop.Shop[3]')}}</a></li>
+                <li><a href="" class="">{{this.$t('shop.Shop[4]')}}</a></li>
             </ul>
           </div>
         <!-- 类别 -->
           <div class="category-inner-cont" :style="'display:'+(nIndex=='1'?'block':'none')">
             <div class="category-cont-1" data-type="cate_id2" data-value="466">
-              <div class="category-cont-1-title">动力系统</div>
+              <div class="category-cont-1-title">{{this.$t('shop.harvestingMachines[1]')}}</div>
               <ul class="clearfix">
                 <a href="">
                 <li class="left col-xs-4" data-type="cate_id3" data-value="593">
                   <div class="category-image" style="height: 100px;">
                       <img src="http://img2.nongji360.com/a/mixed/2017/0526/224731732739.png">
                   </div>
-                  <div class="category-cont-2-title">单缸机</div>
+                  <div class="category-cont-2-title">{{this.$t('shop.harvestingMachines[2]')}}</div>
                 </li>
                 </a>
               </ul>
@@ -82,7 +82,7 @@
           </div>
         <!-- 品牌 -->
           <div class="product-brand-bg product-same" :style="'display:'+(nIndex=='2'?'block':'none')">
-              <h2><span>热销</span>品牌:</h2>
+              <h2>{{this.$t('shop.mark[1]')}}:</h2>
               <ul class="product-brand clearFloat clearfix">
                 <li>
                     <a href="" data-b="3">
@@ -196,9 +196,9 @@
         <!-- 排序 -->
           <div class="product-store product-same" :style="'display:'+(nIndex=='3'?'block':'none')">
             <ul>
-                <li><a href="" class="">默认排序</a></li>
-                <li><a href="" class="same-color">询价量</a></li>
-                <li><a href="" class="">关注度</a></li>
+                <li><a href="" class="">{{this.$t('shop.Sort[1]')}}</a></li>
+                <li><a href="" class="same-color">{{this.$t('shop.Sort[2]')}}</a></li>
+                <li><a href="" class="">{{this.$t('shop.Sort[3]')}}</a></li>
             </ul>
           </div>
       </div>
@@ -213,14 +213,20 @@ import Vue from 'vue'
 import './mock/tractors.js';
 export default {
       data() {
+        
         return {
+            listData:{
+                addShopPingCart:this.$t('shop.addShopPingCart'),
+                searchContent:this.$t('shop.searchContent'),
+                attention:this.$t('shop.attention')
+            },
             active:false,
             data:[],
             items:[
-                {select: '店铺', id:1},
-                {select: '收获机械', id:2},
-                {select: '品牌',id:3},
-                {select: '排序',id:4}
+                {select: this.$t('shop.Shop[0]'), id:1},
+                {select: this.$t('shop.harvestingMachines[0]'), id:2},
+                {select: this.$t('shop.mark[0]'),id:3},
+                {select: this.$t('shop.Sort[0]'),id:4}
             ],
             nIndex:"-1",
             searchText:'',

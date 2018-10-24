@@ -3,14 +3,14 @@
         <div id="nav-header" class="clearfix">
             <ul>
                 <img src="./img/prev.png" alt="" @click="goLeft()">
-                <li class="item1">发表评价</li>
-                <li class="item2">发布</li>
+                <li class="item1">{{this.$t('shop.Comment[0]')}}</li>
+                <li class="item2">{{this.$t('shop.Comment[1]')}}</li>
             </ul>
         </div>
         <div id="review">
             <img class="product" src="./img/2.jpg" alt="">
-            <p class="describe">描述相符</p>
-            <p class="well">非常好</p>
+            <p class="describe">{{this.$t('shop.Comment[2]')}}</p>
+            <p class="well">{{this.$t('shop.Comment[3]')}}</p>
             <div id="review-content">
                 <textarea class="write-review" rows="10" placeholder="宝贝满足你的期待吗？说说它的优点和美中不足的地方吧"></textarea>
                 <!-- <input class="write-review" type="text" placeholder="宝贝满足你的期待吗？说说它的优点和美中不足的地方吧"> -->
@@ -18,22 +18,22 @@
             <div id="review-people" class="clearfix">
                 <ul> 
                     <img src="./img/select.png" alt="">
-                    <li class="item3">匿名</li>
-                    <li class="item4">你的评价能帮助其他小伙伴哟</li>
+                    <li class="item3">{{this.$t('shop.Comment[4]')}}</li>
+                    <li class="item4">{{this.$t('shop.Comment[8]')}}</li>
                 </ul>
             </div>
             <div id="review-score" class="clearfix">
                 <div class="store-score">
                     <ul>
                         <img src="./img/store.png" alt="">
-                        <li class="item5">店铺评分</li>
+                        <li class="item5">{{this.$t('shop.Comment[5]')}}</li>
                     </ul>
                 </div>
                 <div class="wuliu-service">
-                    <p class="item6">物流服务</p>
+                    <p class="item6">{{this.$t('shop.Comment[6]')}}</p>
                 </div>
                 <div class="service-attitude">
-                    <p class="item7">服务态度</p>
+                    <p class="item7">{{this.$t('shop.Comment[7]')}}</p>
                 </div>
             </div>
         </div>

@@ -1,18 +1,18 @@
 <template>
   <div class="interest">
     <div class="interest-head">
-      <span>我的关注</span>
+      <span>{{focus}}</span>
       <div class="interest-head-back">
-        <mu-button flat small @click="goback">返回</mu-button>
+        <mu-button flat small @click="goback">{{this.return}}</mu-button>
       </div>
     </div>
     <mu-container>
       <mu-tabs :value.sync="active" full-width>
-        <mu-tab style="font-size:.2rem;">大v列表</mu-tab>
-        <mu-tab style="font-size:.2rem;">好友列表</mu-tab>
-        <mu-tab style="font-size:.2rem;">商品列表</mu-tab>
-        <mu-tab style="font-size:.2rem;">话题</mu-tab>
-        <mu-tab style="font-size:.2rem;">推荐</mu-tab>
+        <mu-tab style="font-size:.2rem;">{{this.Bigv}}</mu-tab>
+        <mu-tab style="font-size:.2rem;">{{this.FriendsList}}</mu-tab>
+        <mu-tab style="font-size:.2rem;">{{this.Productlist}}</mu-tab>
+        <mu-tab style="font-size:.2rem;">{{this.topic}}</mu-tab>
+        <mu-tab style="font-size:.2rem;">{{this.recommend}}</mu-tab>
       </mu-tabs>
       <div class="demo-text" v-if="active === 0">
         <p>大v列表</p>
@@ -51,27 +51,21 @@ export default {
     return {
       active: 0,
       commodity: [],
-      topic: [],
-      recommend: []
+      recommend: [],
+      focus:this.$t('profile.focus'),
+      return:this.$t('profile.return'),
+      Bigv:this.$t('profile.Bigv'),
+      FriendsList:this.$t('profile.FriendsList'),
+      Productlist:this.$t('profile.Productlist'),
+      topic:this.$t('profile.topic'),
+      recommend:this.$t('profile.recommend'),
     };
   },
   methods: {
-    getdata() {
-      axios.post("/MyInterestMock").then(res => {
-        this.commodity = res.data.commodity;
-        this.topic = res.data.topic;
-        console.log(this.topic);
-        this.userMenu = res.data.recommend;
-      });
-    },
     goback() {
       this.$emit("resetFatherp");
     }
   },
-  created() {
-    this.getdata();
-    console.log(this.$router);
-  }
 };
 </script>
 
@@ -106,4 +100,3 @@ export default {
   height: 100%;
 }
 </style>
-

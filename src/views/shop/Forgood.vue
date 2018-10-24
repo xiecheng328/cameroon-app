@@ -2,13 +2,13 @@
     <div id="good">
         
         <div  class="heads" >
-        <router-link class="heads-font" to=""><img src="./img/return.png" alt="" @click="goLeft()">确认订单</router-link>
+        <router-link class="heads-font" to=""><img src="./img/return.png" alt="" @click="goLeft()">{{this.$t('shop.order')}}</router-link>
         </div>
         <div class="adress">
             <div class="adress-pic"></div>
             <div class="adress-right">
-                <div class="adress-right-top"><span class="adress-right-top-name">收货人：</span><span class="adress-right-top-phone">15555555555</span></div>
-                <div class="adress-right-adr">收货地址：</div>
+                <div class="adress-right-top"><span class="adress-right-top-name">{{this.$t('shop.recipient')}}：</span><span class="adress-right-top-phone">15555555555</span></div>
+                <div class="adress-right-adr">{{this.$t('shop.address')}}：</div>
                 <div class="adress-right-bottom">(收货不变时，可选择免费代收货服务)</div>
             </div>
         </div>
@@ -42,15 +42,15 @@
         </div>
         
         <div class="foots">
-            <div class="foots-money">合计：
+            <div class="foots-money">{{this.$t('shop.total')}}：
                 <div class="foots-money-num">￥{{count*255}}</div>
             </div>
-            <div class="foots-but" @click="tijiao">提交订单</div>
+            <div class="foots-but" @click="tijiao">{{this.$t('shop.submit')}}</div>
         </div>
         <div id="mask" v-show="mask">
           <transition name="trans">
             <div class="top" v-if="show">
-            <h3 class="top-tatle">配送方式</h3>
+            <h3 class="top-tatle">{{this.$t('shop.demethod')}}</h3>
             <div class="top-font">快递免邮</div>
             <input class="top-check" type="checkbox">
             <div class="top-bottom" @click="topBottom">关闭</div>
@@ -74,16 +74,16 @@
                 mask:false,
                 show:false,
                 list:[{
-                listName:'购买数量',
+                listName:this.$t('shop.quantity'),
             },
             {
-                listName:'配送方式',
+                listName:this.$t('shop.demethod'),
             },
             {
-                listName:`运费险`,
+                listName:this.$t('shop.insurance[0]'),
             },
             {
-                listName:'运费险投保须知',
+                listName:this.$t('shop.insurance[1]'),
             },
             {
                 listName:'买家留言',

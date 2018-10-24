@@ -4,7 +4,7 @@
       <mu-button icon slot="left" @click="goLeft()">
       <mu-icon ></mu-icon>
       </mu-button >
-      <div class="shop-title">租赁</div>
+      <div class="shop-title">{{this.$t('shop.lease[0]')}}</div>
       
 </mu-appbar>
 <hr>
@@ -26,31 +26,31 @@
 <mu-paper class="demo-list-wrap">
   <mu-list>
     <mu-list-item style="margin-left: background:#fff" >
-      <mu-list-item-title>租赁人:西瓦尼</mu-list-item-title>
+      <mu-list-item-title>{{this.$t('shop.lease[1]')}}</mu-list-item-title>
     </mu-list-item>
     <mu-list-item  >
       <mu-list-item-title>租金:3000</mu-list-item-title>
     </mu-list-item>
     <mu-list-item  >
-      <mu-list-item-title>联系电话:18898884334</mu-list-item-title>
+      <mu-list-item-title>{{this.$t('shop.Contact')}}:18898884334</mu-list-item-title>
     </mu-list-item>
   </mu-list>
 </mu-paper>
   <mu-form :model="form" class="mu-demo-form" :label-position="labelPosition" label-width="100">
-    <mu-form-item prop="select" label="取货方式:" style="margin: 0 0.15rem; background:#fff">
+    <mu-form-item prop="select" :label="this.$t('shop.demethod')" style="margin: 0 0.15rem; background:#fff">
       <mu-select v-model="form.select">
         <mu-option v-for="(option,index) in options" :key="index" :label="option" :value="option"></mu-option>
       </mu-select>
     </mu-form-item>
-    <mu-form-item prop="city" label="收货地址" style="margin: 0 0.15rem; background:#fff">
+    <mu-form-item prop="city" :label="this.$t('shop.address')" style="margin: 0 0.15rem; background:#fff">
       <mu-select v-model="form.select">
         <mu-option v-for="(option,index) in citys" :key="index" :label="option" :value="option"></mu-option>
       </mu-select>
     </mu-form-item>
-    <mu-form-item prop="date" label="租赁开始日期" style="margin: 0 0.15rem; background:#fff">
+    <mu-form-item prop="date" :label="this.$t('shop.lease[2]')" style="margin: 0 0.15rem; background:#fff">
         <mu-date-input v-model="form.date" type="dateTime" actions></mu-date-input>
     </mu-form-item>
-    <mu-form-item prop="date" label="租赁结束日期" style="margin: 0 0.15rem;margin-bottom:56px; background:#fff">
+    <mu-form-item prop="date" :label="this.$t('shop.lease[3]')" style="margin: 0 0.15rem;margin-bottom:56px; background:#fff">
       <mu-date-input v-model="form.date" type="dateTime" actions></mu-date-input>
     </mu-form-item>
   </mu-form>
@@ -61,21 +61,21 @@
 
   <!-- 底部bar -->
     <mu-container class="bar">
-			    <mu-button @click="openFullscreenDialog"  full-width style="width:50%;font-size:16px">租赁联系</mu-button>
+			    <mu-button @click="openFullscreenDialog"  full-width style="width:50%;font-size:10px">{{this.$t('shop.con[0]')}}</mu-button>
             <mu-dialog width="360" transition="slide-bottom" fullscreen :open.sync="openFullscreen">
-              <mu-appbar color="primary" title="农机询问">
+              <mu-appbar color="primary" :title="this.$t('shop.chat[0]')">
               <mu-button slot="left" icon @click="closeFullscreenDialog">
                 <mu-icon value="close"></mu-icon>
               </mu-button>
               </mu-appbar>
               <div style="padding: 24px;">
-              你好,请问最近农机有拖拉机吗?
+              {{this.$t('shop.chat[1]')}}
               </div>
               <div style="padding: 24px;">
-              对不起,目前没有拖拉机啦,但是我们还类似的农机,小型拖拉机
+              {{this.$t('shop.chat[2]')}}
               </div>
             </mu-dialog>
-          <mu-button full-width style="width:50%;font-size:16px" @click="goRent()" >立即租赁</mu-button>
+          <mu-button full-width style="width:50%;font-size:10px" @click="goRent()" >{{this.$t('shop.con[1]')}}</mu-button>
     </mu-container>
 </div>
 </template>

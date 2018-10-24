@@ -1,65 +1,80 @@
 <template>
-<div id="withme">
- <div id='messageTitle'>
-  <span style="margin-left: .1rem" @click="back" ><-</span>
-  <h5>@Je</h5>
- </div>
- <div class="titlehead">
-  <img class="messagehead" src="../../assets/img/messagesHead.png" alt="">
+ <div id="withme">
+  <div id='messageTitle'>
+   <span style="margin-left: .1rem" @click="back" ><-</span>
+   <h5>@{{pagemessage.withme}}</h5>
+  </div>
+  <div class="titlehead">
+   < img class="messagehead" src="../../assets/img/messagesHead.png" alt="">
    <ul>
     <li>
-     Spécialiste de riz
+     {{pagemessage.withmepersonA}}
     </li>
     <li>
      5-22 16:40
     </li>
    </ul>
- </div>
- <p>//@Spécialiste de riz ：Le message de transfert</p>
+  </div>
+  <p>//@{{pagemessage.withmepersonA}} ：{{pagemessage.withmetransfert}}</p >
   <div class="messagecontain">
-   <img class="messageconent" src="../../assets/img/messageConent.png" alt="">
+   < img class="messageconent" src="../../assets/img/messageConent.png" alt="">
    <div class="containtext">
-   <span>@Expert de maïs</span>
-   <div class="containtext">Le maïs à 40 cm, pour le maïs est appliquée, de fumier, de la promotion de la croissance
-
+    <span>@{{pagemessage.withmepersonB}}</span>
+    <div class="containtext">{{pagemessage.withmecorn}}
+    </div>
    </div>
-   </div>
- </div>
- <div class="titlehead">
-  <img class="messagehead" src="../../assets/img/messagesHead.png" alt="">
-  <ul>
-   <li>
-    Expert de soja
-   </li>
-   <li>
-    5-22 16:40
-   </li>
-  </ul>
- </div>
- <p>Commentaires@Spécialiste de riz</p>
- <div class="messagecontain">
-  <img class="messageconent" src="../../assets/img/messageConent.png" alt="">
-  <div class="containtext">
-   <span>@Expert de soja</span>
+  </div>
+  <div class="titlehead">
+   < img class="messagehead" src="../../assets/img/messagesHead.png" alt="">
+   <ul>
+    <li>
+     {{pagemessage.withmepersonA}}
+    </li>
+    <li>
+     5-22 16:40
+    </li>
+   </ul>
+  </div>
+  <p>{{pagemessage.withmecomment}}@{{pagemessage.withmepersonA}}</p >
+  <div class="messagecontain">
+   < img class="messageconent" src="../../assets/img/messageConent.png" alt="">
    <div class="containtext">
-    La plantation de riz doit d'abord, puis à traiter le lit de semences de riz paddy, après traitement de stérilisation et à la désinfection de graine de nouveau, après transplantation de semis de riz, on a à faire, c'est de combler les lacunes et de consultation de l'irrigation, de suivi et d'engrais, de travail et de LIRIOMYZA de feuilles de prévention.
+    <span>@{{pagemessage.withmepersonC}}</span>
+    <div class="containtext">
+     {{pagemessage.withmerice}}
+    </div>
    </div>
   </div>
  </div>
-</div>
 </template>
 <script>
- export default {
-     methods:{
-         back(){
-              this.$router.push('/message');
-              this.$emit('returnM')
-         }
-     }
+    export default {
+        data(){
+            return{
+                pagemessage:{
+                    withmepersonA:this.$t("message.withmepersonA"),
+                    withmepersonB:this.$t("message.withmepersonB"),
+                    withmepersonC:this.$t("message.withmepersonC"),
+                    withmecorn:this.$t("message.withmecorn"),
+                    withmerice:this.$t("message.withmerice"),
+                    withmecomment:this.$t("message.withmecomment"),
+                    withme:this.$t("message.withme"),
+                    withmetransfert:this.$t("message.withmetransfert")
+                },
 
- }
+            }
+        },
+        methods:{
+            back(){
+                this.$router.push('/message');
+                this.$emit('returnM')
+            }
+        }
+
+    }
 
 </script>
+
 <style scoped>
  h5{
   float: right;
