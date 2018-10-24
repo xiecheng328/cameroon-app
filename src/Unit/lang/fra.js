@@ -142,7 +142,23 @@ export default {
         Subscribe:"Le message d'abonnement",
         useA:"Utilisation de machines agricoles",
         mattersA:"Attention à l'utilisation de machines agricoles",
-        proA:"Résumé de la question des experts dans l'aide de machines agricoles lors de la rencontre d'aujourd'hui"
+        proA:"Résumé de la question des experts dans l'aide de machines agricoles lors de la rencontre d'aujourd'hui",
+        withmepersonA:'Spécialiste de riz',
+        withmepersonB:'Expert de maïs',
+        withmepersonC:'Des experts en agriculture',
+        withmecorn:' 40 cm de maïs, le maïs de l application  engrais organique, de la promotion de la croissance',
+        withmerice:'La culture du riz doit abord, puis à traiter le lit de semences de riz, après traitement de stérilisation puis l"ensemencement, après la transplantation, irrigation est de combler les lacunes et de consultation que nous avons à faire, de suivi et engrais, de feuilles de LIRIOMYZA de travail et de prévention des taches.',
+        withmecomment:'Commentaires',
+        withme:'Je',
+        withmetransfert:'Le message de transfert',
+        newdetailSubscribe:'Le message d"abonnement',
+        newdetailtitle:'Utilisation de machines agricoles',
+        newdetailtext:'With the popularization of agricultural mechanization, more and more agricultural machinery appears in the households of farmers, the use of new machinery is very important. <br/>\n' +
+        'First, read the instructions. After purchasing the new equipment, the engine should first read the instructions carefully before using the machine, paying special attention to the use of the specified brand of diesel oil, before using the full precipitation and filtration, oiler to keep clean. Lubricating oil should be kept clean, enough oil should be added, and regular replacement, the use of brand should be consistent with the provisions. Always pay attention to the maintenance of air filter, pay attention to adding cooling water, especially do not make the engine in the state of water shortage. Check regularly for bolts and nuts that are inherently closed, especially connecting rod bolts, shaft bolts and flywheel locking nuts, and wheel fastening nuts. <br/>\n' +
+        'Two is trial run in. After purchasing a new machine, do not work immediately with load, should be in accordance with the requirements of the instructions for its commissioning run-in. After running-in, clean the oil filter screen and remove residual impurities in the oil, it is necessary to replace the oil and clean the oil pan. <br/>\n' +
+        'Three is not overload work. When the new machine is operating, it must strictly follow the manufacturer\'s instructions to do, not overload, not overspeed, not over-feed, not long-term overload work. <br/>\n' +
+        'Four, it is not possible to refit the new machinery and adjust the engine speed at any time. Some users in order to make the machine run fast, arbitrarily adjust the high-pressure oil pump fuel supply and fuel pressure, and some also speed spring with wire tied up, that is even more wrong. <br/>\n' +
+        'Rational use of new agricultural machinery, reduce mechanical failure, extend mechanical life and improve agricultural production. <br>'
 
     },
     profile:{
