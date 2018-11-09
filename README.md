@@ -44,7 +44,7 @@
 
 material-design-icons：
 
-cdn.bootcss.com
+cdn.bootcss.com.
 
 ## 可替换式header 和  可替换式 footer 的实现(已知问题，底部导航栏激活变色有bug)
 
