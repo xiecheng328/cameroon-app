@@ -6,7 +6,11 @@
                 <mu-icon value="close" flat>返回</mu-icon>
             </mu-button>
             <div class="cameroon-title"><h4>{{topic.askQuestion}}</h4></div>
-            <mu-button   flat slot="right" to="/topic/alists" >OK</mu-button>
+            <mu-button   flat slot="right"  @click="openSimpleDialog">OK</mu-button>
+            <mu-dialog title="Friendly Tips" width="360" :open.sync="openSimple">
+                successful
+                <mu-button slot="actions" flat color="primary" @click="closeSimpleDialog">Close</mu-button>
+            </mu-dialog>
         </mu-appbar>
         <mu-container>
             <mu-text-field v-model="value15" :placeholder="topic.title" :max-length="10"></mu-text-field><br/>
@@ -33,6 +37,7 @@
             return {
                 value15: '',
                 value16: '',
+                openSimple: false,
                 topic: {
                     allConcerns: this.$t('topic.allConcerns'),
                     topic: this.$t('topic.topic'),
@@ -49,6 +54,19 @@
                     title:this.$t('topic.title'),
                     addDescription:this.$t('topic.addDescription')
                 }
+            }
+        },
+        methods: {
+            openSimpleDialog () {
+                this.openSimple = true;
+                setTimeout(function(){
+
+                    location.href="http://localhost:8080/#/topic/alists";
+                },1000);
+
+            },
+            closeSimpleDialog () {
+                this.openSimple = false;
             }
         }
 
